@@ -1,0 +1,16 @@
+{
+  "timestamp": "2026-05-13T08:30:55.809341+00:00",
+  "total_entries": 1346,
+  "simple": 1345,
+  "empty": 1,
+  "multi_source_entries": 905,
+  "max_sources_per_entry": 64,
+  "total_aliases": 1415,
+  "errors": 0,
+  "hash_distribution": {
+    "single_source": 441,
+    "two_to_five": 376,
+    "six_to_ten": 179,
+    "eleven_plus": 350
+  }
+}

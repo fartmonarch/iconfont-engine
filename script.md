@@ -25,7 +25,8 @@
 | 06 | `pipeline/03_extract_glyphs.py` | **新编写** | Python | Phase 3 | 🟢 已完成 | 解析 110 TTF，提取 cmap/contours/hmtx，11528 条 glyph 记录，0 错误 |
 | 07 | `pipeline/04_normalize_glyphs.py` | **新编写** | Python | Phase 4 | 🟢 已完成 | UPM 统一(1024)、contour 排序、起点统一、精度 round(6)、glyphHash(sha256) + 17 单元测试 |
 | 07b | `pipeline/test_04_normalize.py` | **新编写** | Python | Phase 4 | 🟢 已完成 | 17 个单元测试覆盖所有标准化函数 |
-| 08 | `pipeline/05_build_registry.py` | **待编写** | Python | Phase 5 | glyphHash 生成、多源合并、alias 收集、source tracking |
+| 08 | `pipeline/05_build_registry.py` | **新编写** | Python | Phase 5 | 🟢 已完成 | glyphHash 分组、canonical 选择、alias 收集、source tracking + 12 单元测试 |
+| 08b | `pipeline/test_05_registry.py` | **新编写** | Python | Phase 5 | 🟢 已完成 | 12 个单元测试覆盖分组、canonical、alias、source、确定性输出 |
 | 09 | `pipeline/06_detect_conflicts_iconfont_compare.js` | iconfont-superset-check skill | Node.js | Phase 6 | 双链接模式 B：判断两个 iconfont 链接的超集关系，生成对比报告 |
 | 10 | `pipeline/06_detect_conflicts_iconfont_conflicts_doc.js` | iconfont_merge | Node.js | Phase 6 | 按图标逐个生成冲突清单 HTML，含 SVG 预览 |
 | 11 | `pipeline/07_resolve_conflicts_apply_rename.js` | iconfont_merge | Node.js | Phase 7 | 仓库级图标类名替换（带边界匹配、临时标记两遍替换、互换算子处理） |

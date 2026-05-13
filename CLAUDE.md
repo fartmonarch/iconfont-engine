@@ -86,7 +86,7 @@ Agent **只做 4 件事**：
 | Phase 2 | 🟢 已完成（3个脚本：110/111 CSS + 110 TTF + 11494 图标映射） |
 | Phase 3 | 🟢 已完成（2个脚本：110 TTF + 11528 glyph 记录提取，0 错误） |
 | Phase 4 | 🟢 已完成（2个脚本：11528 glyph 标准化 + 1345 唯一 glyphHash + numpy 加速） |
-| Phase 5 | ⬜ 待编写（fontTools） |
+| Phase 5 | 🟢 已完成（2个脚本：1346 registry entry + 905 多来源合并 + 12 单元测试） |
 | Phase 6 | 🔧 脚本已收集（2个） |
 | Phase 7 | 🔧 脚本已收集（4个） |
 | Phase 8 | ⬜ 待编写（fontTools） |
@@ -94,7 +94,7 @@ Agent **只做 4 件事**：
 | Phase 10 | ⬜ 待编写（Playwright） |
 | Phase 11 | 🔧 脚本已收集（1个） |
 
-**统计**：Phase 1 已完成（3个脚本）/ Phase 2 已完成（3个脚本）/ Phase 3 已完成（2个脚本）/ Phase 4 已完成（2个脚本）/ 已收集 6 个 / 待编写 3 个 / 共 17 个。详见 `script.md`。
+**统计**：Phase 1 已完成（3个脚本）/ Phase 2 已完成（3个脚本）/ Phase 3 已完成（2个脚本）/ Phase 4 已完成（2个脚本）/ Phase 5 已完成（2个脚本）/ 已收集 6 个 / 待编写 2 个 / 共 19 个。详见 `script.md`。
 
 ## Phase 1 完成结果
 

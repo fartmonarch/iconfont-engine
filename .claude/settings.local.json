@@ -20,7 +20,14 @@
       "Bash(pip3 list *)",
       "Bash(python *)",
       "Bash(df *)",
-      "Bash(pip install *)"
+      "Bash(pip install *)",
+      "Bash(npx superpowers-zh *)",
+      "Bash(git revert *)",
+      "Bash(git stash *)",
+      "Bash(git add *)",
+      "Bash(git push *)",
+      "Bash(git commit -m ' *)",
+      "Bash(pip show *)"
     ]
   }
 }

@@ -1,7 +1,7 @@
 """
 Phase 4: Geometry Normalization（几何标准化）
 
-技术：Python + 标准库（无 numpy）
+技术：Python + numpy（批量坐标运算加速）
 输入：
   - sources/phase3_glyphs/raw_glyphs.json
   - sources/phase3_glyphs/extraction_summary.json
@@ -24,6 +24,7 @@ import sys
 import hashlib
 from datetime import datetime, timezone
 from copy import deepcopy
+import numpy as np
 
 
 def load_glyphs():
@@ -45,32 +46,70 @@ def build_upm_lookup(summary):
 
 
 def scale_contours(contours, advance_width, lsb, scale):
-    """UPM 缩放：所有坐标和 metrics 乘以 scale"""
+    """UPM 缩放：使用 numpy 批量处理所有坐标"""
+    if not contours:
+        return contours, advance_width * scale, lsb * scale
+
+    # 展平所有点
+    all_points = []
+    contour_lengths = []
+    for c in contours:
+        contour_lengths.append(len(c))
+        all_points.extend([(p['x'], p['y'], p['on_curve']) for p in c])
+
+    # numpy 批量缩放
+    arr = np.array(all_points, dtype=np.float64)
+    arr[:, 0] *= scale
+    arr[:, 1] *= scale
+
+    # 重新构建 contours
     new_contours = []
-    for contour in contours:
+    idx = 0
+    for length in contour_lengths:
         new_contour = []
-        for point in contour:
+        for j in range(length):
             new_contour.append({
-                'x': point['x'] * scale,
-                'y': point['y'] * scale,
-                'on_curve': point['on_curve'],
+                'x': float(arr[idx + j, 0]),
+                'y': float(arr[idx + j, 1]),
+                'on_curve': bool(arr[idx + j, 2]),
             })
         new_contours.append(new_contour)
+        idx += length
+
     return new_contours, advance_width * scale, lsb * scale
 
 
 def round_contours(contours, advance_width, lsb, decimals=6):
-    """坐标精度统一到 6 位小数"""
+    """坐标精度统一到指定小数位，使用 numpy 批量处理"""
+    if not contours:
+        return contours, round(advance_width, decimals), round(lsb, decimals)
+
+    # 展平所有点
+    all_points = []
+    contour_lengths = []
+    for c in contours:
+        contour_lengths.append(len(c))
+        all_points.extend([(p['x'], p['y'], p['on_curve']) for p in c])
+
+    # numpy 批量 round
+    arr = np.array(all_points, dtype=np.float64)
+    arr[:, 0] = np.round(arr[:, 0], decimals)
+    arr[:, 1] = np.round(arr[:, 1], decimals)
+
+    # 重新构建 contours
     new_contours = []
-    for contour in contours:
+    idx = 0
+    for length in contour_lengths:
         new_contour = []
-        for point in contour:
+        for j in range(length):
             new_contour.append({
-                'x': round(point['x'], decimals),
-                'y': round(point['y'], decimals),
-                'on_curve': point['on_curve'],
+                'x': float(arr[idx + j, 0]),
+                'y': float(arr[idx + j, 1]),
+                'on_curve': bool(arr[idx + j, 2]),
             })
         new_contours.append(new_contour)
+        idx += length
+
     return new_contours, round(advance_width, decimals), round(lsb, decimals)
 
 

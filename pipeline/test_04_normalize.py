@@ -1,9 +1,21 @@
 """Phase 4 Geometry Normalization 的单元测试"""
 import sys
-sys.path.insert(0, '.')
-from pipeline import (
-    scale_contours, round_contours, normalize_glyph, build_upm_lookup
-)
+import os
+import importlib.util
+
+# 加载 04_normalize_glyphs.py（文件名以数字开头，不能直接作为模块导入）
+_pipeline_dir = os.path.dirname(os.path.abspath(__file__))
+_module_path = os.path.join(_pipeline_dir, '04_normalize_glyphs.py')
+_spec = importlib.util.spec_from_file_location('normalize_glyphs', _module_path)
+_mod = importlib.util.module_from_spec(_spec)
+_spec.loader.exec_module(_mod)
+
+scale_contours = _mod.scale_contours
+round_contours = _mod.round_contours
+normalize_glyph = _mod.normalize_glyph
+build_upm_lookup = _mod.build_upm_lookup
+load_glyphs = _mod.load_glyphs
+load_extraction_summary = _mod.load_extraction_summary
 
 
 def test_scale_contours():

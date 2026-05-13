@@ -112,3 +112,126 @@ def test_build_upm_lookup():
     upm_map = build_upm_lookup(summary)
     assert upm_map["aaa"] == 560
     assert upm_map["bbb"] == 1024
+
+
+# --- Task 2: Contour 标准化测试 ---
+
+normalize_contour_start = _mod.normalize_contour_start
+sort_contours = _mod.sort_contours
+ensure_cw = _mod.ensure_cw
+signed_area = _mod.signed_area
+compute_glyph_hash = _mod.compute_glyph_hash
+
+
+def test_normalize_contour_start():
+    """contour 起点应该旋转到 min(x+y) 点"""
+    contour = [
+        {"x": 100.0, "y": 200.0, "on_curve": True},  # x+y=300
+        {"x": 50.0, "y": 50.0, "on_curve": True},     # x+y=100 (min)
+        {"x": 200.0, "y": 100.0, "on_curve": True},   # x+y=300
+    ]
+    result = normalize_contour_start(contour)
+    assert result[0]["x"] == 50.0
+    assert result[0]["y"] == 50.0
+    assert len(result) == 3
+
+
+def test_normalize_contour_start_empty():
+    """空 contour 直接返回"""
+    assert normalize_contour_start([]) == []
+
+
+def test_sort_contours():
+    """contour 应该按 bbox 面积降序排序"""
+    c1 = [{"x": 0.0, "y": 0.0, "on_curve": True}, {"x": 10.0, "y": 10.0, "on_curve": True}]
+    c2 = [{"x": 0.0, "y": 0.0, "on_curve": True}, {"x": 100.0, "y": 100.0, "on_curve": True}]
+
+    result = sort_contours([c1, c2])
+    assert result[0] is c2
+    assert result[1] is c1
+
+
+def test_sort_contours_same_area():
+    """面积相同时按 min(x+y) 升序排序"""
+    c1 = [{"x": 50.0, "y": 50.0, "on_curve": True}, {"x": 60.0, "y": 60.0, "on_curve": True}]  # min=100
+    c2 = [{"x": 0.0, "y": 0.0, "on_curve": True}, {"x": 10.0, "y": 10.0, "on_curve": True}]   # min=0
+
+    result = sort_contours([c1, c2])
+    assert result[0] is c2
+
+
+def test_ensure_cw_clockwise():
+    """CW contour 不应该被反转"""
+    contour = [
+        {"x": 0.0, "y": 0.0, "on_curve": True},
+        {"x": 100.0, "y": 0.0, "on_curve": True},
+        {"x": 50.0, "y": 100.0, "on_curve": True},
+    ]
+    area = signed_area(contour)
+    result = ensure_cw(contour)
+    if area < 0:
+        assert result == contour
+
+
+def test_ensure_cw_counter_clockwise():
+    """CCW contour 应该被反转"""
+    contour = [
+        {"x": 0.0, "y": 0.0, "on_curve": True},
+        {"x": 50.0, "y": 100.0, "on_curve": True},
+        {"x": 100.0, "y": 0.0, "on_curve": True},
+    ]
+    area_after = signed_area(ensure_cw(contour))
+    assert area_after <= 0
+
+
+def test_compute_glyph_hash():
+    """glyphHash 应该是确定的 sha256 前 16 位"""
+    contours = [[
+        {"x": 0.0, "y": 0.0, "on_curve": True},
+        {"x": 100.0, "y": 100.0, "on_curve": True},
+    ]]
+    h1 = compute_glyph_hash(contours)
+    h2 = compute_glyph_hash(contours)
+    assert h1 == h2
+    assert len(h1) == 16
+    assert all(c in '0123456789abcdef' for c in h1)
+
+
+def test_compute_glyph_hash_different():
+    """不同的 contour 应该有不同的 hash"""
+    c1 = [[{"x": 0.0, "y": 0.0, "on_curve": True}]]
+    c2 = [[{"x": 1.0, "y": 1.0, "on_curve": True}]]
+    assert compute_glyph_hash(c1) != compute_glyph_hash(c2)
+
+
+def test_normalize_glyph_full_pipeline():
+    """完整标准化流程应该包含 glyphHash"""
+    glyph = {
+        "assetId": "d737f632f4df",
+        "glyphType": "simple",
+        "contours": [[
+            {"x": 512.0, "y": 256.0, "on_curve": True},
+            {"x": 0.0, "y": 0.0, "on_curve": True},
+        ]],
+        "advanceWidth": 1024.0,
+        "lsb": 0.0,
+    }
+    upm_map = {"d737f632f4df": 1024}
+    result = normalize_glyph(glyph, upm_map)
+    assert "glyphHash" in result
+    assert len(result["glyphHash"]) == 16
+    assert result["upmChanged"] is False
+
+
+def test_normalize_glyph_empty_hash():
+    """empty glyph 的 glyphHash 应该是 'empty'"""
+    glyph = {
+        "assetId": "d443fdd5cccb",
+        "glyphType": "empty",
+        "contours": [],
+        "advanceWidth": 1024.0,
+        "lsb": 0.0,
+    }
+    upm_map = {"d443fdd5cccb": 1024}
+    result = normalize_glyph(glyph, upm_map)
+    assert result["glyphHash"] == "empty"

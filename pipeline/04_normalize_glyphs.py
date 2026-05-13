@@ -113,29 +113,114 @@ def round_contours(contours, advance_width, lsb, decimals=6):
     return new_contours, round(advance_width, decimals), round(lsb, decimals)
 
 
+def normalize_contour_start(contour):
+    """将 contour 旋转到 min(x+y) 点作为起点，保证确定性"""
+    if not contour:
+        return contour
+
+    min_idx = 0
+    min_sum = contour[0]['x'] + contour[0]['y']
+    for i, p in enumerate(contour[1:], 1):
+        s = p['x'] + p['y']
+        if s < min_sum:
+            min_sum = s
+            min_idx = i
+
+    return contour[min_idx:] + contour[:min_idx]
+
+
+def contour_bbox(contour):
+    """计算 contour 的 bbox"""
+    xs = [p['x'] for p in contour]
+    ys = [p['y'] for p in contour]
+    return min(xs), min(ys), max(xs), max(ys)
+
+
+def contour_area(contour):
+    """计算 contour 的 bbox 面积（用于排序）"""
+    x0, y0, x1, y1 = contour_bbox(contour)
+    return (x1 - x0) * (y1 - y0)
+
+
+def sort_contours(contours):
+    """按 bbox 面积降序排序，面积相同按 min(x+y) 升序排序"""
+    def sort_key(c):
+        area = contour_area(c)
+        min_xy = min(p['x'] + p['y'] for p in c)
+        return (-area, min_xy)
+    return sorted(contours, key=sort_key)
+
+
+def signed_area(contour):
+    """计算 contour 的 signed area（shoelace formula）"""
+    area = 0.0
+    n = len(contour)
+    for i in range(n):
+        j = (i + 1) % n
+        area += contour[i]['x'] * contour[j]['y']
+        area -= contour[j]['x'] * contour[i]['y']
+    return area / 2.0
+
+
+def ensure_cw(contour):
+    """确保 contour 是顺时针方向（CW）"""
+    if len(contour) < 3:
+        return contour
+    area = signed_area(contour)
+    # signed area < 0 = CW, > 0 = CCW
+    if area > 0:
+        return list(reversed(contour))
+    return contour
+
+
+def compute_glyph_hash(contours):
+    """
+    SHA-256 hash of canonical contours。
+    contours 已经是标准化的（起点统一、排序、CW），
+    序列化时 sort_keys 保证确定性。
+    """
+    data = json.dumps(contours, sort_keys=True, separators=(',', ':'))
+    return hashlib.sha256(data.encode('utf-8')).hexdigest()[:16]
+
+
 def normalize_glyph(glyph, upm_map):
-    """对单个 glyph 应用标准化 Step 1-2（UPM 缩放 + round）"""
+    """对单个 glyph 应用完整标准化（Step 1-5 + glyphHash）"""
     result = deepcopy(glyph)
     asset_id = glyph['assetId']
     source_upm = upm_map.get(asset_id, 1024)
 
     if glyph['glyphType'] == 'empty':
+        result['glyphHash'] = 'empty'
         result['upmChanged'] = False
-    elif source_upm != 1024:
+        return result
+
+    # Step 1: UPM 缩放
+    if source_upm != 1024:
         scale = 1024 / source_upm
-        # Step 1: UPM 缩放
         scaled_contours, scaled_aw, scaled_lsb = \
             scale_contours(glyph['contours'], glyph['advanceWidth'], glyph['lsb'], scale)
-        # Step 2: round(6)
-        result['contours'], result['advanceWidth'], result['lsb'] = \
-            round_contours(scaled_contours, scaled_aw, scaled_lsb)
+        result['contours'] = scaled_contours
+        result['advanceWidth'] = scaled_aw
+        result['lsb'] = scaled_lsb
         result['upmChanged'] = True
         result['sourceUpm'] = source_upm
-        result['scale'] = scale
     else:
-        # 已经是 UPM=1024，跳过缩放，只做 round
-        result['contours'], result['advanceWidth'], result['lsb'] = \
-            round_contours(glyph['contours'], glyph['advanceWidth'], glyph['lsb'])
         result['upmChanged'] = False
+
+    # Step 2: round(6)
+    result['contours'], result['advanceWidth'], result['lsb'] = \
+        round_contours(result['contours'], result['advanceWidth'], result['lsb'])
+
+    # Step 3: 每个 contour 起点统一
+    result['contours'] = [normalize_contour_start(c) for c in result['contours']]
+
+    # Step 4: contour 排序
+    result['contours'] = sort_contours(result['contours'])
+
+    # Step 5: winding direction 统一（CW）
+    result['contours'] = [ensure_cw(c) for c in result['contours']]
+
+    # Step 6: glyphHash
+    result['glyphHash'] = compute_glyph_hash(result['contours'])
 
     return result

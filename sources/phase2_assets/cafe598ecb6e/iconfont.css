@@ -1,0 +1,21 @@
+@font-face {font-family: "iconfont";
+  src: url('//res.winbaoxian.com/ali-iconfont/font_1964111_jn3xutqpl8l.eot?t=1595558289731'); /* IE9 */
+  src: url('//res.winbaoxian.com/ali-iconfont/font_1964111_jn3xutqpl8l.eot?t=1595558289731#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAAMsAAsAAAAABwwAAALeAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHEIGVgCCcAqCFIF8ATYCJAMICwYABCAFhG0HMhskBhHVk8NkX2DbsAeQhQWUOoT8sJzKCLAGpsEZKAAAAAAgiGote3bn4AlVkFQqHoAUooqKZA1Go5ARKhJYAgl9P+7X3oltJyaYdjyLNUhar9H201mdoD6q16uIJkrSpD3BA2ZrdWpxAN9kgPaeeMcvz3F+68j1XgD8zzHTpXh+oLlkB+0NcNw6wI7rEL4DOTC/YewCl3AeAoQpogHpGBiYwEexpgkg2/NrC/g5O4qykI/g1qxVkFNw8E1JfQ1wEv6+/EKjGAGDY8HKGFntXKblo2pHaMg/mfYRwJhPC7BNYIEGQEEmavVD2NjfgCWs+ZUy2FeqwEf1/9+n7/YfDwTEBSs5CkABpN8Tw2XeaoEBQLn3/hlgddT3gNNgtVhMC9Yf55qNuyOuMEIR2j0Es3eEbRWp0ijHWVTmisD49GamXr03mZus+CYEY9Q9Sini3nHOhfCMsSUaLPO+WlFhI1+ETpKjilSOy4edg/XHLWDvNLYWYrpyX5mIveB8cRadxy4lVBbsNdIWW/sc2D1H1/axEzH9dh0bD3D2vKY8bjx2/YYZY/bVbSTRt8t1+xc3yVzJmgg5wo5QAloACF6s1HT967/h/lW2qYRfPtYCwEtXPgutwYtCPyP4d2QQ+LOMnnWqsyyFUZVRGzbM4NxxSZgwEAA2p3kfK869Rljwyb2M0aMwBYtPBVKxDeAQoQlcfJohTD3dmyNk2MEiagKo4xiAkOQaDHFuwJLkFqnYN3DI8w8uSdFAmClhzwhV4iXVy6gFHZg/JEujd1SiotQbhnfVnGWFuBfylFywXqyKoSuOyHMsmD5hI+LBMw3Qg4thrQSNKaOVRRRpl+XS173RwtLQKXoZtaAD84dkafR+c1Gln79heFfNLTU18hfylAaH9WLVA3nlj71q7uUh0ydsRDx4pgF6MAprJWj1ozJaWcQR3nZZ2o18X/5ifeHwdVuAMJbEiD3cYlym71hJu64DAAA=') format('woff2'),
+  url('//res.winbaoxian.com/ali-iconfont/font_1964111_jn3xutqpl8l.woff?t=1595558289731') format('woff'),
+  url('//res.winbaoxian.com/ali-iconfont/font_1964111_jn3xutqpl8l.ttf?t=1595558289731') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+  url('//res.winbaoxian.com/ali-iconfont/font_1964111_jn3xutqpl8l.svg?t=1595558289731#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-download:before {
+  content: "\e6c3";
+}
+

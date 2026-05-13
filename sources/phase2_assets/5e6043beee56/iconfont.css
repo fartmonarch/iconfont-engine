@@ -1,0 +1,262 @@
+@font-face {
+  font-family: "symbols";
+  src: url('../fonts/symbols.eot');
+  src: url('../fonts/symbols.eot?#iefix') format('eot'),
+    url('../fonts/symbols.woff2') format('woff2'),
+    url('../fonts/symbols.woff') format('woff'),
+    url('../fonts/symbols.ttf') format('truetype'),
+    url('../fonts/symbols.svg#symbols') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.s-answer:before,
+.s-claims:before,
+.s-download:before,
+.s-help:before,
+.s-helpkong:before,
+.s-insurance:before,
+.s-message:before,
+.s-notice:before,
+.s-phone3:before,
+.s-pic-in:before,
+.s-pic:before,
+.s-ping:before,
+.s-poster:before,
+.s-rili1:before,
+.s-state1:before,
+.s-state3:before,
+.s-zan-after:before,
+.s-zan-before:before,
+.s-xiayiye:before,
+.s-zhu:before,
+.s-chengzuosijiache:before,
+.s-zhuyuanbaozhang:before,
+.s-zhuyuanjintie:before,
+.s-baodandianzi:before,
+.s-baodanzhizhi:before,
+.s-xinyongqia:before,
+.s-mianfeihuomian:before,
+.s-gongjiaojiaotongyiwai:before,
+.s-guanbi1:before,
+.s-guanbi2:before,
+.s-guanbi3:before,
+.s-chuzuche:before,
+.s-fenxiang1:before,
+.s-fenxiang2:before,
+.s-shuaxin:before,
+.s-quan:before,
+.s-yiliaofei:before,
+.s-shoushang:before,
+.s-tongyitiaokuan:before,
+.s-tongyitiaokuanweigouxuan:before,
+.s-mingpian:before,
+.s-ku:before,
+.s-ditie:before,
+.s-kehu:before,
+.s-kehudianji:before,
+.s-jiayongdianqi:before,
+.s-zhankai:before,
+.s-yixuanze:before,
+.s-yiwaiquancan／shengu:before,
+.s-yiwaiyiliao:before,
+.s-yijianfankui:before,
+.s-wode:before,
+.s-wode-dianji:before,
+.s-fangwu:before,
+.s-shoushubuchang:before,
+.s-shouji:before,
+.s-shouji2:before,
+.s-zhiyin:before,
+.s-sousuo:before,
+.s-bofang1:before,
+.s-bofang2:before,
+.s-shoucang:before,
+.s-shoucang2:before,
+.s-shoucang-dianji:before,
+.s-shouqi:before,
+.s-rili:before,
+.s-rilinew:before,
+.s-qitashenguyiwai:before,
+.s-zanting:before,
+.s-gengduo:before,
+.s-weixuanze:before,
+.s-jidongcheyiwai:before,
+.s-tiaokuan:before,
+.s-chakangengduo:before,
+.s-chakangengduo1:before,
+.s-shumiao:before,
+.s-minyongranqi:before,
+.s-minyongdian:before,
+.s-shuishangjiaotong:before,
+.s-shuiguanbaolie:before,
+.s-shuilujiaotongyiwai:before,
+.s-zhuyi1:before,
+.s-zhuyi2:before,
+.s-tianjia:before,
+.s-manqifanhuan:before,
+.s-huozai:before,
+.s-huoche:before,
+.s-dianzan:before,
+.s-dianzan-dianji:before,
+.s-shaoshang:before,
+.s-tangshang:before,
+.s-diantiyiwaixian:before,
+.s-dianhua:before,
+.s-dianhua1:before,
+.s-dianhua2:before,
+.s-dianhua3:before,
+.s-jibing:before,
+.s-xiangji:before,
+.s-liwu:before,
+.s-sijiacheyiwaixian:before,
+.s-dengdai:before,
+.s-bianji:before,
+.s-ziranzaihai:before,
+.s-jiejiari:before,
+.s-zhuangxiu:before,
+.s-shezhi:before,
+.s-yuyin:before,
+.s-ziliao:before,
+.s-zengxianlianxiren:before,
+.s-shengubaozhang:before,
+.s-qingduzhongji:before,
+.s-fanhui:before,
+.s-zhongbingjianhujintiejintie:before,
+.s-qiandai:before,
+.s-zuanshi:before,
+.s-naozhong:before,
+.s-fu:before,
+.s-feiji:before,
+.s-gaokongzhuiwu:before,
+.symbol-icon {
+  font-family: "symbols";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  text-decoration: inherit;
+}
+
+.s-answer:before { content: "\EA01" }
+.s-claims:before { content: "\EA02" }
+.s-download:before { content: "\EA03" }
+.s-help:before { content: "\EA04" }
+.s-helpkong:before { content: "\EA05" }
+.s-insurance:before { content: "\EA06" }
+.s-message:before { content: "\EA07" }
+.s-notice:before { content: "\EA08" }
+.s-phone3:before { content: "\EA09" }
+.s-pic-in:before { content: "\EA0A" }
+.s-pic:before { content: "\EA0B" }
+.s-ping:before { content: "\EA0C" }
+.s-poster:before { content: "\EA0D" }
+.s-rili1:before { content: "\EA0E" }
+.s-state1:before { content: "\EA0F" }
+.s-state3:before { content: "\EA10" }
+.s-zan-after:before { content: "\EA11" }
+.s-zan-before:before { content: "\EA12" }
+.s-xiayiye:before { content: "\EA13" }
+.s-zhu:before { content: "\EA14" }
+.s-chengzuosijiache:before { content: "\EA15" }
+.s-zhuyuanbaozhang:before { content: "\EA16" }
+.s-zhuyuanjintie:before { content: "\EA17" }
+.s-baodandianzi:before { content: "\EA18" }
+.s-baodanzhizhi:before { content: "\EA19" }
+.s-xinyongqia:before { content: "\EA1A" }
+.s-mianfeihuomian:before { content: "\EA1B" }
+.s-gongjiaojiaotongyiwai:before { content: "\EA1C" }
+.s-guanbi1:before { content: "\EA1D" }
+.s-guanbi2:before { content: "\EA1E" }
+.s-guanbi3:before { content: "\EA1F" }
+.s-chuzuche:before { content: "\EA20" }
+.s-fenxiang1:before { content: "\EA21" }
+.s-fenxiang2:before { content: "\EA22" }
+.s-shuaxin:before { content: "\EA23" }
+.s-quan:before { content: "\EA24" }
+.s-yiliaofei:before { content: "\EA25" }
+.s-shoushang:before { content: "\EA26" }
+.s-tongyitiaokuan:before { content: "\EA27" }
+.s-tongyitiaokuanweigouxuan:before { content: "\EA28" }
+.s-mingpian:before { content: "\EA29" }
+.s-ku:before { content: "\EA2A" }
+.s-ditie:before { content: "\EA2B" }
+.s-kehu:before { content: "\EA2C" }
+.s-kehudianji:before { content: "\EA2D" }
+.s-jiayongdianqi:before { content: "\EA2E" }
+.s-zhankai:before { content: "\EA2F" }
+.s-yixuanze:before { content: "\EA30" }
+.s-yiwaiquancan／shengu:before { content: "\EA31" }
+.s-yiwaiyiliao:before { content: "\EA32" }
+.s-yijianfankui:before { content: "\EA33" }
+.s-wode:before { content: "\EA34" }
+.s-wode-dianji:before { content: "\EA35" }
+.s-fangwu:before { content: "\EA36" }
+.s-shoushubuchang:before { content: "\EA37" }
+.s-shouji:before { content: "\EA38" }
+.s-shouji2:before { content: "\EA39" }
+.s-zhiyin:before { content: "\EA3A" }
+.s-sousuo:before { content: "\EA3B" }
+.s-bofang1:before { content: "\EA3C" }
+.s-bofang2:before { content: "\EA3D" }
+.s-shoucang:before { content: "\EA3E" }
+.s-shoucang2:before { content: "\EA3F" }
+.s-shoucang-dianji:before { content: "\EA40" }
+.s-shouqi:before { content: "\EA41" }
+.s-rili:before { content: "\EA42" }
+.s-rilinew:before { content: "\EA43" }
+.s-qitashenguyiwai:before { content: "\EA44" }
+.s-zanting:before { content: "\EA45" }
+.s-gengduo:before { content: "\EA46" }
+.s-weixuanze:before { content: "\EA47" }
+.s-jidongcheyiwai:before { content: "\EA48" }
+.s-tiaokuan:before { content: "\EA49" }
+.s-chakangengduo:before { content: "\EA4A" }
+.s-chakangengduo1:before { content: "\EA4B" }
+.s-shumiao:before { content: "\EA4C" }
+.s-minyongranqi:before { content: "\EA4D" }
+.s-minyongdian:before { content: "\EA4E" }
+.s-shuishangjiaotong:before { content: "\EA4F" }
+.s-shuiguanbaolie:before { content: "\EA50" }
+.s-shuilujiaotongyiwai:before { content: "\EA51" }
+.s-zhuyi1:before { content: "\EA52" }
+.s-zhuyi2:before { content: "\EA53" }
+.s-tianjia:before { content: "\EA54" }
+.s-manqifanhuan:before { content: "\EA55" }
+.s-huozai:before { content: "\EA56" }
+.s-huoche:before { content: "\EA57" }
+.s-dianzan:before { content: "\EA58" }
+.s-dianzan-dianji:before { content: "\EA59" }
+.s-shaoshang:before { content: "\EA5A" }
+.s-tangshang:before { content: "\EA5B" }
+.s-diantiyiwaixian:before { content: "\EA5C" }
+.s-dianhua:before { content: "\EA5D" }
+.s-dianhua1:before { content: "\EA5E" }
+.s-dianhua2:before { content: "\EA5F" }
+.s-dianhua3:before { content: "\EA60" }
+.s-jibing:before { content: "\EA61" }
+.s-xiangji:before { content: "\EA62" }
+.s-liwu:before { content: "\EA63" }
+.s-sijiacheyiwaixian:before { content: "\EA64" }
+.s-dengdai:before { content: "\EA65" }
+.s-bianji:before { content: "\EA66" }
+.s-ziranzaihai:before { content: "\EA67" }
+.s-jiejiari:before { content: "\EA68" }
+.s-zhuangxiu:before { content: "\EA69" }
+.s-shezhi:before { content: "\EA6A" }
+.s-yuyin:before { content: "\EA6B" }
+.s-ziliao:before { content: "\EA6C" }
+.s-zengxianlianxiren:before { content: "\EA6D" }
+.s-shengubaozhang:before { content: "\EA6E" }
+.s-qingduzhongji:before { content: "\EA6F" }
+.s-fanhui:before { content: "\EA70" }
+.s-zhongbingjianhujintiejintie:before { content: "\EA71" }
+.s-qiandai:before { content: "\EA72" }
+.s-zuanshi:before { content: "\EA73" }
+.s-naozhong:before { content: "\EA74" }
+.s-fu:before { content: "\EA75" }
+.s-feiji:before { content: "\EA76" }
+.s-gaokongzhuiwu:before { content: "\EA77" }

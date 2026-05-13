@@ -6,7 +6,12 @@
       "WebFetch(domain:res.wyins.net)",
       "Bash(curl -s \"https://res.wyins.net/iconfont/1483933727382/css/symbols.css\")",
       "Bash(curl -s \"https://res.wyins.net/ali-iconfont/font_mzpwr9fjab4holxr.css\")",
-      "Bash(node *)"
+      "Bash(node *)",
+      "Bash(rm -rf D:/work/iconfont-engine/sources/phase2_assets/*)",
+      "Bash(rm -f D:/work/iconfont-engine/sources/meta/assets_manifest.json)",
+      "Bash(curl -s -I \"https://res.winbaoxian.com/auto_upload_ci/management-community-operations/static/iconfont/20231024/iconfont.css\")",
+      "Bash(curl -s \"https://res.winbaoxian.com/auto_upload_ci/management-community-operations/static/iconfont/20231024/iconfont.css\")",
+      "Bash(gunzip)"
     ]
   }
 }

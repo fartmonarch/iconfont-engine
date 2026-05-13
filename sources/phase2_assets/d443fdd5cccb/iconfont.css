@@ -1,0 +1,101 @@
+@font-face {
+  font-family: "fileIconfont"; /* Project id 3210243 */
+  /* Color fonts */
+  src: 
+       url('//at.alicdn.com/t/font_3210243_inqj8n4aqvd.woff2?t=1646039274402') format('woff2'),
+       url('//at.alicdn.com/t/font_3210243_inqj8n4aqvd.woff?t=1646039274402') format('woff'),
+       url('//at.alicdn.com/t/font_3210243_inqj8n4aqvd.ttf?t=1646039274402') format('truetype');
+}
+
+.fileIconfont {
+  font-family: "fileIconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-file-word:before {
+  content: "\e65b";
+}
+
+.icon-file-Excel:before {
+  content: "\e65c";
+}
+
+.icon-file-ExperienceDesign:before {
+  content: "\e65e";
+}
+
+.icon-file-HTML:before {
+  content: "\e65f";
+}
+
+.icon-file-image:before {
+  content: "\e660";
+}
+
+.icon-file-keynote:before {
+  content: "\e661";
+}
+
+.icon-file-CSS:before {
+  content: "\e662";
+}
+
+.icon-file-music:before {
+  content: "\e663";
+}
+
+.icon-file-lllustrator:before {
+  content: "\e664";
+}
+
+.icon-file-PDF:before {
+  content: "\e665";
+}
+
+.icon-file-Photoshop:before {
+  content: "\e666";
+}
+
+.icon-file-Text:before {
+  content: "\e667";
+}
+
+.icon-file-sketch:before {
+  content: "\e668";
+}
+
+.icon-file-zip:before {
+  content: "\e66a";
+}
+
+.icon-file-Video:before {
+  content: "\e66b";
+}
+
+.icon-file-PowerPoint:before {
+  content: "\e66c";
+}
+
+.icon-file-gonggongwenjianjia:before {
+  content: "\e66d";
+}
+
+.icon-file-wenjianjia:before {
+  content: "\e66e";
+}
+
+.icon-file-xmind:before {
+  content: "\e677";
+}
+
+.icon-file-exe:before {
+  content: "\e678";
+}
+
+.icon-file-jiazaishibai:before {
+  content: "\e6d6";
+}
+

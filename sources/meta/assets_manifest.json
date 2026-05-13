@@ -1,0 +1,1695 @@
+[
+  {
+    "assetId": "d737f632f4df",
+    "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_5147685_3yj1cl522ql.css",
+    "cssPath": "sources/phase2_assets/d737f632f4df/iconfont.css",
+    "cssContentHash": "676c02e8dae2448f80ae0f761597e5e2e4ee5bb4308870d95a81169debd83a73",
+    "fontUrl": "https://at.alicdn.com/t/c/font_5147685_3yj1cl522ql.ttf?t=1774439960256",
+    "fontFormat": "ttf",
+    "ttfPath": "sources/phase2_assets/d737f632f4df/font.ttf",
+    "ttfContentHash": "24337442e2fe3ae8c4957d46142f61d532620fc5a95791809a0fc72736be7166",
+    "sourceProjects": [
+      "ai-customer-acquisition",
+      "business-tool"
+    ],
+    "templateVar": null,
+    "downloadStatus": "ok"
+  },
+  {
+    "assetId": "3a2dcb72da44",
+    "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_428664_7itacmrlk3.css",
+    "cssPath": "sources/phase2_assets/3a2dcb72da44/iconfont.css",
+    "cssContentHash": "e30dc9d19680d421414f17d9cc78b2f5c615648f1fb313f4668b6f266bc171dc",
+    "fontUrl": "https://at.alicdn.com/t/c/font_428664_7itacmrlk3.ttf?t=1773370887697",
+    "fontFormat": "ttf",
+    "ttfPath": "sources/phase2_assets/3a2dcb72da44/font.ttf",
+    "ttfContentHash": "74d4bde6a53165c1ea5c312532415d1242af54219e1e58c1001f05e67918ed23",
+    "sourceProjects": [
+      "ai-customer-acquisition"
+    ],
+    "templateVar": null,
+    "downloadStatus": "ok"
+  },
+  {
+    "assetId": "3317e5cb12d7",
+    "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_1311936_jf12otjodsq.css",
+    "cssPath": "sources/phase2_assets/3317e5cb12d7/iconfont.css",
+    "cssContentHash": "cb28cfe1eba6c6d034153f838c327ce1e42ce6ed0b389f7cdaf50e132d4febf3",
+    "fontUrl": "https://res.winbaoxian.com/ali-iconfont/font_1311936_jf12otjodsq.ttf?t=1571215530227",
+    "fontFormat": "ttf",
+    "ttfPath": "sources/phase2_assets/3317e5cb12d7/font.ttf",
+    "ttfContentHash": "ef27f622d4b3892450ecb21c4c69ed11b86cb9ca5d9021f1a829ea87b17d680c",
+    "sourceProjects": [
+      "app-settlement"
+    ],
+    "templateVar": null,
+    "downloadStatus": "ok"
+  },
+  {
+    "assetId": "c451667373e6",
+    "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_336721_14yv3un7pqz.css",
+    "cssPath": "sources/phase2_assets/c451667373e6/iconfont.css",
+    "cssContentHash": "f23c719abb3fcba32b74d7b02bf96b4ecb979de7d663c3873b7aaefb2ea72e0e",
+    "fontUrl": "https://res.winbaoxian.com/ali-iconfont/font_336721_14yv3un7pqz.ttf?t=1618478303589",
+    "fontFormat": "ttf",
+    "ttfPath": "sources/phase2_assets/c451667373e6/font.ttf",
+    "ttfContentHash": "7de910f445748d247f554fdd3c32d8fe3130250193f28185c50c210434c27259",
+    "sourceProjects": [
+      "app-settlement"
+    ],
+    "templateVar": null,
+    "downloadStatus": "ok"
+  },
+  {
+    "assetId": "c83f6e44d0c0",
+    "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_2607384_ql7dfkp013h.css",
+    "cssPath": "sources/phase2_assets/c83f6e44d0c0/iconfont.css",
+    "cssContentHash": "822d831ca3f39e0aad7a797b3b0b4a34ac520eaf1398780915666898a2553f8d",
+    "fontUrl": "https://at.alicdn.com/t/font_2607384_ql7dfkp013h.ttf?t=1630549189981",
+    "fontFormat": "ttf",
+    "ttfPath": "sources/phase2_assets/c83f6e44d0c0/font.ttf",
+    "ttfContentHash": "f3a9f905f73d91af8c2e07e00e7830b23831f929c9cf95415897d95de567d68d",
+    "sourceProjects": [
+      "app-settlement",
+      "promotion-vue-2018"
+    ],
+    "templateVar": null,
+    "downloadStatus": "ok"
+  },
+  {
+    "assetId": "1311a7f5b183",
+    "cssUrl": "https://res.winbaoxian.com/iconfont/1493119125659/css/symbols.css",
+    "cssPath": "sources/phase2_assets/1311a7f5b183/iconfont.css",
+    "cssContentHash": "af7913e20f0e51b07dad691141cf72f5c309a958e64e96fc1d3368cdba6e90c4",
+    "fontUrl": "https://res.winbaoxian.com/iconfont/1493119125659/fonts/symbols.ttf",
+    "fontFormat": "ttf",
+    "ttfPath": "sources/phase2_assets/1311a7f5b183/font.ttf",
+    "ttfContentHash": "4c6e18ddf88533c96f1d94e1202723575b5fb97db57532321e04938a7d6a21a6",
+    "sourceProjects": [
+      "business-tool"
+    ],
+    "templateVar": null,
+    "downloadStatus": "ok"
+  },
+  {
+    "assetId": "0dc4cf8ce170",
+    "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_555593_h21x6xjwz8ttvs4i.css",
+    "cssPath": "sources/phase2_assets/0dc4cf8ce170/iconfont.css",
+    "cssContentHash": "68af55edc81f07a22eec58b6b384e240196a8da6fb46e5aa714e4faf9a3648b0",
+    "fontUrl": "https://res.winbaoxian.com/ali-iconfont/font_555593_h21x6xjwz8ttvs4i.ttf?t=1516965833651",
+    "fontFormat": "ttf",
+    "ttfPath": "sources/phase2_assets/0dc4cf8ce170/font.ttf",
+    "ttfContentHash": "b0929b932b52ccd5eb4bf04572620288876f8921290f3ee5f451af77e79abbf7",
+    "sourceProjects": [
+      "business-tool"
+    ],
+    "templateVar": null,
+    "downloadStatus": "ok"
+  },
+  {
+    "assetId": "7233bfd22c8e",
+    "cssUrl": "https://res.winbaoxian.com/iconfont/1491379003572/css/symbols.css",
+    "cssPath": "sources/phase2_assets/7233bfd22c8e/iconfont.css",
+    "cssContentHash": "0ff63da6c371e9c89872671dcac38024086ea94d96fe84f2992f6a10c697f95f",
+    "fontUrl": "https://res.winbaoxian.com/iconfont/1491379003572/fonts/symbols.ttf",
+    "fontFormat": "ttf",
+    "ttfPath": "sources/phase2_assets/7233bfd22c8e/font.ttf",
+    "ttfContentHash": "2ad2e9aa7c15b179421a445dc59e4e801b607b9e6acc9c4896c4c8ea37ffd566",
+    "sourceProjects": [
+      "business-tool"
+    ],
+    "templateVar": null,
+    "downloadStatus": "ok"
+  },
+  {
+    "assetId": "04dce05e46cf",
+    "cssUrl": "http://res.winbaoxian.com/iconfont/1469491211175/css/symbols.css",
+    "cssPath": "sources/phase2_assets/04dce05e46cf/iconfont.css",
+    "cssContentHash": "bdf7722d0a637a52645d8c48a374b74e6e674199f9a4d49c47d359c93c8574a4",
+    "fontUrl": "http://res.winbaoxian.com/iconfont/1469491211175/fonts/symbols.ttf",
+    "fontFormat": "ttf",
+    "ttfPath": "sources/phase2_assets/04dce05e46cf/font.ttf",
+    "ttfContentHash": "e2f65236073270d49fc53b6db538f27f3290379a282ad26cfd114419eee563c1",
+    "sourceProjects": [
+      "business-tool"
+    ],
+    "templateVar": null,
+    "downloadStatus": "ok"
+  },
+  {
+    "assetId": "6a48244a285f",
+    "cssUrl": "https://res.winbaoxian.com/iconfont/1484128104656/css/symbols.css",
+    "cssPath": "sources/phase2_assets/6a48244a285f/iconfont.css",
+    "cssContentHash": "6c22b3ad32d88b9bba053eb8bb0d56048b50be4104f7f8fdf3dabba7350df852",
+    "fontUrl": "https://res.winbaoxian.com/iconfont/1484128104656/fonts/symbols.ttf",
+    "fontFormat": "ttf",
+    "ttfPath": "sources/phase2_assets/6a48244a285f/font.ttf",
+    "ttfContentHash": "551922059409856aa2cef08c983bf4e5848f534b1065708603910c5a27d8c211",
+    "sourceProjects": [
+      "business-tool"
+    ],
+    "templateVar": null,
+    "downloadStatus": "ok"
+  },
+  {
+    "assetId": "e07e7aafbc38",
+    "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_1034268_dc97ohr4nrr.css",
+    "cssPath": "sources/phase2_assets/e07e7aafbc38/iconfont.css",
+    "cssContentHash": "25d98b412efa5312304ec681f853768457752d4118484569a2b1cbc6a4ca26fd",
+    "fontUrl": "https://res.winbaoxian.com/ali-iconfont/font_1034268_dc97ohr4nrr.ttf?t=1548660418941",
+    "fontFormat": "ttf",
+    "ttfPath": "sources/phase2_assets/e07e7aafbc38/font.ttf",
+    "ttfContentHash": "a493ffb100adec4dd4938be00f6d4461d06f6e84293ec2e10923753ccf27d79a",
+    "sourceProjects": [
+      "business-tool"
+    ],
+    "templateVar": null,
+    "downloadStatus": "ok"
+  },
+  {
+    "assetId": "21dc2f00a1ef",
+    "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_1082636_q497i9tat3r.css",
+    "cssPath": "sources/phase2_assets/21dc2f00a1ef/iconfont.css",
+    "cssContentHash": "1de96259e06caf7f0c78990b9434d4d0725ef05701b2b8138d407e66edb65fd7",
+    "fontUrl": "https://res.winbaoxian.com/ali-iconfont/font_1082636_q497i9tat3r.ttf?t=1552356125680",
+    "fontFormat": "ttf",
+    "ttfPath": "sources/phase2_assets/21dc2f00a1ef/font.ttf",
+    "ttfContentHash": "2aec24948ba5d4b38f9747c0f406253e8fe693d12b40643951942edadedfdc9d",
+    "sourceProjects": [
+      "business-tool"
+    ],
+    "templateVar": null,
+    "downloadStatus": "ok"
+  },
+  {
+    "assetId": "cf6e3630a212",
+    "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_rh2uvsvi3gxvfgvi.css",
+    "cssPath": "sources/phase2_assets/cf6e3630a212/iconfont.css",
+    "cssContentHash": "278106f7323e6589e459e43c0de4c2fab0183f8e96d038ae27c3ee2cdf4c836d",
+    "fontUrl": "https://res.winbaoxian.com/ali-iconfont/font_rh2uvsvi3gxvfgvi.ttf?t=1495691171549",
+    "fontFormat": "ttf",
+    "ttfPath": "sources/phase2_assets/cf6e3630a212/font.ttf",
+    "ttfContentHash": "d79e9453fad3e64cb906f8a7426d4020941b844cbceada381f86c5f9f7bfe3ff",
+    "sourceProjects": [
+      "business-tool"
+    ],
+    "templateVar": null,
+    "downloadStatus": "ok"
+  },
+  {
+    "assetId": "53ae05568965",
+    "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_2189700_lnwu2t4brir.css",
+    "cssPath": "sources/phase2_assets/53ae05568965/iconfont.css",
+    "cssContentHash": "7ea6fe556dd5a9a17242f0e3d4fc51a32fe55aeb702e6419f9657a62fac06a1f",
+    "fontUrl": "https://res.winbaoxian.com/ali-iconfont/font_2189700_lnwu2t4brir.ttf?t=1605668450423",
+    "fontFormat": "ttf",
+    "ttfPath": "sources/phase2_assets/53ae05568965/font.ttf",
+    "ttfContentHash": "53785070b3760b739a36d13945b59cbe48db8fca42488ddc822176904733938a",
+    "sourceProjects": [
+      "business-tool"
+    ],
+    "templateVar": null,
+    "downloadStatus": "ok"
+  },
+  {
+    "assetId": "703f65bef56b",
+    "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_280767_3owth2dyrnpl23xr.css",
+    "cssPath": "sources/phase2_assets/703f65bef56b/iconfont.css",
+    "cssContentHash": "e7ffe15bae527be93d541245cbc89ba3b0224cf8717edc875b64bfa430cb60ef",
+    "fontUrl": "https://res.winbaoxian.com/ali-iconfont/font_280767_3owth2dyrnpl23xr.ttf?t=1507602689888",
+    "fontFormat": "ttf",
+    "ttfPath": "sources/phase2_assets/703f65bef56b/font.ttf",
+    "ttfContentHash": "74caf680dd19dbbcd4e109cc3a7defe757b384eec61426e12996a0dfddda22cd",
+    "sourceProjects": [
+      "business-tool",
+      "insurance-group-mobile",
+      "promotion-vue-2018",
+      "promotion-vue-2022",
+      "tools-customer-acquisition",
+      "wechat-crm"
+    ],
+    "templateVar": null,
+    "downloadStatus": "ok"
+  },
+  {
+    "assetId": "85c94873279e",
+    "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_280767_yehzob4ie8kt9.css",
+    "cssPath": "sources/phase2_assets/85c94873279e/iconfont.css",
+    "cssContentHash": "4cefed07fc89eeb9401d9aa3d79bac34f1de4543e68fa0c6873f590b0483acb4",
+    "fontUrl": "https://res.winbaoxian.com/ali-iconfont/font_280767_yehzob4ie8kt9.ttf?t=1513849384151",
+    "fontFormat": "ttf",
+    "ttfPath": "sources/phase2_assets/85c94873279e/font.ttf",
+    "ttfContentHash": "099af0bdc70b258005bc35171873082f7196884aaa63211f96e8512356ab0e98",
+    "sourceProjects": [
+      "business-tool",
+      "face-plus-auth",
+      "payment-cashier-mobile"
+    ],
+    "templateVar": null,
+    "downloadStatus": "ok"
+  },
+  {
+    "assetId": "5598e15c97f0",
+    "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_639125_6wvy748u27bhjjor.css",
+    "cssPath": "sources/phase2_assets/5598e15c97f0/iconfont.css",
+    "cssContentHash": "fbea5bdf135716d7a4e0c55b79e33e300d8de584806503886f85ecdfb0cfa7d4",
+    "fontUrl": "https://res.winbaoxian.com/ali-iconfont/font_639125_6wvy748u27bhjjor.ttf?t=1527495973396",
+    "fontFormat": "ttf",
+    "ttfPath": "sources/phase2_assets/5598e15c97f0/font.ttf",
+    "ttfContentHash": "15f22d0dfc2ff1476382dda3c0afed2168172bfa0317a3b0ebd9becd41718b06",
+    "sourceProjects": [
+      "business-tool"
+    ],
+    "templateVar": null,
+    "downloadStatus": "ok"
+  },
+  {
+    "assetId": "856d3dd79324",
+    "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_428664_bw5n2r3dg5r.css",
+    "cssPath": "sources/phase2_assets/856d3dd79324/iconfont.css",
+    "cssContentHash": "bf680dba80452cbff9a6468975087a2fb4fba1a44e364e1dcd6b93b3e14feca0",
+    "fontUrl": "https://at.alicdn.com/t/c/font_428664_bw5n2r3dg5r.ttf?t=1677808894333",
+    "fontFormat": "ttf",
+    "ttfPath": "sources/phase2_assets/856d3dd79324/font.ttf",
+    "ttfContentHash": "9402a27f3ccdb6b67da2ff8991e2b8cc3c38b12b6e30f5a5c7b5840b369da5f2",
+    "sourceProjects": [
+      "business-tool"
+    ],
+    "templateVar": null,
+    "downloadStatus": "ok"
+  },
+  {
+    "assetId": "5bc913fb2cde",
+    "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_428664_5vdctz8oltd.css",
+    "cssPath": "sources/phase2_assets/5bc913fb2cde/iconfont.css",
+    "cssContentHash": "661ee1fbdbb944670accd78d2e2fa59226e3fbb71efcb000910ebeffdca9cc37",
+    "fontUrl": "https://res.winbaoxian.com/ali-iconfont/font_428664_5vdctz8oltd.ttf?t=1557042884389",
+    "fontFormat": "ttf",
+    "ttfPath": "sources/phase2_assets/5bc913fb2cde/font.ttf",
+    "ttfContentHash": "e5c3af1641d2e778149a05782963a89d6378e0c26f358f75c31243bcbb155119",
+    "sourceProjects": [
+      "business-tool"
+    ],
+    "templateVar": null,
+    "downloadStatus": "ok"
+  },
+  {
+    "assetId": "ca1beac4409e",
+    "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_555593_nnpr09fcvncxflxr.css",
+    "cssPath": "sources/phase2_assets/ca1beac4409e/iconfont.css",
+    "cssContentHash": "fd7ae14532a1c2bf3b22005ccc6a5fb6dca1d8c409d9555584db5e3437faf522",
+    "fontUrl": "https://res.winbaoxian.com/ali-iconfont/font_555593_nnpr09fcvncxflxr.ttf?t=1524648226090",
+    "fontFormat": "ttf",
+    "ttfPath": "sources/phase2_assets/ca1beac4409e/font.ttf",
+    "ttfContentHash": "4ee640bf49cf9f40879bff37acd7c09f8030a0d948bee096847931da51b8718f",
+    "sourceProjects": [
+      "business-tool"
+    ],
+    "templateVar": null,
+    "downloadStatus": "ok"
+  },
+  {
+    "assetId": "ebbc0ba6fc13",
+    "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_280767_uz4h17dcqr.css",
+    "cssPath": "sources/phase2_assets/ebbc0ba6fc13/iconfont.css",
+    "cssContentHash": "b80f1f57e1a3d99b9abf8a0547d239ee50442a98abe8aa5691311099f450daa9",
+    "fontUrl": "https://res.winbaoxian.com/ali-iconfont/font_280767_uz4h17dcqr.ttf?t=1557902837429",
+    "fontFormat": "ttf",
+    "ttfPath": "sources/phase2_assets/ebbc0ba6fc13/font.ttf",
+    "ttfContentHash": "1d2e0b2decae97eeb078676d74dfeb2ffaacb9347880874e28dbf23a5d61f98b",
+    "sourceProjects": [
+      "business-tool"
+    ],
+    "templateVar": null,
+    "downloadStatus": "ok"
+  },
+  {
+    "assetId": "a9b441764fb9",
+    "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_428664_ioax9hc9ckg.css",
+    "cssPath": "sources/phase2_assets/a9b441764fb9/iconfont.css",
+    "cssContentHash": "e5a14eeaea56a575905392cd369b7abbfbf5263dacda8060e1c604c0faa5f77e",
+    "fontUrl": "https://at.alicdn.com/t/c/font_428664_ioax9hc9ckg.ttf?t=1677833214356",
+    "fontFormat": "ttf",
+    "ttfPath": "sources/phase2_assets/a9b441764fb9/font.ttf",
+    "ttfContentHash": "5bd82d261b89531af6b0a22756091e73fcc31336a93565eba5c6ac3557754b13",
+    "sourceProjects": [
+      "bxs-tools-ui",
+      "planbook-main"
+    ],
+    "templateVar": null,
+    "downloadStatus": "ok"
+  },
+  {
+    "assetId": "a28da8cb6a8f",
+    "cssUrl": "https://res.winbaoxian.com/iconfont/1490260879816/css/symbols.css",
+    "cssPath": "sources/phase2_assets/a28da8cb6a8f/iconfont.css",
+    "cssContentHash": "52a8a449ab9116c75eb684287cbf73aed42831dba9f2dc7c848eb1d79a485494",
+    "fontUrl": "https://res.winbaoxian.com/iconfont/1490260879816/fonts/symbols.ttf",
+    "fontFormat": "ttf",
+    "ttfPath": "sources/phase2_assets/a28da8cb6a8f/font.ttf",
+    "ttfContentHash": "65932740fc4e42230b6e5843fd665d56b4518e6600fb5a2f8b49586fb2d40ee3",
+    "sourceProjects": [
+      "fed-toolset"
+    ],
+    "templateVar": null,
+    "downloadStatus": "ok"
+  },
+  {
+    "assetId": "05ae5da1a8d2",
+    "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_590851_sszavby595mw8kt9.css",
+    "cssPath": "sources/phase2_assets/05ae5da1a8d2/iconfont.css",
+    "cssContentHash": "02d847f1aed59d659f538b2c1494d6129af9a0090f7cc991a13902e20ae017f8",
+    "fontUrl": "https://res.winbaoxian.com/ali-iconfont/font_590851_sszavby595mw8kt9.ttf?t=1527070137174",
+    "fontFormat": "ttf",
+    "ttfPath": "sources/phase2_assets/05ae5da1a8d2/font.ttf",
+    "ttfContentHash": "1f455877848cb95927baffe130d4886aa6f92d1fedecbbb6d00d4a220770227d",
+    "sourceProjects": [
+      "h5-order-cancel",
+      "insurance-group-mobile"
+    ],
+    "templateVar": null,
+    "downloadStatus": "ok"
+  },
+  {
+    "assetId": "dc42e569b5c5",
+    "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_590851_1dp59g7ssygjsjor.css",
+    "cssPath": "sources/phase2_assets/dc42e569b5c5/iconfont.css",
+    "cssContentHash": "769253485cdb37c231ed4b1dc707dcfd9a3b860fa2539482996d1acb874f3aa8",
+    "fontUrl": "https://res.winbaoxian.com/ali-iconfont/font_590851_1dp59g7ssygjsjor.ttf?t=1521009158222",
+    "fontFormat": "ttf",
+    "ttfPath": "sources/phase2_assets/dc42e569b5c5/font.ttf",
+    "ttfContentHash": "9954aec60312c0419bbd733469eeb337a6093fd0a75141546f291f9d9b07aaae",
+    "sourceProjects": [
+      "insurance-claims-2"
+    ],
+    "templateVar": null,
+    "downloadStatus": "ok"
+  },
+  {
+    "assetId": "cafe598ecb6e",
+    "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_1964111_jn3xutqpl8l.css",
+    "cssPath": "sources/phase2_assets/cafe598ecb6e/iconfont.css",
+    "cssContentHash": "fd17f19d1769f68aba8519d7716b54bd20759e02d97632e24331b36e611125d2",
+    "fontUrl": "https://res.winbaoxian.com/ali-iconfont/font_1964111_jn3xutqpl8l.ttf?t=1595558289731",
+    "fontFormat": "ttf",
+    "ttfPath": "sources/phase2_assets/cafe598ecb6e/font.ttf",
+    "ttfContentHash": "aebab9e35b663a3e3b0a56699e95780859f6c63d886972a5ad2051ee82de160b",
+    "sourceProjects": [
+      "insurance-claims-2"
+    ],
+    "templateVar": null,
+    "downloadStatus": "ok"
+  },
+  {
+    "assetId": "2368044f2d06",
+    "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_428664_oq3fahn36yo.css",
+    "cssPath": "sources/phase2_assets/2368044f2d06/iconfont.css",
+    "cssContentHash": "fe5bbbbf3494c6acdf1706a488aea769e26e55c0829153035785c699ffe9153c",
+    "fontUrl": "https://at.alicdn.com/t/c/font_428664_oq3fahn36yo.ttf?t=1751340855270",
+    "fontFormat": "ttf",
+    "ttfPath": "sources/phase2_assets/2368044f2d06/font.ttf",
+    "ttfContentHash": "0024dc02f9b4dde33f45af1cd649565c598fc4109353f9a9e10253eddf4bff86",
+    "sourceProjects": [
+      "insurance-collection-pages",
+      "planbook-accessories",
+      "planbook-main",
+      "tools-customer-acquisition"
+    ],
+    "templateVar": null,
+    "downloadStatus": "ok"
+  },
+  {
+    "assetId": "682513d5fcad",
+    "cssUrl": "https://res.winbaoxian.com/iconfont/1483933727382/css/symbols.css",
+    "cssPath": "sources/phase2_assets/682513d5fcad/iconfont.css",
+    "cssContentHash": "a593a20a65fec81065deb1588352ec9bd746531beb732fcb54c717d35e9392d0",
+    "fontUrl": "https://res.winbaoxian.com/iconfont/1483933727382/fonts/symbols.ttf",
+    "fontFormat": "ttf",
+    "ttfPath": "sources/phase2_assets/682513d5fcad/font.ttf",
+    "ttfContentHash": "a3743a32c6f5b5baf0acec8b4ffd78f4dd523de9f37abfb51d7a6de79616ac0d",
+    "sourceProjects": [
+      "insurance-group-mobile"
+    ],
+    "templateVar": null,
+    "downloadStatus": "ok"
+  },
+  {
+    "assetId": "5e6043beee56",
+    "cssUrl": "https://res.winbaoxian.com/iconfont/1484617990198/css/symbols.css",
+    "cssPath": "sources/phase2_assets/5e6043beee56/iconfont.css",
+    "cssContentHash": "8b2f7cbf04ac51655c043ffcd67f9f285653440cf48ecefd3dd8909e084c2e4a",
+    "fontUrl": "https://res.winbaoxian.com/iconfont/1484617990198/fonts/symbols.ttf",
+    "fontFormat": "ttf",
+    "ttfPath": "sources/phase2_assets/5e6043beee56/font.ttf",
+    "ttfContentHash": "3f01c3f86752c458bdd6b79d962195eeaaf8a4a0ed7b45508a3a3d6a79c30018",
+    "sourceProjects": [
+      "insurance-group-mobile"
+    ],
+    "templateVar": null,
+    "downloadStatus": "ok"
+  },
+  {
+    "assetId": "6c4faea4e5ed",
+    "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_mzpwr9fjab4holxr.css",
+    "cssPath": "sources/phase2_assets/6c4faea4e5ed/iconfont.css",
+    "cssContentHash": "333294d0787cfe72ea053943c415bbb05d306a7334df9102731f53fe244694a9",
+    "fontUrl": "https://res.winbaoxian.com/ali-iconfont/font_mzpwr9fjab4holxr.ttf?t=1498615967546",
+    "fontFormat": "ttf",
+    "ttfPath": "sources/phase2_assets/6c4faea4e5ed/font.ttf",
+    "ttfContentHash": "5a36bf4a103097d81063b376262ce32e5db5638ea869d5f78226d48f2c20ba8d",
+    "sourceProjects": [
+      "insurance-group-mobile"
+    ],
+    "templateVar": null,
+    "downloadStatus": "ok"
+  },
+  {
+    "assetId": "79b4e8e587a5",
+    "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_401243_enzxezydrmvon7b9.css",
+    "cssPath": "sources/phase2_assets/79b4e8e587a5/iconfont.css",
+    "cssContentHash": "28611e7ea52252c94b9dead6bd72dbb0465dde5f810e64ca8cf4141888a216b0",
+    "fontUrl": "https://res.winbaoxian.com/ali-iconfont/font_401243_enzxezydrmvon7b9.ttf?t=1506421121127",
+    "fontFormat": "ttf",
+    "ttfPath": "sources/phase2_assets/79b4e8e587a5/font.ttf",
+    "ttfContentHash": "69543a04e305504e7f0e53558c8678972847bc635aa4c949a829c8413353811d",
+    "sourceProjects": [
+      "insurance-group-mobile"
+    ],
+    "templateVar": null,
+    "downloadStatus": "ok"
+  },
+  {
+    "assetId": "f73565d1bbce",
+    "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_2365860_kv786slvuwh.css",
+    "cssPath": "sources/phase2_assets/f73565d1bbce/iconfont.css",
+    "cssContentHash": "b3b7f88c85ed95b336a56e704ffb83d0eebb9bd5d49da0a00349d79b7c4f4aed",
+    "fontUrl": "https://res.winbaoxian.com/ali-iconfont/font_2365860_kv786slvuwh.ttf?t=1612425879988",
+    "fontFormat": "ttf",
+    "ttfPath": "sources/phase2_assets/f73565d1bbce/font.ttf",
+    "ttfContentHash": "382dec9661cfa46f86bf3da7e93475ae6d6c7c4bac78c8e81677e4d87c5987dd",
+    "sourceProjects": [
+      "insurance-group-mobile"
+    ],
+    "templateVar": null,
+    "downloadStatus": "ok"
+  },
+  {
+    "assetId": "dc42a65128c9",
+    "cssUrl": "https://res.winbaoxian.com/auto_upload_ci/insurance-group-mobile-webpack4/ali-iconfont/font_428664_7jwpsg6zrcx.css",
+    "cssPath": null,
+    "cssContentHash": null,
+    "fontUrl": null,
+    "fontFormat": "ttf",
+    "ttfPath": null,
+    "ttfContentHash": null,
+    "sourceProjects": [
+      "insurance-group-mobile"
+    ],
+    "templateVar": null,
+    "downloadStatus": "css_404"
+  },
+  {
+    "assetId": "019f321bbcff",
+    "cssUrl": "https://res.winbaoxian.com/iconfont/1494384846295/css/symbols.css",
+    "cssPath": "sources/phase2_assets/019f321bbcff/iconfont.css",
+    "cssContentHash": "603ea2987b0a40215dab93beea6e131c3367847a7f2ece68f886ab3a403fb6c0",
+    "fontUrl": "https://res.winbaoxian.com/iconfont/1494384846295/fonts/symbols.ttf",
+    "fontFormat": "ttf",
+    "ttfPath": "sources/phase2_assets/019f321bbcff/font.ttf",
+    "ttfContentHash": "38cebb7edf106cb2ed88b8ed75545b1abe7de37c6c71bfc1e788e12ba2076926",
+    "sourceProjects": [
+      "insurance-group-mobile"
+    ],
+    "templateVar": null,
+    "downloadStatus": "ok"
+  },
+  {
+    "assetId": "a18c04d4f0c5",
+    "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_2921605_uatv9twnxne.css",
+    "cssPath": "sources/phase2_assets/a18c04d4f0c5/iconfont.css",
+    "cssContentHash": "02a42b8cb91eedb79c2bc59cbbba41d2e349bc53f7a26b8682bc83ab7f0d00af",
+    "fontUrl": "https://at.alicdn.com/t/c/font_2921605_uatv9twnxne.ttf?t=1664420987006",
+    "fontFormat": "ttf",
+    "ttfPath": "sources/phase2_assets/a18c04d4f0c5/font.ttf",
+    "ttfContentHash": "d62b5705a8ff8fa97211ef200a9de1d9eda98daf0f54f5a8ad3a589ee2c804c6",
+    "sourceProjects": [
+      "insurance-group-mobile",
+      "promotion-vue-2022"
+    ],
+    "templateVar": null,
+    "downloadStatus": "ok"
+  },
+  {
+    "assetId": "eedc00a2f845",
+    "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_806066_ow7azo4zaoi.css",
+    "cssPath": "sources/phase2_assets/eedc00a2f845/iconfont.css",
+    "cssContentHash": "e783813b2cb2f5fa3a34f934cb64d4c1217873b274cd6f47e0f5309cf9c4039a",
+    "fontUrl": "https://res.winbaoxian.com/ali-iconfont/font_806066_ow7azo4zaoi.ttf?t=1535010572570",
+    "fontFormat": "ttf",
+    "ttfPath": "sources/phase2_assets/eedc00a2f845/font.ttf",
+    "ttfContentHash": "8282e00f5f72e19a0306702f029864f7db3152e56d9996190c1893000a92d282",
+    "sourceProjects": [
+      "insurance-list-pages"
+    ],
+    "templateVar": null,
+    "downloadStatus": "ok"
+  },
+  {
+    "assetId": "90242b7194f8",
+    "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_280767_gc9nad8nz5mi.css",
+    "cssPath": "sources/phase2_assets/90242b7194f8/iconfont.css",
+    "cssContentHash": "ed5e0f84ebc0c87e99212e77ae730279b23491ea94a06ed04fe9cd8f901b5ba5",
+    "fontUrl": "https://res.winbaoxian.com/ali-iconfont/font_280767_gc9nad8nz5mi.ttf?t=1506420893052",
+    "fontFormat": "ttf",
+    "ttfPath": "sources/phase2_assets/90242b7194f8/font.ttf",
+    "ttfContentHash": "3cd5cd1df26cc321d2063950600b43f9ebdd4b8eef5f4db8d4d65213b4de3570",
+    "sourceProjects": [
+      "insurance-policy-refund"
+    ],
+    "templateVar": null,
+    "downloadStatus": "ok"
+  },
+  {
+    "assetId": "2a7e87aa7c81",
+    "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_280767_p4qiup9lop.css",
+    "cssPath": "sources/phase2_assets/2a7e87aa7c81/iconfont.css",
+    "cssContentHash": "c8b45f6f8bd90c47e68d4093aff75718c42eb29248bcdff532902fdcf4a27d09",
+    "fontUrl": "https://res.winbaoxian.com/ali-iconfont/font_280767_p4qiup9lop.ttf?t=1529638462545",
+    "fontFormat": "ttf",
+    "ttfPath": "sources/phase2_assets/2a7e87aa7c81/font.ttf",
+    "ttfContentHash": "cc9887392b8f0212a9e2fbbad4242bfd3a270a18cff5949c86f81e47d030f2d0",
+    "sourceProjects": [
+      "insurance-policy-refund",
+      "management-insurance-template"
+    ],
+    "templateVar": null,
+    "downloadStatus": "ok"
+  },
+  {
+    "assetId": "d443fdd5cccb",
+    "cssUrl": "https://at.alicdn.com/t/font_3210243_inqj8n4aqvd.css",
+    "cssPath": "sources/phase2_assets/d443fdd5cccb/iconfont.css",
+    "cssContentHash": "944ba60620d529c475a4d93d3f0d2307458f95ba6bce543c99605bd8e1c50743",
+    "fontUrl": "https://at.alicdn.com/t/font_3210243_inqj8n4aqvd.ttf?t=1646039274402",
+    "fontFormat": "ttf",
+    "ttfPath": "sources/phase2_assets/d443fdd5cccb/font.ttf",
+    "ttfContentHash": "c2821c9a7dd0ae34b2a5f00e69f9ef31d73424224f0d44edd66697b8ae18d38e",
+    "sourceProjects": [
+      "management-community-operations",
+      "management-digitalize-product"
+    ],
+    "templateVar": null,
+    "downloadStatus": "ok"
+  },
+  {
+    "assetId": "13c3d5d6f120",
+    "cssUrl": "https://res.winbaoxian.com/auto_upload_ci/management-community-operations/static/iconfont/20231024/iconfont.css",
+    "cssPath": "sources/phase2_assets/13c3d5d6f120/iconfont.css",
+    "cssContentHash": "0dcb966c086e529cf2de3c17d6a9a2f622567971e3aa1116690ce8cb4d924318",
+    "fontUrl": "https://res.winbaoxian.com/auto_upload_ci/management-community-operations/static/iconfont/20231024/iconfont.ttf?t=1698118546579",
+    "fontFormat": "ttf",
+    "ttfPath": "sources/phase2_assets/13c3d5d6f120/font.ttf",
+    "ttfContentHash": "997fd44720d923fd9e47b6fe9c4f700f09359f86088f31f30ab4363777798f17",
+    "sourceProjects": [
+      "management-community-operations"
+    ],
+    "templateVar": null,
+    "downloadStatus": "ok"
+  },
+  {
+    "assetId": "9e8f27840200",
+    "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_336721_74m4vln6iy919k9.css",
+    "cssPath": "sources/phase2_assets/9e8f27840200/iconfont.css",
+    "cssContentHash": "180a3dcffbae17afecd6d86aee8460c96ba2659df6a3291a9fd0bf4ebba8d666",
+    "fontUrl": "https://res.winbaoxian.com/ali-iconfont/font_336721_74m4vln6iy919k9.ttf?t=1515134309722",
+    "fontFormat": "ttf",
+    "ttfPath": "sources/phase2_assets/9e8f27840200/font.ttf",
+    "ttfContentHash": "1e946b828ba0467563eeace6b8a4901407fefa80c924c2fde1ae4cd6f04b58aa",
+    "sourceProjects": [
+      "management-promotions"
+    ],
+    "templateVar": null,
+    "downloadStatus": "ok"
+  },
+  {
+    "assetId": "12e46533c451",
+    "cssUrl": "https://at.alicdn.com/t/c/font_280767_l7q0rmkx4g.css",
+    "cssPath": "sources/phase2_assets/12e46533c451/iconfont.css",
+    "cssContentHash": "3276eb5bb51ade21b41677d3c65fb43e0639c82a3be5acfc0b3b2cc58229fabd",
+    "fontUrl": "https://at.alicdn.com/t/c/font_280767_l7q0rmkx4g.ttf?t=1694768849547",
+    "fontFormat": "ttf",
+    "ttfPath": "sources/phase2_assets/12e46533c451/font.ttf",
+    "ttfContentHash": "1780dd5f6c3dcff89add4a9f7d0ff2aa4c5901fe49ac79d7f3aa7006292dd999",
+    "sourceProjects": [
+      "management-wechat-crm"
+    ],
+    "templateVar": null,
+    "downloadStatus": "ok"
+  },
+  {
+    "assetId": "0c2981bd9779",
+    "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_428664_79kd0g7h613.css",
+    "cssPath": "sources/phase2_assets/0c2981bd9779/iconfont.css",
+    "cssContentHash": "613241cc40c62bf86a78b058f7b87b4a12e270c3ff044d329d1d6d01bd057085",
+    "fontUrl": "https://at.alicdn.com/t/c/font_428664_79kd0g7h613.ttf?t=1691371371500",
+    "fontFormat": "ttf",
+    "ttfPath": "sources/phase2_assets/0c2981bd9779/font.ttf",
+    "ttfContentHash": "218f4acc30cd74c769c6ec8ef06863b6e201644221fe3dfd92087df054da4d2e",
+    "sourceProjects": [
+      "management-wechat-crm"
+    ],
+    "templateVar": null,
+    "downloadStatus": "ok"
+  },
+  {
+    "assetId": "c10909b7d1bf",
+    "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_428664_pwh4ebtaxx.css",
+    "cssPath": "sources/phase2_assets/c10909b7d1bf/iconfont.css",
+    "cssContentHash": "0c046c91809eef0b05bb157e842e062300275be211cd4b7720c55f1ebf71f474",
+    "fontUrl": "https://at.alicdn.com/t/c/font_428664_pwh4ebtaxx.ttf?t=1702866714461",
+    "fontFormat": "ttf",
+    "ttfPath": "sources/phase2_assets/c10909b7d1bf/font.ttf",
+    "ttfContentHash": "5f803b18b3c4b88d7915fa8d5bc9a831159cba69adeb7b108e9af4e511da645d",
+    "sourceProjects": [
+      "planbook-accessories",
+      "promotion-vue-2022"
+    ],
+    "templateVar": null,
+    "downloadStatus": "ok"
+  },
+  {
+    "assetId": "89654a0a851a",
+    "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_428664_4b80dqdddqv.css",
+    "cssPath": "sources/phase2_assets/89654a0a851a/iconfont.css",
+    "cssContentHash": "c2cf4e08498c9775edb2933f18f8a1b73074225a6fa78da4981616bcc29b1a1f",
+    "fontUrl": "https://res.winbaoxian.com/ali-iconfont/font_428664_4b80dqdddqv.ttf?t=1570590750884",
+    "fontFormat": "ttf",
+    "ttfPath": "sources/phase2_assets/89654a0a851a/font.ttf",
+    "ttfContentHash": "6879e4cc6c7a946b3cf1e84409175d75670b140ceddd5fbf46432b493963afe9",
+    "sourceProjects": [
+      "planbook-accessories",
+      "planbook-main",
+      "promotion-vue-2018",
+      "tools-customer-acquisition"
+    ],
+    "templateVar": null,
+    "downloadStatus": "ok"
+  },
+  {
+    "assetId": "5a3d27427ec3",
+    "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_428664_2ilxht3q3ky.css",
+    "cssPath": "sources/phase2_assets/5a3d27427ec3/iconfont.css",
+    "cssContentHash": "605be4eddcff921eab7e6c194b83e8fdb8457342938c2e8f9cbcabdd88bb4f63",
+    "fontUrl": "https://at.alicdn.com/t/c/font_428664_2ilxht3q3ky.ttf?t=1664154342841",
+    "fontFormat": "ttf",
+    "ttfPath": "sources/phase2_assets/5a3d27427ec3/font.ttf",
+    "ttfContentHash": "085acd7baf5f3a92c2e84ac808bbca11e6a16911e87778b378524e1add8486f7",
+    "sourceProjects": [
+      "planbook-accessories"
+    ],
+    "templateVar": null,
+    "downloadStatus": "ok"
+  },
+  {
+    "assetId": "651c88c09048",
+    "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_5083134_600xfof53ct.css",
+    "cssPath": "sources/phase2_assets/651c88c09048/iconfont.css",
+    "cssContentHash": "e9add228457f6c54c687ff00ada48f52e24865f4e9b9c2bfa184525cd5e0994a",
+    "fontUrl": "https://at.alicdn.com/t/c/font_5083134_600xfof53ct.ttf?t=1765443649035",
+    "fontFormat": "ttf",
+    "ttfPath": "sources/phase2_assets/651c88c09048/font.ttf",
+    "ttfContentHash": "6c03dd4325030e8d8d0432419e932ed1047c947f2aff51450931c3c4c41b123f",
+    "sourceProjects": [
+      "planbook-accessories",
+      "tools-customer-acquisition"
+    ],
+    "templateVar": null,
+    "downloadStatus": "ok"
+  },
+  {
+    "assetId": "c1be4e109970",
+    "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_280767_1r2koyd9phb.css",
+    "cssPath": "sources/phase2_assets/c1be4e109970/iconfont.css",
+    "cssContentHash": "0ea199c4b12b582d821b48695b278cba8db14f00069e46f3a01c05f82c7d4c8a",
+    "fontUrl": "https://res.winbaoxian.com/ali-iconfont/font_280767_1r2koyd9phb.ttf?t=1551942467596",
+    "fontFormat": "ttf",
+    "ttfPath": "sources/phase2_assets/c1be4e109970/font.ttf",
+    "ttfContentHash": "ef921edc6ef2a3870e3580d60f7cbd0f1fed7ec6f76370343740fe111c8c75ac",
+    "sourceProjects": [
+      "planbook-accessories"
+    ],
+    "templateVar": null,
+    "downloadStatus": "ok"
+  },
+  {
+    "assetId": "abdf3a84ee65",
+    "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_428664_dvo3et3tigh.css",
+    "cssPath": "sources/phase2_assets/abdf3a84ee65/iconfont.css",
+    "cssContentHash": "477ce98731b8c14b67555a9a350c6c59e7a48decd0b538c2ec2183ccfaae83af",
+    "fontUrl": "https://at.alicdn.com/t/c/font_428664_dvo3et3tigh.ttf?t=1744188267532",
+    "fontFormat": "ttf",
+    "ttfPath": "sources/phase2_assets/abdf3a84ee65/font.ttf",
+    "ttfContentHash": "09df0bd93354a834eb98d49c85130c1f70ab44dc0f3c02b98fbd6a01b5e2a758",
+    "sourceProjects": [
+      "planbook-accessories",
+      "promotion-vue-2022"
+    ],
+    "templateVar": null,
+    "downloadStatus": "ok"
+  },
+  {
+    "assetId": "13457a0ec155",
+    "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_428664_19bv2uxkv45.css",
+    "cssPath": "sources/phase2_assets/13457a0ec155/iconfont.css",
+    "cssContentHash": "83cd3e55811c163fc70e20ca2d6f5bbe77a829b2e51af8dc3d759f095bc4e6a1",
+    "fontUrl": "https://at.alicdn.com/t/c/font_428664_19bv2uxkv45.ttf?t=1758701687763",
+    "fontFormat": "ttf",
+    "ttfPath": "sources/phase2_assets/13457a0ec155/font.ttf",
+    "ttfContentHash": "7e385d2bf1d6bf728226028ed7e169c33d81702fbca1795a5cc389290b5cd86d",
+    "sourceProjects": [
+      "planbook-accessories"
+    ],
+    "templateVar": null,
+    "downloadStatus": "ok"
+  },
+  {
+    "assetId": "c722a0383ed5",
+    "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_428664_98h83hzvaj5.css",
+    "cssPath": "sources/phase2_assets/c722a0383ed5/iconfont.css",
+    "cssContentHash": "fd8800eac5a4bc475f040955243faa97ebdb173a783de52bd734375d1674217b",
+    "fontUrl": "https://at.alicdn.com/t/c/font_428664_98h83hzvaj5.ttf?t=1740982026927",
+    "fontFormat": "ttf",
+    "ttfPath": "sources/phase2_assets/c722a0383ed5/font.ttf",
+    "ttfContentHash": "2b7b10e84bca23fb98c5f2c44f530a731ecec8e3050faca763664772c8a188d3",
+    "sourceProjects": [
+      "planbook-accessories"
+    ],
+    "templateVar": null,
+    "downloadStatus": "ok"
+  },
+  {
+    "assetId": "94e10a346cb3",
+    "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_428664_i62br8ctjvi.css",
+    "cssPath": "sources/phase2_assets/94e10a346cb3/iconfont.css",
+    "cssContentHash": "f47d8d2e2a03be5777c6b55e35560330eb2d6db92dc513738095d685e3fce542",
+    "fontUrl": "https://res.winbaoxian.com/ali-iconfont/font_428664_i62br8ctjvi.ttf?t=1589188469041",
+    "fontFormat": "ttf",
+    "ttfPath": "sources/phase2_assets/94e10a346cb3/font.ttf",
+    "ttfContentHash": "ff71fa297b811255338df82e65786176c45c0cc6e85012acd112e845cc0d6c64",
+    "sourceProjects": [
+      "planbook-accessories"
+    ],
+    "templateVar": null,
+    "downloadStatus": "ok"
+  },
+  {
+    "assetId": "e6592a1ef015",
+    "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_280767_xzhtbg6ic.css",
+    "cssPath": "sources/phase2_assets/e6592a1ef015/iconfont.css",
+    "cssContentHash": "b581f83df46c9a63cc2194207227be41c6c8b985c5edf85c3a6e94d150317b61",
+    "fontUrl": "https://res.winbaoxian.com/ali-iconfont/font_280767_xzhtbg6ic.ttf?t=1558924187945",
+    "fontFormat": "ttf",
+    "ttfPath": "sources/phase2_assets/e6592a1ef015/font.ttf",
+    "ttfContentHash": "d40c7fcb2b7e05237a7a71db3cb112e357563be8513f8f6080ca78cfe773546f",
+    "sourceProjects": [
+      "planbook-innovative",
+      "planbook-main"
+    ],
+    "templateVar": null,
+    "downloadStatus": "ok"
+  },
+  {
+    "assetId": "5b4ea5927db0",
+    "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_428664_h9h1ezsv.css",
+    "cssPath": "sources/phase2_assets/5b4ea5927db0/iconfont.css",
+    "cssContentHash": "6b57d9fea2c275ae43ab3e0d2e1f63069564ecef5ec6d3910853c95868743c3e",
+    "fontUrl": "https://at.alicdn.com/t/c/font_428664_h9h1ezsv.ttf?t=1740045687551",
+    "fontFormat": "ttf",
+    "ttfPath": "sources/phase2_assets/5b4ea5927db0/font.ttf",
+    "ttfContentHash": "b1c8ccf5302ec05231756b59877e3248631002ab1a876311e97804c68b3a2ebb",
+    "sourceProjects": [
+      "planbook-main"
+    ],
+    "templateVar": null,
+    "downloadStatus": "ok"
+  },
+  {
+    "assetId": "cf5f445075cb",
+    "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_428664_8y61ps0f84n.css",
+    "cssPath": "sources/phase2_assets/cf5f445075cb/iconfont.css",
+    "cssContentHash": "0292910d46abd537f00b090449faf2d6c84c78a826a804d2fca1f05af2f0b8aa",
+    "fontUrl": "https://at.alicdn.com/t/c/font_428664_8y61ps0f84n.ttf?t=1743585981454",
+    "fontFormat": "ttf",
+    "ttfPath": "sources/phase2_assets/cf5f445075cb/font.ttf",
+    "ttfContentHash": "1447d6d158ca7cf38881d4ab8743ebc6f6e5f1f7ac5bbaf217df905222c0773a",
+    "sourceProjects": [
+      "planbook-main"
+    ],
+    "templateVar": null,
+    "downloadStatus": "ok"
+  },
+  {
+    "assetId": "667e13431cb7",
+    "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_428664_8h17cvfvm7r.css",
+    "cssPath": "sources/phase2_assets/667e13431cb7/iconfont.css",
+    "cssContentHash": "4062c36c9b5a2593215ebd96784cf7d8aaec36e51b71a22a7c947eeb51868544",
+    "fontUrl": "https://at.alicdn.com/t/c/font_428664_8h17cvfvm7r.ttf?t=1753164579316",
+    "fontFormat": "ttf",
+    "ttfPath": "sources/phase2_assets/667e13431cb7/font.ttf",
+    "ttfContentHash": "1bb0ae610a45b8df71a766ec67d4bb19905b5c7f2fc1ba217caddcc70cbd6930",
+    "sourceProjects": [
+      "planbook-main"
+    ],
+    "templateVar": null,
+    "downloadStatus": "ok"
+  },
+  {
+    "assetId": "090d8a31db71",
+    "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_428664_66gv1lr5kkx.css",
+    "cssPath": "sources/phase2_assets/090d8a31db71/iconfont.css",
+    "cssContentHash": "e7069ca23e957e9ab7662a0d8d931acae94d6a36d3abe4fcb91fd051afd8b824",
+    "fontUrl": "https://at.alicdn.com/t/c/font_428664_66gv1lr5kkx.ttf?t=1727169043608",
+    "fontFormat": "ttf",
+    "ttfPath": "sources/phase2_assets/090d8a31db71/font.ttf",
+    "ttfContentHash": "927529cb4422b4b41bd510227237266b6fe88662d8df4b65f78b67fd9e7b5786",
+    "sourceProjects": [
+      "planbook-main"
+    ],
+    "templateVar": null,
+    "downloadStatus": "ok"
+  },
+  {
+    "assetId": "cdb190ccdd75",
+    "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_428664_3dz2t0h957y14i.css",
+    "cssPath": "sources/phase2_assets/cdb190ccdd75/iconfont.css",
+    "cssContentHash": "e0ae526c1591732dea3b968d204362cdf0d4856d295524b172081e5222f7f800",
+    "fontUrl": "https://res.winbaoxian.com/ali-iconfont/font_428664_3dz2t0h957y14i.ttf?t=1524637100703",
+    "fontFormat": "ttf",
+    "ttfPath": "sources/phase2_assets/cdb190ccdd75/font.ttf",
+    "ttfContentHash": "997504de1505743fa6fe2bf37049fd7bfd4277cef670b4be0a0769d30137fb7a",
+    "sourceProjects": [
+      "planbook-main"
+    ],
+    "templateVar": null,
+    "downloadStatus": "ok"
+  },
+  {
+    "assetId": "bc82d40635fc",
+    "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_428664_7i2cv6kfg7.css",
+    "cssPath": "sources/phase2_assets/bc82d40635fc/iconfont.css",
+    "cssContentHash": "00f115d9abb8ad7b58c175abe844f056752c59c0d01ebadcd37ba719800b68a5",
+    "fontUrl": "https://at.alicdn.com/t/c/font_428664_7i2cv6kfg7.ttf?t=1736733004194",
+    "fontFormat": "ttf",
+    "ttfPath": "sources/phase2_assets/bc82d40635fc/font.ttf",
+    "ttfContentHash": "a1bdadf2f500444f91896f19a449434d60c3bb052379bb5ef982c2c9cdc5476c",
+    "sourceProjects": [
+      "planbook-main"
+    ],
+    "templateVar": null,
+    "downloadStatus": "ok"
+  },
+  {
+    "assetId": "128f73b66b91",
+    "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_428664_b8utvxl1paa.css",
+    "cssPath": "sources/phase2_assets/128f73b66b91/iconfont.css",
+    "cssContentHash": "e03a80c56f632cb5e0b97a2f8eb06bd12072fb17a03216beef6ef53eb5bda9e4",
+    "fontUrl": "https://res.winbaoxian.com/ali-iconfont/font_428664_b8utvxl1paa.ttf?t=1563347346545",
+    "fontFormat": "ttf",
+    "ttfPath": "sources/phase2_assets/128f73b66b91/font.ttf",
+    "ttfContentHash": "cef81f78ee798c1fb1b8e1beed2b90ff9501afac7fddd2271375a3019762b815",
+    "sourceProjects": [
+      "planbook-main"
+    ],
+    "templateVar": null,
+    "downloadStatus": "ok"
+  },
+  {
+    "assetId": "d6fea52e9b79",
+    "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_428664_bgi1lbym7wp.css",
+    "cssPath": "sources/phase2_assets/d6fea52e9b79/iconfont.css",
+    "cssContentHash": "49fac70a501d513cae3cacacc3285b491ce0c0063e7d10dca3a74836e9f7f4e3",
+    "fontUrl": "https://res.winbaoxian.com/ali-iconfont/font_428664_bgi1lbym7wp.ttf?t=1591086307636",
+    "fontFormat": "ttf",
+    "ttfPath": "sources/phase2_assets/d6fea52e9b79/font.ttf",
+    "ttfContentHash": "977cd8a9a33d4e5bd4c1e6949d11af1b268f9a1ea7cb36990c84af51e8a86876",
+    "sourceProjects": [
+      "planbook-main",
+      "planbook-policy-check",
+      "tools-customer-acquisition"
+    ],
+    "templateVar": null,
+    "downloadStatus": "ok"
+  },
+  {
+    "assetId": "b667bae78d4c",
+    "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_428664_gjvv2uvrt8k.css",
+    "cssPath": "sources/phase2_assets/b667bae78d4c/iconfont.css",
+    "cssContentHash": "10f926ae2cac0f0cd2e6299ebd8cab0381fce5d9aa1f9c0c0cf8b55fe36560fd",
+    "fontUrl": "https://at.alicdn.com/t/c/font_428664_gjvv2uvrt8k.ttf?t=1679454835679",
+    "fontFormat": "ttf",
+    "ttfPath": "sources/phase2_assets/b667bae78d4c/font.ttf",
+    "ttfContentHash": "73a8f6e25a84857c7083da296158c86fc6ed386ee4c8c494053ed4eff46be2a1",
+    "sourceProjects": [
+      "planbook-main"
+    ],
+    "templateVar": null,
+    "downloadStatus": "ok"
+  },
+  {
+    "assetId": "a6f5b3c6f8a9",
+    "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_280767_a0v3md61aah.css",
+    "cssPath": "sources/phase2_assets/a6f5b3c6f8a9/iconfont.css",
+    "cssContentHash": "79ab1d623e253ce45d8ffdb290d3559d9b6091536038a4c937156ab4e2790958",
+    "fontUrl": "https://res.winbaoxian.com/ali-iconfont/font_280767_a0v3md61aah.ttf?t=1605058555445",
+    "fontFormat": "ttf",
+    "ttfPath": "sources/phase2_assets/a6f5b3c6f8a9/font.ttf",
+    "ttfContentHash": "2f5b7941ea8e33ae508580f5656511f870bffccc3952e49a502c51d2a4780bf3",
+    "sourceProjects": [
+      "planbook-main",
+      "tools-customer-acquisition"
+    ],
+    "templateVar": null,
+    "downloadStatus": "ok"
+  },
+  {
+    "assetId": "7383d5e31884",
+    "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_1400070_muj04vmlu7b.css",
+    "cssPath": "sources/phase2_assets/7383d5e31884/iconfont.css",
+    "cssContentHash": "74bd45258ad883b35a604344c8a77909cb0132aaa15408ed31c8a2592825b117",
+    "fontUrl": "https://res.winbaoxian.com/ali-iconfont/font_1400070_muj04vmlu7b.ttf?t=1579167315731",
+    "fontFormat": "ttf",
+    "ttfPath": "sources/phase2_assets/7383d5e31884/font.ttf",
+    "ttfContentHash": "d4f63eb6a130b94998caaf479284dc00b51d3102c46d94686b64d9a39b700af1",
+    "sourceProjects": [
+      "planbook-main"
+    ],
+    "templateVar": null,
+    "downloadStatus": "ok"
+  },
+  {
+    "assetId": "ddbc89023849",
+    "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_428664_8mcpbsbmetn.css",
+    "cssPath": "sources/phase2_assets/ddbc89023849/iconfont.css",
+    "cssContentHash": "cc60a2fa20db1b89c0659f242d62b7d9702a88123742ee45c4c9d1822b0260b4",
+    "fontUrl": "https://at.alicdn.com/t/c/font_428664_8mcpbsbmetn.ttf?t=1680829488483",
+    "fontFormat": "ttf",
+    "ttfPath": "sources/phase2_assets/ddbc89023849/font.ttf",
+    "ttfContentHash": "818b8cb9461daad5a0163629e4fcc8c41a22d19457639c997e18eb7a8ab8a450",
+    "sourceProjects": [
+      "planbook-main"
+    ],
+    "templateVar": null,
+    "downloadStatus": "ok"
+  },
+  {
+    "assetId": "a626133907e9",
+    "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_428664_oyu00uuny3j.css",
+    "cssPath": "sources/phase2_assets/a626133907e9/iconfont.css",
+    "cssContentHash": "953a3b6170876ab0eb078aa2df726c927a3d6cfcddd476c25af7ed4dea5bb445",
+    "fontUrl": "https://at.alicdn.com/t/c/font_428664_oyu00uuny3j.ttf?t=1748398813468",
+    "fontFormat": "ttf",
+    "ttfPath": "sources/phase2_assets/a626133907e9/font.ttf",
+    "ttfContentHash": "c2dc7b24106f43f4985085c5a1db3e17bac294ed86a067f29ad3d5fd589b0cd9",
+    "sourceProjects": [
+      "planbook-main"
+    ],
+    "templateVar": null,
+    "downloadStatus": "ok"
+  },
+  {
+    "assetId": "04996b07804e",
+    "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_5083134_vfi4mapwxbh.css",
+    "cssPath": "sources/phase2_assets/04996b07804e/iconfont.css",
+    "cssContentHash": "31d018d7a4742b8c242ffec084376da86789aae1c1114ffdd84a4eeca4fb80db",
+    "fontUrl": "https://at.alicdn.com/t/c/font_5083134_vfi4mapwxbh.ttf?t=1770361231138",
+    "fontFormat": "ttf",
+    "ttfPath": "sources/phase2_assets/04996b07804e/font.ttf",
+    "ttfContentHash": "26aed9d133c678e520ecc8df88dd8d170214df6a5dda6a3b1d044549ddc22669",
+    "sourceProjects": [
+      "planbook-main"
+    ],
+    "templateVar": null,
+    "downloadStatus": "ok"
+  },
+  {
+    "assetId": "3a3a35657d1d",
+    "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_428664_jfilksqj3ej.css",
+    "cssPath": "sources/phase2_assets/3a3a35657d1d/iconfont.css",
+    "cssContentHash": "10b6f5cc47c164bd344e919b9d9e939b8a8f1e7fd074768d58beffc65a38527e",
+    "fontUrl": "https://at.alicdn.com/t/c/font_428664_jfilksqj3ej.ttf?t=1743582912006",
+    "fontFormat": "ttf",
+    "ttfPath": "sources/phase2_assets/3a3a35657d1d/font.ttf",
+    "ttfContentHash": "503cd2a3f2f1cea2f6fbb423ce2bb8e16cefb56974fddea19112bd2dca1c8550",
+    "sourceProjects": [
+      "planbook-main"
+    ],
+    "templateVar": null,
+    "downloadStatus": "ok"
+  },
+  {
+    "assetId": "f5f3da6d03f8",
+    "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_4960269_9p2et13034r.css",
+    "cssPath": "sources/phase2_assets/f5f3da6d03f8/iconfont.css",
+    "cssContentHash": "65079f985e8e61d15d88c716ae28337ad6e876d91e297dad26d469ecd6c5470f",
+    "fontUrl": "https://at.alicdn.com/t/c/font_4960269_9p2et13034r.ttf?t=1750925323346",
+    "fontFormat": "ttf",
+    "ttfPath": "sources/phase2_assets/f5f3da6d03f8/font.ttf",
+    "ttfContentHash": "e50b5995a021a515c0c9a2149e031c9d04e43b7ec498ea3c2bfc475e9ae36133",
+    "sourceProjects": [
+      "planbook-main"
+    ],
+    "templateVar": null,
+    "downloadStatus": "ok"
+  },
+  {
+    "assetId": "88e6c16ebe27",
+    "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_428664_y6u9dveq22.css",
+    "cssPath": "sources/phase2_assets/88e6c16ebe27/iconfont.css",
+    "cssContentHash": "b9ceb2fa0d9628e131980e434f990cae16517d7bc12f1e5efbe1476cf3df2aae",
+    "fontUrl": "https://at.alicdn.com/t/c/font_428664_y6u9dveq22.ttf?t=1739349946408",
+    "fontFormat": "ttf",
+    "ttfPath": "sources/phase2_assets/88e6c16ebe27/font.ttf",
+    "ttfContentHash": "0e41b073470652a6eecee28cc9e4ec21a1f54d7cca9e915431f74cde0642dbf7",
+    "sourceProjects": [
+      "planbook-main"
+    ],
+    "templateVar": null,
+    "downloadStatus": "ok"
+  },
+  {
+    "assetId": "82f2c3714e22",
+    "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_428664_jlenlrheaxn.css",
+    "cssPath": "sources/phase2_assets/82f2c3714e22/iconfont.css",
+    "cssContentHash": "5bd45519cf48df3f527088d664bbca1c8993389ae0d80f8715517476aa34501c",
+    "fontUrl": "https://at.alicdn.com/t/c/font_428664_jlenlrheaxn.ttf?t=1769766603134",
+    "fontFormat": "ttf",
+    "ttfPath": "sources/phase2_assets/82f2c3714e22/font.ttf",
+    "ttfContentHash": "eeaf675982679d72b9717ae93002a8b9514a249686491e973c0577e76bb9cb29",
+    "sourceProjects": [
+      "planbook-policy-check"
+    ],
+    "templateVar": null,
+    "downloadStatus": "ok"
+  },
+  {
+    "assetId": "c34e5ca9f39e",
+    "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_428664_99d69tcivr4.css",
+    "cssPath": "sources/phase2_assets/c34e5ca9f39e/iconfont.css",
+    "cssContentHash": "f7dc7a61e19108bf74006c9a1a8d34d3ef69a485872e8d3e275073028cd39fb2",
+    "fontUrl": "https://at.alicdn.com/t/c/font_428664_99d69tcivr4.ttf?t=1767003229974",
+    "fontFormat": "ttf",
+    "ttfPath": "sources/phase2_assets/c34e5ca9f39e/font.ttf",
+    "ttfContentHash": "9bdf7066c9d822c9a95618c9f1c3e94127734c72cab81e4831ce22fbe3ffb9c3",
+    "sourceProjects": [
+      "planbook-policy-check"
+    ],
+    "templateVar": null,
+    "downloadStatus": "ok"
+  },
+  {
+    "assetId": "195a8578410e",
+    "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_5083134_4f3egsm2o2c.css",
+    "cssPath": "sources/phase2_assets/195a8578410e/iconfont.css",
+    "cssContentHash": "45357860560f06f557b2ee717a89e1b8c35a121a193d7740468e43dc5c36af41",
+    "fontUrl": "https://at.alicdn.com/t/c/font_5083134_4f3egsm2o2c.ttf?t=1765165388345",
+    "fontFormat": "ttf",
+    "ttfPath": "sources/phase2_assets/195a8578410e/font.ttf",
+    "ttfContentHash": "e0dc3815f50944db19e3379de45987abfd6ff1332c62348a33d8f14ca394470f",
+    "sourceProjects": [
+      "planbook-policy-check"
+    ],
+    "templateVar": null,
+    "downloadStatus": "ok"
+  },
+  {
+    "assetId": "c8641db01338",
+    "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_1504904_9rkffrqg85l.css",
+    "cssPath": "sources/phase2_assets/c8641db01338/iconfont.css",
+    "cssContentHash": "b33f38bc28223dc645998ab8a835e1927410dfe5b1253c09a18b4b17e0021aed",
+    "fontUrl": "https://res.winbaoxian.com/ali-iconfont/font_1504904_9rkffrqg85l.ttf?t=1574324377189",
+    "fontFormat": "ttf",
+    "ttfPath": "sources/phase2_assets/c8641db01338/font.ttf",
+    "ttfContentHash": "449544210d27dd3522c3316312b22ed5e38d20aa0fbcb83cc3d7fe38a7788963",
+    "sourceProjects": [
+      "planbook-policy-check"
+    ],
+    "templateVar": null,
+    "downloadStatus": "ok"
+  },
+  {
+    "assetId": "d8e56b7ece15",
+    "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_428664_9bzhjthg5j7.css",
+    "cssPath": "sources/phase2_assets/d8e56b7ece15/iconfont.css",
+    "cssContentHash": "c505fb4acb7cc79677f156a172b6c1e236a1a96528c6324c6d00c4816292fc53",
+    "fontUrl": "https://res.winbaoxian.com/ali-iconfont/font_428664_9bzhjthg5j7.ttf?t=1569205305480",
+    "fontFormat": "ttf",
+    "ttfPath": "sources/phase2_assets/d8e56b7ece15/font.ttf",
+    "ttfContentHash": "6b0fc8a60f98aba564bee8abfaa16284fb85e478a594c7052494f9597819d384",
+    "sourceProjects": [
+      "planbook-policy-check"
+    ],
+    "templateVar": null,
+    "downloadStatus": "ok"
+  },
+  {
+    "assetId": "a3be5af06ee7",
+    "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_590851_mqnkkoenssn.css",
+    "cssPath": "sources/phase2_assets/a3be5af06ee7/iconfont.css",
+    "cssContentHash": "af53d7f4f0d7e6a1aa6529f536713961bf485bf476ba86667ad39744269a98ca",
+    "fontUrl": "https://res.winbaoxian.com/ali-iconfont/font_590851_mqnkkoenssn.ttf?t=1557733402885",
+    "fontFormat": "ttf",
+    "ttfPath": "sources/phase2_assets/a3be5af06ee7/font.ttf",
+    "ttfContentHash": "0b1f7c0db1a84612b3b3b7ca8f0fdaf3ef77a6e4de734c2e9412ff67292cecfa",
+    "sourceProjects": [
+      "planbook-policy-check"
+    ],
+    "templateVar": null,
+    "downloadStatus": "ok"
+  },
+  {
+    "assetId": "f4fee3da2e72",
+    "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_336721_2btvfpbqkid.css",
+    "cssPath": "sources/phase2_assets/f4fee3da2e72/iconfont.css",
+    "cssContentHash": "7939c3c8bb681b31bc2dd15f5db0a29f0c6cb13911adfd8fb7f8334c0ec023da",
+    "fontUrl": "https://res.winbaoxian.com/ali-iconfont/font_336721_2btvfpbqkid.ttf?t=1555315286339",
+    "fontFormat": "ttf",
+    "ttfPath": "sources/phase2_assets/f4fee3da2e72/font.ttf",
+    "ttfContentHash": "fb2423f59a36983e3bff9e92c9912fbba9da8e7745d744f078d1f8ec1869a26d",
+    "sourceProjects": [
+      "planbook-policy-check"
+    ],
+    "templateVar": null,
+    "downloadStatus": "ok"
+  },
+  {
+    "assetId": "7555fcc5d2e4",
+    "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_1561272_hu0tnmnn4m.css",
+    "cssPath": "sources/phase2_assets/7555fcc5d2e4/iconfont.css",
+    "cssContentHash": "718f89b53d0a9a030ebc938b504a4a3353577cbeaeaba8405b9b75060973faae",
+    "fontUrl": "https://res.winbaoxian.com/ali-iconfont/font_1561272_hu0tnmnn4m.ttf?t=1592547357665",
+    "fontFormat": "ttf",
+    "ttfPath": "sources/phase2_assets/7555fcc5d2e4/font.ttf",
+    "ttfContentHash": "438197f59e7cd0c8ef2cb43e9a380ccb413e252f3cb3f7b0f6f0953e4d27e148",
+    "sourceProjects": [
+      "planbook-policy-check",
+      "promotion-vue-2018"
+    ],
+    "templateVar": null,
+    "downloadStatus": "ok"
+  },
+  {
+    "assetId": "926d6d290bf9",
+    "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_428664_rzvsoddflce.css",
+    "cssPath": "sources/phase2_assets/926d6d290bf9/iconfont.css",
+    "cssContentHash": "11af6acf327bd7478f0751fd0bcf5f330b24f4cb9306011d4dd8eaecaa008d47",
+    "fontUrl": "https://at.alicdn.com/t/c/font_428664_rzvsoddflce.ttf?t=1751593023670",
+    "fontFormat": "ttf",
+    "ttfPath": "sources/phase2_assets/926d6d290bf9/font.ttf",
+    "ttfContentHash": "99fba5c2d68e7816ec792ccd19b2615ee278219117f0678fb8f9da8d0fb435b4",
+    "sourceProjects": [
+      "planbook-policy-check"
+    ],
+    "templateVar": null,
+    "downloadStatus": "ok"
+  },
+  {
+    "assetId": "961379abbfb6",
+    "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_910415_35zmby5poyg.css",
+    "cssPath": "sources/phase2_assets/961379abbfb6/iconfont.css",
+    "cssContentHash": "6c84f6fa5a1d446ded97943ec2ed54e2a023db7cbb599c7560ed093781cc561f",
+    "fontUrl": "https://res.winbaoxian.com/ali-iconfont/font_910415_35zmby5poyg.ttf?t=1541674098875",
+    "fontFormat": "ttf",
+    "ttfPath": "sources/phase2_assets/961379abbfb6/font.ttf",
+    "ttfContentHash": "558402d57c8455391ade2ba66865a17a69a93ca226ca24635b8857207f5c9728",
+    "sourceProjects": [
+      "promotion-vue-2018"
+    ],
+    "templateVar": null,
+    "downloadStatus": "ok"
+  },
+  {
+    "assetId": "86a7c6cdf72f",
+    "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_428664_00w563jpjgex.css",
+    "cssPath": "sources/phase2_assets/86a7c6cdf72f/iconfont.css",
+    "cssContentHash": "ccbe4f94e73a7c3eb7b52e4d5a0e54bfd44a354a1314a108083173684c082733",
+    "fontUrl": "https://res.winbaoxian.com/ali-iconfont/font_428664_00w563jpjgex.ttf?t=1535612512373",
+    "fontFormat": "ttf",
+    "ttfPath": "sources/phase2_assets/86a7c6cdf72f/font.ttf",
+    "ttfContentHash": "d947d7a22cdbac15d77d15808d77644f9b4429844e00ab63579b79cb676be641",
+    "sourceProjects": [
+      "promotion-vue-2018"
+    ],
+    "templateVar": null,
+    "downloadStatus": "ok"
+  },
+  {
+    "assetId": "83ee3a416bd9",
+    "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_280767_mexaglzgdqk.css",
+    "cssPath": "sources/phase2_assets/83ee3a416bd9/iconfont.css",
+    "cssContentHash": "ff45d7b33d96fde225f1d8814cb2be286ccf52bfca7aa8c8f63573742d895718",
+    "fontUrl": "https://res.winbaoxian.com/ali-iconfont/font_280767_mexaglzgdqk.ttf?t=1545877819645",
+    "fontFormat": "ttf",
+    "ttfPath": "sources/phase2_assets/83ee3a416bd9/font.ttf",
+    "ttfContentHash": "031faab457dd92ffa2cbc9fc39ce382675a428a628afd9061b41c466d660d814",
+    "sourceProjects": [
+      "promotion-vue-2018"
+    ],
+    "templateVar": null,
+    "downloadStatus": "ok"
+  },
+  {
+    "assetId": "5ee20560641d",
+    "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_336721_eewfjl2pcis.css",
+    "cssPath": "sources/phase2_assets/5ee20560641d/iconfont.css",
+    "cssContentHash": "be9e5b40d9c609c6a0f65b59742b444e49a88f1ce73350172e228c37f97be450",
+    "fontUrl": "https://res.winbaoxian.com/ali-iconfont/font_336721_eewfjl2pcis.ttf?t=1531878384295",
+    "fontFormat": "ttf",
+    "ttfPath": "sources/phase2_assets/5ee20560641d/font.ttf",
+    "ttfContentHash": "ad16769f584263fbf54d7b73605e3485584d7f9799288a37ccf355e820fc6803",
+    "sourceProjects": [
+      "promotion-vue-2018"
+    ],
+    "templateVar": null,
+    "downloadStatus": "ok"
+  },
+  {
+    "assetId": "dfb63027401a",
+    "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_1811719_x9kbnc9we1.css",
+    "cssPath": "sources/phase2_assets/dfb63027401a/iconfont.css",
+    "cssContentHash": "f26c208aab37be87805f5d165007234cd1db7e3f2afc57f9f42f24c04da5e9ea",
+    "fontUrl": "https://res.winbaoxian.com/ali-iconfont/font_1811719_x9kbnc9we1.ttf?t=1594713353711",
+    "fontFormat": "ttf",
+    "ttfPath": "sources/phase2_assets/dfb63027401a/font.ttf",
+    "ttfContentHash": "9ba768e18be15580d8482be3d00c930139cafb7f2bf951603173d19140320823",
+    "sourceProjects": [
+      "promotion-vue-2018"
+    ],
+    "templateVar": null,
+    "downloadStatus": "ok"
+  },
+  {
+    "assetId": "036bedba6122",
+    "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_2142609_8gd8hy3a76p.css",
+    "cssPath": "sources/phase2_assets/036bedba6122/iconfont.css",
+    "cssContentHash": "ccca4bef92639a07cb667a48fb9f3d67e4e2090f45aefe82226a678e46bccad2",
+    "fontUrl": "https://res.winbaoxian.com/ali-iconfont/font_2142609_8gd8hy3a76p.ttf?t=1611035450951",
+    "fontFormat": "ttf",
+    "ttfPath": "sources/phase2_assets/036bedba6122/font.ttf",
+    "ttfContentHash": "1a0bfab973540a34890708ae0b0cce523a226db00e78a1dddd9e01e7d2db48f9",
+    "sourceProjects": [
+      "promotion-vue-2018"
+    ],
+    "templateVar": null,
+    "downloadStatus": "ok"
+  },
+  {
+    "assetId": "43b5d5b9b636",
+    "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_639125_jnpqzi0xjoj.css",
+    "cssPath": "sources/phase2_assets/43b5d5b9b636/iconfont.css",
+    "cssContentHash": "ce8a798236f54aa95787c4e195db7fcb937229286a48739f4bfcd9b05ace1f2a",
+    "fontUrl": "https://res.winbaoxian.com/ali-iconfont/font_639125_jnpqzi0xjoj.ttf?t=1617328085543",
+    "fontFormat": "ttf",
+    "ttfPath": "sources/phase2_assets/43b5d5b9b636/font.ttf",
+    "ttfContentHash": "15955d57e4f41c941215631e4a37f6df6998e8aa1414a081a2e07e7a3b6bddda",
+    "sourceProjects": [
+      "promotion-vue-2018"
+    ],
+    "templateVar": null,
+    "downloadStatus": "ok"
+  },
+  {
+    "assetId": "10517dd8c534",
+    "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_3156005_bit0veqkv6c.css",
+    "cssPath": "sources/phase2_assets/10517dd8c534/iconfont.css",
+    "cssContentHash": "f5cd2a5174590f92e443c9794e3f84dbab707f0f8c7247a177e0a01fb79fb60b",
+    "fontUrl": "https://at.alicdn.com/t/font_3156005_bit0veqkv6c.ttf?t=1642752745143",
+    "fontFormat": "ttf",
+    "ttfPath": "sources/phase2_assets/10517dd8c534/font.ttf",
+    "ttfContentHash": "90f12ca4f78e8a4ee1ed9c8a5d95d529ee2be9199a78ff81c5f38ea9679d28a2",
+    "sourceProjects": [
+      "promotion-vue-2018"
+    ],
+    "templateVar": null,
+    "downloadStatus": "ok"
+  },
+  {
+    "assetId": "73f560053ae0",
+    "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_2607384_m6xy4y9iq5j.css",
+    "cssPath": "sources/phase2_assets/73f560053ae0/iconfont.css",
+    "cssContentHash": "908c69f1585f82a83fe473b1595706fe596bfc6f32ad189ed3577a3ba9b9c1b0",
+    "fontUrl": "https://at.alicdn.com/t/font_2607384_m6xy4y9iq5j.ttf?t=1625554247397",
+    "fontFormat": "ttf",
+    "ttfPath": "sources/phase2_assets/73f560053ae0/font.ttf",
+    "ttfContentHash": "096f4c15bbf59c59fe22577c55e34700365540609faf4da3f09c6f4b934cc866",
+    "sourceProjects": [
+      "promotion-vue-2018"
+    ],
+    "templateVar": null,
+    "downloadStatus": "ok"
+  },
+  {
+    "assetId": "ee5cb31752dd",
+    "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_2189700_ftksvdkbx64.css",
+    "cssPath": "sources/phase2_assets/ee5cb31752dd/iconfont.css",
+    "cssContentHash": "b86c2611028b25694769b98760de2d3377f639fbd08325af7a713b574186d629",
+    "fontUrl": "https://res.winbaoxian.com/ali-iconfont/font_2189700_ftksvdkbx64.ttf?t=1608024650132",
+    "fontFormat": "ttf",
+    "ttfPath": "sources/phase2_assets/ee5cb31752dd/font.ttf",
+    "ttfContentHash": "e7240f95f1fd93dcf612a923fa22f498faf2b01c57baba7b73a0269e1c6f8ee1",
+    "sourceProjects": [
+      "promotion-vue-2018"
+    ],
+    "templateVar": null,
+    "downloadStatus": "ok"
+  },
+  {
+    "assetId": "889300d79ebd",
+    "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_428664_1xnjtbqjoqg.css",
+    "cssPath": "sources/phase2_assets/889300d79ebd/iconfont.css",
+    "cssContentHash": "2167423f9bc9d70852e41343a799b04aef07f2fd01f6e55d9596a76427806cb3",
+    "fontUrl": "https://res.winbaoxian.com/ali-iconfont/font_428664_1xnjtbqjoqg.ttf?t=1585106811574",
+    "fontFormat": "ttf",
+    "ttfPath": "sources/phase2_assets/889300d79ebd/font.ttf",
+    "ttfContentHash": "304a6d4ea9ee9200458a9f1d68c3527345ef79d824b55fd36b0ea6368e5f28ab",
+    "sourceProjects": [
+      "promotion-vue-2022"
+    ],
+    "templateVar": null,
+    "downloadStatus": "ok"
+  },
+  {
+    "assetId": "98a9c63e17c4",
+    "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_336721_cwgrn48i7um.css",
+    "cssPath": "sources/phase2_assets/98a9c63e17c4/iconfont.css",
+    "cssContentHash": "966e73c02398a266210c48b6735e7e7e73c3d1dff81da97dd41884deba8953db",
+    "fontUrl": "https://res.winbaoxian.com/ali-iconfont/font_336721_cwgrn48i7um.ttf?t=1551513446228",
+    "fontFormat": "ttf",
+    "ttfPath": "sources/phase2_assets/98a9c63e17c4/font.ttf",
+    "ttfContentHash": "baabd6c5734531109ac68a941ff3183d5824e192f03619518969a9b39c209e91",
+    "sourceProjects": [
+      "tools-customer-acquisition"
+    ],
+    "templateVar": null,
+    "downloadStatus": "ok"
+  },
+  {
+    "assetId": "a4f0c329de1d",
+    "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_428664_kwy4ouo1glvaq0k9.css",
+    "cssPath": "sources/phase2_assets/a4f0c329de1d/iconfont.css",
+    "cssContentHash": "a32f0dbde6e1b3213f734c0e25da5de2cbb4b0472de3a6decd7d13cbc9e6ab0b",
+    "fontUrl": "https://res.winbaoxian.com/ali-iconfont/font_428664_kwy4ouo1glvaq0k9.ttf?t=1506497002654",
+    "fontFormat": "ttf",
+    "ttfPath": "sources/phase2_assets/a4f0c329de1d/font.ttf",
+    "ttfContentHash": "4373ac15b58302efb2ad225aeab70fd83849175308a25d91a3d82d095e12bffe",
+    "sourceProjects": [
+      "tools-customer-acquisition"
+    ],
+    "templateVar": null,
+    "downloadStatus": "ok"
+  },
+  {
+    "assetId": "e898939e33bb",
+    "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_336721_o6v1iugrqdoyldi.css",
+    "cssPath": "sources/phase2_assets/e898939e33bb/iconfont.css",
+    "cssContentHash": "c6e86930ae6897c5b72d57ac1b80e731104e14872453158d986d4ce11dfd99cb",
+    "fontUrl": "https://res.winbaoxian.com/ali-iconfont/font_336721_o6v1iugrqdoyldi.ttf?t=1516679703523",
+    "fontFormat": "ttf",
+    "ttfPath": "sources/phase2_assets/e898939e33bb/font.ttf",
+    "ttfContentHash": "b4318d0e01537eb7251f2892162aa9be8bddce21eea918e278b812798700331b",
+    "sourceProjects": [
+      "tools-customer-acquisition"
+    ],
+    "templateVar": null,
+    "downloadStatus": "ok"
+  },
+  {
+    "assetId": "e5102c29bd68",
+    "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_685961_a2ozv0zlba8.css",
+    "cssPath": "sources/phase2_assets/e5102c29bd68/iconfont.css",
+    "cssContentHash": "9066edd795d15d197f6b79991a3bdd60332ef352a7180a62f0f8b160e7e83064",
+    "fontUrl": "https://res.winbaoxian.com/ali-iconfont/font_685961_a2ozv0zlba8.ttf?t=1529393692750",
+    "fontFormat": "ttf",
+    "ttfPath": "sources/phase2_assets/e5102c29bd68/font.ttf",
+    "ttfContentHash": "25d407915dd99de3cc74a0bbee5677e33dfa581a6439861cbbde3e51c13921f0",
+    "sourceProjects": [
+      "tools-customer-acquisition"
+    ],
+    "templateVar": null,
+    "downloadStatus": "ok"
+  },
+  {
+    "assetId": "0de9569a4b80",
+    "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_336721_baavf6cg3xewb3xr.css",
+    "cssPath": "sources/phase2_assets/0de9569a4b80/iconfont.css",
+    "cssContentHash": "5e5b8e00eaa92869e7f58becfcd21fe392c34a92204831e26ccd0cbdcc9cbd5f",
+    "fontUrl": "https://res.winbaoxian.com/ali-iconfont/font_336721_baavf6cg3xewb3xr.ttf?t=1522123165853",
+    "fontFormat": "ttf",
+    "ttfPath": "sources/phase2_assets/0de9569a4b80/font.ttf",
+    "ttfContentHash": "5beabce50b173cc3bb8a496a4cca3dd9535c84cd6b9950bf2dbb5c4a5f760fe4",
+    "sourceProjects": [
+      "tools-customer-acquisition"
+    ],
+    "templateVar": null,
+    "downloadStatus": "ok"
+  },
+  {
+    "assetId": "5075d65c5796",
+    "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_336721_j9qak3imhho20529.css",
+    "cssPath": "sources/phase2_assets/5075d65c5796/iconfont.css",
+    "cssContentHash": "47fd596d12b97cf717500a736d068bb6c26ba42469c5577a74b3eb9f28cc4990",
+    "fontUrl": "https://res.winbaoxian.com/ali-iconfont/font_336721_j9qak3imhho20529.ttf?t=1526958161173",
+    "fontFormat": "ttf",
+    "ttfPath": "sources/phase2_assets/5075d65c5796/font.ttf",
+    "ttfContentHash": "f32f0fb8fd706602c131f8d900e698286ff8ecbe342ebc748a818c0e3f71ece7",
+    "sourceProjects": [
+      "tools-customer-acquisition"
+    ],
+    "templateVar": null,
+    "downloadStatus": "ok"
+  },
+  {
+    "assetId": "1e86aa599253",
+    "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_336721_fa8v5jid4nzpk3xr.css",
+    "cssPath": "sources/phase2_assets/1e86aa599253/iconfont.css",
+    "cssContentHash": "321054eb996228623742f1edbc889a9998ee42f10433b73e0cefb6a6f991b5f0",
+    "fontUrl": "https://res.winbaoxian.com/ali-iconfont/font_336721_fa8v5jid4nzpk3xr.ttf?t=1513333120605",
+    "fontFormat": "ttf",
+    "ttfPath": "sources/phase2_assets/1e86aa599253/font.ttf",
+    "ttfContentHash": "87aaff00dac6c569e6de9363bbc9c52ff2daeff86fe1a41d1ae9dea3e2f1074c",
+    "sourceProjects": [
+      "tools-customer-acquisition"
+    ],
+    "templateVar": null,
+    "downloadStatus": "ok"
+  },
+  {
+    "assetId": "8642a7e35589",
+    "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_685961_8psalwzjgwh.css",
+    "cssPath": "sources/phase2_assets/8642a7e35589/iconfont.css",
+    "cssContentHash": "88d31dd101fcc901c9b1ed93466d237708764020b3a9dbdd5ee7c2e2f88a38bb",
+    "fontUrl": "https://res.winbaoxian.com/ali-iconfont/font_685961_8psalwzjgwh.ttf?t=1528767659779",
+    "fontFormat": "ttf",
+    "ttfPath": "sources/phase2_assets/8642a7e35589/font.ttf",
+    "ttfContentHash": "61ac3573227d42681046d8983a849ef3582dec00a6f14f10a9c0c209ab2b1b0d",
+    "sourceProjects": [
+      "tools-customer-acquisition"
+    ],
+    "templateVar": null,
+    "downloadStatus": "ok"
+  },
+  {
+    "assetId": "b065f46bd42c",
+    "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_685961_vwgwrinez5o.css",
+    "cssPath": "sources/phase2_assets/b065f46bd42c/iconfont.css",
+    "cssContentHash": "eb3726685d12fcdfa0720047b8f75b00e98aa53aa954e41dd0b2ef2857e041a6",
+    "fontUrl": "https://res.winbaoxian.com/ali-iconfont/font_685961_vwgwrinez5o.ttf?t=1556178390308",
+    "fontFormat": "ttf",
+    "ttfPath": "sources/phase2_assets/b065f46bd42c/font.ttf",
+    "ttfContentHash": "125666a7227ae7c384e1a3f9f072af48526c3115bd0c8bc41bf04d9677da2434",
+    "sourceProjects": [
+      "tools-customer-acquisition"
+    ],
+    "templateVar": null,
+    "downloadStatus": "ok"
+  },
+  {
+    "assetId": "8034cd8c4e90",
+    "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_685961_zx5qm9ub0cf.css",
+    "cssPath": "sources/phase2_assets/8034cd8c4e90/iconfont.css",
+    "cssContentHash": "9c12b3647715ccd83881988182993534c2f73becdf0e298a2344f2df47912c0b",
+    "fontUrl": "https://res.winbaoxian.com/ali-iconfont/font_685961_zx5qm9ub0cf.ttf?t=1547537740263",
+    "fontFormat": "ttf",
+    "ttfPath": "sources/phase2_assets/8034cd8c4e90/font.ttf",
+    "ttfContentHash": "4b246a5b4e460aecf9b24b1b5e66ffce6a838b8a13251ac330a28b96a7fe400f",
+    "sourceProjects": [
+      "tools-customer-acquisition"
+    ],
+    "templateVar": null,
+    "downloadStatus": "ok"
+  },
+  {
+    "assetId": "dae51330f742",
+    "cssUrl": "https://res.winbaoxian.com/iconfont/1494329292049/css/symbols.css",
+    "cssPath": "sources/phase2_assets/dae51330f742/iconfont.css",
+    "cssContentHash": "94d3e253b775932fa3b3ff440f69a65cba3f59d98c042cb299a44a82388cc50c",
+    "fontUrl": "https://res.winbaoxian.com/iconfont/1494329292049/fonts/symbols.ttf",
+    "fontFormat": "ttf",
+    "ttfPath": "sources/phase2_assets/dae51330f742/font.ttf",
+    "ttfContentHash": "1a905eb1401421572f5b959f3d1d71324a9b7ff1426fff66697d2e9d817e2239",
+    "sourceProjects": [
+      "tools-customer-acquisition"
+    ],
+    "templateVar": null,
+    "downloadStatus": "ok"
+  },
+  {
+    "assetId": "44bb4b297b58",
+    "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_428664_lq56367snj1exw29.css",
+    "cssPath": "sources/phase2_assets/44bb4b297b58/iconfont.css",
+    "cssContentHash": "f0abf09866ac3834cfe0aa4ad23bfaa8dcee1f230b47cffbb1bccd08fab94e65",
+    "fontUrl": "https://res.winbaoxian.com/ali-iconfont/font_428664_lq56367snj1exw29.ttf?t=1520996639294",
+    "fontFormat": "ttf",
+    "ttfPath": "sources/phase2_assets/44bb4b297b58/font.ttf",
+    "ttfContentHash": "401c68b99d6e34d1ba526ce0f0bb7fc02bc4e3d3ed0669f71bc351dbb45f5b0b",
+    "sourceProjects": [
+      "websites-wyjj"
+    ],
+    "templateVar": null,
+    "downloadStatus": "ok"
+  },
+  {
+    "assetId": "a8b4b50b4446",
+    "cssUrl": "https://res.winbaoxian.com/iconfont/1469782413913/css/symbols.css",
+    "cssPath": "sources/phase2_assets/a8b4b50b4446/iconfont.css",
+    "cssContentHash": "269eb347ba672ad7815da494ff7033824a1c981c4470b03d90bc9b1db1225d2b",
+    "fontUrl": "https://res.winbaoxian.com/iconfont/1469782413913/fonts/symbols.ttf",
+    "fontFormat": "ttf",
+    "ttfPath": "sources/phase2_assets/a8b4b50b4446/font.ttf",
+    "ttfContentHash": "1a30b4eff4ec0cf0902a3f1ce0842e283fc0871d8f1774ea19851300ec1fd6a2",
+    "sourceProjects": [
+      "websites-wyjj"
+    ],
+    "templateVar": null,
+    "downloadStatus": "ok"
+  },
+  {
+    "assetId": "fb2dc9b73a35",
+    "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_4337802_bpezdq4qcvg.css",
+    "cssPath": "sources/phase2_assets/fb2dc9b73a35/iconfont.css",
+    "cssContentHash": "dd36676e951671b9d6f9b37f74a00c03e39d40b4933b153a69e30d8329aed8d4",
+    "fontUrl": "https://at.alicdn.com/t/c/font_4337802_bpezdq4qcvg.ttf?t=1701843059216",
+    "fontFormat": "ttf",
+    "ttfPath": "sources/phase2_assets/fb2dc9b73a35/font.ttf",
+    "ttfContentHash": "d2fea32596924b2f0d5b91fdfeee400b76cd90864db83ef128a8a52fe564038d",
+    "sourceProjects": [
+      "websites-wyjj"
+    ],
+    "templateVar": null,
+    "downloadStatus": "ok"
+  },
+  {
+    "assetId": "c4862e36d872",
+    "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_5165506_p8nm66u0fd.css",
+    "cssPath": "sources/phase2_assets/c4862e36d872/iconfont.css",
+    "cssContentHash": "476a54f4b02867ad901f51b5af87107669544b98bff5fa0a4c6575bc6d839f3a",
+    "fontUrl": "https://at.alicdn.com/t/c/font_5165506_p8nm66u0fd.ttf?t=1776825277934",
+    "fontFormat": "ttf",
+    "ttfPath": "sources/phase2_assets/c4862e36d872/font.ttf",
+    "ttfContentHash": "119facf10081069fde312acd5890389fa5192cfe0f2e55d44986cd1202e08140",
+    "sourceProjects": [
+      "manual"
+    ],
+    "templateVar": null,
+    "downloadStatus": "ok"
+  },
+  {
+    "assetId": "2e965f5713c8",
+    "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_5139753_59xlfs1rv4t.css",
+    "cssPath": "sources/phase2_assets/2e965f5713c8/iconfont.css",
+    "cssContentHash": "2f08c6915e4e96d6c2288801441aecb41165913b26a4931facb2c823249a0399",
+    "fontUrl": "https://at.alicdn.com/t/c/font_5139753_59xlfs1rv4t.ttf?t=1773626738353",
+    "fontFormat": "ttf",
+    "ttfPath": "sources/phase2_assets/2e965f5713c8/font.ttf",
+    "ttfContentHash": "1c23541ec4769ca2e22b16efad792e7aa07b78a7015856831a08599f065f8c63",
+    "sourceProjects": [
+      "manual"
+    ],
+    "templateVar": null,
+    "downloadStatus": "ok"
+  },
+  {
+    "assetId": "ebce00384658",
+    "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_428664_cj8pe527d8u.css",
+    "cssPath": "sources/phase2_assets/ebce00384658/iconfont.css",
+    "cssContentHash": "99d6fd4c02c052b21393f7b0283996dd32a076e9f80bc690a5c89ab915b4c9ad",
+    "fontUrl": "https://at.alicdn.com/t/c/font_428664_cj8pe527d8u.ttf?t=1773306732352",
+    "fontFormat": "ttf",
+    "ttfPath": "sources/phase2_assets/ebce00384658/font.ttf",
+    "ttfContentHash": "bc4ba269474d14994163edf2f26cbc5d7ec7c0d84f507ba00a4f445f6cb3635c",
+    "sourceProjects": [
+      "manual"
+    ],
+    "templateVar": null,
+    "downloadStatus": "ok"
+  },
+  {
+    "assetId": "9656075c0261",
+    "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_428664_piwj8vscg7b.css",
+    "cssPath": "sources/phase2_assets/9656075c0261/iconfont.css",
+    "cssContentHash": "1a97720e2a6f5c4410e10ff2e5c5c25b318545e6a50ef315c05e5a715e2fbab2",
+    "fontUrl": "https://at.alicdn.com/t/c/font_428664_piwj8vscg7b.ttf?t=1766995788128",
+    "fontFormat": "ttf",
+    "ttfPath": "sources/phase2_assets/9656075c0261/font.ttf",
+    "ttfContentHash": "78a8d29854ea1a42fe9c7f4d7330071605f86d20dd536b633d765289a98e12f1",
+    "sourceProjects": [
+      "manual"
+    ],
+    "templateVar": null,
+    "downloadStatus": "ok"
+  },
+  {
+    "assetId": "53bb8b5dbd99",
+    "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_4960269_cv46z0yckxg.css",
+    "cssPath": "sources/phase2_assets/53bb8b5dbd99/iconfont.css",
+    "cssContentHash": "b33dfcf164faf95b27afd6aeb102476e46f15d84ae509a28aa798ac120161c29",
+    "fontUrl": "https://at.alicdn.com/t/c/font_4960269_cv46z0yckxg.ttf?t=1750925941425",
+    "fontFormat": "ttf",
+    "ttfPath": "sources/phase2_assets/53bb8b5dbd99/font.ttf",
+    "ttfContentHash": "42e9590754ae68da3cb64f8156b92ef7df40a08ff0bc1e4a9016e9922e1794d2",
+    "sourceProjects": [
+      "manual"
+    ],
+    "templateVar": null,
+    "downloadStatus": "ok"
+  },
+  {
+    "assetId": "eb3bd67c3857",
+    "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_428664_7ip68eerepd.css",
+    "cssPath": "sources/phase2_assets/eb3bd67c3857/iconfont.css",
+    "cssContentHash": "ec91d7160dc653e921cd42b640dc10b736f505f1b0d6cfc4f03fb180c5fe3c40",
+    "fontUrl": "https://at.alicdn.com/t/c/font_428664_7ip68eerepd.ttf?t=1747190038246",
+    "fontFormat": "ttf",
+    "ttfPath": "sources/phase2_assets/eb3bd67c3857/font.ttf",
+    "ttfContentHash": "c6144c03827020ff3f7e27aff90a545d402e6dc048dc91ae930cd6c3208604b6",
+    "sourceProjects": [
+      "manual"
+    ],
+    "templateVar": null,
+    "downloadStatus": "ok"
+  },
+  {
+    "assetId": "036492dced92",
+    "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_428664_fr92kem0hlr.css",
+    "cssPath": "sources/phase2_assets/036492dced92/iconfont.css",
+    "cssContentHash": "ce21c225447b7c71f0b1207dc414ae54e1c9b00085762f6c7276ed468d337dcd",
+    "fontUrl": "https://at.alicdn.com/t/c/font_428664_fr92kem0hlr.ttf?t=1744281515454",
+    "fontFormat": "ttf",
+    "ttfPath": "sources/phase2_assets/036492dced92/font.ttf",
+    "ttfContentHash": "1fe52456d98c864c5c76a710292888beca97190a897a9fe28cc1a4c64d637f30",
+    "sourceProjects": [
+      "manual"
+    ],
+    "templateVar": null,
+    "downloadStatus": "ok"
+  }
+]

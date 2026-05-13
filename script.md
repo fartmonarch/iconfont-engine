@@ -19,8 +19,9 @@
 | 01 | `pipeline/01_scan_repos_clone_repos.js` | codeup-clone skill | Node.js | Phase 1 | 🟢 已完成 | 批量克隆 Codeup 仓库，HTTPS→SSH 转换、去重、超时控制 |
 | 02 | `pipeline/01_scan_repos_iconfont_check.js` | **重写** | Node.js | Phase 1 | 🟢 已完成 | 单项目全局扫描：源码扫描 + webpack模板变量替换 + CDN去重 + 注释过滤 + 完整文件读取（不截断） |
 | 03 | `pipeline/01_scan_repos_iconfont_scan_multi.js` | **重写** | Node.js | Phase 1 | 🟢 已完成 | 多项目扫描 + 20手动链接整合 → 111个CSS链接，输出 all_iconfont_links.json + iconfont_urls.txt |
-| 04 | `pipeline/02_resolve_iconfont_links_build_superset.js` | D:\work\build_superset.js | Node.js | Phase 2 | 超集检查：下载所有 iconfont CSS、提取图标、检测 unicode/名称冲突、生成 HTML 报告 |
-| 05 | `pipeline/02_resolve_iconfont_links_iconfont_file_compare.js` | iconfont-superset-check skill | Node.js | Phase 2 | 文件混合对比模式 E：支持远程 URL 和本地 CSS 文件互相对比，判断超集关系 |
+| 04 | `pipeline/02_resolve_download_assets.js` | **新编写** | Node.js | Phase 2 | 🟢 已完成 | 下载 110/111 CSS + 110 TTF，gzip/相对路径修复，输出 assets_manifest.json |
+| 05 | `pipeline/02_resolve_parse_css_mappings.js` | **新编写** | Node.js | Phase 2 | 🟢 已完成 | 11494 个图标映射提取，symbol 逗号 selector 修复，输出 css_mappings.json |
+| 06 | `pipeline/02_resolve_validate_assets.js` | **新编写** | Node.js | Phase 2 | 🟢 已完成 | TTF header 校验 + 文件完整性检查，输出 assets_validation.json |
 | 06 | `pipeline/03_extract_glyphs.py` | **待编写** | Python | Phase 3 | 解析 TTF，提取 cmap/contours，生成 raw glyph dataset |
 | 07 | `pipeline/04_normalize_glyphs.py` | **待编写** | Python | Phase 4 | UPM 统一(1024)、contour 排序、起点统一、精度 round(6)、composite 展开 |
 | 08 | `pipeline/05_build_registry.py` | **待编写** | Python | Phase 5 | glyphHash 生成、多源合并、alias 收集、source tracking |
@@ -59,11 +60,12 @@
 |------|----------|------|
 | `clone_repos.js` | 01 | 批量克隆 Codeup 仓库 |
 
-### C. `D:\work\` 根目录（1 个）
+### C. 参考脚本（不迁入 pipeline）
 
-| 文件 | 目标编号 | 说明 |
-|------|----------|------|
-| `build_superset.js` | 04 | 全量超集检查 + 冲突检测 + HTML 报告生成 |
+| 文件 | 说明 |
+|------|------|
+| `D:\work\build_superset.js` | CSS 下载 + @font-face 解析逻辑可参考（已验证可正常下载） |
+| `C:\Users\win-boweng\.claude\skills\iconfont-superset-check\scripts\iconfont_file_compare.js` | URL/本地文件混合对比，可参考 CSS 解析模式 |
 
 ### D. `D:\work\iconfont_merge\`（6 个脚本 + 1 个文档）
 
@@ -108,8 +110,9 @@ Phase 1 全程脚本覆盖扫描的是**"文本里存在的完整链接"**，而
 | 01 clone_repos | `fs`, `path`, `child_process`（内置） |
 | 02 iconfont_check | `cheerio`, `fonteditor-core`, `https`, `fs` |
 | 03 iconfont_scan_multi | `cheerio`, `fonteditor-core`, `https`, `fs` |
-| 04 build_superset | `https`, `http`, `fs`（内置） |
-| 05 iconfont_file_compare | `cheerio`, `fonteditor-core`, `https`, `fs` |
+| 04 download_assets | `https`, `http`, `fs`, `crypto`, `path` |
+| 05 parse_css_mappings | `fs`, `path`, `regex` |
+| 06 validate_assets | `fs`, `path` |
 | 09 iconfont_compare | `cheerio`, `fonteditor-core`, `https`, `fs` |
 | 10 iconfont_conflicts_doc | `fs`, `path`（内置） |
 | 11 apply_rename | `fs`, `path`（内置） |
@@ -132,14 +135,12 @@ Phase 1 全程脚本覆盖扫描的是**"文本里存在的完整链接"**，而
 ## 状态图
 
 ```
-Phase 1 扫描    Phase 2 解析     Phase 3-5 提取    Phase 6 检测     Phase 7 解决     Phase 8-9 合并    Phase 10 验证   Phase 11 输出
-    │               │                │                │                │                │               │              │
-  [01]            [04]             [06]            [09]            [11]            [15]            [17]           [18]
-  [02]            [05]             [07]            [10]            [12]            [16]
-  [03]                             [08]            [13]
-                                                    [14]
+Phase 1 扫描    Phase 2 解析         Phase 3-5 提取    Phase 6 检测     Phase 7 解决     Phase 8-9 合并    Phase 10 验证   Phase 11 输出
+    │               │                    │                │                │                │               │              │
+  [01] 🟢         [04] 🟢              [07] ⬜          [10] 🔧          [12] 🔧          [16] ⬜           [18] ⬜          [19] 🔧
+  [02] 🟢         [05] 🟢              [08] ⬜          [11] 🔧          [13] 🔧          [17] ⬜
+  [03] 🟢         [06] 🟢              [09] ⬜          [14] 🔧
+                                                        [15] 🔧
 ```
 
-- `[N]` = 🟢 Phase 1 已完成
-- 绿色 = Node.js 脚本
-- 蓝色 = Python 脚本（fontTools）
+- 🟢 = 已完成  🔧 = 已收集待迁移  ⬜ = 待编写

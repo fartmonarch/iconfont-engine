@@ -1,0 +1,21 @@
+@font-face {font-family: "iconfont";
+  src: url('//res.winbaoxian.com/ali-iconfont/font_2365860_kv786slvuwh.eot?t=1612425879988'); /* IE9 */
+  src: url('//res.winbaoxian.com/ali-iconfont/font_2365860_kv786slvuwh.eot?t=1612425879988#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAAMcAAsAAAAABvAAAALNAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHEIGVgCCcAqBeIFpATYCJAMICwYABCAFhG0HMhsRBsgOJQnCwBDhAkBAPDx/v+/XPvdMJmVSB1dqBfjoUCIMyQf5Dfj+8q8C1bPCOFpBrXH/6nmrTAeFy/xkRLNBdBcKB9fUX4nnAc0tKygScGDTAXZhlfAGNADeMHYTwQPcTaBalwLu23UtPW5+MjAoEE9mPunmV7DJshOsFMobZmbxzltlek3P8ca/H79NRiVJWQGk7d3UEreKn4EwzPOl9GKEIujLaeDMo8AEN5k4atTt8JS+CZ6qI5+XPm7HSg5+Bv4vUYU46p8nyoHEWtCh056JjhmPmphAlq173FxOujZpOBfveXrz7Kdz+f3vPnWuLhzeE3P0fUnP9fe5qxeyL5X3r+89shDVc/ixsf/Ss/bJXUefvn+c07OycGRvbP+tT7lHer7NuP9izNqewwvRR54E7l2ISjv8/y3Vvdo9DbDPS7eZYEg4/K8/6wAiPC9cW46OtypCNhL0ibvZZTd/6/790/3eBKj32te680dd+rOByWaiPmGDENWQp+u/V38kTKve7DlcR2bJ2+SX0rysA47i2ePzL/6Npa+m++OhJV/9AjP4UflsnUuyYQYqb0Qf/FD6wJocM4E85ZDeaEj2JnkSqqGTEmBqtjVV1Hb3oVCp7R0MFTozKFQaQGXcBJSpMQ3lKq1BtXH182u0kDxFrsKY7RqERqcgqfcNhUYvUBnngjLtvkC5xiig2klErlhjKO4DqiWdBErQ1DwyY+FgSAkBIrmL8mnbpMwzOb6PSqfZiXRqbTlYTx1ULjHGOcP1AAwxKeyoTtuP2mwCKVJYKAa1CUAp0mhY043UWNjdAmyRqEmAIpAp8xAzTHBgtDkIqHy+C8VNs5kkOwpGlH0oycncPqKjph2Aquc5BhU8yiFOMzg9ABiEkQQ7pE7rRtnYCIjS3M2CwoCaaYJHUUQDG7GhPPX2AvsPpDolAHEK2LlQuSWUeZvZYXVzAwAAAA==') format('woff2'),
+  url('//res.winbaoxian.com/ali-iconfont/font_2365860_kv786slvuwh.woff?t=1612425879988') format('woff'),
+  url('//res.winbaoxian.com/ali-iconfont/font_2365860_kv786slvuwh.ttf?t=1612425879988') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+  url('//res.winbaoxian.com/ali-iconfont/font_2365860_kv786slvuwh.svg?t=1612425879988#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-Copylink:before {
+  content: "\e90b";
+}
+

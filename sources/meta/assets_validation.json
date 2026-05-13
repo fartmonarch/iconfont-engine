@@ -1,0 +1,1709 @@
+{
+  "timestamp": "2026-05-13T05:47:48.322Z",
+  "totalAssets": 111,
+  "statusSummary": {
+    "ok": 110,
+    "css_404": 1,
+    "ttf_missing": 0,
+    "empty_mappings": 0,
+    "ttf_corrupt": 0
+  },
+  "details": [
+    {
+      "assetId": "d737f632f4df",
+      "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_5147685_3yj1cl522ql.css",
+      "sourceProjects": [
+        "ai-customer-acquisition",
+        "business-tool"
+      ],
+      "downloadStatus": "ok",
+      "cssExists": true,
+      "cssSize": 1944,
+      "ttfExists": true,
+      "ttfSize": 7760,
+      "ttfValid": true,
+      "mappingsCount": 28,
+      "status": "ok"
+    },
+    {
+      "assetId": "3a2dcb72da44",
+      "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_428664_7itacmrlk3.css",
+      "sourceProjects": [
+        "ai-customer-acquisition"
+      ],
+      "downloadStatus": "ok",
+      "cssExists": true,
+      "cssSize": 8205,
+      "ttfExists": true,
+      "ttfSize": 49344,
+      "ttfValid": true,
+      "mappingsCount": 158,
+      "status": "ok"
+    },
+    {
+      "assetId": "3317e5cb12d7",
+      "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_1311936_jf12otjodsq.css",
+      "sourceProjects": [
+        "app-settlement"
+      ],
+      "downloadStatus": "ok",
+      "cssExists": true,
+      "cssSize": 4018,
+      "ttfExists": true,
+      "ttfSize": 3776,
+      "ttfValid": true,
+      "mappingsCount": 8,
+      "status": "ok"
+    },
+    {
+      "assetId": "c451667373e6",
+      "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_336721_14yv3un7pqz.css",
+      "sourceProjects": [
+        "app-settlement"
+      ],
+      "downloadStatus": "ok",
+      "cssExists": true,
+      "cssSize": 25050,
+      "ttfExists": true,
+      "ttfSize": 29068,
+      "ttfValid": true,
+      "mappingsCount": 84,
+      "status": "ok"
+    },
+    {
+      "assetId": "c83f6e44d0c0",
+      "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_2607384_ql7dfkp013h.css",
+      "sourceProjects": [
+        "app-settlement",
+        "promotion-vue-2018"
+      ],
+      "downloadStatus": "ok",
+      "cssExists": true,
+      "cssSize": 1842,
+      "ttfExists": true,
+      "ttfSize": 7080,
+      "ttfValid": true,
+      "mappingsCount": 26,
+      "status": "ok"
+    },
+    {
+      "assetId": "1311a7f5b183",
+      "cssUrl": "https://res.winbaoxian.com/iconfont/1493119125659/css/symbols.css",
+      "sourceProjects": [
+        "business-tool"
+      ],
+      "downloadStatus": "ok",
+      "cssExists": true,
+      "cssSize": 11502,
+      "ttfExists": true,
+      "ttfSize": 47508,
+      "ttfValid": true,
+      "mappingsCount": 168,
+      "status": "ok"
+    },
+    {
+      "assetId": "0dc4cf8ce170",
+      "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_555593_h21x6xjwz8ttvs4i.css",
+      "sourceProjects": [
+        "business-tool"
+      ],
+      "downloadStatus": "ok",
+      "cssExists": true,
+      "cssSize": 3244,
+      "ttfExists": true,
+      "ttfSize": 2512,
+      "ttfValid": true,
+      "mappingsCount": 3,
+      "status": "ok"
+    },
+    {
+      "assetId": "7233bfd22c8e",
+      "cssUrl": "https://res.winbaoxian.com/iconfont/1491379003572/css/symbols.css",
+      "sourceProjects": [
+        "business-tool"
+      ],
+      "downloadStatus": "ok",
+      "cssExists": true,
+      "cssSize": 6120,
+      "ttfExists": true,
+      "ttfSize": 27284,
+      "ttfValid": true,
+      "mappingsCount": 93,
+      "status": "ok"
+    },
+    {
+      "assetId": "04dce05e46cf",
+      "cssUrl": "http://res.winbaoxian.com/iconfont/1469491211175/css/symbols.css",
+      "sourceProjects": [
+        "business-tool"
+      ],
+      "downloadStatus": "ok",
+      "cssExists": true,
+      "cssSize": 4958,
+      "ttfExists": true,
+      "ttfSize": 22036,
+      "ttfValid": true,
+      "mappingsCount": 73,
+      "status": "ok"
+    },
+    {
+      "assetId": "6a48244a285f",
+      "cssUrl": "https://res.winbaoxian.com/iconfont/1484128104656/css/symbols.css",
+      "sourceProjects": [
+        "business-tool"
+      ],
+      "downloadStatus": "ok",
+      "cssExists": true,
+      "cssSize": 7922,
+      "ttfExists": true,
+      "ttfSize": 33916,
+      "ttfValid": true,
+      "mappingsCount": 116,
+      "status": "ok"
+    },
+    {
+      "assetId": "e07e7aafbc38",
+      "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_1034268_dc97ohr4nrr.css",
+      "sourceProjects": [
+        "business-tool"
+      ],
+      "downloadStatus": "ok",
+      "cssExists": true,
+      "cssSize": 5127,
+      "ttfExists": true,
+      "ttfSize": 5328,
+      "ttfValid": true,
+      "mappingsCount": 17,
+      "status": "ok"
+    },
+    {
+      "assetId": "21dc2f00a1ef",
+      "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_1082636_q497i9tat3r.css",
+      "sourceProjects": [
+        "business-tool"
+      ],
+      "downloadStatus": "ok",
+      "cssExists": true,
+      "cssSize": 1890,
+      "ttfExists": true,
+      "ttfSize": 1628,
+      "ttfValid": true,
+      "mappingsCount": 1,
+      "status": "ok"
+    },
+    {
+      "assetId": "cf6e3630a212",
+      "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_rh2uvsvi3gxvfgvi.css",
+      "sourceProjects": [
+        "business-tool"
+      ],
+      "downloadStatus": "ok",
+      "cssExists": true,
+      "cssSize": 5413,
+      "ttfExists": true,
+      "ttfSize": 47856,
+      "ttfValid": true,
+      "mappingsCount": 98,
+      "status": "ok"
+    },
+    {
+      "assetId": "53ae05568965",
+      "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_2189700_lnwu2t4brir.css",
+      "sourceProjects": [
+        "business-tool"
+      ],
+      "downloadStatus": "ok",
+      "cssExists": true,
+      "cssSize": 7832,
+      "ttfExists": true,
+      "ttfSize": 8660,
+      "ttfValid": true,
+      "mappingsCount": 27,
+      "status": "ok"
+    },
+    {
+      "assetId": "703f65bef56b",
+      "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_280767_3owth2dyrnpl23xr.css",
+      "sourceProjects": [
+        "business-tool",
+        "insurance-group-mobile",
+        "promotion-vue-2018",
+        "promotion-vue-2022",
+        "tools-customer-acquisition",
+        "wechat-crm"
+      ],
+      "downloadStatus": "ok",
+      "cssExists": true,
+      "cssSize": 49586,
+      "ttfExists": true,
+      "ttfSize": 53008,
+      "ttfValid": true,
+      "mappingsCount": 165,
+      "status": "ok"
+    },
+    {
+      "assetId": "85c94873279e",
+      "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_280767_yehzob4ie8kt9.css",
+      "sourceProjects": [
+        "business-tool",
+        "face-plus-auth",
+        "payment-cashier-mobile"
+      ],
+      "downloadStatus": "ok",
+      "cssExists": true,
+      "cssSize": 51724,
+      "ttfExists": true,
+      "ttfSize": 55232,
+      "ttfValid": true,
+      "mappingsCount": 173,
+      "status": "ok"
+    },
+    {
+      "assetId": "5598e15c97f0",
+      "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_639125_6wvy748u27bhjjor.css",
+      "sourceProjects": [
+        "business-tool"
+      ],
+      "downloadStatus": "ok",
+      "cssExists": true,
+      "cssSize": 6893,
+      "ttfExists": true,
+      "ttfSize": 6072,
+      "ttfValid": true,
+      "mappingsCount": 19,
+      "status": "ok"
+    },
+    {
+      "assetId": "856d3dd79324",
+      "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_428664_bw5n2r3dg5r.css",
+      "sourceProjects": [
+        "business-tool"
+      ],
+      "downloadStatus": "ok",
+      "cssExists": true,
+      "cssSize": 5936,
+      "ttfExists": true,
+      "ttfSize": 37752,
+      "ttfValid": true,
+      "mappingsCount": 113,
+      "status": "ok"
+    },
+    {
+      "assetId": "5bc913fb2cde",
+      "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_428664_5vdctz8oltd.css",
+      "sourceProjects": [
+        "business-tool"
+      ],
+      "downloadStatus": "ok",
+      "cssExists": true,
+      "cssSize": 24979,
+      "ttfExists": true,
+      "ttfSize": 28992,
+      "ttfValid": true,
+      "mappingsCount": 85,
+      "status": "ok"
+    },
+    {
+      "assetId": "ca1beac4409e",
+      "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_555593_nnpr09fcvncxflxr.css",
+      "sourceProjects": [
+        "business-tool"
+      ],
+      "downloadStatus": "ok",
+      "cssExists": true,
+      "cssSize": 4146,
+      "ttfExists": true,
+      "ttfSize": 3312,
+      "ttfValid": true,
+      "mappingsCount": 8,
+      "status": "ok"
+    },
+    {
+      "assetId": "ebbc0ba6fc13",
+      "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_280767_uz4h17dcqr.css",
+      "sourceProjects": [
+        "business-tool"
+      ],
+      "downloadStatus": "ok",
+      "cssExists": true,
+      "cssSize": 62630,
+      "ttfExists": true,
+      "ttfSize": 78108,
+      "ttfValid": true,
+      "mappingsCount": 241,
+      "status": "ok"
+    },
+    {
+      "assetId": "a9b441764fb9",
+      "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_428664_ioax9hc9ckg.css",
+      "sourceProjects": [
+        "bxs-tools-ui",
+        "planbook-main"
+      ],
+      "downloadStatus": "ok",
+      "cssExists": true,
+      "cssSize": 5936,
+      "ttfExists": true,
+      "ttfSize": 37752,
+      "ttfValid": true,
+      "mappingsCount": 113,
+      "status": "ok"
+    },
+    {
+      "assetId": "a28da8cb6a8f",
+      "cssUrl": "https://res.winbaoxian.com/iconfont/1490260879816/css/symbols.css",
+      "sourceProjects": [
+        "fed-toolset"
+      ],
+      "downloadStatus": "ok",
+      "cssExists": true,
+      "cssSize": 10812,
+      "ttfExists": true,
+      "ttfSize": 44716,
+      "ttfValid": true,
+      "mappingsCount": 158,
+      "status": "ok"
+    },
+    {
+      "assetId": "05ae5da1a8d2",
+      "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_590851_sszavby595mw8kt9.css",
+      "sourceProjects": [
+        "h5-order-cancel",
+        "insurance-group-mobile"
+      ],
+      "downloadStatus": "ok",
+      "cssExists": true,
+      "cssSize": 66217,
+      "ttfExists": true,
+      "ttfSize": 71420,
+      "ttfValid": true,
+      "mappingsCount": 213,
+      "status": "ok"
+    },
+    {
+      "assetId": "dc42e569b5c5",
+      "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_590851_1dp59g7ssygjsjor.css",
+      "sourceProjects": [
+        "insurance-claims-2"
+      ],
+      "downloadStatus": "ok",
+      "cssExists": true,
+      "cssSize": 59321,
+      "ttfExists": true,
+      "ttfSize": 63156,
+      "ttfValid": true,
+      "mappingsCount": 194,
+      "status": "ok"
+    },
+    {
+      "assetId": "cafe598ecb6e",
+      "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_1964111_jn3xutqpl8l.css",
+      "sourceProjects": [
+        "insurance-claims-2"
+      ],
+      "downloadStatus": "ok",
+      "cssExists": true,
+      "cssSize": 2062,
+      "ttfExists": true,
+      "ttfSize": 1804,
+      "ttfValid": true,
+      "mappingsCount": 1,
+      "status": "ok"
+    },
+    {
+      "assetId": "2368044f2d06",
+      "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_428664_oq3fahn36yo.css",
+      "sourceProjects": [
+        "insurance-collection-pages",
+        "planbook-accessories",
+        "planbook-main",
+        "tools-customer-acquisition"
+      ],
+      "downloadStatus": "ok",
+      "cssExists": true,
+      "cssSize": 7474,
+      "ttfExists": true,
+      "ttfSize": 45132,
+      "ttfValid": true,
+      "mappingsCount": 143,
+      "status": "ok"
+    },
+    {
+      "assetId": "682513d5fcad",
+      "cssUrl": "https://res.winbaoxian.com/iconfont/1483933727382/css/symbols.css",
+      "sourceProjects": [
+        "insurance-group-mobile"
+      ],
+      "downloadStatus": "ok",
+      "cssExists": true,
+      "cssSize": 7802,
+      "ttfExists": true,
+      "ttfSize": 33396,
+      "ttfValid": true,
+      "mappingsCount": 114,
+      "status": "ok"
+    },
+    {
+      "assetId": "5e6043beee56",
+      "cssUrl": "https://res.winbaoxian.com/iconfont/1484617990198/css/symbols.css",
+      "sourceProjects": [
+        "insurance-group-mobile"
+      ],
+      "downloadStatus": "ok",
+      "cssExists": true,
+      "cssSize": 8034,
+      "ttfExists": true,
+      "ttfSize": 34264,
+      "ttfValid": true,
+      "mappingsCount": 118,
+      "status": "ok"
+    },
+    {
+      "assetId": "6c4faea4e5ed",
+      "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_mzpwr9fjab4holxr.css",
+      "sourceProjects": [
+        "insurance-group-mobile"
+      ],
+      "downloadStatus": "ok",
+      "cssExists": true,
+      "cssSize": 7638,
+      "ttfExists": true,
+      "ttfSize": 77980,
+      "ttfValid": true,
+      "mappingsCount": 146,
+      "status": "ok"
+    },
+    {
+      "assetId": "79b4e8e587a5",
+      "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_401243_enzxezydrmvon7b9.css",
+      "sourceProjects": [
+        "insurance-group-mobile"
+      ],
+      "downloadStatus": "ok",
+      "cssExists": true,
+      "cssSize": 49043,
+      "ttfExists": true,
+      "ttfSize": 52444,
+      "ttfValid": true,
+      "mappingsCount": 163,
+      "status": "ok"
+    },
+    {
+      "assetId": "f73565d1bbce",
+      "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_2365860_kv786slvuwh.css",
+      "sourceProjects": [
+        "insurance-group-mobile"
+      ],
+      "downloadStatus": "ok",
+      "cssExists": true,
+      "cssSize": 2042,
+      "ttfExists": true,
+      "ttfSize": 1776,
+      "ttfValid": true,
+      "mappingsCount": 1,
+      "status": "ok"
+    },
+    {
+      "assetId": "dc42a65128c9",
+      "cssUrl": "https://res.winbaoxian.com/auto_upload_ci/insurance-group-mobile-webpack4/ali-iconfont/font_428664_7jwpsg6zrcx.css",
+      "sourceProjects": [
+        "insurance-group-mobile"
+      ],
+      "downloadStatus": "css_404",
+      "cssExists": false,
+      "cssSize": 0,
+      "ttfExists": false,
+      "ttfSize": 0,
+      "ttfValid": null,
+      "mappingsCount": 0,
+      "status": "css_404",
+      "issues": [
+        "css_path_missing"
+      ]
+    },
+    {
+      "assetId": "019f321bbcff",
+      "cssUrl": "https://res.winbaoxian.com/iconfont/1494384846295/css/symbols.css",
+      "sourceProjects": [
+        "insurance-group-mobile"
+      ],
+      "downloadStatus": "ok",
+      "cssExists": true,
+      "cssSize": 11708,
+      "ttfExists": true,
+      "ttfSize": 47984,
+      "ttfValid": true,
+      "mappingsCount": 171,
+      "status": "ok"
+    },
+    {
+      "assetId": "a18c04d4f0c5",
+      "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_2921605_uatv9twnxne.css",
+      "sourceProjects": [
+        "insurance-group-mobile",
+        "promotion-vue-2022"
+      ],
+      "downloadStatus": "ok",
+      "cssExists": true,
+      "cssSize": 5657,
+      "ttfExists": true,
+      "ttfSize": 25544,
+      "ttfValid": true,
+      "mappingsCount": 103,
+      "status": "ok"
+    },
+    {
+      "assetId": "eedc00a2f845",
+      "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_806066_ow7azo4zaoi.css",
+      "sourceProjects": [
+        "insurance-list-pages"
+      ],
+      "downloadStatus": "ok",
+      "cssExists": true,
+      "cssSize": 81195,
+      "ttfExists": true,
+      "ttfSize": 87224,
+      "ttfValid": true,
+      "mappingsCount": 273,
+      "status": "ok"
+    },
+    {
+      "assetId": "90242b7194f8",
+      "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_280767_gc9nad8nz5mi.css",
+      "sourceProjects": [
+        "insurance-policy-refund"
+      ],
+      "downloadStatus": "ok",
+      "cssExists": true,
+      "cssSize": 49578,
+      "ttfExists": true,
+      "ttfSize": 53008,
+      "ttfValid": true,
+      "mappingsCount": 165,
+      "status": "ok"
+    },
+    {
+      "assetId": "2a7e87aa7c81",
+      "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_280767_p4qiup9lop.css",
+      "sourceProjects": [
+        "insurance-policy-refund",
+        "management-insurance-template"
+      ],
+      "downloadStatus": "ok",
+      "cssExists": true,
+      "cssSize": 66611,
+      "ttfExists": true,
+      "ttfSize": 72020,
+      "ttfValid": true,
+      "mappingsCount": 215,
+      "status": "ok"
+    },
+    {
+      "assetId": "d443fdd5cccb",
+      "cssUrl": "https://at.alicdn.com/t/font_3210243_inqj8n4aqvd.css",
+      "sourceProjects": [
+        "management-community-operations",
+        "management-digitalize-product"
+      ],
+      "downloadStatus": "ok",
+      "cssExists": true,
+      "cssSize": 1638,
+      "ttfExists": true,
+      "ttfSize": 5976,
+      "ttfValid": true,
+      "mappingsCount": 21,
+      "status": "ok"
+    },
+    {
+      "assetId": "13c3d5d6f120",
+      "cssUrl": "https://res.winbaoxian.com/auto_upload_ci/management-community-operations/static/iconfont/20231024/iconfont.css",
+      "sourceProjects": [
+        "management-community-operations"
+      ],
+      "downloadStatus": "ok",
+      "cssExists": true,
+      "cssSize": 1867,
+      "ttfExists": true,
+      "ttfSize": 7116,
+      "ttfValid": true,
+      "mappingsCount": 29,
+      "status": "ok"
+    },
+    {
+      "assetId": "9e8f27840200",
+      "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_336721_74m4vln6iy919k9.css",
+      "sourceProjects": [
+        "management-promotions"
+      ],
+      "downloadStatus": "ok",
+      "cssExists": true,
+      "cssSize": 22810,
+      "ttfExists": true,
+      "ttfSize": 23144,
+      "ttfValid": true,
+      "mappingsCount": 64,
+      "status": "ok"
+    },
+    {
+      "assetId": "12e46533c451",
+      "cssUrl": "https://at.alicdn.com/t/c/font_280767_l7q0rmkx4g.css",
+      "sourceProjects": [
+        "management-wechat-crm"
+      ],
+      "downloadStatus": "ok",
+      "cssExists": true,
+      "cssSize": 19151,
+      "ttfExists": true,
+      "ttfSize": 117984,
+      "ttfValid": true,
+      "mappingsCount": 378,
+      "status": "ok"
+    },
+    {
+      "assetId": "0c2981bd9779",
+      "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_428664_79kd0g7h613.css",
+      "sourceProjects": [
+        "management-wechat-crm"
+      ],
+      "downloadStatus": "ok",
+      "cssExists": true,
+      "cssSize": 6282,
+      "ttfExists": true,
+      "ttfSize": 39380,
+      "ttfValid": true,
+      "mappingsCount": 120,
+      "status": "ok"
+    },
+    {
+      "assetId": "c10909b7d1bf",
+      "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_428664_pwh4ebtaxx.css",
+      "sourceProjects": [
+        "planbook-accessories",
+        "promotion-vue-2022"
+      ],
+      "downloadStatus": "ok",
+      "cssExists": true,
+      "cssSize": 6424,
+      "ttfExists": true,
+      "ttfSize": 39996,
+      "ttfValid": true,
+      "mappingsCount": 123,
+      "status": "ok"
+    },
+    {
+      "assetId": "89654a0a851a",
+      "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_428664_4b80dqdddqv.css",
+      "sourceProjects": [
+        "planbook-accessories",
+        "planbook-main",
+        "promotion-vue-2018",
+        "tools-customer-acquisition"
+      ],
+      "downloadStatus": "ok",
+      "cssExists": true,
+      "cssSize": 26718,
+      "ttfExists": true,
+      "ttfSize": 31108,
+      "ttfValid": true,
+      "mappingsCount": 92,
+      "status": "ok"
+    },
+    {
+      "assetId": "5a3d27427ec3",
+      "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_428664_2ilxht3q3ky.css",
+      "sourceProjects": [
+        "planbook-accessories"
+      ],
+      "downloadStatus": "ok",
+      "cssExists": true,
+      "cssSize": 5615,
+      "ttfExists": true,
+      "ttfSize": 36260,
+      "ttfValid": true,
+      "mappingsCount": 106,
+      "status": "ok"
+    },
+    {
+      "assetId": "651c88c09048",
+      "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_5083134_600xfof53ct.css",
+      "sourceProjects": [
+        "planbook-accessories",
+        "tools-customer-acquisition"
+      ],
+      "downloadStatus": "ok",
+      "cssExists": true,
+      "cssSize": 6589,
+      "ttfExists": true,
+      "ttfSize": 39632,
+      "ttfValid": true,
+      "mappingsCount": 124,
+      "status": "ok"
+    },
+    {
+      "assetId": "c1be4e109970",
+      "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_280767_1r2koyd9phb.css",
+      "sourceProjects": [
+        "planbook-accessories"
+      ],
+      "downloadStatus": "ok",
+      "cssExists": true,
+      "cssSize": 61935,
+      "ttfExists": true,
+      "ttfSize": 77360,
+      "ttfValid": true,
+      "mappingsCount": 238,
+      "status": "ok"
+    },
+    {
+      "assetId": "abdf3a84ee65",
+      "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_428664_dvo3et3tigh.css",
+      "sourceProjects": [
+        "planbook-accessories",
+        "promotion-vue-2022"
+      ],
+      "downloadStatus": "ok",
+      "cssExists": true,
+      "cssSize": 7094,
+      "ttfExists": true,
+      "ttfSize": 43268,
+      "ttfValid": true,
+      "mappingsCount": 136,
+      "status": "ok"
+    },
+    {
+      "assetId": "13457a0ec155",
+      "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_428664_19bv2uxkv45.css",
+      "sourceProjects": [
+        "planbook-accessories"
+      ],
+      "downloadStatus": "ok",
+      "cssExists": true,
+      "cssSize": 7623,
+      "ttfExists": true,
+      "ttfSize": 46004,
+      "ttfValid": true,
+      "mappingsCount": 146,
+      "status": "ok"
+    },
+    {
+      "assetId": "c722a0383ed5",
+      "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_428664_98h83hzvaj5.css",
+      "sourceProjects": [
+        "planbook-accessories"
+      ],
+      "downloadStatus": "ok",
+      "cssExists": true,
+      "cssSize": 6769,
+      "ttfExists": true,
+      "ttfSize": 41716,
+      "ttfValid": true,
+      "mappingsCount": 130,
+      "status": "ok"
+    },
+    {
+      "assetId": "94e10a346cb3",
+      "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_428664_i62br8ctjvi.css",
+      "sourceProjects": [
+        "planbook-accessories"
+      ],
+      "downloadStatus": "ok",
+      "cssExists": true,
+      "cssSize": 28987,
+      "ttfExists": true,
+      "ttfSize": 33840,
+      "ttfValid": true,
+      "mappingsCount": 100,
+      "status": "ok"
+    },
+    {
+      "assetId": "e6592a1ef015",
+      "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_280767_xzhtbg6ic.css",
+      "sourceProjects": [
+        "planbook-innovative",
+        "planbook-main"
+      ],
+      "downloadStatus": "ok",
+      "cssExists": true,
+      "cssSize": 62625,
+      "ttfExists": true,
+      "ttfSize": 78108,
+      "ttfValid": true,
+      "mappingsCount": 241,
+      "status": "ok"
+    },
+    {
+      "assetId": "5b4ea5927db0",
+      "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_428664_h9h1ezsv.css",
+      "sourceProjects": [
+        "planbook-main"
+      ],
+      "downloadStatus": "ok",
+      "cssExists": true,
+      "cssSize": 6709,
+      "ttfExists": true,
+      "ttfSize": 41436,
+      "ttfValid": true,
+      "mappingsCount": 129,
+      "status": "ok"
+    },
+    {
+      "assetId": "cf5f445075cb",
+      "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_428664_8y61ps0f84n.css",
+      "sourceProjects": [
+        "planbook-main"
+      ],
+      "downloadStatus": "ok",
+      "cssExists": true,
+      "cssSize": 6984,
+      "ttfExists": true,
+      "ttfSize": 42844,
+      "ttfValid": true,
+      "mappingsCount": 134,
+      "status": "ok"
+    },
+    {
+      "assetId": "667e13431cb7",
+      "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_428664_8h17cvfvm7r.css",
+      "sourceProjects": [
+        "planbook-main"
+      ],
+      "downloadStatus": "ok",
+      "cssExists": true,
+      "cssSize": 7573,
+      "ttfExists": true,
+      "ttfSize": 45640,
+      "ttfValid": true,
+      "mappingsCount": 145,
+      "status": "ok"
+    },
+    {
+      "assetId": "090d8a31db71",
+      "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_428664_66gv1lr5kkx.css",
+      "sourceProjects": [
+        "planbook-main"
+      ],
+      "downloadStatus": "ok",
+      "cssExists": true,
+      "cssSize": 6570,
+      "ttfExists": true,
+      "ttfSize": 40620,
+      "ttfValid": true,
+      "mappingsCount": 126,
+      "status": "ok"
+    },
+    {
+      "assetId": "cdb190ccdd75",
+      "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_428664_3dz2t0h957y14i.css",
+      "sourceProjects": [
+        "planbook-main"
+      ],
+      "downloadStatus": "ok",
+      "cssExists": true,
+      "cssSize": 20076,
+      "ttfExists": true,
+      "ttfSize": 19660,
+      "ttfValid": true,
+      "mappingsCount": 57,
+      "status": "ok"
+    },
+    {
+      "assetId": "bc82d40635fc",
+      "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_428664_7i2cv6kfg7.css",
+      "sourceProjects": [
+        "planbook-main"
+      ],
+      "downloadStatus": "ok",
+      "cssExists": true,
+      "cssSize": 6615,
+      "ttfExists": true,
+      "ttfSize": 41012,
+      "ttfValid": true,
+      "mappingsCount": 127,
+      "status": "ok"
+    },
+    {
+      "assetId": "128f73b66b91",
+      "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_428664_b8utvxl1paa.css",
+      "sourceProjects": [
+        "planbook-main"
+      ],
+      "downloadStatus": "ok",
+      "cssExists": true,
+      "cssSize": 25504,
+      "ttfExists": true,
+      "ttfSize": 29620,
+      "ttfValid": true,
+      "mappingsCount": 87,
+      "status": "ok"
+    },
+    {
+      "assetId": "d6fea52e9b79",
+      "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_428664_bgi1lbym7wp.css",
+      "sourceProjects": [
+        "planbook-main",
+        "planbook-policy-check",
+        "tools-customer-acquisition"
+      ],
+      "downloadStatus": "ok",
+      "cssExists": true,
+      "cssSize": 29662,
+      "ttfExists": true,
+      "ttfSize": 34608,
+      "ttfValid": true,
+      "mappingsCount": 104,
+      "status": "ok"
+    },
+    {
+      "assetId": "b667bae78d4c",
+      "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_428664_gjvv2uvrt8k.css",
+      "sourceProjects": [
+        "planbook-main"
+      ],
+      "downloadStatus": "ok",
+      "cssExists": true,
+      "cssSize": 5986,
+      "ttfExists": true,
+      "ttfSize": 37936,
+      "ttfValid": true,
+      "mappingsCount": 114,
+      "status": "ok"
+    },
+    {
+      "assetId": "a6f5b3c6f8a9",
+      "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_280767_a0v3md61aah.css",
+      "sourceProjects": [
+        "planbook-main",
+        "tools-customer-acquisition"
+      ],
+      "downloadStatus": "ok",
+      "cssExists": true,
+      "cssSize": 80409,
+      "ttfExists": true,
+      "ttfSize": 100056,
+      "ttfValid": true,
+      "mappingsCount": 320,
+      "status": "ok"
+    },
+    {
+      "assetId": "7383d5e31884",
+      "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_1400070_muj04vmlu7b.css",
+      "sourceProjects": [
+        "planbook-main"
+      ],
+      "downloadStatus": "ok",
+      "cssExists": true,
+      "cssSize": 3408,
+      "ttfExists": true,
+      "ttfSize": 3148,
+      "ttfValid": true,
+      "mappingsCount": 10,
+      "status": "ok"
+    },
+    {
+      "assetId": "ddbc89023849",
+      "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_428664_8mcpbsbmetn.css",
+      "sourceProjects": [
+        "planbook-main"
+      ],
+      "downloadStatus": "ok",
+      "cssExists": true,
+      "cssSize": 6081,
+      "ttfExists": true,
+      "ttfSize": 38520,
+      "ttfValid": true,
+      "mappingsCount": 116,
+      "status": "ok"
+    },
+    {
+      "assetId": "a626133907e9",
+      "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_428664_oyu00uuny3j.css",
+      "sourceProjects": [
+        "planbook-main"
+      ],
+      "downloadStatus": "ok",
+      "cssExists": true,
+      "cssSize": 7409,
+      "ttfExists": true,
+      "ttfSize": 44600,
+      "ttfValid": true,
+      "mappingsCount": 142,
+      "status": "ok"
+    },
+    {
+      "assetId": "04996b07804e",
+      "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_5083134_vfi4mapwxbh.css",
+      "sourceProjects": [
+        "planbook-main"
+      ],
+      "downloadStatus": "ok",
+      "cssExists": true,
+      "cssSize": 6634,
+      "ttfExists": true,
+      "ttfSize": 39920,
+      "ttfValid": true,
+      "mappingsCount": 125,
+      "status": "ok"
+    },
+    {
+      "assetId": "3a3a35657d1d",
+      "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_428664_jfilksqj3ej.css",
+      "sourceProjects": [
+        "planbook-main"
+      ],
+      "downloadStatus": "ok",
+      "cssExists": true,
+      "cssSize": 6875,
+      "ttfExists": true,
+      "ttfSize": 42392,
+      "ttfValid": true,
+      "mappingsCount": 132,
+      "status": "ok"
+    },
+    {
+      "assetId": "f5f3da6d03f8",
+      "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_4960269_9p2et13034r.css",
+      "sourceProjects": [
+        "planbook-main"
+      ],
+      "downloadStatus": "ok",
+      "cssExists": true,
+      "cssSize": 604,
+      "ttfExists": true,
+      "ttfSize": 2036,
+      "ttfValid": true,
+      "mappingsCount": 1,
+      "status": "ok"
+    },
+    {
+      "assetId": "88e6c16ebe27",
+      "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_428664_y6u9dveq22.css",
+      "sourceProjects": [
+        "planbook-main"
+      ],
+      "downloadStatus": "ok",
+      "cssExists": true,
+      "cssSize": 6668,
+      "ttfExists": true,
+      "ttfSize": 41332,
+      "ttfValid": true,
+      "mappingsCount": 128,
+      "status": "ok"
+    },
+    {
+      "assetId": "82f2c3714e22",
+      "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_428664_jlenlrheaxn.css",
+      "sourceProjects": [
+        "planbook-policy-check"
+      ],
+      "downloadStatus": "ok",
+      "cssExists": true,
+      "cssSize": 7913,
+      "ttfExists": true,
+      "ttfSize": 47424,
+      "ttfValid": true,
+      "mappingsCount": 152,
+      "status": "ok"
+    },
+    {
+      "assetId": "c34e5ca9f39e",
+      "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_428664_99d69tcivr4.css",
+      "sourceProjects": [
+        "planbook-policy-check"
+      ],
+      "downloadStatus": "ok",
+      "cssExists": true,
+      "cssSize": 7774,
+      "ttfExists": true,
+      "ttfSize": 46988,
+      "ttfValid": true,
+      "mappingsCount": 149,
+      "status": "ok"
+    },
+    {
+      "assetId": "195a8578410e",
+      "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_5083134_4f3egsm2o2c.css",
+      "sourceProjects": [
+        "planbook-policy-check"
+      ],
+      "downloadStatus": "ok",
+      "cssExists": true,
+      "cssSize": 6546,
+      "ttfExists": true,
+      "ttfSize": 39516,
+      "ttfValid": true,
+      "mappingsCount": 123,
+      "status": "ok"
+    },
+    {
+      "assetId": "c8641db01338",
+      "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_1504904_9rkffrqg85l.css",
+      "sourceProjects": [
+        "planbook-policy-check"
+      ],
+      "downloadStatus": "ok",
+      "cssExists": true,
+      "cssSize": 4775,
+      "ttfExists": true,
+      "ttfSize": 4236,
+      "ttfValid": true,
+      "mappingsCount": 14,
+      "status": "ok"
+    },
+    {
+      "assetId": "d8e56b7ece15",
+      "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_428664_9bzhjthg5j7.css",
+      "sourceProjects": [
+        "planbook-policy-check"
+      ],
+      "downloadStatus": "ok",
+      "cssExists": true,
+      "cssSize": 25988,
+      "ttfExists": true,
+      "ttfSize": 30200,
+      "ttfValid": true,
+      "mappingsCount": 90,
+      "status": "ok"
+    },
+    {
+      "assetId": "a3be5af06ee7",
+      "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_590851_mqnkkoenssn.css",
+      "sourceProjects": [
+        "planbook-policy-check"
+      ],
+      "downloadStatus": "ok",
+      "cssExists": true,
+      "cssSize": 78356,
+      "ttfExists": true,
+      "ttfSize": 97196,
+      "ttfValid": true,
+      "mappingsCount": 312,
+      "status": "ok"
+    },
+    {
+      "assetId": "f4fee3da2e72",
+      "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_336721_2btvfpbqkid.css",
+      "sourceProjects": [
+        "planbook-policy-check"
+      ],
+      "downloadStatus": "ok",
+      "cssExists": true,
+      "cssSize": 24499,
+      "ttfExists": true,
+      "ttfSize": 28568,
+      "ttfValid": true,
+      "mappingsCount": 82,
+      "status": "ok"
+    },
+    {
+      "assetId": "7555fcc5d2e4",
+      "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_1561272_hu0tnmnn4m.css",
+      "sourceProjects": [
+        "planbook-policy-check",
+        "promotion-vue-2018"
+      ],
+      "downloadStatus": "ok",
+      "cssExists": true,
+      "cssSize": 3992,
+      "ttfExists": true,
+      "ttfSize": 3544,
+      "ttfValid": true,
+      "mappingsCount": 12,
+      "status": "ok"
+    },
+    {
+      "assetId": "926d6d290bf9",
+      "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_428664_rzvsoddflce.css",
+      "sourceProjects": [
+        "planbook-policy-check"
+      ],
+      "downloadStatus": "ok",
+      "cssExists": true,
+      "cssSize": 7525,
+      "ttfExists": true,
+      "ttfSize": 45368,
+      "ttfValid": true,
+      "mappingsCount": 144,
+      "status": "ok"
+    },
+    {
+      "assetId": "961379abbfb6",
+      "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_910415_35zmby5poyg.css",
+      "sourceProjects": [
+        "promotion-vue-2018"
+      ],
+      "downloadStatus": "ok",
+      "cssExists": true,
+      "cssSize": 86302,
+      "ttfExists": true,
+      "ttfSize": 92560,
+      "ttfValid": true,
+      "mappingsCount": 291,
+      "status": "ok"
+    },
+    {
+      "assetId": "86a7c6cdf72f",
+      "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_428664_00w563jpjgex.css",
+      "sourceProjects": [
+        "promotion-vue-2018"
+      ],
+      "downloadStatus": "ok",
+      "cssExists": true,
+      "cssSize": 22659,
+      "ttfExists": true,
+      "ttfSize": 22528,
+      "ttfValid": true,
+      "mappingsCount": 67,
+      "status": "ok"
+    },
+    {
+      "assetId": "83ee3a416bd9",
+      "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_280767_mexaglzgdqk.css",
+      "sourceProjects": [
+        "promotion-vue-2018"
+      ],
+      "downloadStatus": "ok",
+      "cssExists": true,
+      "cssSize": 70597,
+      "ttfExists": true,
+      "ttfSize": 76440,
+      "ttfValid": true,
+      "mappingsCount": 234,
+      "status": "ok"
+    },
+    {
+      "assetId": "5ee20560641d",
+      "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_336721_eewfjl2pcis.css",
+      "sourceProjects": [
+        "promotion-vue-2018"
+      ],
+      "downloadStatus": "ok",
+      "cssExists": true,
+      "cssSize": 26062,
+      "ttfExists": true,
+      "ttfSize": 26568,
+      "ttfValid": true,
+      "mappingsCount": 74,
+      "status": "ok"
+    },
+    {
+      "assetId": "dfb63027401a",
+      "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_1811719_x9kbnc9we1.css",
+      "sourceProjects": [
+        "promotion-vue-2018"
+      ],
+      "downloadStatus": "ok",
+      "cssExists": true,
+      "cssSize": 6706,
+      "ttfExists": true,
+      "ttfSize": 6420,
+      "ttfValid": true,
+      "mappingsCount": 23,
+      "status": "ok"
+    },
+    {
+      "assetId": "036bedba6122",
+      "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_2142609_8gd8hy3a76p.css",
+      "sourceProjects": [
+        "promotion-vue-2018"
+      ],
+      "downloadStatus": "ok",
+      "cssExists": true,
+      "cssSize": 7728,
+      "ttfExists": true,
+      "ttfSize": 7424,
+      "ttfValid": true,
+      "mappingsCount": 25,
+      "status": "ok"
+    },
+    {
+      "assetId": "43b5d5b9b636",
+      "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_639125_jnpqzi0xjoj.css",
+      "sourceProjects": [
+        "promotion-vue-2018"
+      ],
+      "downloadStatus": "ok",
+      "cssExists": true,
+      "cssSize": 7082,
+      "ttfExists": true,
+      "ttfSize": 6892,
+      "ttfValid": true,
+      "mappingsCount": 25,
+      "status": "ok"
+    },
+    {
+      "assetId": "10517dd8c534",
+      "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_3156005_bit0veqkv6c.css",
+      "sourceProjects": [
+        "promotion-vue-2018"
+      ],
+      "downloadStatus": "ok",
+      "cssExists": true,
+      "cssSize": 832,
+      "ttfExists": true,
+      "ttfSize": 2392,
+      "ttfValid": true,
+      "mappingsCount": 6,
+      "status": "ok"
+    },
+    {
+      "assetId": "73f560053ae0",
+      "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_2607384_m6xy4y9iq5j.css",
+      "sourceProjects": [
+        "promotion-vue-2018"
+      ],
+      "downloadStatus": "ok",
+      "cssExists": true,
+      "cssSize": 1641,
+      "ttfExists": true,
+      "ttfSize": 6360,
+      "ttfValid": true,
+      "mappingsCount": 22,
+      "status": "ok"
+    },
+    {
+      "assetId": "ee5cb31752dd",
+      "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_2189700_ftksvdkbx64.css",
+      "sourceProjects": [
+        "promotion-vue-2018"
+      ],
+      "downloadStatus": "ok",
+      "cssExists": true,
+      "cssSize": 9793,
+      "ttfExists": true,
+      "ttfSize": 10724,
+      "ttfValid": true,
+      "mappingsCount": 37,
+      "status": "ok"
+    },
+    {
+      "assetId": "889300d79ebd",
+      "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_428664_1xnjtbqjoqg.css",
+      "sourceProjects": [
+        "promotion-vue-2022"
+      ],
+      "downloadStatus": "ok",
+      "cssExists": true,
+      "cssSize": 28240,
+      "ttfExists": true,
+      "ttfSize": 33076,
+      "ttfValid": true,
+      "mappingsCount": 97,
+      "status": "ok"
+    },
+    {
+      "assetId": "98a9c63e17c4",
+      "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_336721_cwgrn48i7um.css",
+      "sourceProjects": [
+        "tools-customer-acquisition"
+      ],
+      "downloadStatus": "ok",
+      "cssExists": true,
+      "cssSize": 23319,
+      "ttfExists": true,
+      "ttfSize": 26980,
+      "ttfValid": true,
+      "mappingsCount": 77,
+      "status": "ok"
+    },
+    {
+      "assetId": "a4f0c329de1d",
+      "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_428664_kwy4ouo1glvaq0k9.css",
+      "sourceProjects": [
+        "tools-customer-acquisition"
+      ],
+      "downloadStatus": "ok",
+      "cssExists": true,
+      "cssSize": 6260,
+      "ttfExists": true,
+      "ttfSize": 5540,
+      "ttfValid": true,
+      "mappingsCount": 19,
+      "status": "ok"
+    },
+    {
+      "assetId": "e898939e33bb",
+      "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_336721_o6v1iugrqdoyldi.css",
+      "sourceProjects": [
+        "tools-customer-acquisition"
+      ],
+      "downloadStatus": "ok",
+      "cssExists": true,
+      "cssSize": 23827,
+      "ttfExists": true,
+      "ttfSize": 24116,
+      "ttfValid": true,
+      "mappingsCount": 66,
+      "status": "ok"
+    },
+    {
+      "assetId": "e5102c29bd68",
+      "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_685961_a2ozv0zlba8.css",
+      "sourceProjects": [
+        "tools-customer-acquisition"
+      ],
+      "downloadStatus": "ok",
+      "cssExists": true,
+      "cssSize": 14243,
+      "ttfExists": true,
+      "ttfSize": 13480,
+      "ttfValid": true,
+      "mappingsCount": 45,
+      "status": "ok"
+    },
+    {
+      "assetId": "0de9569a4b80",
+      "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_336721_baavf6cg3xewb3xr.css",
+      "sourceProjects": [
+        "tools-customer-acquisition"
+      ],
+      "downloadStatus": "ok",
+      "cssExists": true,
+      "cssSize": 24576,
+      "ttfExists": true,
+      "ttfSize": 24916,
+      "ttfValid": true,
+      "mappingsCount": 69,
+      "status": "ok"
+    },
+    {
+      "assetId": "5075d65c5796",
+      "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_336721_j9qak3imhho20529.css",
+      "sourceProjects": [
+        "tools-customer-acquisition"
+      ],
+      "downloadStatus": "ok",
+      "cssExists": true,
+      "cssSize": 25691,
+      "ttfExists": true,
+      "ttfSize": 26132,
+      "ttfValid": true,
+      "mappingsCount": 73,
+      "status": "ok"
+    },
+    {
+      "assetId": "1e86aa599253",
+      "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_336721_fa8v5jid4nzpk3xr.css",
+      "sourceProjects": [
+        "tools-customer-acquisition"
+      ],
+      "downloadStatus": "ok",
+      "cssExists": true,
+      "cssSize": 17980,
+      "ttfExists": true,
+      "ttfSize": 18068,
+      "ttfValid": true,
+      "mappingsCount": 50,
+      "status": "ok"
+    },
+    {
+      "assetId": "8642a7e35589",
+      "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_685961_8psalwzjgwh.css",
+      "sourceProjects": [
+        "tools-customer-acquisition"
+      ],
+      "downloadStatus": "ok",
+      "cssExists": true,
+      "cssSize": 13943,
+      "ttfExists": true,
+      "ttfSize": 13220,
+      "ttfValid": true,
+      "mappingsCount": 44,
+      "status": "ok"
+    },
+    {
+      "assetId": "b065f46bd42c",
+      "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_685961_vwgwrinez5o.css",
+      "sourceProjects": [
+        "tools-customer-acquisition"
+      ],
+      "downloadStatus": "ok",
+      "cssExists": true,
+      "cssSize": 13993,
+      "ttfExists": true,
+      "ttfSize": 14720,
+      "ttfValid": true,
+      "mappingsCount": 53,
+      "status": "ok"
+    },
+    {
+      "assetId": "8034cd8c4e90",
+      "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_685961_zx5qm9ub0cf.css",
+      "sourceProjects": [
+        "tools-customer-acquisition"
+      ],
+      "downloadStatus": "ok",
+      "cssExists": true,
+      "cssSize": 13125,
+      "ttfExists": true,
+      "ttfSize": 13944,
+      "ttfValid": true,
+      "mappingsCount": 49,
+      "status": "ok"
+    },
+    {
+      "assetId": "dae51330f742",
+      "cssUrl": "https://res.winbaoxian.com/iconfont/1494329292049/css/symbols.css",
+      "sourceProjects": [
+        "tools-customer-acquisition"
+      ],
+      "downloadStatus": "ok",
+      "cssExists": true,
+      "cssSize": 11638,
+      "ttfExists": true,
+      "ttfSize": 47676,
+      "ttfValid": true,
+      "mappingsCount": 170,
+      "status": "ok"
+    },
+    {
+      "assetId": "44bb4b297b58",
+      "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_428664_lq56367snj1exw29.css",
+      "sourceProjects": [
+        "websites-wyjj"
+      ],
+      "downloadStatus": "ok",
+      "cssExists": true,
+      "cssSize": 18307,
+      "ttfExists": true,
+      "ttfSize": 17876,
+      "ttfValid": true,
+      "mappingsCount": 53,
+      "status": "ok"
+    },
+    {
+      "assetId": "a8b4b50b4446",
+      "cssUrl": "https://res.winbaoxian.com/iconfont/1469782413913/css/symbols.css",
+      "sourceProjects": [
+        "websites-wyjj"
+      ],
+      "downloadStatus": "ok",
+      "cssExists": true,
+      "cssSize": 4972,
+      "ttfExists": true,
+      "ttfSize": 22036,
+      "ttfValid": true,
+      "mappingsCount": 73,
+      "status": "ok"
+    },
+    {
+      "assetId": "fb2dc9b73a35",
+      "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_4337802_bpezdq4qcvg.css",
+      "sourceProjects": [
+        "websites-wyjj"
+      ],
+      "downloadStatus": "ok",
+      "cssExists": true,
+      "cssSize": 1367,
+      "ttfExists": true,
+      "ttfSize": 4732,
+      "ttfValid": true,
+      "mappingsCount": 17,
+      "status": "ok"
+    },
+    {
+      "assetId": "c4862e36d872",
+      "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_5165506_p8nm66u0fd.css",
+      "sourceProjects": [
+        "manual"
+      ],
+      "downloadStatus": "ok",
+      "cssExists": true,
+      "cssSize": 2254,
+      "ttfExists": true,
+      "ttfSize": 8756,
+      "ttfValid": true,
+      "mappingsCount": 34,
+      "status": "ok"
+    },
+    {
+      "assetId": "2e965f5713c8",
+      "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_5139753_59xlfs1rv4t.css",
+      "sourceProjects": [
+        "manual"
+      ],
+      "downloadStatus": "ok",
+      "cssExists": true,
+      "cssSize": 633,
+      "ttfExists": true,
+      "ttfSize": 2028,
+      "ttfValid": true,
+      "mappingsCount": 2,
+      "status": "ok"
+    },
+    {
+      "assetId": "ebce00384658",
+      "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_428664_cj8pe527d8u.css",
+      "sourceProjects": [
+        "manual"
+      ],
+      "downloadStatus": "ok",
+      "cssExists": true,
+      "cssSize": 7960,
+      "ttfExists": true,
+      "ttfSize": 47736,
+      "ttfValid": true,
+      "mappingsCount": 153,
+      "status": "ok"
+    },
+    {
+      "assetId": "9656075c0261",
+      "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_428664_piwj8vscg7b.css",
+      "sourceProjects": [
+        "manual"
+      ],
+      "downloadStatus": "ok",
+      "cssExists": true,
+      "cssSize": 7719,
+      "ttfExists": true,
+      "ttfSize": 46708,
+      "ttfValid": true,
+      "mappingsCount": 148,
+      "status": "ok"
+    },
+    {
+      "assetId": "53bb8b5dbd99",
+      "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_4960269_cv46z0yckxg.css",
+      "sourceProjects": [
+        "manual"
+      ],
+      "downloadStatus": "ok",
+      "cssExists": true,
+      "cssSize": 652,
+      "ttfExists": true,
+      "ttfSize": 2428,
+      "ttfValid": true,
+      "mappingsCount": 2,
+      "status": "ok"
+    },
+    {
+      "assetId": "eb3bd67c3857",
+      "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_428664_7ip68eerepd.css",
+      "sourceProjects": [
+        "manual"
+      ],
+      "downloadStatus": "ok",
+      "cssExists": true,
+      "cssSize": 7360,
+      "ttfExists": true,
+      "ttfSize": 44380,
+      "ttfValid": true,
+      "mappingsCount": 141,
+      "status": "ok"
+    },
+    {
+      "assetId": "036492dced92",
+      "cssUrl": "https://res.winbaoxian.com/ali-iconfont/font_428664_fr92kem0hlr.css",
+      "sourceProjects": [
+        "manual"
+      ],
+      "downloadStatus": "ok",
+      "cssExists": true,
+      "cssSize": 7140,
+      "ttfExists": true,
+      "ttfSize": 43512,
+      "ttfValid": true,
+      "mappingsCount": 137,
+      "status": "ok"
+    }
+  ]
+}

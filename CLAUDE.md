@@ -31,7 +31,7 @@ Agent **只做 4 件事**：
 | 0 | Task Planning | LLM | — | 生成 JSON pipeline plan |
 | 1 | Repo Discovery | Node.js | `01_scan_repos_*.js` | 克隆仓库、扫描 HTML 提取 iconfont 链接 |
 | 2 | Asset Resolver | Node.js | `02_resolve_download_assets.js` + 2 | CSS 下载(gzip)、@font-face 解析(TTF URL)、name→unicode 映射提取、TTF 下载 |
-| 3 | Glyph Extraction | Python | `03_extract_glyphs.py` | fontTools 解析 TTF、提取 contours |
+| Phase 3 | Glyph Extraction | Python | `03_extract_glyphs.py` | fontTools 解析 TTF、提取 contours | 🟢 已完成 |
 | 4 | Geometry Normalization | Python | `04_normalize_glyphs.py` | UPM=1024、contour 标准化、glyphHash |
 | 5 | Glyph Hash Registry | Python | `05_build_registry.py` | 核心数据库、多源合并、alias |
 | 6 | Conflict Detection | Python/Node.js | `06_detect_conflicts_*.js` | unicode/name/glyph 冲突检测 |
@@ -48,10 +48,11 @@ Agent **只做 4 件事**：
 | `pipeline/` | 所有流水线脚本（编号命名） |
 | `sources/phase1_raw_links/` | Phase 1 原始数据：CSS 链接清单 |
 | `sources/phase2_assets/` | Phase 2 下载资产：`<assetId>/iconfont.css` + `font.ttf` |
+| `sources/phase3_glyphs/` | Phase 3 glyph 数据：`raw_glyphs.json` + `extraction_summary.json` |
 | `sources/meta/` | 跨 Phase 元数据：assets_manifest.json、css_mappings.json、assets_validation.json |
 | `registry/` | glyph 哈希数据库和中间数据（Phase 3-5） |
 | `output/` | 最终生成的字体文件和 manifest（Phase 9-11） |
-| `report/` | 冲突报告、验证报告（Phase 6-10） |
+| `report/` | 各阶段验证/冲突报告（Phase 3 起） |
 | `snapshots/` | 每阶段快照，用于回滚 |
 
 ## Tech Stack
@@ -83,7 +84,7 @@ Agent **只做 4 件事**：
 | Phase 0 | ⬜ 未开始 |
 | Phase 1 | 🟢 已完成 |
 | Phase 2 | 🟢 已完成（3个脚本：110/111 CSS + 110 TTF + 11494 图标映射） |
-| Phase 3 | ⬜ 待编写（fontTools） |
+| Phase 3 | 🟢 已完成（2个脚本：110 TTF + 11528 glyph 记录提取，0 错误） |
 | Phase 4 | ⬜ 待编写（fontTools） |
 | Phase 5 | ⬜ 待编写（fontTools） |
 | Phase 6 | 🔧 脚本已收集（2个） |
@@ -93,7 +94,7 @@ Agent **只做 4 件事**：
 | Phase 10 | ⬜ 待编写（Playwright） |
 | Phase 11 | 🔧 脚本已收集（1个） |
 
-**统计**：Phase 1 已完成（3个脚本）/ Phase 2 已完成（3个脚本）/ 已收集 6 个 / 待编写 5 个 / 共 17 个。详见 `script.md`。
+**统计**：Phase 1 已完成（3个脚本）/ Phase 2 已完成（3个脚本）/ Phase 3 已完成（2个脚本）/ 已收集 6 个 / 待编写 4 个 / 共 17 个。详见 `script.md`。
 
 ## Phase 1 完成结果
 

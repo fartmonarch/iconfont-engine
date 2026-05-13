@@ -22,7 +22,7 @@
 | 04 | `pipeline/02_resolve_download_assets.js` | **新编写** | Node.js | Phase 2 | 🟢 已完成 | 下载 110/111 CSS + 110 TTF，gzip/相对路径修复，输出 assets_manifest.json |
 | 05 | `pipeline/02_resolve_parse_css_mappings.js` | **新编写** | Node.js | Phase 2 | 🟢 已完成 | 11494 个图标映射提取，symbol 逗号 selector 修复，输出 css_mappings.json |
 | 06 | `pipeline/02_resolve_validate_assets.js` | **新编写** | Node.js | Phase 2 | 🟢 已完成 | TTF header 校验 + 文件完整性检查，输出 assets_validation.json |
-| 06 | `pipeline/03_extract_glyphs.py` | **待编写** | Python | Phase 3 | 解析 TTF，提取 cmap/contours，生成 raw glyph dataset |
+| 06 | `pipeline/03_extract_glyphs.py` | **新编写** | Python | Phase 3 | 🟢 已完成 | 解析 110 TTF，提取 cmap/contours/hmtx，11528 条 glyph 记录，0 错误 |
 | 07 | `pipeline/04_normalize_glyphs.py` | **待编写** | Python | Phase 4 | UPM 统一(1024)、contour 排序、起点统一、精度 round(6)、composite 展开 |
 | 08 | `pipeline/05_build_registry.py` | **待编写** | Python | Phase 5 | glyphHash 生成、多源合并、alias 收集、source tracking |
 | 09 | `pipeline/06_detect_conflicts_iconfont_compare.js` | iconfont-superset-check skill | Node.js | Phase 6 | 双链接模式 B：判断两个 iconfont 链接的超集关系，生成对比报告 |
@@ -78,11 +78,10 @@
 | `_cmp2.js` | 14 | 单文件替换验证 |
 | `GPT_ttf合并流程规范.md` | — | 参考文档（TTF 合并流程规范） |
 
-### E. 待编写（6 个）
+### E. 待编写（5 个）
 
 | 编号 | 文件 | 语言 | 说明 |
 |------|------|------|------|
-| 06 | `03_extract_glyphs.py` | Python | 字形提取（fontTools） |
 | 07 | `04_normalize_glyphs.py` | Python | 几何标准化 |
 | 08 | `05_build_registry.py` | Python | 哈希注册表构建 |
 | 15 | `08_merge_glyf.py` | Python | 核心合并引擎 |
@@ -120,7 +119,7 @@ Phase 1 全程脚本覆盖扫描的是**"文本里存在的完整链接"**，而
 | 13/14 cmp 测试 | `fs`, `path`（内置） |
 | 18 gen_demo | `fs`, `path`（内置） |
 
-### Python 脚本依赖（待编写）
+### Python 脚本依赖
 
 | 脚本 | 关键依赖 |
 |------|----------|
@@ -137,9 +136,9 @@ Phase 1 全程脚本覆盖扫描的是**"文本里存在的完整链接"**，而
 ```
 Phase 1 扫描    Phase 2 解析         Phase 3-5 提取    Phase 6 检测     Phase 7 解决     Phase 8-9 合并    Phase 10 验证   Phase 11 输出
     │               │                    │                │                │                │               │              │
-  [01] 🟢         [04] 🟢              [07] ⬜          [10] 🔧          [12] 🔧          [16] ⬜           [18] ⬜          [19] 🔧
-  [02] 🟢         [05] 🟢              [08] ⬜          [11] 🔧          [13] 🔧          [17] ⬜
-  [03] 🟢         [06] 🟢              [09] ⬜          [14] 🔧
+  [01] 🟢         [04] 🟢              [06] 🟢          [10] 🔧          [12] 🔧          [16] ⬜           [18] ⬜          [19] 🔧
+  [02] 🟢         [05] 🟢              [07] ⬜          [11] 🔧          [13] 🔧          [17] ⬜
+  [03] 🟢         [06] 🟢              [08] ⬜          [14] 🔧
                                                         [15] 🔧
 ```
 

@@ -1,0 +1,1030 @@
+{
+  "timestamp": "2026-05-13T06:13:53.876185+00:00",
+  "total_assets": 110,
+  "total_glyphs": 11528,
+  "status_summary": {
+    "ok": 110,
+    "error": 0
+  },
+  "total_errors": 0,
+  "asset_summaries": [
+    {
+      "assetId": "d737f632f4df",
+      "sourceProjects": [
+        "ai-customer-acquisition",
+        "business-tool"
+      ],
+      "numGlyphs": 28,
+      "unitsPerEm": 1024,
+      "errors": []
+    },
+    {
+      "assetId": "3a2dcb72da44",
+      "sourceProjects": [
+        "ai-customer-acquisition"
+      ],
+      "numGlyphs": 158,
+      "unitsPerEm": 1024,
+      "errors": []
+    },
+    {
+      "assetId": "3317e5cb12d7",
+      "sourceProjects": [
+        "app-settlement"
+      ],
+      "numGlyphs": 8,
+      "unitsPerEm": 1024,
+      "errors": []
+    },
+    {
+      "assetId": "c451667373e6",
+      "sourceProjects": [
+        "app-settlement"
+      ],
+      "numGlyphs": 84,
+      "unitsPerEm": 1024,
+      "errors": []
+    },
+    {
+      "assetId": "c83f6e44d0c0",
+      "sourceProjects": [
+        "app-settlement",
+        "promotion-vue-2018"
+      ],
+      "numGlyphs": 26,
+      "unitsPerEm": 1024,
+      "errors": []
+    },
+    {
+      "assetId": "1311a7f5b183",
+      "sourceProjects": [
+        "business-tool"
+      ],
+      "numGlyphs": 170,
+      "unitsPerEm": 560,
+      "errors": []
+    },
+    {
+      "assetId": "0dc4cf8ce170",
+      "sourceProjects": [
+        "business-tool"
+      ],
+      "numGlyphs": 4,
+      "unitsPerEm": 1024,
+      "errors": []
+    },
+    {
+      "assetId": "7233bfd22c8e",
+      "sourceProjects": [
+        "business-tool"
+      ],
+      "numGlyphs": 93,
+      "unitsPerEm": 560,
+      "errors": []
+    },
+    {
+      "assetId": "04dce05e46cf",
+      "sourceProjects": [
+        "business-tool"
+      ],
+      "numGlyphs": 73,
+      "unitsPerEm": 560,
+      "errors": []
+    },
+    {
+      "assetId": "6a48244a285f",
+      "sourceProjects": [
+        "business-tool"
+      ],
+      "numGlyphs": 117,
+      "unitsPerEm": 560,
+      "errors": []
+    },
+    {
+      "assetId": "e07e7aafbc38",
+      "sourceProjects": [
+        "business-tool"
+      ],
+      "numGlyphs": 17,
+      "unitsPerEm": 1024,
+      "errors": []
+    },
+    {
+      "assetId": "21dc2f00a1ef",
+      "sourceProjects": [
+        "business-tool"
+      ],
+      "numGlyphs": 1,
+      "unitsPerEm": 1024,
+      "errors": []
+    },
+    {
+      "assetId": "cf6e3630a212",
+      "sourceProjects": [
+        "business-tool"
+      ],
+      "numGlyphs": 99,
+      "unitsPerEm": 1024,
+      "errors": []
+    },
+    {
+      "assetId": "53ae05568965",
+      "sourceProjects": [
+        "business-tool"
+      ],
+      "numGlyphs": 27,
+      "unitsPerEm": 1024,
+      "errors": []
+    },
+    {
+      "assetId": "703f65bef56b",
+      "sourceProjects": [
+        "business-tool",
+        "insurance-group-mobile",
+        "promotion-vue-2018",
+        "promotion-vue-2022",
+        "tools-customer-acquisition",
+        "wechat-crm"
+      ],
+      "numGlyphs": 166,
+      "unitsPerEm": 1024,
+      "errors": []
+    },
+    {
+      "assetId": "85c94873279e",
+      "sourceProjects": [
+        "business-tool",
+        "face-plus-auth",
+        "payment-cashier-mobile"
+      ],
+      "numGlyphs": 174,
+      "unitsPerEm": 1024,
+      "errors": []
+    },
+    {
+      "assetId": "5598e15c97f0",
+      "sourceProjects": [
+        "business-tool"
+      ],
+      "numGlyphs": 20,
+      "unitsPerEm": 1024,
+      "errors": []
+    },
+    {
+      "assetId": "856d3dd79324",
+      "sourceProjects": [
+        "business-tool"
+      ],
+      "numGlyphs": 113,
+      "unitsPerEm": 1024,
+      "errors": []
+    },
+    {
+      "assetId": "5bc913fb2cde",
+      "sourceProjects": [
+        "business-tool"
+      ],
+      "numGlyphs": 85,
+      "unitsPerEm": 1024,
+      "errors": []
+    },
+    {
+      "assetId": "ca1beac4409e",
+      "sourceProjects": [
+        "business-tool"
+      ],
+      "numGlyphs": 9,
+      "unitsPerEm": 1024,
+      "errors": []
+    },
+    {
+      "assetId": "ebbc0ba6fc13",
+      "sourceProjects": [
+        "business-tool"
+      ],
+      "numGlyphs": 241,
+      "unitsPerEm": 1024,
+      "errors": []
+    },
+    {
+      "assetId": "a9b441764fb9",
+      "sourceProjects": [
+        "bxs-tools-ui",
+        "planbook-main"
+      ],
+      "numGlyphs": 113,
+      "unitsPerEm": 1024,
+      "errors": []
+    },
+    {
+      "assetId": "a28da8cb6a8f",
+      "sourceProjects": [
+        "fed-toolset"
+      ],
+      "numGlyphs": 159,
+      "unitsPerEm": 560,
+      "errors": []
+    },
+    {
+      "assetId": "05ae5da1a8d2",
+      "sourceProjects": [
+        "h5-order-cancel",
+        "insurance-group-mobile"
+      ],
+      "numGlyphs": 214,
+      "unitsPerEm": 1024,
+      "errors": []
+    },
+    {
+      "assetId": "dc42e569b5c5",
+      "sourceProjects": [
+        "insurance-claims-2"
+      ],
+      "numGlyphs": 195,
+      "unitsPerEm": 1024,
+      "errors": []
+    },
+    {
+      "assetId": "cafe598ecb6e",
+      "sourceProjects": [
+        "insurance-claims-2"
+      ],
+      "numGlyphs": 1,
+      "unitsPerEm": 1024,
+      "errors": []
+    },
+    {
+      "assetId": "2368044f2d06",
+      "sourceProjects": [
+        "insurance-collection-pages",
+        "planbook-accessories",
+        "planbook-main",
+        "tools-customer-acquisition"
+      ],
+      "numGlyphs": 143,
+      "unitsPerEm": 1024,
+      "errors": []
+    },
+    {
+      "assetId": "682513d5fcad",
+      "sourceProjects": [
+        "insurance-group-mobile"
+      ],
+      "numGlyphs": 115,
+      "unitsPerEm": 560,
+      "errors": []
+    },
+    {
+      "assetId": "5e6043beee56",
+      "sourceProjects": [
+        "insurance-group-mobile"
+      ],
+      "numGlyphs": 119,
+      "unitsPerEm": 560,
+      "errors": []
+    },
+    {
+      "assetId": "6c4faea4e5ed",
+      "sourceProjects": [
+        "insurance-group-mobile"
+      ],
+      "numGlyphs": 147,
+      "unitsPerEm": 1024,
+      "errors": []
+    },
+    {
+      "assetId": "79b4e8e587a5",
+      "sourceProjects": [
+        "insurance-group-mobile"
+      ],
+      "numGlyphs": 164,
+      "unitsPerEm": 1024,
+      "errors": []
+    },
+    {
+      "assetId": "f73565d1bbce",
+      "sourceProjects": [
+        "insurance-group-mobile"
+      ],
+      "numGlyphs": 1,
+      "unitsPerEm": 1024,
+      "errors": []
+    },
+    {
+      "assetId": "019f321bbcff",
+      "sourceProjects": [
+        "insurance-group-mobile"
+      ],
+      "numGlyphs": 173,
+      "unitsPerEm": 560,
+      "errors": []
+    },
+    {
+      "assetId": "a18c04d4f0c5",
+      "sourceProjects": [
+        "insurance-group-mobile",
+        "promotion-vue-2022"
+      ],
+      "numGlyphs": 103,
+      "unitsPerEm": 1024,
+      "errors": []
+    },
+    {
+      "assetId": "eedc00a2f845",
+      "sourceProjects": [
+        "insurance-list-pages"
+      ],
+      "numGlyphs": 273,
+      "unitsPerEm": 1024,
+      "errors": []
+    },
+    {
+      "assetId": "90242b7194f8",
+      "sourceProjects": [
+        "insurance-policy-refund"
+      ],
+      "numGlyphs": 166,
+      "unitsPerEm": 1024,
+      "errors": []
+    },
+    {
+      "assetId": "2a7e87aa7c81",
+      "sourceProjects": [
+        "insurance-policy-refund",
+        "management-insurance-template"
+      ],
+      "numGlyphs": 216,
+      "unitsPerEm": 1024,
+      "errors": []
+    },
+    {
+      "assetId": "d443fdd5cccb",
+      "sourceProjects": [
+        "management-community-operations",
+        "management-digitalize-product"
+      ],
+      "numGlyphs": 22,
+      "unitsPerEm": 1024,
+      "errors": []
+    },
+    {
+      "assetId": "13c3d5d6f120",
+      "sourceProjects": [
+        "management-community-operations"
+      ],
+      "numGlyphs": 29,
+      "unitsPerEm": 1024,
+      "errors": []
+    },
+    {
+      "assetId": "9e8f27840200",
+      "sourceProjects": [
+        "management-promotions"
+      ],
+      "numGlyphs": 65,
+      "unitsPerEm": 1024,
+      "errors": []
+    },
+    {
+      "assetId": "12e46533c451",
+      "sourceProjects": [
+        "management-wechat-crm"
+      ],
+      "numGlyphs": 378,
+      "unitsPerEm": 1024,
+      "errors": []
+    },
+    {
+      "assetId": "0c2981bd9779",
+      "sourceProjects": [
+        "management-wechat-crm"
+      ],
+      "numGlyphs": 120,
+      "unitsPerEm": 1024,
+      "errors": []
+    },
+    {
+      "assetId": "c10909b7d1bf",
+      "sourceProjects": [
+        "planbook-accessories",
+        "promotion-vue-2022"
+      ],
+      "numGlyphs": 123,
+      "unitsPerEm": 1024,
+      "errors": []
+    },
+    {
+      "assetId": "89654a0a851a",
+      "sourceProjects": [
+        "planbook-accessories",
+        "planbook-main",
+        "promotion-vue-2018",
+        "tools-customer-acquisition"
+      ],
+      "numGlyphs": 92,
+      "unitsPerEm": 1024,
+      "errors": []
+    },
+    {
+      "assetId": "5a3d27427ec3",
+      "sourceProjects": [
+        "planbook-accessories"
+      ],
+      "numGlyphs": 106,
+      "unitsPerEm": 1024,
+      "errors": []
+    },
+    {
+      "assetId": "651c88c09048",
+      "sourceProjects": [
+        "planbook-accessories",
+        "tools-customer-acquisition"
+      ],
+      "numGlyphs": 124,
+      "unitsPerEm": 1024,
+      "errors": []
+    },
+    {
+      "assetId": "c1be4e109970",
+      "sourceProjects": [
+        "planbook-accessories"
+      ],
+      "numGlyphs": 238,
+      "unitsPerEm": 1024,
+      "errors": []
+    },
+    {
+      "assetId": "abdf3a84ee65",
+      "sourceProjects": [
+        "planbook-accessories",
+        "promotion-vue-2022"
+      ],
+      "numGlyphs": 136,
+      "unitsPerEm": 1024,
+      "errors": []
+    },
+    {
+      "assetId": "13457a0ec155",
+      "sourceProjects": [
+        "planbook-accessories"
+      ],
+      "numGlyphs": 146,
+      "unitsPerEm": 1024,
+      "errors": []
+    },
+    {
+      "assetId": "c722a0383ed5",
+      "sourceProjects": [
+        "planbook-accessories"
+      ],
+      "numGlyphs": 130,
+      "unitsPerEm": 1024,
+      "errors": []
+    },
+    {
+      "assetId": "94e10a346cb3",
+      "sourceProjects": [
+        "planbook-accessories"
+      ],
+      "numGlyphs": 100,
+      "unitsPerEm": 1024,
+      "errors": []
+    },
+    {
+      "assetId": "e6592a1ef015",
+      "sourceProjects": [
+        "planbook-innovative",
+        "planbook-main"
+      ],
+      "numGlyphs": 241,
+      "unitsPerEm": 1024,
+      "errors": []
+    },
+    {
+      "assetId": "5b4ea5927db0",
+      "sourceProjects": [
+        "planbook-main"
+      ],
+      "numGlyphs": 129,
+      "unitsPerEm": 1024,
+      "errors": []
+    },
+    {
+      "assetId": "cf5f445075cb",
+      "sourceProjects": [
+        "planbook-main"
+      ],
+      "numGlyphs": 134,
+      "unitsPerEm": 1024,
+      "errors": []
+    },
+    {
+      "assetId": "667e13431cb7",
+      "sourceProjects": [
+        "planbook-main"
+      ],
+      "numGlyphs": 145,
+      "unitsPerEm": 1024,
+      "errors": []
+    },
+    {
+      "assetId": "090d8a31db71",
+      "sourceProjects": [
+        "planbook-main"
+      ],
+      "numGlyphs": 126,
+      "unitsPerEm": 1024,
+      "errors": []
+    },
+    {
+      "assetId": "cdb190ccdd75",
+      "sourceProjects": [
+        "planbook-main"
+      ],
+      "numGlyphs": 58,
+      "unitsPerEm": 1024,
+      "errors": []
+    },
+    {
+      "assetId": "bc82d40635fc",
+      "sourceProjects": [
+        "planbook-main"
+      ],
+      "numGlyphs": 127,
+      "unitsPerEm": 1024,
+      "errors": []
+    },
+    {
+      "assetId": "128f73b66b91",
+      "sourceProjects": [
+        "planbook-main"
+      ],
+      "numGlyphs": 87,
+      "unitsPerEm": 1024,
+      "errors": []
+    },
+    {
+      "assetId": "d6fea52e9b79",
+      "sourceProjects": [
+        "planbook-main",
+        "planbook-policy-check",
+        "tools-customer-acquisition"
+      ],
+      "numGlyphs": 104,
+      "unitsPerEm": 1024,
+      "errors": []
+    },
+    {
+      "assetId": "b667bae78d4c",
+      "sourceProjects": [
+        "planbook-main"
+      ],
+      "numGlyphs": 114,
+      "unitsPerEm": 1024,
+      "errors": []
+    },
+    {
+      "assetId": "a6f5b3c6f8a9",
+      "sourceProjects": [
+        "planbook-main",
+        "tools-customer-acquisition"
+      ],
+      "numGlyphs": 320,
+      "unitsPerEm": 1024,
+      "errors": []
+    },
+    {
+      "assetId": "7383d5e31884",
+      "sourceProjects": [
+        "planbook-main"
+      ],
+      "numGlyphs": 10,
+      "unitsPerEm": 1024,
+      "errors": []
+    },
+    {
+      "assetId": "ddbc89023849",
+      "sourceProjects": [
+        "planbook-main"
+      ],
+      "numGlyphs": 116,
+      "unitsPerEm": 1024,
+      "errors": []
+    },
+    {
+      "assetId": "a626133907e9",
+      "sourceProjects": [
+        "planbook-main"
+      ],
+      "numGlyphs": 142,
+      "unitsPerEm": 1024,
+      "errors": []
+    },
+    {
+      "assetId": "04996b07804e",
+      "sourceProjects": [
+        "planbook-main"
+      ],
+      "numGlyphs": 125,
+      "unitsPerEm": 1024,
+      "errors": []
+    },
+    {
+      "assetId": "3a3a35657d1d",
+      "sourceProjects": [
+        "planbook-main"
+      ],
+      "numGlyphs": 132,
+      "unitsPerEm": 1024,
+      "errors": []
+    },
+    {
+      "assetId": "f5f3da6d03f8",
+      "sourceProjects": [
+        "planbook-main"
+      ],
+      "numGlyphs": 1,
+      "unitsPerEm": 1024,
+      "errors": []
+    },
+    {
+      "assetId": "88e6c16ebe27",
+      "sourceProjects": [
+        "planbook-main"
+      ],
+      "numGlyphs": 128,
+      "unitsPerEm": 1024,
+      "errors": []
+    },
+    {
+      "assetId": "82f2c3714e22",
+      "sourceProjects": [
+        "planbook-policy-check"
+      ],
+      "numGlyphs": 152,
+      "unitsPerEm": 1024,
+      "errors": []
+    },
+    {
+      "assetId": "c34e5ca9f39e",
+      "sourceProjects": [
+        "planbook-policy-check"
+      ],
+      "numGlyphs": 149,
+      "unitsPerEm": 1024,
+      "errors": []
+    },
+    {
+      "assetId": "195a8578410e",
+      "sourceProjects": [
+        "planbook-policy-check"
+      ],
+      "numGlyphs": 123,
+      "unitsPerEm": 1024,
+      "errors": []
+    },
+    {
+      "assetId": "c8641db01338",
+      "sourceProjects": [
+        "planbook-policy-check"
+      ],
+      "numGlyphs": 14,
+      "unitsPerEm": 1024,
+      "errors": []
+    },
+    {
+      "assetId": "d8e56b7ece15",
+      "sourceProjects": [
+        "planbook-policy-check"
+      ],
+      "numGlyphs": 90,
+      "unitsPerEm": 1024,
+      "errors": []
+    },
+    {
+      "assetId": "a3be5af06ee7",
+      "sourceProjects": [
+        "planbook-policy-check"
+      ],
+      "numGlyphs": 312,
+      "unitsPerEm": 1024,
+      "errors": []
+    },
+    {
+      "assetId": "f4fee3da2e72",
+      "sourceProjects": [
+        "planbook-policy-check"
+      ],
+      "numGlyphs": 82,
+      "unitsPerEm": 1024,
+      "errors": []
+    },
+    {
+      "assetId": "7555fcc5d2e4",
+      "sourceProjects": [
+        "planbook-policy-check",
+        "promotion-vue-2018"
+      ],
+      "numGlyphs": 12,
+      "unitsPerEm": 1024,
+      "errors": []
+    },
+    {
+      "assetId": "926d6d290bf9",
+      "sourceProjects": [
+        "planbook-policy-check"
+      ],
+      "numGlyphs": 144,
+      "unitsPerEm": 1024,
+      "errors": []
+    },
+    {
+      "assetId": "961379abbfb6",
+      "sourceProjects": [
+        "promotion-vue-2018"
+      ],
+      "numGlyphs": 291,
+      "unitsPerEm": 1024,
+      "errors": []
+    },
+    {
+      "assetId": "86a7c6cdf72f",
+      "sourceProjects": [
+        "promotion-vue-2018"
+      ],
+      "numGlyphs": 67,
+      "unitsPerEm": 1024,
+      "errors": []
+    },
+    {
+      "assetId": "83ee3a416bd9",
+      "sourceProjects": [
+        "promotion-vue-2018"
+      ],
+      "numGlyphs": 234,
+      "unitsPerEm": 1024,
+      "errors": []
+    },
+    {
+      "assetId": "5ee20560641d",
+      "sourceProjects": [
+        "promotion-vue-2018"
+      ],
+      "numGlyphs": 75,
+      "unitsPerEm": 1024,
+      "errors": []
+    },
+    {
+      "assetId": "dfb63027401a",
+      "sourceProjects": [
+        "promotion-vue-2018"
+      ],
+      "numGlyphs": 23,
+      "unitsPerEm": 1024,
+      "errors": []
+    },
+    {
+      "assetId": "036bedba6122",
+      "sourceProjects": [
+        "promotion-vue-2018"
+      ],
+      "numGlyphs": 25,
+      "unitsPerEm": 1024,
+      "errors": []
+    },
+    {
+      "assetId": "43b5d5b9b636",
+      "sourceProjects": [
+        "promotion-vue-2018"
+      ],
+      "numGlyphs": 25,
+      "unitsPerEm": 1024,
+      "errors": []
+    },
+    {
+      "assetId": "10517dd8c534",
+      "sourceProjects": [
+        "promotion-vue-2018"
+      ],
+      "numGlyphs": 6,
+      "unitsPerEm": 1024,
+      "errors": []
+    },
+    {
+      "assetId": "73f560053ae0",
+      "sourceProjects": [
+        "promotion-vue-2018"
+      ],
+      "numGlyphs": 22,
+      "unitsPerEm": 1024,
+      "errors": []
+    },
+    {
+      "assetId": "ee5cb31752dd",
+      "sourceProjects": [
+        "promotion-vue-2018"
+      ],
+      "numGlyphs": 37,
+      "unitsPerEm": 1024,
+      "errors": []
+    },
+    {
+      "assetId": "889300d79ebd",
+      "sourceProjects": [
+        "promotion-vue-2022"
+      ],
+      "numGlyphs": 97,
+      "unitsPerEm": 1024,
+      "errors": []
+    },
+    {
+      "assetId": "98a9c63e17c4",
+      "sourceProjects": [
+        "tools-customer-acquisition"
+      ],
+      "numGlyphs": 77,
+      "unitsPerEm": 1024,
+      "errors": []
+    },
+    {
+      "assetId": "a4f0c329de1d",
+      "sourceProjects": [
+        "tools-customer-acquisition"
+      ],
+      "numGlyphs": 20,
+      "unitsPerEm": 1024,
+      "errors": []
+    },
+    {
+      "assetId": "e898939e33bb",
+      "sourceProjects": [
+        "tools-customer-acquisition"
+      ],
+      "numGlyphs": 67,
+      "unitsPerEm": 1024,
+      "errors": []
+    },
+    {
+      "assetId": "e5102c29bd68",
+      "sourceProjects": [
+        "tools-customer-acquisition"
+      ],
+      "numGlyphs": 46,
+      "unitsPerEm": 1024,
+      "errors": []
+    },
+    {
+      "assetId": "0de9569a4b80",
+      "sourceProjects": [
+        "tools-customer-acquisition"
+      ],
+      "numGlyphs": 70,
+      "unitsPerEm": 1024,
+      "errors": []
+    },
+    {
+      "assetId": "5075d65c5796",
+      "sourceProjects": [
+        "tools-customer-acquisition"
+      ],
+      "numGlyphs": 74,
+      "unitsPerEm": 1024,
+      "errors": []
+    },
+    {
+      "assetId": "1e86aa599253",
+      "sourceProjects": [
+        "tools-customer-acquisition"
+      ],
+      "numGlyphs": 51,
+      "unitsPerEm": 1024,
+      "errors": []
+    },
+    {
+      "assetId": "8642a7e35589",
+      "sourceProjects": [
+        "tools-customer-acquisition"
+      ],
+      "numGlyphs": 45,
+      "unitsPerEm": 1024,
+      "errors": []
+    },
+    {
+      "assetId": "b065f46bd42c",
+      "sourceProjects": [
+        "tools-customer-acquisition"
+      ],
+      "numGlyphs": 53,
+      "unitsPerEm": 1024,
+      "errors": []
+    },
+    {
+      "assetId": "8034cd8c4e90",
+      "sourceProjects": [
+        "tools-customer-acquisition"
+      ],
+      "numGlyphs": 49,
+      "unitsPerEm": 1024,
+      "errors": []
+    },
+    {
+      "assetId": "dae51330f742",
+      "sourceProjects": [
+        "tools-customer-acquisition"
+      ],
+      "numGlyphs": 172,
+      "unitsPerEm": 560,
+      "errors": []
+    },
+    {
+      "assetId": "44bb4b297b58",
+      "sourceProjects": [
+        "websites-wyjj"
+      ],
+      "numGlyphs": 54,
+      "unitsPerEm": 1024,
+      "errors": []
+    },
+    {
+      "assetId": "a8b4b50b4446",
+      "sourceProjects": [
+        "websites-wyjj"
+      ],
+      "numGlyphs": 73,
+      "unitsPerEm": 560,
+      "errors": []
+    },
+    {
+      "assetId": "fb2dc9b73a35",
+      "sourceProjects": [
+        "websites-wyjj"
+      ],
+      "numGlyphs": 17,
+      "unitsPerEm": 1024,
+      "errors": []
+    },
+    {
+      "assetId": "c4862e36d872",
+      "sourceProjects": [
+        "manual"
+      ],
+      "numGlyphs": 34,
+      "unitsPerEm": 1024,
+      "errors": []
+    },
+    {
+      "assetId": "2e965f5713c8",
+      "sourceProjects": [
+        "manual"
+      ],
+      "numGlyphs": 2,
+      "unitsPerEm": 1024,
+      "errors": []
+    },
+    {
+      "assetId": "ebce00384658",
+      "sourceProjects": [
+        "manual"
+      ],
+      "numGlyphs": 153,
+      "unitsPerEm": 1024,
+      "errors": []
+    },
+    {
+      "assetId": "9656075c0261",
+      "sourceProjects": [
+        "manual"
+      ],
+      "numGlyphs": 148,
+      "unitsPerEm": 1024,
+      "errors": []
+    },
+    {
+      "assetId": "53bb8b5dbd99",
+      "sourceProjects": [
+        "manual"
+      ],
+      "numGlyphs": 2,
+      "unitsPerEm": 1024,
+      "errors": []
+    },
+    {
+      "assetId": "eb3bd67c3857",
+      "sourceProjects": [
+        "manual"
+      ],
+      "numGlyphs": 141,
+      "unitsPerEm": 1024,
+      "errors": []
+    },
+    {
+      "assetId": "036492dced92",
+      "sourceProjects": [
+        "manual"
+      ],
+      "numGlyphs": 137,
+      "unitsPerEm": 1024,
+      "errors": []
+    }
+  ]
+}

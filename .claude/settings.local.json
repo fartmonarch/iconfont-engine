@@ -11,7 +11,16 @@
       "Bash(rm -f D:/work/iconfont-engine/sources/meta/assets_manifest.json)",
       "Bash(curl -s -I \"https://res.winbaoxian.com/auto_upload_ci/management-community-operations/static/iconfont/20231024/iconfont.css\")",
       "Bash(curl -s \"https://res.winbaoxian.com/auto_upload_ci/management-community-operations/static/iconfont/20231024/iconfont.css\")",
-      "Bash(gunzip)"
+      "Bash(gunzip)",
+      "Bash(pip list *)",
+      "Bash(findstr /I \"font\")",
+      "Bash(python3 -c \"import fontTools; print\\('fontTools version:', fontTools.__version__\\)\")",
+      "Bash(python -c \"import fontTools; print\\('fontTools version:', fontTools.__version__\\)\")",
+      "Bash(awk '{print $5}')",
+      "Bash(pip3 list *)",
+      "Bash(python *)",
+      "Bash(df *)",
+      "Bash(pip install *)"
     ]
   }
 }

@@ -147,6 +147,28 @@ def detect_unicode_conflicts(entries):
     return conflicts
 
 
+def detect_name_conflicts(entries):
+    """Type B: 同 name → 不同 glyphHash"""
+    name_groups = defaultdict(list)
+    for e in entries:
+        name = e.get('canonicalName')
+        if name:
+            name_groups[name].append(e)
+
+    conflicts = []
+    for name, group in sorted(name_groups.items()):
+        hashes = set(g['glyphHash'] for g in group)
+        if len(hashes) > 1:
+            conflicts.append(_build_conflict_record(
+                conflict_type='name_conflict',
+                key=name,
+                group=group,
+                resolution_hint='rename',
+            ))
+
+    return conflicts
+
+
 def main():
     """主入口：运行冲突检测"""
     print('=' * 60)

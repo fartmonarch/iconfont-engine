@@ -18,6 +18,7 @@ mod = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(mod)
 
 detect_unicode_conflicts = mod.detect_unicode_conflicts
+detect_name_conflicts = mod.detect_name_conflicts
 classify_severity = mod.classify_severity
 _build_conflict_record = mod._build_conflict_record
 
@@ -113,6 +114,44 @@ def test_classify_severity():
     print('  PASS test_classify_severity')
 
 
+def test_detect_name_conflicts_basic():
+    """同 name 不同 glyphHash → 冲突"""
+    entries = [
+        make_entry('hash_a', 'E6B5', 'icon-arrow', [make_source('asset1', ['proj-a'])]),
+        make_entry('hash_b', 'E6B6', 'icon-arrow', [make_source('asset2', ['proj-b'])]),
+        make_entry('hash_c', 'E6B7', 'icon-up', [make_source('asset1', ['proj-a'])]),
+    ]
+    conflicts = detect_name_conflicts(entries)
+    assert len(conflicts) == 1
+    assert conflicts[0]['key'] == 'icon-arrow'
+    assert len(conflicts[0]['variants']) == 2
+    assert conflicts[0]['resolution_hint'] == 'rename'
+    print('  PASS test_detect_name_conflicts_basic')
+
+
+def test_detect_name_conflicts_null_name():
+    """name 为 null/空字符串应跳过"""
+    entries = [
+        make_entry('hash_a', 'E6B5', None, [make_source('asset1', ['proj-a'])]),
+        make_entry('hash_b', 'E6B6', '', [make_source('asset2', ['proj-b'])]),
+        make_entry('hash_c', 'E6B7', 'icon-arrow', [make_source('asset1', ['proj-a'])]),
+    ]
+    conflicts = detect_name_conflicts(entries)
+    assert len(conflicts) == 0
+    print('  PASS test_detect_name_conflicts_null_name')
+
+
+def test_detect_name_conflicts_same_hash():
+    """同 name 同 glyphHash → 不冲突"""
+    entries = [
+        make_entry('hash_a', 'E6B5', 'icon-arrow', [make_source('asset1', ['proj-a'])]),
+        make_entry('hash_a', 'E6B6', 'icon-arrow', [make_source('asset2', ['proj-b'])]),
+    ]
+    conflicts = detect_name_conflicts(entries)
+    assert len(conflicts) == 0
+    print('  PASS test_detect_name_conflicts_same_hash')
+
+
 def main():
     print('=' * 60)
     print('Phase 6: Conflict Detection — Tests')
@@ -124,6 +163,9 @@ def main():
         test_detect_unicode_conflicts_same_hash,
         test_detect_unicode_conflicts_null_unicode,
         test_classify_severity,
+        test_detect_name_conflicts_basic,
+        test_detect_name_conflicts_null_name,
+        test_detect_name_conflicts_same_hash,
     ]
 
     passed = 0

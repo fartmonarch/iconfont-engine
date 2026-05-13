@@ -18,7 +18,9 @@ Phase 6: Conflict Detection（冲突检测）
 
 import json
 import os
+import sys
 from collections import defaultdict
+from datetime import datetime, timezone
 
 
 # ─── CONFLICT_RECORD 数据模型 ──────────────────────────────────────
@@ -188,6 +190,111 @@ def detect_duplicate_glyphs(entries):
     return conflicts
 
 
+def build_conflict_records(entries):
+    """整合三类冲突检测结果，返回所有 CONFLICT_RECORD 列表"""
+    unicode_conflicts = detect_unicode_conflicts(entries)
+    name_conflicts = detect_name_conflicts(entries)
+    duplicate_conflicts = detect_duplicate_glyphs(entries)
+
+    all_records = unicode_conflicts + name_conflicts + duplicate_conflicts
+
+    # 按 severity 排序: critical → warning → info
+    severity_order = {'critical': 0, 'warning': 1, 'info': 2}
+    all_records.sort(key=lambda r: (
+        severity_order.get(r['severity'], 9), r['key']))
+
+    return all_records
+
+
+def generate_records_json(records, output_path):
+    """生成结构化 JSON 文件（Phase 7 消费）"""
+    by_type = defaultdict(int)
+    by_severity = defaultdict(int)
+    for r in records:
+        by_type[r['type']] += 1
+        by_severity[r['severity']] += 1
+
+    output = {
+        'metadata': {
+            'generatedAt': datetime.now(timezone.utc).isoformat(),
+            'total_conflicts': len(records),
+            'by_type': dict(by_type),
+            'by_severity': dict(by_severity),
+        },
+        'records': records,
+    }
+
+    os.makedirs(os.path.dirname(output_path) or '.', exist_ok=True)
+    with open(output_path, 'w', encoding='utf-8') as f:
+        json.dump(output, f, ensure_ascii=False, indent=2)
+
+
+def generate_report_md(records, output_path):
+    """生成人类可读 Markdown 报告"""
+    by_type = defaultdict(int)
+    by_severity = defaultdict(int)
+    by_type_severity = defaultdict(lambda: defaultdict(int))
+    for r in records:
+        by_type[r['type']] += 1
+        by_severity[r['severity']] += 1
+        by_type_severity[r['type']][r['severity']] += 1
+
+    type_labels = {
+        'unicode_conflict': 'Unicode 冲突',
+        'name_conflict': 'Name 冲突',
+        'glyph_duplicate': 'Duplicate Glyph',
+    }
+
+    lines = []
+    lines.append('# Phase 6 冲突检测报告\n')
+    lines.append(f'生成时间: {datetime.now(timezone.utc).isoformat()}\n')
+
+    # 统计总览表
+    lines.append('## 统计总览\n')
+    lines.append(f'总冲突数: **{len(records)}**\n')
+    lines.append('| 类型 | 总数 | Critical | Warning | Info |')
+    lines.append('|------|------|----------|---------|------|')
+    for t in ['unicode_conflict', 'name_conflict', 'glyph_duplicate']:
+        total = by_type.get(t, 0)
+        c = by_type_severity[t].get('critical', 0)
+        w = by_type_severity[t].get('warning', 0)
+        i = by_type_severity[t].get('info', 0)
+        lines.append(f'| {type_labels[t]} | {total} | {c} | {w} | {i} |')
+    lines.append('')
+
+    # 分级列出冲突
+    for severity in ['critical', 'warning', 'info']:
+        sev_records = [r for r in records if r['severity'] == severity]
+        if not sev_records:
+            continue
+
+        sev_label = severity.capitalize()
+        lines.append(f'## {sev_label} 冲突 ({len(sev_records)} 个)\n')
+
+        for r in sev_records:
+            lines.append(
+                f'### {r["type"]}: {r["key"]} ({r["variantCount"]} 种变体)\n')
+            lines.append(f'`resolution_hint`: {r["resolution_hint"]}\n')
+            lines.append(f'影响项目: {", ".join(r["affectedProjects"][:5])}\n')
+
+            # 变体列表
+            lines.append('| # | glyphHash | Name | 来源数 |')
+            lines.append('|---|-----------|------|--------|')
+            for idx, v in enumerate(r['variants'], 1):
+                name = v.get('canonicalName') or '(none)'
+                gh = v['glyphHash']
+                gh_display = gh[:12] + '...' if len(gh) > 12 else gh
+                lines.append(
+                    f'| {idx} | {gh_display} | {name} | {len(v.get("sources", []))} |')
+            lines.append('')
+
+    parent = os.path.dirname(output_path)
+    if parent:
+        os.makedirs(parent, exist_ok=True)
+    with open(output_path, 'w', encoding='utf-8') as f:
+        f.write('\n'.join(lines))
+
+
 def main():
     """主入口：运行冲突检测"""
     print('=' * 60)
@@ -195,55 +302,45 @@ def main():
     print('=' * 60)
 
     registry = load_registry()
-    entries = registry if isinstance(registry, list) else registry.get('entries', registry.get('registry', []))
+    entries = registry if isinstance(registry, list) else registry.get(
+        'entries', registry.get('registry', []))
 
     print(f'\n加载 registry: {len(entries)} entries')
 
-    # Type A: Unicode conflicts
-    unicode_conflicts = detect_unicode_conflicts(entries)
-    print(f'\n[Type A] Unicode 冲突: {len(unicode_conflicts)} 个')
+    # 检测全部冲突
+    records = build_conflict_records(entries)
 
-    for rec in unicode_conflicts:
-        sev_icon = {'critical': '🔴', 'warning': '🟡', 'info': '🔵'}.get(rec['severity'], '⚪')
-        print(f'  {sev_icon} [{rec["severity"].upper()}] {rec["key"]}: {rec["variantCount"]} variants')
-        print(f'      来源: {", ".join(rec["affectedProjects"])}')
+    # 统计
+    by_type = defaultdict(int)
+    by_severity = defaultdict(int)
+    for r in records:
+        by_type[r['type']] += 1
+        by_severity[r['severity']] += 1
+
+    print(f'\n[Type A] Unicode 冲突:    {by_type.get("unicode_conflict", 0)} 个')
+    print(f'[Type B] Name 冲突:       {by_type.get("name_conflict", 0)} 个')
+    print(f'[Type C] Duplicate Glyph: {by_type.get("glyph_duplicate", 0)} 个')
+    print(f'\n总冲突数: {len(records)}')
+    print(f'  Critical: {by_severity.get("critical", 0)}')
+    print(f'  Warning:  {by_severity.get("warning", 0)}')
+    print(f'  Info:     {by_severity.get("info", 0)}')
 
     # 输出报告
-    report_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'report')
+    report_dir = os.path.join(os.path.dirname(
+        os.path.dirname(os.path.abspath(__file__))), 'report')
     os.makedirs(report_dir, exist_ok=True)
 
-    # JSON records
-    all_conflicts = unicode_conflicts  # 后续可追加 Type B/C
     records_path = os.path.join(report_dir, 'conflict_records.json')
-    with open(records_path, 'w', encoding='utf-8') as f:
-        json.dump(all_conflicts, f, indent=2, ensure_ascii=False)
-    print(f'\n输出: {records_path} ({len(all_conflicts)} records)')
+    generate_records_json(records, records_path)
+    print(f'\n输出: {records_path}')
 
-    # Markdown report
     md_path = os.path.join(report_dir, 'conflict_report.md')
-    with open(md_path, 'w', encoding='utf-8') as f:
-        f.write('# Phase 6: Conflict Report\n\n')
-        f.write(f'总冲突数: {len(all_conflicts)}\n\n')
-
-        severity_counts = defaultdict(int)
-        for rec in all_conflicts:
-            severity_counts[rec['severity']] += 1
-
-        f.write('## 分级统计\n\n')
-        for sev in ['critical', 'warning', 'info']:
-            f.write(f'- **{sev.upper()}**: {severity_counts.get(sev, 0)}\n')
-        f.write('\n')
-
-        for rec in all_conflicts:
-            f.write(f'### {rec["key"]} — [{rec["severity"].upper()}]\n\n')
-            f.write(f'- 类型: {rec["type"]}\n')
-            f.write(f'- 变体数: {rec["variantCount"]}\n')
-            f.write(f'- 影响项目: {", ".join(rec["affectedProjects"])}\n')
-            f.write(f'- 解决建议: {rec["resolution_hint"]}\n\n')
-
+    generate_report_md(records, md_path)
     print(f'输出: {md_path}')
+
     print('\nPhase 6 完成。')
+    return 0
 
 
 if __name__ == '__main__':
-    main()
+    sys.exit(main())

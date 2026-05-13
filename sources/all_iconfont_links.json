@@ -1,0 +1,1150 @@
+{
+  "version": "2.0.0",
+  "rootDir": "D:\\work\\codestore",
+  "totalProjects": 57,
+  "projectsWithIconfont": 27,
+  "manualLinkCount": 20,
+  "uniqueLinkCount": 111,
+  "links": [
+    {
+      "url": "https://res.winbaoxian.com/ali-iconfont/font_5147685_3yj1cl522ql.css",
+      "usedBy": [
+        "ai-customer-acquisition",
+        "business-tool"
+      ]
+    },
+    {
+      "url": "https://res.winbaoxian.com/ali-iconfont/font_428664_7itacmrlk3.css",
+      "usedBy": [
+        "ai-customer-acquisition"
+      ]
+    },
+    {
+      "url": "https://res.winbaoxian.com/ali-iconfont/font_1311936_jf12otjodsq.css",
+      "usedBy": [
+        "app-settlement"
+      ]
+    },
+    {
+      "url": "https://res.winbaoxian.com/ali-iconfont/font_336721_14yv3un7pqz.css",
+      "usedBy": [
+        "app-settlement"
+      ]
+    },
+    {
+      "url": "https://res.winbaoxian.com/ali-iconfont/font_2607384_ql7dfkp013h.css",
+      "usedBy": [
+        "app-settlement",
+        "promotion-vue-2018"
+      ]
+    },
+    {
+      "url": "https://res.winbaoxian.com/iconfont/1493119125659/css/symbols.css",
+      "usedBy": [
+        "business-tool"
+      ]
+    },
+    {
+      "url": "https://res.winbaoxian.com/ali-iconfont/font_555593_h21x6xjwz8ttvs4i.css",
+      "usedBy": [
+        "business-tool"
+      ]
+    },
+    {
+      "url": "https://res.winbaoxian.com/iconfont/1491379003572/css/symbols.css",
+      "usedBy": [
+        "business-tool"
+      ]
+    },
+    {
+      "url": "http://res.winbaoxian.com/iconfont/1469491211175/css/symbols.css",
+      "usedBy": [
+        "business-tool"
+      ]
+    },
+    {
+      "url": "https://res.winbaoxian.com/iconfont/1484128104656/css/symbols.css",
+      "usedBy": [
+        "business-tool"
+      ]
+    },
+    {
+      "url": "https://res.winbaoxian.com/ali-iconfont/font_1034268_dc97ohr4nrr.css",
+      "usedBy": [
+        "business-tool"
+      ]
+    },
+    {
+      "url": "https://res.winbaoxian.com/ali-iconfont/font_1082636_q497i9tat3r.css",
+      "usedBy": [
+        "business-tool"
+      ]
+    },
+    {
+      "url": "https://res.winbaoxian.com/ali-iconfont/font_rh2uvsvi3gxvfgvi.css",
+      "usedBy": [
+        "business-tool"
+      ]
+    },
+    {
+      "url": "https://res.winbaoxian.com/ali-iconfont/font_2189700_lnwu2t4brir.css",
+      "usedBy": [
+        "business-tool"
+      ]
+    },
+    {
+      "url": "https://res.winbaoxian.com/ali-iconfont/font_280767_3owth2dyrnpl23xr.css",
+      "usedBy": [
+        "business-tool",
+        "insurance-group-mobile",
+        "promotion-vue-2018",
+        "promotion-vue-2022",
+        "tools-customer-acquisition",
+        "wechat-crm"
+      ]
+    },
+    {
+      "url": "https://res.winbaoxian.com/ali-iconfont/font_280767_yehzob4ie8kt9.css",
+      "usedBy": [
+        "business-tool",
+        "face-plus-auth",
+        "payment-cashier-mobile"
+      ]
+    },
+    {
+      "url": "https://res.winbaoxian.com/ali-iconfont/font_639125_6wvy748u27bhjjor.css",
+      "usedBy": [
+        "business-tool"
+      ]
+    },
+    {
+      "url": "https://res.winbaoxian.com/ali-iconfont/font_428664_bw5n2r3dg5r.css",
+      "usedBy": [
+        "business-tool"
+      ]
+    },
+    {
+      "url": "https://res.winbaoxian.com/ali-iconfont/font_428664_5vdctz8oltd.css",
+      "usedBy": [
+        "business-tool"
+      ]
+    },
+    {
+      "url": "https://res.winbaoxian.com/ali-iconfont/font_555593_nnpr09fcvncxflxr.css",
+      "usedBy": [
+        "business-tool"
+      ]
+    },
+    {
+      "url": "https://res.winbaoxian.com/ali-iconfont/font_280767_uz4h17dcqr.css",
+      "usedBy": [
+        "business-tool"
+      ]
+    },
+    {
+      "url": "https://res.winbaoxian.com/ali-iconfont/font_428664_ioax9hc9ckg.css",
+      "usedBy": [
+        "bxs-tools-ui",
+        "planbook-main"
+      ]
+    },
+    {
+      "url": "https://res.winbaoxian.com/iconfont/1490260879816/css/symbols.css",
+      "usedBy": [
+        "fed-toolset"
+      ]
+    },
+    {
+      "url": "https://res.winbaoxian.com/ali-iconfont/font_590851_sszavby595mw8kt9.css",
+      "usedBy": [
+        "h5-order-cancel",
+        "insurance-group-mobile"
+      ]
+    },
+    {
+      "url": "https://res.winbaoxian.com/ali-iconfont/font_590851_1dp59g7ssygjsjor.css",
+      "usedBy": [
+        "insurance-claims-2"
+      ]
+    },
+    {
+      "url": "https://res.winbaoxian.com/ali-iconfont/font_1964111_jn3xutqpl8l.css",
+      "usedBy": [
+        "insurance-claims-2"
+      ]
+    },
+    {
+      "url": "https://res.winbaoxian.com/ali-iconfont/font_428664_oq3fahn36yo.css",
+      "usedBy": [
+        "insurance-collection-pages",
+        "planbook-accessories",
+        "planbook-main",
+        "tools-customer-acquisition"
+      ]
+    },
+    {
+      "url": "https://res.winbaoxian.com/iconfont/1483933727382/css/symbols.css",
+      "usedBy": [
+        "insurance-group-mobile"
+      ]
+    },
+    {
+      "url": "https://res.winbaoxian.com/iconfont/1484617990198/css/symbols.css",
+      "usedBy": [
+        "insurance-group-mobile"
+      ]
+    },
+    {
+      "url": "https://res.winbaoxian.com/ali-iconfont/font_mzpwr9fjab4holxr.css",
+      "usedBy": [
+        "insurance-group-mobile"
+      ]
+    },
+    {
+      "url": "https://res.winbaoxian.com/ali-iconfont/font_401243_enzxezydrmvon7b9.css",
+      "usedBy": [
+        "insurance-group-mobile"
+      ]
+    },
+    {
+      "url": "https://res.winbaoxian.com/ali-iconfont/font_2365860_kv786slvuwh.css",
+      "usedBy": [
+        "insurance-group-mobile"
+      ]
+    },
+    {
+      "url": "https://res.winbaoxian.com/auto_upload_ci/insurance-group-mobile-webpack4/ali-iconfont/font_428664_7jwpsg6zrcx.css",
+      "usedBy": [
+        "insurance-group-mobile"
+      ]
+    },
+    {
+      "url": "https://res.winbaoxian.com/iconfont/1494384846295/css/symbols.css",
+      "usedBy": [
+        "insurance-group-mobile"
+      ]
+    },
+    {
+      "url": "https://res.winbaoxian.com/ali-iconfont/font_2921605_uatv9twnxne.css",
+      "usedBy": [
+        "insurance-group-mobile",
+        "promotion-vue-2022"
+      ]
+    },
+    {
+      "url": "https://res.winbaoxian.com/ali-iconfont/font_806066_ow7azo4zaoi.css",
+      "usedBy": [
+        "insurance-list-pages"
+      ]
+    },
+    {
+      "url": "https://res.winbaoxian.com/ali-iconfont/font_280767_gc9nad8nz5mi.css",
+      "usedBy": [
+        "insurance-policy-refund"
+      ]
+    },
+    {
+      "url": "https://res.winbaoxian.com/ali-iconfont/font_280767_p4qiup9lop.css",
+      "usedBy": [
+        "insurance-policy-refund",
+        "management-insurance-template"
+      ]
+    },
+    {
+      "url": "https://at.alicdn.com/t/font_3210243_inqj8n4aqvd.css",
+      "usedBy": [
+        "management-community-operations",
+        "management-digitalize-product"
+      ]
+    },
+    {
+      "url": "https://res.winbaoxian.com/auto_upload_ci/management-community-operations/static/iconfont/20231024/iconfont.css",
+      "usedBy": [
+        "management-community-operations"
+      ]
+    },
+    {
+      "url": "https://res.winbaoxian.com/ali-iconfont/font_336721_74m4vln6iy919k9.css",
+      "usedBy": [
+        "management-promotions"
+      ]
+    },
+    {
+      "url": "https://at.alicdn.com/t/c/font_280767_l7q0rmkx4g.css",
+      "usedBy": [
+        "management-wechat-crm"
+      ]
+    },
+    {
+      "url": "https://res.winbaoxian.com/ali-iconfont/font_428664_79kd0g7h613.css",
+      "usedBy": [
+        "management-wechat-crm"
+      ]
+    },
+    {
+      "url": "https://res.winbaoxian.com/ali-iconfont/font_428664_pwh4ebtaxx.css",
+      "usedBy": [
+        "planbook-accessories",
+        "promotion-vue-2022"
+      ]
+    },
+    {
+      "url": "https://res.winbaoxian.com/ali-iconfont/font_428664_4b80dqdddqv.css",
+      "usedBy": [
+        "planbook-accessories",
+        "planbook-main",
+        "promotion-vue-2018",
+        "tools-customer-acquisition"
+      ]
+    },
+    {
+      "url": "https://res.winbaoxian.com/ali-iconfont/font_428664_2ilxht3q3ky.css",
+      "usedBy": [
+        "planbook-accessories"
+      ]
+    },
+    {
+      "url": "https://res.winbaoxian.com/ali-iconfont/font_5083134_600xfof53ct.css",
+      "usedBy": [
+        "planbook-accessories",
+        "tools-customer-acquisition"
+      ]
+    },
+    {
+      "url": "https://res.winbaoxian.com/ali-iconfont/font_280767_1r2koyd9phb.css",
+      "usedBy": [
+        "planbook-accessories"
+      ]
+    },
+    {
+      "url": "https://res.winbaoxian.com/ali-iconfont/font_428664_dvo3et3tigh.css",
+      "usedBy": [
+        "planbook-accessories",
+        "promotion-vue-2022"
+      ]
+    },
+    {
+      "url": "https://res.winbaoxian.com/ali-iconfont/font_428664_19bv2uxkv45.css",
+      "usedBy": [
+        "planbook-accessories"
+      ]
+    },
+    {
+      "url": "https://res.winbaoxian.com/ali-iconfont/font_428664_98h83hzvaj5.css",
+      "usedBy": [
+        "planbook-accessories"
+      ]
+    },
+    {
+      "url": "https://res.winbaoxian.com/ali-iconfont/font_428664_i62br8ctjvi.css",
+      "usedBy": [
+        "planbook-accessories"
+      ]
+    },
+    {
+      "url": "https://res.winbaoxian.com/ali-iconfont/font_280767_xzhtbg6ic.css",
+      "usedBy": [
+        "planbook-innovative",
+        "planbook-main"
+      ]
+    },
+    {
+      "url": "https://res.winbaoxian.com/ali-iconfont/font_428664_h9h1ezsv.css",
+      "usedBy": [
+        "planbook-main"
+      ]
+    },
+    {
+      "url": "https://res.winbaoxian.com/ali-iconfont/font_428664_8y61ps0f84n.css",
+      "usedBy": [
+        "planbook-main"
+      ]
+    },
+    {
+      "url": "https://res.winbaoxian.com/ali-iconfont/font_428664_8h17cvfvm7r.css",
+      "usedBy": [
+        "planbook-main"
+      ]
+    },
+    {
+      "url": "https://res.winbaoxian.com/ali-iconfont/font_428664_66gv1lr5kkx.css",
+      "usedBy": [
+        "planbook-main"
+      ]
+    },
+    {
+      "url": "https://res.winbaoxian.com/ali-iconfont/font_428664_3dz2t0h957y14i.css",
+      "usedBy": [
+        "planbook-main"
+      ]
+    },
+    {
+      "url": "https://res.winbaoxian.com/ali-iconfont/font_428664_7i2cv6kfg7.css",
+      "usedBy": [
+        "planbook-main"
+      ]
+    },
+    {
+      "url": "https://res.winbaoxian.com/ali-iconfont/font_428664_b8utvxl1paa.css",
+      "usedBy": [
+        "planbook-main"
+      ]
+    },
+    {
+      "url": "https://res.winbaoxian.com/ali-iconfont/font_428664_bgi1lbym7wp.css",
+      "usedBy": [
+        "planbook-main",
+        "planbook-policy-check",
+        "tools-customer-acquisition"
+      ]
+    },
+    {
+      "url": "https://res.winbaoxian.com/ali-iconfont/font_428664_gjvv2uvrt8k.css",
+      "usedBy": [
+        "planbook-main"
+      ]
+    },
+    {
+      "url": "https://res.winbaoxian.com/ali-iconfont/font_280767_a0v3md61aah.css",
+      "usedBy": [
+        "planbook-main",
+        "tools-customer-acquisition"
+      ]
+    },
+    {
+      "url": "https://res.winbaoxian.com/ali-iconfont/font_1400070_muj04vmlu7b.css",
+      "usedBy": [
+        "planbook-main"
+      ]
+    },
+    {
+      "url": "https://res.winbaoxian.com/ali-iconfont/font_428664_8mcpbsbmetn.css",
+      "usedBy": [
+        "planbook-main"
+      ]
+    },
+    {
+      "url": "https://res.winbaoxian.com/ali-iconfont/font_428664_oyu00uuny3j.css",
+      "usedBy": [
+        "planbook-main"
+      ]
+    },
+    {
+      "url": "https://res.winbaoxian.com/ali-iconfont/font_5083134_vfi4mapwxbh.css",
+      "usedBy": [
+        "planbook-main"
+      ]
+    },
+    {
+      "url": "https://res.winbaoxian.com/ali-iconfont/font_428664_jfilksqj3ej.css",
+      "usedBy": [
+        "planbook-main"
+      ]
+    },
+    {
+      "url": "https://res.winbaoxian.com/ali-iconfont/font_4960269_9p2et13034r.css",
+      "usedBy": [
+        "planbook-main"
+      ]
+    },
+    {
+      "url": "https://res.winbaoxian.com/ali-iconfont/font_428664_y6u9dveq22.css",
+      "usedBy": [
+        "planbook-main"
+      ]
+    },
+    {
+      "url": "https://res.winbaoxian.com/ali-iconfont/font_428664_jlenlrheaxn.css",
+      "usedBy": [
+        "planbook-policy-check"
+      ]
+    },
+    {
+      "url": "https://res.winbaoxian.com/ali-iconfont/font_428664_99d69tcivr4.css",
+      "usedBy": [
+        "planbook-policy-check"
+      ]
+    },
+    {
+      "url": "https://res.winbaoxian.com/ali-iconfont/font_5083134_4f3egsm2o2c.css",
+      "usedBy": [
+        "planbook-policy-check"
+      ]
+    },
+    {
+      "url": "https://res.winbaoxian.com/ali-iconfont/font_1504904_9rkffrqg85l.css",
+      "usedBy": [
+        "planbook-policy-check"
+      ]
+    },
+    {
+      "url": "https://res.winbaoxian.com/ali-iconfont/font_428664_9bzhjthg5j7.css",
+      "usedBy": [
+        "planbook-policy-check"
+      ]
+    },
+    {
+      "url": "https://res.winbaoxian.com/ali-iconfont/font_590851_mqnkkoenssn.css",
+      "usedBy": [
+        "planbook-policy-check"
+      ]
+    },
+    {
+      "url": "https://res.winbaoxian.com/ali-iconfont/font_336721_2btvfpbqkid.css",
+      "usedBy": [
+        "planbook-policy-check"
+      ]
+    },
+    {
+      "url": "https://res.winbaoxian.com/ali-iconfont/font_1561272_hu0tnmnn4m.css",
+      "usedBy": [
+        "planbook-policy-check",
+        "promotion-vue-2018"
+      ]
+    },
+    {
+      "url": "https://res.winbaoxian.com/ali-iconfont/font_428664_rzvsoddflce.css",
+      "usedBy": [
+        "planbook-policy-check"
+      ]
+    },
+    {
+      "url": "https://res.winbaoxian.com/ali-iconfont/font_910415_35zmby5poyg.css",
+      "usedBy": [
+        "promotion-vue-2018"
+      ]
+    },
+    {
+      "url": "https://res.winbaoxian.com/ali-iconfont/font_428664_00w563jpjgex.css",
+      "usedBy": [
+        "promotion-vue-2018"
+      ]
+    },
+    {
+      "url": "https://res.winbaoxian.com/ali-iconfont/font_280767_mexaglzgdqk.css",
+      "usedBy": [
+        "promotion-vue-2018"
+      ]
+    },
+    {
+      "url": "https://res.winbaoxian.com/ali-iconfont/font_336721_eewfjl2pcis.css",
+      "usedBy": [
+        "promotion-vue-2018"
+      ]
+    },
+    {
+      "url": "https://res.winbaoxian.com/ali-iconfont/font_1811719_x9kbnc9we1.css",
+      "usedBy": [
+        "promotion-vue-2018"
+      ]
+    },
+    {
+      "url": "https://res.winbaoxian.com/ali-iconfont/font_2142609_8gd8hy3a76p.css",
+      "usedBy": [
+        "promotion-vue-2018"
+      ]
+    },
+    {
+      "url": "https://res.winbaoxian.com/ali-iconfont/font_639125_jnpqzi0xjoj.css",
+      "usedBy": [
+        "promotion-vue-2018"
+      ]
+    },
+    {
+      "url": "https://res.winbaoxian.com/ali-iconfont/font_3156005_bit0veqkv6c.css",
+      "usedBy": [
+        "promotion-vue-2018"
+      ]
+    },
+    {
+      "url": "https://res.winbaoxian.com/ali-iconfont/font_2607384_m6xy4y9iq5j.css",
+      "usedBy": [
+        "promotion-vue-2018"
+      ]
+    },
+    {
+      "url": "https://res.winbaoxian.com/ali-iconfont/font_2189700_ftksvdkbx64.css",
+      "usedBy": [
+        "promotion-vue-2018"
+      ]
+    },
+    {
+      "url": "https://res.winbaoxian.com/ali-iconfont/font_428664_1xnjtbqjoqg.css",
+      "usedBy": [
+        "promotion-vue-2022"
+      ]
+    },
+    {
+      "url": "https://res.winbaoxian.com/ali-iconfont/font_336721_cwgrn48i7um.css",
+      "usedBy": [
+        "tools-customer-acquisition"
+      ]
+    },
+    {
+      "url": "https://res.winbaoxian.com/ali-iconfont/font_428664_kwy4ouo1glvaq0k9.css",
+      "usedBy": [
+        "tools-customer-acquisition"
+      ]
+    },
+    {
+      "url": "https://res.winbaoxian.com/ali-iconfont/font_336721_o6v1iugrqdoyldi.css",
+      "usedBy": [
+        "tools-customer-acquisition"
+      ]
+    },
+    {
+      "url": "https://res.winbaoxian.com/ali-iconfont/font_685961_a2ozv0zlba8.css",
+      "usedBy": [
+        "tools-customer-acquisition"
+      ]
+    },
+    {
+      "url": "https://res.winbaoxian.com/ali-iconfont/font_336721_baavf6cg3xewb3xr.css",
+      "usedBy": [
+        "tools-customer-acquisition"
+      ]
+    },
+    {
+      "url": "https://res.winbaoxian.com/ali-iconfont/font_336721_j9qak3imhho20529.css",
+      "usedBy": [
+        "tools-customer-acquisition"
+      ]
+    },
+    {
+      "url": "https://res.winbaoxian.com/ali-iconfont/font_336721_fa8v5jid4nzpk3xr.css",
+      "usedBy": [
+        "tools-customer-acquisition"
+      ]
+    },
+    {
+      "url": "https://res.winbaoxian.com/ali-iconfont/font_685961_8psalwzjgwh.css",
+      "usedBy": [
+        "tools-customer-acquisition"
+      ]
+    },
+    {
+      "url": "https://res.winbaoxian.com/ali-iconfont/font_685961_vwgwrinez5o.css",
+      "usedBy": [
+        "tools-customer-acquisition"
+      ]
+    },
+    {
+      "url": "https://res.winbaoxian.com/ali-iconfont/font_685961_zx5qm9ub0cf.css",
+      "usedBy": [
+        "tools-customer-acquisition"
+      ]
+    },
+    {
+      "url": "https://res.winbaoxian.com/iconfont/1494329292049/css/symbols.css",
+      "usedBy": [
+        "tools-customer-acquisition"
+      ]
+    },
+    {
+      "url": "https://res.winbaoxian.com/ali-iconfont/font_428664_lq56367snj1exw29.css",
+      "usedBy": [
+        "websites-wyjj"
+      ]
+    },
+    {
+      "url": "https://res.winbaoxian.com/iconfont/1469782413913/css/symbols.css",
+      "usedBy": [
+        "websites-wyjj"
+      ]
+    },
+    {
+      "url": "https://res.winbaoxian.com/ali-iconfont/font_4337802_bpezdq4qcvg.css",
+      "usedBy": [
+        "websites-wyjj"
+      ]
+    },
+    {
+      "url": "https://res.winbaoxian.com/ali-iconfont/font_5165506_p8nm66u0fd.css",
+      "usedBy": [
+        "manual"
+      ]
+    },
+    {
+      "url": "https://res.winbaoxian.com/ali-iconfont/font_5139753_59xlfs1rv4t.css",
+      "usedBy": [
+        "manual"
+      ]
+    },
+    {
+      "url": "https://res.winbaoxian.com/ali-iconfont/font_428664_cj8pe527d8u.css",
+      "usedBy": [
+        "manual"
+      ]
+    },
+    {
+      "url": "https://res.winbaoxian.com/ali-iconfont/font_428664_piwj8vscg7b.css",
+      "usedBy": [
+        "manual"
+      ]
+    },
+    {
+      "url": "https://res.winbaoxian.com/ali-iconfont/font_4960269_cv46z0yckxg.css",
+      "usedBy": [
+        "manual"
+      ]
+    },
+    {
+      "url": "https://res.winbaoxian.com/ali-iconfont/font_428664_7ip68eerepd.css",
+      "usedBy": [
+        "manual"
+      ]
+    },
+    {
+      "url": "https://res.winbaoxian.com/ali-iconfont/font_428664_fr92kem0hlr.css",
+      "usedBy": [
+        "manual"
+      ]
+    }
+  ],
+  "byProject": [
+    {
+      "project": "ai-customer-acquisition",
+      "linkCount": 2,
+      "links": [
+        "https://res.winbaoxian.com/ali-iconfont/font_5147685_3yj1cl522ql.css",
+        "https://res.winbaoxian.com/ali-iconfont/font_428664_7itacmrlk3.css"
+      ]
+    },
+    {
+      "project": "ai-hosting-mobile",
+      "linkCount": 0,
+      "links": []
+    },
+    {
+      "project": "app-settlement",
+      "linkCount": 3,
+      "links": [
+        "https://res.winbaoxian.com/ali-iconfont/font_1311936_jf12otjodsq.css",
+        "https://res.winbaoxian.com/ali-iconfont/font_336721_14yv3un7pqz.css",
+        "https://res.winbaoxian.com/ali-iconfont/font_2607384_ql7dfkp013h.css"
+      ]
+    },
+    {
+      "project": "business-tool",
+      "linkCount": 17,
+      "links": [
+        "https://res.winbaoxian.com/iconfont/1493119125659/css/symbols.css",
+        "https://res.winbaoxian.com/ali-iconfont/font_555593_h21x6xjwz8ttvs4i.css",
+        "https://res.winbaoxian.com/iconfont/1491379003572/css/symbols.css",
+        "http://res.winbaoxian.com/iconfont/1469491211175/css/symbols.css",
+        "https://res.winbaoxian.com/iconfont/1484128104656/css/symbols.css",
+        "https://res.winbaoxian.com/ali-iconfont/font_1034268_dc97ohr4nrr.css",
+        "https://res.winbaoxian.com/ali-iconfont/font_1082636_q497i9tat3r.css",
+        "https://res.winbaoxian.com/ali-iconfont/font_rh2uvsvi3gxvfgvi.css",
+        "https://res.winbaoxian.com/ali-iconfont/font_2189700_lnwu2t4brir.css",
+        "https://res.winbaoxian.com/ali-iconfont/font_280767_3owth2dyrnpl23xr.css",
+        "https://res.winbaoxian.com/ali-iconfont/font_280767_yehzob4ie8kt9.css",
+        "https://res.winbaoxian.com/ali-iconfont/font_5147685_3yj1cl522ql.css",
+        "https://res.winbaoxian.com/ali-iconfont/font_639125_6wvy748u27bhjjor.css",
+        "https://res.winbaoxian.com/ali-iconfont/font_428664_bw5n2r3dg5r.css",
+        "https://res.winbaoxian.com/ali-iconfont/font_428664_5vdctz8oltd.css",
+        "https://res.winbaoxian.com/ali-iconfont/font_555593_nnpr09fcvncxflxr.css",
+        "https://res.winbaoxian.com/ali-iconfont/font_280767_uz4h17dcqr.css"
+      ]
+    },
+    {
+      "project": "bxs-js-tools",
+      "linkCount": 0,
+      "links": []
+    },
+    {
+      "project": "bxs-norm-ui",
+      "linkCount": 0,
+      "links": []
+    },
+    {
+      "project": "bxs-tools-ui",
+      "linkCount": 1,
+      "links": [
+        "https://res.winbaoxian.com/ali-iconfont/font_428664_ioax9hc9ckg.css"
+      ]
+    },
+    {
+      "project": "bxs-ui-vue",
+      "linkCount": 0,
+      "links": []
+    },
+    {
+      "project": "dev-tools",
+      "linkCount": 0,
+      "links": []
+    },
+    {
+      "project": "double-record-miniapp",
+      "linkCount": 0,
+      "links": []
+    },
+    {
+      "project": "face-plus-auth",
+      "linkCount": 1,
+      "links": [
+        "https://res.winbaoxian.com/ali-iconfont/font_280767_yehzob4ie8kt9.css"
+      ]
+    },
+    {
+      "project": "fed-knowledge-share",
+      "linkCount": 0,
+      "links": []
+    },
+    {
+      "project": "fed-toolset",
+      "linkCount": 1,
+      "links": [
+        "https://res.winbaoxian.com/iconfont/1490260879816/css/symbols.css"
+      ]
+    },
+    {
+      "project": "h5-order-cancel",
+      "linkCount": 1,
+      "links": [
+        "https://res.winbaoxian.com/ali-iconfont/font_590851_sszavby595mw8kt9.css"
+      ]
+    },
+    {
+      "project": "insurance-claims-2",
+      "linkCount": 2,
+      "links": [
+        "https://res.winbaoxian.com/ali-iconfont/font_590851_1dp59g7ssygjsjor.css",
+        "https://res.winbaoxian.com/ali-iconfont/font_1964111_jn3xutqpl8l.css"
+      ]
+    },
+    {
+      "project": "insurance-collection-pages",
+      "linkCount": 1,
+      "links": [
+        "https://res.winbaoxian.com/ali-iconfont/font_428664_oq3fahn36yo.css"
+      ]
+    },
+    {
+      "project": "insurance-group-mobile",
+      "linkCount": 10,
+      "links": [
+        "https://res.winbaoxian.com/ali-iconfont/font_590851_sszavby595mw8kt9.css",
+        "https://res.winbaoxian.com/iconfont/1483933727382/css/symbols.css",
+        "https://res.winbaoxian.com/iconfont/1484617990198/css/symbols.css",
+        "https://res.winbaoxian.com/ali-iconfont/font_mzpwr9fjab4holxr.css",
+        "https://res.winbaoxian.com/ali-iconfont/font_280767_3owth2dyrnpl23xr.css",
+        "https://res.winbaoxian.com/ali-iconfont/font_401243_enzxezydrmvon7b9.css",
+        "https://res.winbaoxian.com/ali-iconfont/font_2365860_kv786slvuwh.css",
+        "https://res.winbaoxian.com/auto_upload_ci/insurance-group-mobile-webpack4/ali-iconfont/font_428664_7jwpsg6zrcx.css",
+        "https://res.winbaoxian.com/iconfont/1494384846295/css/symbols.css",
+        "https://res.winbaoxian.com/ali-iconfont/font_2921605_uatv9twnxne.css"
+      ]
+    },
+    {
+      "project": "insurance-group-mobile-vue3",
+      "linkCount": 0,
+      "links": []
+    },
+    {
+      "project": "insurance-group-preserve-admin",
+      "linkCount": 0,
+      "links": []
+    },
+    {
+      "project": "insurance-list-pages",
+      "linkCount": 1,
+      "links": [
+        "https://res.winbaoxian.com/ali-iconfont/font_806066_ow7azo4zaoi.css"
+      ]
+    },
+    {
+      "project": "insurance-policy-refund",
+      "linkCount": 2,
+      "links": [
+        "https://res.winbaoxian.com/ali-iconfont/font_280767_gc9nad8nz5mi.css",
+        "https://res.winbaoxian.com/ali-iconfont/font_280767_p4qiup9lop.css"
+      ]
+    },
+    {
+      "project": "know-your-customer",
+      "linkCount": 0,
+      "links": []
+    },
+    {
+      "project": "lib-app-webview-bridge1",
+      "linkCount": 0,
+      "links": []
+    },
+    {
+      "project": "lib-membership-2026",
+      "linkCount": 0,
+      "links": []
+    },
+    {
+      "project": "management-2c-merchant",
+      "linkCount": 0,
+      "links": []
+    },
+    {
+      "project": "management-baoxiaozhu-agency",
+      "linkCount": 0,
+      "links": []
+    },
+    {
+      "project": "management-baoxiaozhu-tenant",
+      "linkCount": 0,
+      "links": []
+    },
+    {
+      "project": "management-billing-2",
+      "linkCount": 0,
+      "links": []
+    },
+    {
+      "project": "management-commission-rate",
+      "linkCount": 0,
+      "links": []
+    },
+    {
+      "project": "management-community-operations",
+      "linkCount": 2,
+      "links": [
+        "https://at.alicdn.com/t/font_3210243_inqj8n4aqvd.css",
+        "https://res.winbaoxian.com/auto_upload_ci/management-community-operations/static/iconfont/20231024/iconfont.css"
+      ]
+    },
+    {
+      "project": "management-content-factory",
+      "linkCount": 0,
+      "links": []
+    },
+    {
+      "project": "management-digitalize-product",
+      "linkCount": 1,
+      "links": [
+        "https://at.alicdn.com/t/font_3210243_inqj8n4aqvd.css"
+      ]
+    },
+    {
+      "project": "management-insurance-claims",
+      "linkCount": 0,
+      "links": []
+    },
+    {
+      "project": "management-insurance-products",
+      "linkCount": 0,
+      "links": []
+    },
+    {
+      "project": "management-insurance-template",
+      "linkCount": 1,
+      "links": [
+        "https://res.winbaoxian.com/ali-iconfont/font_280767_p4qiup9lop.css"
+      ]
+    },
+    {
+      "project": "management-main-frame",
+      "linkCount": 0,
+      "links": []
+    },
+    {
+      "project": "management-marketing-platform",
+      "linkCount": 0,
+      "links": []
+    },
+    {
+      "project": "management-operations",
+      "linkCount": 0,
+      "links": []
+    },
+    {
+      "project": "management-planbook-2",
+      "linkCount": 0,
+      "links": []
+    },
+    {
+      "project": "management-planbook-2019",
+      "linkCount": 0,
+      "links": []
+    },
+    {
+      "project": "management-promotions",
+      "linkCount": 1,
+      "links": [
+        "https://res.winbaoxian.com/ali-iconfont/font_336721_74m4vln6iy919k9.css"
+      ]
+    },
+    {
+      "project": "management-risk",
+      "linkCount": 0,
+      "links": []
+    },
+    {
+      "project": "management-settlement",
+      "linkCount": 0,
+      "links": []
+    },
+    {
+      "project": "management-wechat-crm",
+      "linkCount": 2,
+      "links": [
+        "https://at.alicdn.com/t/c/font_280767_l7q0rmkx4g.css",
+        "https://res.winbaoxian.com/ali-iconfont/font_428664_79kd0g7h613.css"
+      ]
+    },
+    {
+      "project": "payment-cashier",
+      "linkCount": 0,
+      "links": []
+    },
+    {
+      "project": "payment-cashier-mobile",
+      "linkCount": 1,
+      "links": [
+        "https://res.winbaoxian.com/ali-iconfont/font_280767_yehzob4ie8kt9.css"
+      ]
+    },
+    {
+      "project": "planbook-accessories",
+      "linkCount": 10,
+      "links": [
+        "https://res.winbaoxian.com/ali-iconfont/font_428664_pwh4ebtaxx.css",
+        "https://res.winbaoxian.com/ali-iconfont/font_428664_4b80dqdddqv.css",
+        "https://res.winbaoxian.com/ali-iconfont/font_428664_oq3fahn36yo.css",
+        "https://res.winbaoxian.com/ali-iconfont/font_428664_2ilxht3q3ky.css",
+        "https://res.winbaoxian.com/ali-iconfont/font_5083134_600xfof53ct.css",
+        "https://res.winbaoxian.com/ali-iconfont/font_280767_1r2koyd9phb.css",
+        "https://res.winbaoxian.com/ali-iconfont/font_428664_dvo3et3tigh.css",
+        "https://res.winbaoxian.com/ali-iconfont/font_428664_19bv2uxkv45.css",
+        "https://res.winbaoxian.com/ali-iconfont/font_428664_98h83hzvaj5.css",
+        "https://res.winbaoxian.com/ali-iconfont/font_428664_i62br8ctjvi.css"
+      ]
+    },
+    {
+      "project": "planbook-innovative",
+      "linkCount": 1,
+      "links": [
+        "https://res.winbaoxian.com/ali-iconfont/font_280767_xzhtbg6ic.css"
+      ]
+    },
+    {
+      "project": "planbook-main",
+      "linkCount": 21,
+      "links": [
+        "https://res.winbaoxian.com/ali-iconfont/font_428664_h9h1ezsv.css",
+        "https://res.winbaoxian.com/ali-iconfont/font_428664_8y61ps0f84n.css",
+        "https://res.winbaoxian.com/ali-iconfont/font_428664_ioax9hc9ckg.css",
+        "https://res.winbaoxian.com/ali-iconfont/font_428664_8h17cvfvm7r.css",
+        "https://res.winbaoxian.com/ali-iconfont/font_428664_66gv1lr5kkx.css",
+        "https://res.winbaoxian.com/ali-iconfont/font_428664_3dz2t0h957y14i.css",
+        "https://res.winbaoxian.com/ali-iconfont/font_428664_oq3fahn36yo.css",
+        "https://res.winbaoxian.com/ali-iconfont/font_428664_7i2cv6kfg7.css",
+        "https://res.winbaoxian.com/ali-iconfont/font_428664_b8utvxl1paa.css",
+        "https://res.winbaoxian.com/ali-iconfont/font_428664_4b80dqdddqv.css",
+        "https://res.winbaoxian.com/ali-iconfont/font_428664_bgi1lbym7wp.css",
+        "https://res.winbaoxian.com/ali-iconfont/font_428664_gjvv2uvrt8k.css",
+        "https://res.winbaoxian.com/ali-iconfont/font_280767_a0v3md61aah.css",
+        "https://res.winbaoxian.com/ali-iconfont/font_1400070_muj04vmlu7b.css",
+        "https://res.winbaoxian.com/ali-iconfont/font_428664_8mcpbsbmetn.css",
+        "https://res.winbaoxian.com/ali-iconfont/font_428664_oyu00uuny3j.css",
+        "https://res.winbaoxian.com/ali-iconfont/font_5083134_vfi4mapwxbh.css",
+        "https://res.winbaoxian.com/ali-iconfont/font_280767_xzhtbg6ic.css",
+        "https://res.winbaoxian.com/ali-iconfont/font_428664_jfilksqj3ej.css",
+        "https://res.winbaoxian.com/ali-iconfont/font_4960269_9p2et13034r.css",
+        "https://res.winbaoxian.com/ali-iconfont/font_428664_y6u9dveq22.css"
+      ]
+    },
+    {
+      "project": "planbook-policy-check",
+      "linkCount": 10,
+      "links": [
+        "https://res.winbaoxian.com/ali-iconfont/font_428664_jlenlrheaxn.css",
+        "https://res.winbaoxian.com/ali-iconfont/font_428664_99d69tcivr4.css",
+        "https://res.winbaoxian.com/ali-iconfont/font_428664_bgi1lbym7wp.css",
+        "https://res.winbaoxian.com/ali-iconfont/font_5083134_4f3egsm2o2c.css",
+        "https://res.winbaoxian.com/ali-iconfont/font_1504904_9rkffrqg85l.css",
+        "https://res.winbaoxian.com/ali-iconfont/font_428664_9bzhjthg5j7.css",
+        "https://res.winbaoxian.com/ali-iconfont/font_590851_mqnkkoenssn.css",
+        "https://res.winbaoxian.com/ali-iconfont/font_336721_2btvfpbqkid.css",
+        "https://res.winbaoxian.com/ali-iconfont/font_1561272_hu0tnmnn4m.css",
+        "https://res.winbaoxian.com/ali-iconfont/font_428664_rzvsoddflce.css"
+      ]
+    },
+    {
+      "project": "promotion-vue-2018",
+      "linkCount": 14,
+      "links": [
+        "https://res.winbaoxian.com/ali-iconfont/font_910415_35zmby5poyg.css",
+        "https://res.winbaoxian.com/ali-iconfont/font_428664_00w563jpjgex.css",
+        "https://res.winbaoxian.com/ali-iconfont/font_280767_mexaglzgdqk.css",
+        "https://res.winbaoxian.com/ali-iconfont/font_336721_eewfjl2pcis.css",
+        "https://res.winbaoxian.com/ali-iconfont/font_280767_3owth2dyrnpl23xr.css",
+        "https://res.winbaoxian.com/ali-iconfont/font_1561272_hu0tnmnn4m.css",
+        "https://res.winbaoxian.com/ali-iconfont/font_428664_4b80dqdddqv.css",
+        "https://res.winbaoxian.com/ali-iconfont/font_1811719_x9kbnc9we1.css",
+        "https://res.winbaoxian.com/ali-iconfont/font_2142609_8gd8hy3a76p.css",
+        "https://res.winbaoxian.com/ali-iconfont/font_639125_jnpqzi0xjoj.css",
+        "https://res.winbaoxian.com/ali-iconfont/font_2607384_ql7dfkp013h.css",
+        "https://res.winbaoxian.com/ali-iconfont/font_3156005_bit0veqkv6c.css",
+        "https://res.winbaoxian.com/ali-iconfont/font_2607384_m6xy4y9iq5j.css",
+        "https://res.winbaoxian.com/ali-iconfont/font_2189700_ftksvdkbx64.css"
+      ]
+    },
+    {
+      "project": "promotion-vue-2022",
+      "linkCount": 5,
+      "links": [
+        "https://res.winbaoxian.com/ali-iconfont/font_280767_3owth2dyrnpl23xr.css",
+        "https://res.winbaoxian.com/ali-iconfont/font_2921605_uatv9twnxne.css",
+        "https://res.winbaoxian.com/ali-iconfont/font_428664_dvo3et3tigh.css",
+        "https://res.winbaoxian.com/ali-iconfont/font_428664_1xnjtbqjoqg.css",
+        "https://res.winbaoxian.com/ali-iconfont/font_428664_pwh4ebtaxx.css"
+      ]
+    },
+    {
+      "project": "sms-management",
+      "linkCount": 0,
+      "links": []
+    },
+    {
+      "project": "tools-customer-acquisition",
+      "linkCount": 17,
+      "links": [
+        "https://res.winbaoxian.com/ali-iconfont/font_428664_4b80dqdddqv.css",
+        "https://res.winbaoxian.com/ali-iconfont/font_336721_cwgrn48i7um.css",
+        "https://res.winbaoxian.com/ali-iconfont/font_428664_kwy4ouo1glvaq0k9.css",
+        "https://res.winbaoxian.com/ali-iconfont/font_336721_o6v1iugrqdoyldi.css",
+        "https://res.winbaoxian.com/ali-iconfont/font_5083134_600xfof53ct.css",
+        "https://res.winbaoxian.com/ali-iconfont/font_685961_a2ozv0zlba8.css",
+        "https://res.winbaoxian.com/ali-iconfont/font_336721_baavf6cg3xewb3xr.css",
+        "https://res.winbaoxian.com/ali-iconfont/font_336721_j9qak3imhho20529.css",
+        "https://res.winbaoxian.com/ali-iconfont/font_336721_fa8v5jid4nzpk3xr.css",
+        "https://res.winbaoxian.com/ali-iconfont/font_685961_8psalwzjgwh.css",
+        "https://res.winbaoxian.com/ali-iconfont/font_685961_vwgwrinez5o.css",
+        "https://res.winbaoxian.com/ali-iconfont/font_685961_zx5qm9ub0cf.css",
+        "https://res.winbaoxian.com/iconfont/1494329292049/css/symbols.css",
+        "https://res.winbaoxian.com/ali-iconfont/font_428664_bgi1lbym7wp.css",
+        "https://res.winbaoxian.com/ali-iconfont/font_428664_oq3fahn36yo.css",
+        "https://res.winbaoxian.com/ali-iconfont/font_280767_3owth2dyrnpl23xr.css",
+        "https://res.winbaoxian.com/ali-iconfont/font_280767_a0v3md61aah.css"
+      ]
+    },
+    {
+      "project": "weapp-planbook",
+      "linkCount": 0,
+      "links": []
+    },
+    {
+      "project": "websites-wyjj",
+      "linkCount": 3,
+      "links": [
+        "https://res.winbaoxian.com/ali-iconfont/font_428664_lq56367snj1exw29.css",
+        "https://res.winbaoxian.com/iconfont/1469782413913/css/symbols.css",
+        "https://res.winbaoxian.com/ali-iconfont/font_4337802_bpezdq4qcvg.css"
+      ]
+    },
+    {
+      "project": "wechat-crm",
+      "linkCount": 1,
+      "links": [
+        "https://res.winbaoxian.com/ali-iconfont/font_280767_3owth2dyrnpl23xr.css"
+      ]
+    }
+  ]
+}

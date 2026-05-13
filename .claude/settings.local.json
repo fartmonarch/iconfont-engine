@@ -20,8 +20,7 @@
       "Bash(pip3 list *)",
       "Bash(python *)",
       "Bash(df *)",
-      "Bash(pip install *)",
-      "Bash(npx superpowers-zh *)"
+      "Bash(pip install *)"
     ]
   }
 }

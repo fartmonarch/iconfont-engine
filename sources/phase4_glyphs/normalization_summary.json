@@ -1,0 +1,450 @@
+{
+  "timestamp": "2026-05-13T08:04:57.186733+00:00",
+  "total_glyphs": 11528,
+  "upm_scaled": 1263,
+  "upm_unchanged": 10265,
+  "empty": 2,
+  "errors": 0,
+  "asset_stats": {
+    "d737f632f4df": {
+      "total": 28,
+      "scaled": 0
+    },
+    "3a2dcb72da44": {
+      "total": 158,
+      "scaled": 0
+    },
+    "3317e5cb12d7": {
+      "total": 8,
+      "scaled": 0
+    },
+    "c451667373e6": {
+      "total": 84,
+      "scaled": 0
+    },
+    "c83f6e44d0c0": {
+      "total": 26,
+      "scaled": 0
+    },
+    "1311a7f5b183": {
+      "total": 170,
+      "scaled": 170
+    },
+    "0dc4cf8ce170": {
+      "total": 4,
+      "scaled": 0
+    },
+    "7233bfd22c8e": {
+      "total": 93,
+      "scaled": 93
+    },
+    "04dce05e46cf": {
+      "total": 73,
+      "scaled": 73
+    },
+    "6a48244a285f": {
+      "total": 117,
+      "scaled": 117
+    },
+    "e07e7aafbc38": {
+      "total": 17,
+      "scaled": 0
+    },
+    "21dc2f00a1ef": {
+      "total": 1,
+      "scaled": 0
+    },
+    "cf6e3630a212": {
+      "total": 99,
+      "scaled": 0
+    },
+    "53ae05568965": {
+      "total": 27,
+      "scaled": 0
+    },
+    "703f65bef56b": {
+      "total": 166,
+      "scaled": 0
+    },
+    "85c94873279e": {
+      "total": 174,
+      "scaled": 0
+    },
+    "5598e15c97f0": {
+      "total": 20,
+      "scaled": 0
+    },
+    "856d3dd79324": {
+      "total": 113,
+      "scaled": 0
+    },
+    "5bc913fb2cde": {
+      "total": 85,
+      "scaled": 0
+    },
+    "ca1beac4409e": {
+      "total": 9,
+      "scaled": 0
+    },
+    "ebbc0ba6fc13": {
+      "total": 241,
+      "scaled": 0
+    },
+    "a9b441764fb9": {
+      "total": 113,
+      "scaled": 0
+    },
+    "a28da8cb6a8f": {
+      "total": 159,
+      "scaled": 159
+    },
+    "05ae5da1a8d2": {
+      "total": 214,
+      "scaled": 0
+    },
+    "dc42e569b5c5": {
+      "total": 195,
+      "scaled": 0
+    },
+    "cafe598ecb6e": {
+      "total": 1,
+      "scaled": 0
+    },
+    "2368044f2d06": {
+      "total": 143,
+      "scaled": 0
+    },
+    "682513d5fcad": {
+      "total": 115,
+      "scaled": 115
+    },
+    "5e6043beee56": {
+      "total": 119,
+      "scaled": 119
+    },
+    "6c4faea4e5ed": {
+      "total": 147,
+      "scaled": 0
+    },
+    "79b4e8e587a5": {
+      "total": 164,
+      "scaled": 0
+    },
+    "f73565d1bbce": {
+      "total": 1,
+      "scaled": 0
+    },
+    "019f321bbcff": {
+      "total": 173,
+      "scaled": 173
+    },
+    "a18c04d4f0c5": {
+      "total": 103,
+      "scaled": 0
+    },
+    "eedc00a2f845": {
+      "total": 273,
+      "scaled": 0
+    },
+    "90242b7194f8": {
+      "total": 166,
+      "scaled": 0
+    },
+    "2a7e87aa7c81": {
+      "total": 216,
+      "scaled": 0
+    },
+    "d443fdd5cccb": {
+      "total": 22,
+      "scaled": 0
+    },
+    "13c3d5d6f120": {
+      "total": 29,
+      "scaled": 0
+    },
+    "9e8f27840200": {
+      "total": 65,
+      "scaled": 0
+    },
+    "12e46533c451": {
+      "total": 378,
+      "scaled": 0
+    },
+    "0c2981bd9779": {
+      "total": 120,
+      "scaled": 0
+    },
+    "c10909b7d1bf": {
+      "total": 123,
+      "scaled": 0
+    },
+    "89654a0a851a": {
+      "total": 92,
+      "scaled": 0
+    },
+    "5a3d27427ec3": {
+      "total": 106,
+      "scaled": 0
+    },
+    "651c88c09048": {
+      "total": 124,
+      "scaled": 0
+    },
+    "c1be4e109970": {
+      "total": 238,
+      "scaled": 0
+    },
+    "abdf3a84ee65": {
+      "total": 136,
+      "scaled": 0
+    },
+    "13457a0ec155": {
+      "total": 146,
+      "scaled": 0
+    },
+    "c722a0383ed5": {
+      "total": 130,
+      "scaled": 0
+    },
+    "94e10a346cb3": {
+      "total": 100,
+      "scaled": 0
+    },
+    "e6592a1ef015": {
+      "total": 241,
+      "scaled": 0
+    },
+    "5b4ea5927db0": {
+      "total": 129,
+      "scaled": 0
+    },
+    "cf5f445075cb": {
+      "total": 134,
+      "scaled": 0
+    },
+    "667e13431cb7": {
+      "total": 145,
+      "scaled": 0
+    },
+    "090d8a31db71": {
+      "total": 126,
+      "scaled": 0
+    },
+    "cdb190ccdd75": {
+      "total": 58,
+      "scaled": 0
+    },
+    "bc82d40635fc": {
+      "total": 127,
+      "scaled": 0
+    },
+    "128f73b66b91": {
+      "total": 87,
+      "scaled": 0
+    },
+    "d6fea52e9b79": {
+      "total": 104,
+      "scaled": 0
+    },
+    "b667bae78d4c": {
+      "total": 114,
+      "scaled": 0
+    },
+    "a6f5b3c6f8a9": {
+      "total": 320,
+      "scaled": 0
+    },
+    "7383d5e31884": {
+      "total": 10,
+      "scaled": 0
+    },
+    "ddbc89023849": {
+      "total": 116,
+      "scaled": 0
+    },
+    "a626133907e9": {
+      "total": 142,
+      "scaled": 0
+    },
+    "04996b07804e": {
+      "total": 125,
+      "scaled": 0
+    },
+    "3a3a35657d1d": {
+      "total": 132,
+      "scaled": 0
+    },
+    "f5f3da6d03f8": {
+      "total": 1,
+      "scaled": 0
+    },
+    "88e6c16ebe27": {
+      "total": 128,
+      "scaled": 0
+    },
+    "82f2c3714e22": {
+      "total": 152,
+      "scaled": 0
+    },
+    "c34e5ca9f39e": {
+      "total": 149,
+      "scaled": 0
+    },
+    "195a8578410e": {
+      "total": 123,
+      "scaled": 0
+    },
+    "c8641db01338": {
+      "total": 14,
+      "scaled": 0
+    },
+    "d8e56b7ece15": {
+      "total": 90,
+      "scaled": 0
+    },
+    "a3be5af06ee7": {
+      "total": 312,
+      "scaled": 0
+    },
+    "f4fee3da2e72": {
+      "total": 82,
+      "scaled": 0
+    },
+    "7555fcc5d2e4": {
+      "total": 12,
+      "scaled": 0
+    },
+    "926d6d290bf9": {
+      "total": 144,
+      "scaled": 0
+    },
+    "961379abbfb6": {
+      "total": 291,
+      "scaled": 0
+    },
+    "86a7c6cdf72f": {
+      "total": 67,
+      "scaled": 0
+    },
+    "83ee3a416bd9": {
+      "total": 234,
+      "scaled": 0
+    },
+    "5ee20560641d": {
+      "total": 75,
+      "scaled": 0
+    },
+    "dfb63027401a": {
+      "total": 23,
+      "scaled": 0
+    },
+    "036bedba6122": {
+      "total": 25,
+      "scaled": 0
+    },
+    "43b5d5b9b636": {
+      "total": 25,
+      "scaled": 0
+    },
+    "10517dd8c534": {
+      "total": 6,
+      "scaled": 0
+    },
+    "73f560053ae0": {
+      "total": 22,
+      "scaled": 0
+    },
+    "ee5cb31752dd": {
+      "total": 37,
+      "scaled": 0
+    },
+    "889300d79ebd": {
+      "total": 97,
+      "scaled": 0
+    },
+    "98a9c63e17c4": {
+      "total": 77,
+      "scaled": 0
+    },
+    "a4f0c329de1d": {
+      "total": 20,
+      "scaled": 0
+    },
+    "e898939e33bb": {
+      "total": 67,
+      "scaled": 0
+    },
+    "e5102c29bd68": {
+      "total": 46,
+      "scaled": 0
+    },
+    "0de9569a4b80": {
+      "total": 70,
+      "scaled": 0
+    },
+    "5075d65c5796": {
+      "total": 74,
+      "scaled": 0
+    },
+    "1e86aa599253": {
+      "total": 51,
+      "scaled": 0
+    },
+    "8642a7e35589": {
+      "total": 45,
+      "scaled": 0
+    },
+    "b065f46bd42c": {
+      "total": 53,
+      "scaled": 0
+    },
+    "8034cd8c4e90": {
+      "total": 49,
+      "scaled": 0
+    },
+    "dae51330f742": {
+      "total": 172,
+      "scaled": 171
+    },
+    "44bb4b297b58": {
+      "total": 54,
+      "scaled": 0
+    },
+    "a8b4b50b4446": {
+      "total": 73,
+      "scaled": 73
+    },
+    "fb2dc9b73a35": {
+      "total": 17,
+      "scaled": 0
+    },
+    "c4862e36d872": {
+      "total": 34,
+      "scaled": 0
+    },
+    "2e965f5713c8": {
+      "total": 2,
+      "scaled": 0
+    },
+    "ebce00384658": {
+      "total": 153,
+      "scaled": 0
+    },
+    "9656075c0261": {
+      "total": 148,
+      "scaled": 0
+    },
+    "53bb8b5dbd99": {
+      "total": 2,
+      "scaled": 0
+    },
+    "eb3bd67c3857": {
+      "total": 141,
+      "scaled": 0
+    },
+    "036492dced92": {
+      "total": 137,
+      "scaled": 0
+    }
+  }
+}

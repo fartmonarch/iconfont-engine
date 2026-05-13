@@ -224,3 +224,132 @@ def normalize_glyph(glyph, upm_map):
     result['glyphHash'] = compute_glyph_hash(result['contours'])
 
     return result
+
+
+def main():
+    """主流程：读取 raw_glyphs、逐条标准化、输出结果与报告"""
+    print('=' * 60)
+    print('Phase 4: Geometry Normalization')
+    print('=' * 60)
+
+    os.makedirs('sources/phase4_glyphs', exist_ok=True)
+
+    # 加载数据
+    print('\n加载 raw_glyphs.json ...')
+    glyphs = load_glyphs()
+    print(f'  共 {len(glyphs)} 条 glyph 记录')
+
+    print('加载 extraction_summary.json ...')
+    summary = load_extraction_summary()
+    upm_map = build_upm_lookup(summary)
+    print(f'  共 {len(upm_map)} 个 asset 的 UPM 信息')
+
+    # 统计
+    stats = {
+        'total': 0,
+        'upm_scaled': 0,
+        'upm_unchanged': 0,
+        'empty': 0,
+        'errors': 0,
+        'asset_stats': {},
+    }
+
+    # 逐 glyph 标准化
+    print('\n开始标准化...')
+    normalized = []
+    for i, glyph in enumerate(glyphs):
+        if (i + 1) % 1000 == 0:
+            print(f'  已处理 {i + 1}/{len(glyphs)} ...')
+
+        try:
+            result = normalize_glyph(glyph, upm_map)
+            normalized.append(result)
+
+            stats['total'] += 1
+            aid = glyph['assetId']
+            if aid not in stats['asset_stats']:
+                stats['asset_stats'][aid] = {'total': 0, 'scaled': 0}
+            stats['asset_stats'][aid]['total'] += 1
+
+            if glyph['glyphType'] == 'empty':
+                stats['empty'] += 1
+                stats['upm_unchanged'] += 1
+            elif result.get('upmChanged'):
+                stats['upm_scaled'] += 1
+                stats['asset_stats'][aid]['scaled'] += 1
+            else:
+                stats['upm_unchanged'] += 1
+        except Exception as e:
+            stats['errors'] += 1
+            print(f'  ERROR [{glyph.get("assetId", "?")}][{glyph.get("glyphName", "?")}]: {e}')
+
+    # 输出 normalized_glyphs.json
+    output_path = 'sources/phase4_glyphs/normalized_glyphs.json'
+    with open(output_path, 'w', encoding='utf-8') as f:
+        json.dump(normalized, f, ensure_ascii=False)
+    print(f'\n标准化 glyph 数据: {len(normalized)} 条 -> {output_path}')
+
+    # 输出 normalization_summary.json
+    norm_summary = {
+        'timestamp': datetime.now(timezone.utc).isoformat(),
+        'total_glyphs': stats['total'],
+        'upm_scaled': stats['upm_scaled'],
+        'upm_unchanged': stats['upm_unchanged'],
+        'empty': stats['empty'],
+        'errors': stats['errors'],
+        'asset_stats': stats['asset_stats'],
+    }
+    summary_path = 'sources/phase4_glyphs/normalization_summary.json'
+    with open(summary_path, 'w', encoding='utf-8') as f:
+        json.dump(norm_summary, f, ensure_ascii=False, indent=2)
+    print(f'标准化摘要: {summary_path}')
+
+    # 打印统计
+    unique_hashes = set(g['glyphHash'] for g in normalized if g['glyphHash'] != 'empty')
+    print(f'\n--- Normalization 统计 ---')
+    print(f'  总 glyph: {stats["total"]}')
+    print(f'  UPM 缩放: {stats["upm_scaled"]}')
+    print(f'  UPM 不变: {stats["upm_unchanged"]}')
+    print(f'  empty:    {stats["empty"]}')
+    print(f'  错误:     {stats["errors"]}')
+    print(f'  unique glyphHash: {len(unique_hashes)}')
+
+    if stats['errors'] > 0:
+        print(f'\n有 {stats["errors"]} 个错误')
+        return 1
+
+    # 生成人类可读报告
+    report_path = 'report/phase4_normalization.md'
+    os.makedirs('report', exist_ok=True)
+
+    with open(report_path, 'w', encoding='utf-8') as f:
+        f.write('# Phase 4: Geometry Normalization 报告\n\n')
+        f.write(f'生成时间: {norm_summary["timestamp"]}\n\n')
+        f.write('## 统计\n\n')
+        f.write('| 指标 | 值 |\n')
+        f.write('|------|-----|\n')
+        f.write(f'| 总 glyph | {stats["total"]} |\n')
+        f.write(f'| UPM 缩放 | {stats["upm_scaled"]} |\n')
+        f.write(f'| UPM 不变 | {stats["upm_unchanged"]} |\n')
+        f.write(f'| empty | {stats["empty"]} |\n')
+        f.write(f'| unique glyphHash | {len(unique_hashes)} |\n')
+        f.write(f'| 错误 | {stats["errors"]} |\n\n')
+
+        f.write('## UPM 缩放详情\n\n')
+        f.write('| assetId | sourceProjects | 总 glyph | UPM 缩放 |\n')
+        f.write('|---------|---------------|----------|----------|\n')
+        for asset in summary['asset_summaries']:
+            aid = asset['assetId']
+            s = stats['asset_stats'].get(aid, {})
+            if s.get('scaled', 0) > 0:
+                projects = ', '.join(asset['sourceProjects'])
+                f.write(f'| {aid} | {projects} | {s["total"]} | {s["scaled"]} |\n')
+
+    print(f'报告: {report_path}')
+
+    print('\nPhase 4 完成！')
+    return 0
+
+
+if __name__ == '__main__':
+    sys.exit(main())

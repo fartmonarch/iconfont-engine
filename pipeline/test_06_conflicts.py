@@ -19,6 +19,7 @@ spec.loader.exec_module(mod)
 
 detect_unicode_conflicts = mod.detect_unicode_conflicts
 detect_name_conflicts = mod.detect_name_conflicts
+detect_duplicate_glyphs = mod.detect_duplicate_glyphs
 classify_severity = mod.classify_severity
 _build_conflict_record = mod._build_conflict_record
 
@@ -152,6 +153,53 @@ def test_detect_name_conflicts_same_hash():
     print('  PASS test_detect_name_conflicts_same_hash')
 
 
+def test_detect_duplicate_glyphs_basic():
+    """同 glyphHash 多来源 → Duplicate Glyph"""
+    entries = [
+        make_entry('hash_a', 'E6B5', 'icon-arrow', [
+            make_source('asset1', ['proj-a']),
+            make_source('asset2', ['proj-b']),
+        ]),
+        make_entry('hash_b', 'E6B6', 'icon-up', [make_source('asset1', ['proj-a'])]),
+    ]
+    conflicts = detect_duplicate_glyphs(entries)
+    assert len(conflicts) == 1
+    assert conflicts[0]['type'] == 'glyph_duplicate'
+    assert conflicts[0]['key'] == 'hash_a'
+    assert conflicts[0]['variantCount'] == 1
+    assert conflicts[0]['resolution_hint'] == 'merge_alias'
+    print('  PASS test_detect_duplicate_glyphs_basic')
+
+
+def test_detect_duplicate_glyphs_single_source():
+    """单来源 entry → 不是 duplicate"""
+    entries = [
+        make_entry('hash_a', 'E6B5', 'icon-arrow', [make_source('asset1', ['proj-a'])]),
+        make_entry('hash_b', 'E6B6', 'icon-up', [make_source('asset2', ['proj-b'])]),
+    ]
+    conflicts = detect_duplicate_glyphs(entries)
+    assert len(conflicts) == 0
+    print('  PASS test_detect_duplicate_glyphs_single_source')
+
+
+def test_detect_duplicate_glyphs_severity():
+    """按 sources 数量分级"""
+    entries_2src = make_entry('hash_a', 'E6B5', 'icon-a', [
+        make_source('asset1', ['p1']), make_source('asset2', ['p2'])
+    ])
+    entries_5src = make_entry('hash_b', 'E6B6', 'icon-b', [
+        make_source('a1', ['p1']), make_source('a2', ['p2']),
+        make_source('a3', ['p3']), make_source('a4', ['p4']),
+        make_source('a5', ['p5']),
+    ])
+    conflicts = detect_duplicate_glyphs([entries_2src, entries_5src])
+    assert len(conflicts) == 2
+    sev_map = {c['key']: c['severity'] for c in conflicts}
+    assert sev_map['hash_b'] == 'critical'
+    assert sev_map['hash_a'] == 'info'
+    print('  PASS test_detect_duplicate_glyphs_severity')
+
+
 def main():
     print('=' * 60)
     print('Phase 6: Conflict Detection — Tests')
@@ -166,6 +214,9 @@ def main():
         test_detect_name_conflicts_basic,
         test_detect_name_conflicts_null_name,
         test_detect_name_conflicts_same_hash,
+        test_detect_duplicate_glyphs_basic,
+        test_detect_duplicate_glyphs_single_source,
+        test_detect_duplicate_glyphs_severity,
     ]
 
     passed = 0

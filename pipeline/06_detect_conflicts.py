@@ -169,6 +169,25 @@ def detect_name_conflicts(entries):
     return conflicts
 
 
+def detect_duplicate_glyphs(entries):
+    """Type C: 同 glyphHash 多来源（正常合并情况）"""
+    conflicts = []
+    for e in entries:
+        sources = e.get('sources', [])
+        if len(sources) > 1:
+            record = _build_conflict_record(
+                conflict_type='glyph_duplicate',
+                key=e['glyphHash'],
+                group=[e],
+                resolution_hint='merge_alias',
+            )
+            # variantCount 是 entry 数（=1），severity 按 source 数分级
+            record['severity'] = classify_severity(len(sources))
+            conflicts.append(record)
+
+    return conflicts
+
+
 def main():
     """主入口：运行冲突检测"""
     print('=' * 60)

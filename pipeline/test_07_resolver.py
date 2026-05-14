@@ -223,7 +223,7 @@ class TestResolveTypeA(unittest.TestCase):
     def test_keep_one_variant(self):
         record = self._make_record(3, record_id=0)
         decisions = {
-            '0': {'recordType': 'unicode_conflict', 'key': 'U+E0', 'action': 'keep', 'variantIndex': 1, 'keptGlyphHash': 'hash_0_1'},
+            '0': {'recordType': 'unicode_conflict', 'key': 'U+E0', 'variants': {'1': 'keep'}},
         }
         pua = PUAAllocator()
         resolved, stats = resolve_type_a([record], decisions, pua)
@@ -245,15 +245,21 @@ class TestResolveTypeA(unittest.TestCase):
         for r in resolved:
             self.assertTrue(r['finalUnicode'] >= 0xE000)
 
-    def test_pua_action(self):
-        record = self._make_record(2, record_id=2)
+    def test_per_variant_decisions(self):
+        """Test mixed keep/pua per variant."""
+        record = self._make_record(3, record_id=3)
         decisions = {
-            '2': {'recordType': 'unicode_conflict', 'key': 'U+E2', 'action': 'pua', 'variantIndex': 0, 'keptGlyphHash': 'hash_2_0'},
+            '3': {'recordType': 'unicode_conflict', 'key': 'U+E3', 'variants': {'0': 'keep', '1': 'pua', '2': 'keep'}},
         }
         pua = PUAAllocator()
         resolved, stats = resolve_type_a([record], decisions, pua)
-        # PUA action → all variants get PUA (different from keep)
-        self.assertEqual(len(resolved), 2)
+        self.assertEqual(len(resolved), 3)
+        self.assertEqual(stats['kept'], 2)  # variants 0 and 2 kept
+        self.assertEqual(stats['pua_assigned'], 1)  # variant 1 got PUA
+        # Variant 1 should have PUA
+        pua_glyph = [r for r in resolved if r['glyphHash'] == 'hash_3_1'][0]
+        self.assertEqual(pua_glyph['resolution'], 'pua_assigned')
+        self.assertTrue(pua_glyph['finalUnicode'] >= 0xE000)
 
 
 class TestResolveTypeB(unittest.TestCase):
@@ -283,7 +289,7 @@ class TestResolveTypeB(unittest.TestCase):
     def test_keep_one_variant(self):
         record = self._make_record(3, record_id=5)
         decisions = {
-            '5': {'recordType': 'name_conflict', 'key': 'icon-conflict_5', 'action': 'keep', 'variantIndex': 0, 'keptGlyphHash': 'namehash_5_0'},
+            '5': {'recordType': 'name_conflict', 'key': 'icon-conflict_5', 'variants': {'0': 'keep'}},
         }
         pua = PUAAllocator()
         resolved, stats = resolve_type_b([record], decisions, pua)
@@ -300,6 +306,18 @@ class TestResolveTypeB(unittest.TestCase):
         names = [r['finalName'] for r in resolved]
         self.assertIn('icon-conflict_6_v1', names)
         self.assertIn('icon-conflict_6_v2', names)
+
+    def test_per_variant_decisions(self):
+        """Test mixed keep/pua per variant for Type B."""
+        record = self._make_record(3, record_id=7)
+        decisions = {
+            '7': {'recordType': 'name_conflict', 'key': 'icon-conflict_7', 'variants': {'0': 'keep', '2': 'keep'}},
+        }
+        pua = PUAAllocator()
+        resolved, stats = resolve_type_b([record], decisions, pua)
+        self.assertEqual(len(resolved), 3)
+        self.assertEqual(stats['kept'], 2)
+        self.assertEqual(stats['pua_assigned'], 1)  # variant 1 undecided → PUA
 
 
 class TestResolveTypeC(unittest.TestCase):

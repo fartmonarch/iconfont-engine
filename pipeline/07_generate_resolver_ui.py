@@ -18,6 +18,7 @@ import sys
 DATA_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CONFLICTS_PATH = os.path.join(DATA_DIR, 'report', 'conflict_records.json')
 OUTPUT_PATH = os.path.join(DATA_DIR, 'report', 'conflict_resolver.html')
+DATA_JSON_PATH = os.path.join(DATA_DIR, 'report', 'conflict_resolver_data.json')
 
 TYPE_LABELS = {
     'unicode_conflict': 'Type A: Unicode',
@@ -42,9 +43,20 @@ def contour_to_path(contour):
             first_on = i
             break
     if first_on is None:
-        d = f'M {pts[0]["x"]:.1f} {pts[0]["y"]:.1f} '
-        for pt in pts[1:]:
-            d += f'L {pt["x"]:.1f} {pt["y"]:.1f} '
+        # 全 off-curve contour（TrueType 圆/孔洞）：
+        # 在最后一个和第一个 off-curve 点之间插入隐含 on-curve 点
+        mid_x = (pts[-1]['x'] + pts[0]['x']) / 2
+        mid_y = (pts[-1]['y'] + pts[0]['y']) / 2
+        d = f'M {mid_x:.1f} {mid_y:.1f} '
+        for i in range(len(pts)):
+            pt = pts[i]
+            next_pt = pts[(i + 1) % len(pts)]
+            if i == len(pts) - 1:
+                d += f'Q {pt["x"]:.1f} {pt["y"]:.1f} {mid_x:.1f} {mid_y:.1f} '
+            else:
+                mid2_x = (pt['x'] + next_pt['x']) / 2
+                mid2_y = (pt['y'] + next_pt['y']) / 2
+                d += f'Q {pt["x"]:.1f} {pt["y"]:.1f} {mid2_x:.1f} {mid2_y:.1f} '
         d += 'Z'
         return d
     pts = pts[first_on:] + pts[:first_on]
@@ -99,13 +111,13 @@ def contours_to_svg(contours, upm=1024, size=80):
         flipped = [{'x': p['x'], 'y': upm - p['y'], 'on_curve': p['on_curve']} for p in contour]
         d = contour_to_path(flipped)
         if d:
-            paths.append(f'<path d="{d}" fill="currentColor"/>')
+            paths.append(f'<path d="{d}" fill="#333"/>')
     if not paths:
         return None
     svg_content = ''.join(paths)
     return (
         f'<svg viewBox="{vx:.0f} {vy:.0f} {vw:.0f} {vh:.0f}" '
-        f'width="{size}" height="{size}" xmlns="http://www.w3.org/2000/svg">'
+        f'width="{size}" height="{size}" fill-rule="evenodd" xmlns="http://www.w3.org/2000/svg">'
         f'{svg_content}</svg>'
     )
 
@@ -116,7 +128,7 @@ def load_conflicts():
 
 
 def build_embedded_records(data):
-    """Build compact JSON for HTML embedding. Only Type A+B, with SVG strings."""
+    """Build JSON for embedding. Only Type A+B, with inline SVG strings."""
     records = data['records']
     embedded = []
     for idx, r in enumerate(records):
@@ -156,9 +168,6 @@ def generate_html(embedded_records):
     crit = sum(1 for r in embedded_records if r['severity'] == 'critical')
     warn = sum(1 for r in embedded_records if r['severity'] == 'warning')
     info = sum(1 for r in embedded_records if r['severity'] == 'info')
-
-    data_json = json.dumps({'records': embedded_records}, ensure_ascii=False, separators=(',', ':'))
-    data_json_escaped = data_json.replace('</script>', '<\\/script>')
 
     html_parts = []
     html_parts.append(f'''<!DOCTYPE html>
@@ -225,6 +234,10 @@ body {{ font-family: -apple-system, "Microsoft YaHei", "Segoe UI", sans-serif; b
     padding: 10px 14px; background: #fafafa; border-bottom: 1px solid #f0f0f0;
 }}
 .card-header .key {{ font-weight: 700; font-size: 14px; font-family: monospace; }}
+.card-hint {{
+    padding: 4px 14px; background: #fffbe6; border-bottom: 1px solid #ffe58f;
+    font-size: 12px; color: #d46b08;
+}}
 .sev-badge {{
     padding: 2px 8px; border-radius: 10px; font-size: 11px; font-weight: 600;
 }}
@@ -257,7 +270,7 @@ body {{ font-family: -apple-system, "Microsoft YaHei", "Segoe UI", sans-serif; b
 .svg-container {{
     width: 80px; height: 80px; margin: 0 auto 8px;
     display: flex; align-items: center; justify-content: center;
-    color: #333;
+    color: #303133;
 }}
 .svg-container svg {{ display: block; }}
 .svg-placeholder {{
@@ -275,15 +288,22 @@ body {{ font-family: -apple-system, "Microsoft YaHei", "Segoe UI", sans-serif; b
 /* Buttons */
 .btn-group {{ display: flex; gap: 4px; justify-content: center; }}
 .btn {{
-    padding: 4px 10px; border: none; border-radius: 4px;
+    padding: 4px 10px; border: 1px solid #d9d9d9; border-radius: 4px;
     cursor: pointer; font-size: 11px; font-weight: 600;
-    transition: all 0.2s;
+    transition: all 0.2s; background: #fff;
 }}
-.btn-keep {{ background: #52c41a; color: #fff; }}
-.btn-keep:hover {{ background: #73d13d; }}
-.btn-pua {{ background: #1890ff; color: #fff; }}
-.btn-pua:hover {{ background: #40a9ff; }}
-.btn:disabled {{ background: #d9d9d9; color: #999; cursor: not-allowed; }}
+.btn-keep {{ color: #52c41a; border-color: #52c41a; }}
+.btn-keep:hover {{ background: #f6ffed; }}
+.btn-pua {{ color: #fa8c16; border-color: #fa8c16; }}
+.btn-pua:hover {{ background: #fff7e6; }}
+
+.variant-panel.selected {{ border-color: #52c41a; background: #f6ffed; }}
+.variant-panel.selected:hover {{ border-color: #52c41a; }}
+.variant-panel.pua-active {{ border-color: #fa8c16; background: #fff7e6; }}
+.variant-panel.pua-active:hover {{ border-color: #fa8c16; }}
+
+.variant-panel.selected .btn-keep {{ background: #52c41a; color: #fff; border-color: #52c41a; }}
+.variant-panel.pua-active .btn-pua {{ background: #fa8c16; color: #fff; border-color: #fa8c16; }}
 
 /* No icon placeholder */
 .no-icon {{ width: 80px; height: 80px; margin: 0 auto; background: #f0f0f0; border-radius: 6px; display: flex; align-items: center; justify-content: center; color: #ccc; font-size: 24px; }}
@@ -293,6 +313,7 @@ body {{ font-family: -apple-system, "Microsoft YaHei", "Segoe UI", sans-serif; b
     .card-body {{ flex-wrap: wrap; }}
     .variant-panel {{ width: 100%; max-width: 200px; }}
 }}
+.loading {{ text-align: center; padding: 60px; color: #909399; font-size: 16px; }}
 </style>
 </head>
 <body>
@@ -300,43 +321,87 @@ body {{ font-family: -apple-system, "Microsoft YaHei", "Segoe UI", sans-serif; b
 <header id="app-header">
     <h1>Phase 7 Conflict Resolution</h1>
     <div class="progress-section">
-        <span id="progress-text">0 / {total} resolved</span>
+        <span id="progress-text">Loading...</span>
         <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
     </div>
-    <div class="filter-bar">
-        <button class="filter-btn active" data-filter="all">All ({total})</button>
-        <button class="filter-btn" data-filter="critical">Critical ({crit})</button>
-        <button class="filter-btn" data-filter="warning">Warning ({warn})</button>
-        <button class="filter-btn" data-filter="info">Info ({info})</button>
-        <button class="filter-btn" data-filter="unicode_conflict">Type A ({type_a})</button>
-        <button class="filter-btn" data-filter="name_conflict">Type B ({type_b})</button>
+    <div class="filter-bar" id="filter-bar">
+        <button class="filter-btn active" data-filter="all">All</button>
     </div>
     <div class="actions">
         <button id="export-btn" disabled>Export Decisions (JSON)</button>
     </div>
 </header>
 
-<main id="card-container"></main>
-
-<script id="conflict-data" type="application/json">{data_json_escaped}</script>
+<main id="card-container"><div class="loading">Loading data...</div></main>
 
 <script>
 (function() {{
     'use strict';
 
+    function escapeHtml(str) {{
+        return String(str).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+    }}
+
     const state = {{
         decisions: {{}},
         totalRecords: 0,
+        totalVariants: 0,
     }};
+    let records = [];
 
-    // Parse embedded data
-    const data = JSON.parse(document.getElementById('conflict-data').textContent);
-    const records = data.records || [];
-    state.totalRecords = records.length;
-
-    // Render cards
     const container = document.getElementById('card-container');
-    const fragment = document.createDocumentFragment();
+
+    // Load data from external JSON file (same approach as review.html)
+    fetch('conflict_resolver_data.json')
+        .then(function(r) {{ return r.json(); }})
+        .then(function(data) {{
+            records = data.records || [];
+            state.totalRecords = records.length;
+            state.totalVariants = records.reduce(function(sum, r) {{
+                return sum + (r.variants ? r.variants.length : 0);
+            }}, 0);
+            buildFilterButtons();
+            renderCards();
+            updateProgress();
+        }})
+        .catch(function(e) {{
+            container.innerHTML = '<div class="loading">Failed to load data: ' + e.message + '<br/>Please serve this page via an HTTP server (e.g., python -m http.server)</div>';
+        }});
+
+    function buildFilterButtons() {{
+        var type_a = records.filter(function(r) {{ return r.type === 'unicode_conflict'; }}).length;
+        var type_b = records.filter(function(r) {{ return r.type === 'name_conflict'; }}).length;
+        var crit = records.filter(function(r) {{ return r.severity === 'critical'; }}).length;
+        var warn = records.filter(function(r) {{ return r.severity === 'warning'; }}).length;
+        var info = records.filter(function(r) {{ return r.severity === 'info'; }}).length;
+        var total = records.length;
+        document.getElementById('filter-bar').innerHTML =
+            '<button class="filter-btn active" data-filter="all">All (' + total + ')</button>' +
+            '<button class="filter-btn" data-filter="critical">Critical (' + crit + ')</button>' +
+            '<button class="filter-btn" data-filter="warning">Warning (' + warn + ')</button>' +
+            '<button class="filter-btn" data-filter="info">Info (' + info + ')</button>' +
+            '<button class="filter-btn" data-filter="unicode_conflict">Type A (' + type_a + ')</button>' +
+            '<button class="filter-btn" data-filter="name_conflict">Type B (' + type_b + ')</button>';
+        // Re-bind filter events
+        document.querySelectorAll('.filter-btn').forEach(function(btn) {{
+            btn.addEventListener('click', function() {{
+                document.querySelectorAll('.filter-btn').forEach(function(b) {{ b.classList.remove('active'); }});
+                btn.classList.add('active');
+                const filter = btn.dataset.filter;
+                document.querySelectorAll('.conflict-card').forEach(function(card) {{
+                    if (filter === 'all') {{
+                        card.classList.remove('hidden');
+                    }} else {{
+                        const match = card.dataset.severity === filter || card.dataset.type === filter;
+                        card.classList.toggle('hidden', !match);
+                    }}
+                }});
+            }});
+        }});
+    }}
+
+    function renderCards() {{
+        const fragment = document.createDocumentFragment();
 
     records.forEach(function(record) {{
         const card = document.createElement('div');
@@ -345,28 +410,28 @@ body {{ font-family: -apple-system, "Microsoft YaHei", "Segoe UI", sans-serif; b
         card.dataset.type = record.type;
         card.dataset.severity = record.severity;
 
-        const typeLabel = record.type === 'unicode_conflict' ? 'Type A: Unicode' : 'Type B: Name';
+        const typeLabel = record.type === 'unicode_conflict' ? 'Unicode: ' + record.key : 'Name: ' + record.key;
         const sevLabel = record.severity.charAt(0).toUpperCase() + record.severity.slice(1);
+        const actionHint = record.type === 'unicode_conflict'
+            ? '保留一个变体在原 unicode，其余分配 PUA'
+            : '保留一个变体在原名称，其余分配 PUA + _vN 后缀';
 
         let variantsHtml = '';
         record.variants.forEach(function(v, vi) {{
             const svgHtml = v.svg
-                ? v.svg
-                : '<div class="no-icon">--</div>';
-            const svgContainer = v.svg
-                ? '<div class="svg-container" data-svg=\'' + v.svg.replace(/'/g, "\\'") + '\'></div>'
+                ? '<div class="svg-container">' + v.svg + '</div>'
                 : '<div class="svg-placeholder"></div>';
 
             variantsHtml += '<div class="variant-panel" data-variant="' + vi + '">'
-                + svgContainer
+                + svgHtml
                 + '<div class="variant-meta">'
-                + '<code>' + escapeHtml(v.glyphHash.substring(0, 12)) + '...</code>'
                 + '<span class="name">' + escapeHtml(v.name) + '</span>'
+                + '<code>' + escapeHtml(v.glyphHash.substring(0, 12)) + '</code><br/>'
                 + '<span class="sources">' + escapeHtml(v.sources) + '</span>'
                 + '</div>'
                 + '<div class="btn-group">'
-                + '<button class="btn btn-keep" onclick="window._decide(' + record.id + ', ' + vi + ', \'keep\')">保留</button>'
-                + '<button class="btn btn-pua" onclick="window._decide(' + record.id + ', ' + vi + ', \'pua\')">PUA</button>'
+                + '<button class="btn btn-keep" data-rid="' + record.id + '" data-vi="' + vi + '" data-act="keep">保留</button>'
+                + '<button class="btn btn-pua" data-rid="' + record.id + '" data-vi="' + vi + '" data-act="pua">PUA</button>'
                 + '</div>'
                 + '</div>';
         }});
@@ -377,107 +442,95 @@ body {{ font-family: -apple-system, "Microsoft YaHei", "Segoe UI", sans-serif; b
             + '<span class="sev-badge ' + record.severity + '">' + sevLabel + '</span>'
             + '<span class="type-label">' + typeLabel + '</span>'
             + '<span class="variant-count">' + record.variantCount + ' variants</span>'
-            + '<span class="decision-status">✓ Resolved</span>'
+            + '<span class="decision-status">&#10003; Resolved</span>'
             + '</div>'
+            + '<div class="card-hint">' + actionHint + '</div>'
             + '<div class="card-body">' + variantsHtml + '</div>';
 
         fragment.appendChild(card);
     }});
 
-    container.appendChild(fragment);
+        container.innerHTML = '';
+        container.appendChild(fragment);
 
-    // Lazy load SVGs with IntersectionObserver
-    if ('IntersectionObserver' in window) {{
-        const observer = new IntersectionObserver(function(entries) {{
-            entries.forEach(function(entry) {{
-                if (entry.isIntersecting) {{
-                    const el = entry.target;
-                    if (el.dataset.svg && !el.dataset.rendered) {{
-                        el.innerHTML = el.dataset.svg;
-                        el.dataset.rendered = '1';
-                    }}
-                    observer.unobserve(el);
-                }}
-            }});
-        }}, {{ rootMargin: '200px' }});
-
-        document.querySelectorAll('.svg-container[data-svg]').forEach(function(el) {{
-            observer.observe(el);
-        }});
-    }} else {{
-        // Fallback: render all at once
-        document.querySelectorAll('.svg-container[data-svg]').forEach(function(el) {{
-            el.innerHTML = el.dataset.svg;
+        // Event delegation for decision buttons
+        container.addEventListener('click', function(e) {{
+            var btn = e.target.closest('.btn');
+            if (!btn) return;
+            var rid = btn.dataset.rid;
+            var vi = btn.dataset.vi;
+            var act = btn.dataset.act;
+            if (rid === undefined) return;
+            _decide(parseInt(rid), parseInt(vi), act);
         }});
     }}
 
-    // Decision logic
-    window._decide = function(recordId, variantIndex, action) {{
-        const card = container.querySelector('.conflict-card[data-id="' + recordId + '"]');
+    function _decide(recordId, variantIndex, action) {{
+        var card = container.querySelector('.conflict-card[data-id="' + recordId + '"]');
         if (!card) return;
 
-        // Remove previous selection
-        card.querySelectorAll('.variant-panel').forEach(function(p) {{
-            p.classList.remove('selected');
-            p.querySelectorAll('.btn').forEach(function(b) {{ b.disabled = false; }});
-        }});
+        var record = records[recordId];
+        var panel = card.querySelector('.variant-panel[data-variant="' + variantIndex + '"]');
+        if (!panel) return;
 
-        // Mark selected
-        const panel = card.querySelector('.variant-panel[data-variant="' + variantIndex + '"]');
-        panel.classList.add('selected');
-        panel.querySelectorAll('.btn').forEach(function(b) {{
-            if ((action === 'keep' && b.classList.contains('btn-keep')) ||
-                (action === 'pua' && b.classList.contains('btn-pua'))) {{
-                b.disabled = true;
+        // Ensure decisions entry exists for this record
+        if (!state.decisions[recordId]) {{
+            state.decisions[recordId] = {{
+                recordType: record.type,
+                key: record.key,
+                variants: {{}}
+            }};
+        }}
+
+        var variantKey = String(variantIndex);
+        var currentDecision = state.decisions[recordId].variants[variantKey];
+
+        if (currentDecision === action) {{
+            // Toggle off: deselect this action
+            delete state.decisions[recordId].variants[variantKey];
+            panel.classList.remove('selected', 'pua-active');
+        }} else {{
+            // Apply new action
+            panel.classList.remove('selected', 'pua-active');
+            if (action === 'keep') {{
+                panel.classList.add('selected');
+            }} else if (action === 'pua') {{
+                panel.classList.add('pua-active');
             }}
-        }});
+            state.decisions[recordId].variants[variantKey] = action;
+        }}
 
-        card.classList.add('resolved');
-
-        // Store decision
-        const record = records[recordId];
-        state.decisions[recordId] = {{
-            recordType: record.type,
-            key: record.key,
-            action: action,
-            variantIndex: variantIndex,
-            keptGlyphHash: record.variants[variantIndex].glyphHash,
-        }};
+        // Update card resolved state
+        var decidedCount = Object.keys(state.decisions[recordId].variants).length;
+        var allDecided = decidedCount === record.variants.length;
+        card.classList.toggle('resolved', allDecided);
 
         updateProgress();
-    }};
+    }}
 
     function updateProgress() {{
-        const count = Object.keys(state.decisions).length;
-        const pct = (count / state.totalRecords * 100).toFixed(1);
-        document.getElementById('progress-text').textContent = count + ' / ' + state.totalRecords + ' resolved';
+        var decidedCount = 0;
+        for (var rid in state.decisions) {{
+            decidedCount += Object.keys(state.decisions[rid].variants).length;
+        }}
+        var pct = (decidedCount / state.totalVariants * 100).toFixed(1);
+        document.getElementById('progress-text').textContent = decidedCount + ' / ' + state.totalVariants + ' variants resolved';
         document.getElementById('progress-fill').style.width = pct + '%';
-        document.getElementById('export-btn').disabled = (count < state.totalRecords);
+        // Export enabled when there is at least one decision
+        document.getElementById('export-btn').disabled = (decidedCount === 0);
     }};
-
-    // Filters
-    document.querySelectorAll('.filter-btn').forEach(function(btn) {{
-        btn.addEventListener('click', function() {{
-            document.querySelectorAll('.filter-btn').forEach(function(b) {{ b.classList.remove('active'); }});
-            btn.classList.add('active');
-            const filter = btn.dataset.filter;
-            document.querySelectorAll('.conflict-card').forEach(function(card) {{
-                if (filter === 'all') {{
-                    card.classList.remove('hidden');
-                }} else {{
-                    const match = card.dataset.severity === filter || card.dataset.type === filter;
-                    card.classList.toggle('hidden', !match);
-                }}
-            }});
-        }});
-    }});
 
     // Export
     document.getElementById('export-btn').addEventListener('click', function() {{
+        var decidedCount = 0;
+        for (var rid in state.decisions) {{
+            decidedCount += Object.keys(state.decisions[rid].variants).length;
+        }}
         const output = {{
             generatedAt: new Date().toISOString(),
             totalRecords: state.totalRecords,
-            decidedCount: Object.keys(state.decisions).length,
+            totalVariants: state.totalVariants,
+            decidedCount: decidedCount,
             decisions: state.decisions,
         }};
         const blob = new Blob([JSON.stringify(output, null, 2)], {{ type: 'application/json' }});
@@ -488,10 +541,6 @@ body {{ font-family: -apple-system, "Microsoft YaHei", "Segoe UI", sans-serif; b
         a.click();
         URL.revokeObjectURL(url);
     }});
-
-    function escapeHtml(str) {{
-        return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
-    }};
 }})();
 </script>
 </body>
@@ -526,6 +575,13 @@ def main():
     html_content = generate_html(embedded)
 
     os.makedirs(os.path.dirname(OUTPUT_PATH), exist_ok=True)
+
+    # Write JSON data file (loaded via fetch, same as review.html)
+    with open(DATA_JSON_PATH, 'w', encoding='utf-8') as f:
+        json.dump({'records': embedded}, f, ensure_ascii=False)
+    data_size_kb = os.path.getsize(DATA_JSON_PATH) / 1024
+    print(f'\n数据: {DATA_JSON_PATH} ({data_size_kb:.1f} KB)')
+
     with open(OUTPUT_PATH, 'w', encoding='utf-8') as f:
         f.write(html_content)
 
@@ -534,7 +590,9 @@ def main():
     print(f'大小: {size_kb:.1f} KB')
     print(f'卡片数: {len(embedded)}')
     print(f'SVG 数: {svg_count}')
-    print('\nPhase 7 HTML 生成完成。在浏览器中打开上述路径进行决策。')
+    print(f'\n注意: 此页面需要通过 HTTP 服务器访问（与 review.html 一样）')
+    print(f'  cd report && python -m http.server 8080')
+    print(f'  浏览器打开: http://localhost:8080/conflict_resolver.html')
     return 0
 
 

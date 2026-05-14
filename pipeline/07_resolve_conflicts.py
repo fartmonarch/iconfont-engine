@@ -38,7 +38,7 @@ class PUAAllocator:
         self._log = []
 
     def allocate(self, glyph_hash, reason=''):
-        while self._next in self._used or self._next > self._end:
+        while self._next <= self._end and self._next in self._used:
             self._next += 1
         if self._next > self._end:
             raise RuntimeError(f'PUA range exhausted at U+{self._next:04X}')
@@ -92,44 +92,35 @@ def resolve_type_a(records, decisions, pua):
 
     for record in records:
         rid = str(record['id']) if 'id' in record else str(records.index(record))
-        decision = decisions.get(rid) if decisions else None
+        record_decisions = decisions.get(rid, {}).get('variants', {}) if decisions else {}
 
-        if decision and decision.get('action') == 'keep':
-            # Keep the chosen variant at original unicode
-            kept_idx = decision['variantIndex']
-            for vi, v in enumerate(record['variants']):
-                glyph = _build_glyph_entry(v, record)
-                if vi == kept_idx:
-                    glyph['finalUnicode'] = record.get('key', '')
-                    # Extract numeric unicode from key like "U+E6B5"
-                    try:
-                        glyph['finalUnicode'] = int(record['key'].replace('U+', ''), 16)
-                    except (ValueError, AttributeError):
-                        pass
-                    glyph['finalUnicodeHex'] = record['key'].replace('U+', '')
-                    glyph['finalName'] = v.get('canonicalName') or v.get('name', '')
-                    glyph['resolution'] = 'kept_original'
-                    stats['kept'] += 1
-                else:
-                    pua_code = pua.allocate(v['glyphHash'], f'Type A variant, record key={record["key"]}')
-                    glyph['finalUnicode'] = pua_code
-                    glyph['finalUnicodeHex'] = f'{pua_code:04X}'
-                    glyph['finalName'] = (v.get('canonicalName') or v.get('name', '')) + f'_v{vi + 1}'
-                    glyph['resolution'] = 'pua_assigned'
-                    glyph['aliases'] = [v.get('canonicalName') or v.get('name', '')]
-                    stats['pua_assigned'] += 1
-                resolved.append(glyph)
-        else:
-            # No decision or PUA action: assign PUA to all variants
-            for vi, v in enumerate(record['variants']):
-                glyph = _build_glyph_entry(v, record)
-                pua_code = pua.allocate(v['glyphHash'], f'Type A auto-resolve, record key={record["key"]}')
+        for vi, v in enumerate(record['variants']):
+            glyph = _build_glyph_entry(v, record)
+            variant_key = str(vi)
+            variant_decision = record_decisions.get(variant_key)
+
+            if variant_decision == 'keep':
+                # Keep original unicode/name
+                try:
+                    glyph['finalUnicode'] = int(record['key'].replace('U+', ''), 16)
+                except (ValueError, AttributeError):
+                    glyph['finalUnicode'] = None
+                glyph['finalUnicodeHex'] = record['key'].replace('U+', '')
+                glyph['finalName'] = v.get('canonicalName') or v.get('name', '')
+                glyph['resolution'] = 'kept_original'
+                stats['kept'] += 1
+            else:
+                # PUA or undecided: assign PUA code + rename
+                pua_code = pua.allocate(v['glyphHash'], f'Type A variant, record key={record["key"]}, vi={vi}')
                 glyph['finalUnicode'] = pua_code
                 glyph['finalUnicodeHex'] = f'{pua_code:04X}'
                 glyph['finalName'] = (v.get('canonicalName') or v.get('name', '')) + f'_v{vi + 1}'
                 glyph['resolution'] = 'pua_assigned'
-                stats['auto_resolved'] += 1
-                resolved.append(glyph)
+                glyph['aliases'] = [v.get('canonicalName') or v.get('name', '')]
+                stats['pua_assigned'] += 1
+                if variant_decision is None:
+                    stats['auto_resolved'] += 1
+            resolved.append(glyph)
 
     return resolved, stats
 
@@ -141,43 +132,37 @@ def resolve_type_b(records, decisions, pua):
 
     for record in records:
         rid = str(record['id']) if 'id' in record else str(records.index(record))
-        decision = decisions.get(rid) if decisions else None
+        record_decisions = decisions.get(rid, {}).get('variants', {}) if decisions else {}
         base_name = record.get('key', 'unknown')
 
-        if decision and decision.get('action') == 'keep':
-            kept_idx = decision['variantIndex']
-            for vi, v in enumerate(record['variants']):
-                glyph = _build_glyph_entry(v, record)
-                if vi == kept_idx:
-                    glyph['finalUnicode'] = v.get('sources', [{}])[0].get('originalUnicode')
-                    if glyph['finalUnicode']:
-                        glyph['finalUnicodeHex'] = f'{glyph["finalUnicode"]:04X}'
-                    else:
-                        glyph['finalUnicodeHex'] = ''
-                    glyph['finalName'] = base_name
-                    glyph['resolution'] = 'kept_original'
-                    stats['kept'] += 1
+        for vi, v in enumerate(record['variants']):
+            glyph = _build_glyph_entry(v, record)
+            variant_key = str(vi)
+            variant_decision = record_decisions.get(variant_key)
+
+            if variant_decision == 'keep':
+                # Keep original name, original unicode
+                glyph['finalUnicode'] = v.get('sources', [{}])[0].get('originalUnicode')
+                if glyph['finalUnicode']:
+                    glyph['finalUnicodeHex'] = f'{glyph["finalUnicode"]:04X}'
                 else:
-                    suffix_name = base_name + f'_v{vi + 1}'
-                    pua_code = pua.allocate(v['glyphHash'], f'Type B variant, name={base_name}')
-                    glyph['finalUnicode'] = pua_code
-                    glyph['finalUnicodeHex'] = f'{pua_code:04X}'
-                    glyph['finalName'] = suffix_name
-                    glyph['resolution'] = 'pua_assigned'
-                    glyph['aliases'] = [base_name]
-                    stats['pua_assigned'] += 1
-                resolved.append(glyph)
-        else:
-            for vi, v in enumerate(record['variants']):
-                glyph = _build_glyph_entry(v, record)
+                    glyph['finalUnicodeHex'] = ''
+                glyph['finalName'] = base_name
+                glyph['resolution'] = 'kept_original'
+                stats['kept'] += 1
+            else:
+                # PUA or undecided
                 suffix_name = base_name + f'_v{vi + 1}'
-                pua_code = pua.allocate(v['glyphHash'], f'Type B auto-resolve, name={base_name}')
+                pua_code = pua.allocate(v['glyphHash'], f'Type B variant, name={base_name}, vi={vi}')
                 glyph['finalUnicode'] = pua_code
                 glyph['finalUnicodeHex'] = f'{pua_code:04X}'
                 glyph['finalName'] = suffix_name
                 glyph['resolution'] = 'pua_assigned'
-                stats['auto_resolved'] += 1
-                resolved.append(glyph)
+                glyph['aliases'] = [base_name]
+                stats['pua_assigned'] += 1
+                if variant_decision is None:
+                    stats['auto_resolved'] += 1
+            resolved.append(glyph)
 
     return resolved, stats
 
@@ -354,6 +339,16 @@ def main():
 
     decisions_data = load_decisions()
     decisions = decisions_data.get('decisions', {}) if decisions_data else {}
+
+    # Migrate old format (action/variantIndex) to new format (variants map)
+    for rid, dec in list(decisions.items()):
+        if 'variants' not in dec and 'action' in dec:
+            decisions[rid] = {
+                'recordType': dec.get('recordType', ''),
+                'key': dec.get('key', ''),
+                'variants': {str(dec['variantIndex']): dec['action']}
+            }
+
     decided_count = len(decisions)
     if decided_count:
         print(f'加载用户决策: {decided_count} 条')

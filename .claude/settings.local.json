@@ -27,7 +27,12 @@
       "Bash(git add *)",
       "Bash(git push *)",
       "Bash(git commit -m ' *)",
-      "Bash(pip show *)"
+      "Bash(pip show *)",
+      "Bash(python3 pipeline/gen_phase6_preview.py)",
+      "Bash(git commit *)",
+      "Bash(echo \"EXIT_CODE=$?\")",
+      "Bash(python3 *)",
+      "Bash(npx playwright *)"
     ]
   }
 }

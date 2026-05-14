@@ -1,0 +1,14 @@
+{
+  "ttf_path": "D:\\work\\iconfont-engine\\output\\iconfont_merged.ttf",
+  "woff2_path": "D:\\work\\iconfont-engine\\output\\iconfont_merged.woff2",
+  "css_path": "D:\\work\\iconfont-engine\\output\\iconfont_merged.css",
+  "manifest_path": "D:\\work\\iconfont-engine\\output\\iconfont_merged.json",
+  "glyphs_merged": 1268,
+  "errors": 0,
+  "total_resolved": 1269,
+  "total_valid": 1268,
+  "skipped_no_contours": 0,
+  "skipped_no_unicode": 1,
+  "skipped_composite": 0,
+  "generatedAt": "2026-05-14T07:30:12.939928+00:00"
+}

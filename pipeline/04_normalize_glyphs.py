@@ -217,11 +217,12 @@ def normalize_glyph(glyph, upm_map):
     # Step 4: contour 排序
     result['contours'] = sort_contours(result['contours'])
 
-    # Step 5: winding direction 统一（CW）
-    result['contours'] = [ensure_cw(c) for c in result['contours']]
+    # Step 5: glyphHash 计算 — 使用 CW 统一版本做去重
+    canonical_contours = [ensure_cw(c) for c in result['contours']]
+    result['glyphHash'] = compute_glyph_hash(canonical_contours)
 
-    # Step 6: glyphHash
-    result['glyphHash'] = compute_glyph_hash(result['contours'])
+    # 注意：不修改 result['contours']，保留原始 winding direction 用于渲染
+    # TrueType 约定：外轮廓 CW，孔洞 CCW。渲染时需要正确的 winding。
 
     return result
 

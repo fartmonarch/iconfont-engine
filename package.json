@@ -1,5 +1,8 @@
 {
   "dependencies": {
-    "cheerio": "^1.2.0"
+    "@napi-rs/canvas": "^1.0.0",
+    "cheerio": "^1.2.0",
+    "pixelmatch": "^7.2.0",
+    "playwright": "^1.60.0"
   }
 }

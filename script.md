@@ -33,10 +33,10 @@
 | 12 | `pipeline/07_resolve_conflicts_apply_alias.js` | iconfont-superset-check skill | Node.js | Phase 7 | 别名替换模式 D：从扫描结果中提取匹配映射，自动替换项目中的旧 icon 类名 |
 | 13 | `pipeline/07_resolve_conflicts_cmp_replace_test.js` | iconfont_merge | Node.js | Phase 7 | 替换算法对比测试：简单替换 vs 边界匹配替换 |
 | 14 | `pipeline/07_resolve_conflicts_cmp2_test.js` | iconfont_merge | Node.js | Phase 7 | 单文件替换算法验证对比 |
-| 15 | `pipeline/08_merge_glyf.py` | **待编写** | Python | Phase 8 | glyph deep copy、cmap rebuild、hmtx normalize、glyf table merge |
-| 16 | `pipeline/09_build_font.py` | **待编写** | Python | Phase 9 | TTF/WOFF2 生成、table 补全（使用 fontTools FontBuilder） |
-| 17 | `pipeline/10_validate_render.js` | **待编写** | Node.js | Phase 10 | Chrome/Firefox 渲染对比、pixel diff、输出 diff report（Playwright + pixelmatch） |
-| 18 | `pipeline/11_generate_manifest_gen_demo.js` | iconfont_merge | Node.js | Phase 11 | 生成合并字体的 demo 预览页面（iconfont.css/json/merge_manifest.json） |
+| 15 | `pipeline/08_merge_glyf.py` | **新编写** | Python | Phase 8-9 | 🟢 已完成 | glyph deep copy、cmap rebuild、hmtx normalize、TTF/WOFF2/CSS/JSON/HTML 输出 |
+| 16 | ~~`pipeline/09_build_font.py`~~ | ~~待编写~~ | Python | Phase 9 | 🟢 已合并到 Phase 8 | 合并到 08_merge_glyf.py |
+| 17 | `pipeline/10_validate_render.js` | **新编写** | Node.js | Phase 10 | 🟢 已完成 | Chrome/Firefox 渲染对比、pixel diff、输出 diff report（Playwright + pixelmatch）|
+| 18 | `pipeline/11_generate_manifest.js` | **新编写** | Node.js | Phase 11 | 🟢 已完成 | merge_manifest.json + demo_index.html + phase11_output.md |
 
 ---
 

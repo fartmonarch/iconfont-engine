@@ -18,7 +18,10 @@ from collections import defaultdict
 from datetime import datetime, timezone
 
 DATA_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-CONFLICTS_PATH = os.path.join(DATA_DIR, 'report', 'conflict_records.json')
+# Prefer filtered conflicts (Phase 6.5) if available
+FILTERED_PATH = os.path.join(DATA_DIR, 'report', 'filtered_conflicts.json')
+CONFLICTS_PATH = FILTERED_PATH if os.path.exists(
+    FILTERED_PATH) else os.path.join(DATA_DIR, 'report', 'conflict_records.json')
 REGISTRY_PATH = os.path.join(DATA_DIR, 'registry', 'glyph_registry.json')
 DECISIONS_PATH = os.path.join(DATA_DIR, 'report', 'phase7_decisions.json')
 RESOLUTION_PATH = os.path.join(DATA_DIR, 'report', 'phase7_resolution.json')
@@ -88,35 +91,109 @@ def load_decisions():
 def resolve_type_a(records, decisions, pua):
     """Resolve Unicode conflicts: same unicode, different glyphHash."""
     resolved = []
-    stats = {'kept': 0, 'pua_assigned': 0, 'auto_resolved': 0}
+    stats = {'kept': 0, 'pua_assigned': 0,
+             'auto_resolved': 0, 'false_positive_merged': 0,
+             'group_merged': 0}
 
-    for record in records:
-        rid = str(record['id']) if 'id' in record else str(records.index(record))
-        record_decisions = decisions.get(rid, {}).get('variants', {}) if decisions else {}
+    for i, record in enumerate(records):
+        rid = str(record.get('original_index', i))
+        record_decision = decisions.get(rid, {}) if decisions else {}
 
+        # Check for unmerge override
+        unmerge = record_decision.get('unmerge', False)
+
+        # False positive: merge all variants into one glyph
+        if record.get('isFalsePositive') and not unmerge:
+            variants = record['variants']
+            glyph = merge_variants_into_glyph(variants, record)
+            if glyph:
+                try:
+                    glyph['finalUnicode'] = int(
+                        record['key'].replace('U+', ''), 16)
+                except (ValueError, AttributeError):
+                    glyph['finalUnicode'] = None
+                glyph['finalUnicodeHex'] = record['key'].replace('U+', '')
+                glyph['finalName'] = variants[0].get(
+                    'canonicalName') or variants[0].get('name', '')
+                glyph['resolution'] = 'false_positive_merged'
+                resolved.append(glyph)
+            stats['false_positive_merged'] += 1
+            continue
+
+        # NEW FORMAT: groups-based decisions
+        if 'groups' in record_decision:
+            groups = record_decision['groups']
+            group_idx = 0
+            for group in groups:
+                vi_list = group.get('variants', [])
+                if not vi_list:
+                    continue
+                variants = [record['variants'][vi]
+                            for vi in vi_list if vi < len(record['variants'])]
+                if not variants:
+                    continue
+                glyph = merge_variants_into_glyph(variants, record)
+                if not glyph:
+                    continue
+
+                if group['type'] == 'keep':
+                    # Keep group: merge into one glyph, keep original unicode
+                    try:
+                        glyph['finalUnicode'] = int(
+                            record['key'].replace('U+', ''), 16)
+                    except (ValueError, AttributeError):
+                        glyph['finalUnicode'] = None
+                    glyph['finalUnicodeHex'] = record['key'].replace('U+', '')
+                    glyph['finalName'] = variants[0].get(
+                        'canonicalName') or variants[0].get('name', '')
+                    glyph['resolution'] = 'group_kept'
+                    stats['kept'] += 1
+                else:  # pua
+                    # PUA group: merge into one glyph, assign one PUA
+                    pua_code = pua.allocate(
+                        variants[0]['glyphHash'],
+                        f'Type A group PUA, key={record["key"]}, group={group_idx}')
+                    glyph['finalUnicode'] = pua_code
+                    glyph['finalUnicodeHex'] = f'{pua_code:04X}'
+                    base_name = variants[0].get(
+                        'canonicalName') or variants[0].get('name', '')
+                    glyph['finalName'] = base_name + f'_g{group_idx + 1}'
+                    glyph['resolution'] = 'group_pua'
+                    stats['pua_assigned'] += 1
+
+                resolved.append(glyph)
+                group_idx += 1
+            stats['group_merged'] += len(groups)
+            continue
+
+        # OLD FORMAT: per-variant decisions (backward compatible)
+        record_decisions = record_decision.get('variants', {})
         for vi, v in enumerate(record['variants']):
             glyph = _build_glyph_entry(v, record)
             variant_key = str(vi)
             variant_decision = record_decisions.get(variant_key)
 
             if variant_decision == 'keep':
-                # Keep original unicode/name
                 try:
-                    glyph['finalUnicode'] = int(record['key'].replace('U+', ''), 16)
+                    glyph['finalUnicode'] = int(
+                        record['key'].replace('U+', ''), 16)
                 except (ValueError, AttributeError):
                     glyph['finalUnicode'] = None
                 glyph['finalUnicodeHex'] = record['key'].replace('U+', '')
-                glyph['finalName'] = v.get('canonicalName') or v.get('name', '')
+                glyph['finalName'] = v.get(
+                    'canonicalName') or v.get('name', '')
                 glyph['resolution'] = 'kept_original'
                 stats['kept'] += 1
             else:
-                # PUA or undecided: assign PUA code + rename
-                pua_code = pua.allocate(v['glyphHash'], f'Type A variant, record key={record["key"]}, vi={vi}')
+                pua_code = pua.allocate(
+                    v['glyphHash'], f'Type A variant, record key={record["key"]}, vi={vi}')
                 glyph['finalUnicode'] = pua_code
                 glyph['finalUnicodeHex'] = f'{pua_code:04X}'
-                glyph['finalName'] = (v.get('canonicalName') or v.get('name', '')) + f'_v{vi + 1}'
+                glyph['finalName'] = (
+                    v.get('canonicalName') or v.get('name', '')) + f'_v{vi + 1}'
                 glyph['resolution'] = 'pua_assigned'
-                glyph['aliases'] = [v.get('canonicalName') or v.get('name', '')]
+                glyph['aliases'] = [
+                    v.get('canonicalName') or v.get('name', '')]
                 stats['pua_assigned'] += 1
                 if variant_decision is None:
                     stats['auto_resolved'] += 1
@@ -128,21 +205,89 @@ def resolve_type_a(records, decisions, pua):
 def resolve_type_b(records, decisions, pua):
     """Resolve Name conflicts: same name, different glyphHash."""
     resolved = []
-    stats = {'kept': 0, 'pua_assigned': 0, 'auto_resolved': 0}
+    stats = {'kept': 0, 'pua_assigned': 0,
+             'auto_resolved': 0, 'false_positive_merged': 0,
+             'group_merged': 0}
 
-    for record in records:
-        rid = str(record['id']) if 'id' in record else str(records.index(record))
-        record_decisions = decisions.get(rid, {}).get('variants', {}) if decisions else {}
+    for i, record in enumerate(records):
+        rid = str(record.get('original_index', i))
+        record_decision = decisions.get(rid, {}) if decisions else {}
         base_name = record.get('key', 'unknown')
 
+        # Check for unmerge override
+        unmerge = record_decision.get('unmerge', False)
+
+        # False positive: merge all variants into one glyph
+        if record.get('isFalsePositive') and not unmerge:
+            variants = record['variants']
+            glyph = merge_variants_into_glyph(variants, record)
+            if glyph:
+                glyph['finalUnicode'] = variants[0].get('sources', [{}])[
+                    0].get('originalUnicode')
+                if glyph['finalUnicode']:
+                    glyph['finalUnicodeHex'] = f'{glyph["finalUnicode"]:04X}'
+                else:
+                    glyph['finalUnicodeHex'] = ''
+                glyph['finalName'] = base_name
+                glyph['resolution'] = 'false_positive_merged'
+                resolved.append(glyph)
+            stats['false_positive_merged'] += 1
+            continue
+
+        # NEW FORMAT: groups-based decisions
+        if 'groups' in record_decision:
+            groups = record_decision['groups']
+            group_idx = 0
+            for group in groups:
+                vi_list = group.get('variants', [])
+                if not vi_list:
+                    continue
+                variants = [record['variants'][vi]
+                            for vi in vi_list if vi < len(record['variants'])]
+                if not variants:
+                    continue
+                glyph = merge_variants_into_glyph(variants, record)
+                if not glyph:
+                    continue
+
+                if group['type'] == 'keep':
+                    # Keep group: merge into one glyph, keep original name
+                    glyph['finalUnicode'] = variants[0].get('sources', [{}])[
+                        0].get('originalUnicode')
+                    if glyph['finalUnicode']:
+                        glyph['finalUnicodeHex'] = f'{glyph["finalUnicode"]:04X}'
+                    else:
+                        glyph['finalUnicodeHex'] = ''
+                    glyph['finalName'] = base_name
+                    glyph['resolution'] = 'group_kept'
+                    stats['kept'] += 1
+                else:  # pua
+                    # PUA group: merge into one glyph, assign one PUA
+                    pua_code = pua.allocate(
+                        variants[0]['glyphHash'],
+                        f'Type B group PUA, name={base_name}, group={group_idx}')
+                    glyph['finalUnicode'] = pua_code
+                    glyph['finalUnicodeHex'] = f'{pua_code:04X}'
+                    glyph['finalName'] = base_name + f'_g{group_idx + 1}'
+                    glyph['resolution'] = 'group_pua'
+                    glyph['aliases'] = [base_name]
+                    stats['pua_assigned'] += 1
+
+                resolved.append(glyph)
+                group_idx += 1
+            stats['group_merged'] += len(groups)
+            continue
+
+        # OLD FORMAT: per-variant decisions (backward compatible)
+        record_decisions = record_decision.get('variants', {})
         for vi, v in enumerate(record['variants']):
             glyph = _build_glyph_entry(v, record)
             variant_key = str(vi)
             variant_decision = record_decisions.get(variant_key)
 
             if variant_decision == 'keep':
-                # Keep original name, original unicode
-                glyph['finalUnicode'] = v.get('sources', [{}])[0].get('originalUnicode')
+                glyph['finalUnicode'] = v.get('sources', [{}])[
+                    0].get('originalUnicode')
                 if glyph['finalUnicode']:
                     glyph['finalUnicodeHex'] = f'{glyph["finalUnicode"]:04X}'
                 else:
@@ -151,9 +296,9 @@ def resolve_type_b(records, decisions, pua):
                 glyph['resolution'] = 'kept_original'
                 stats['kept'] += 1
             else:
-                # PUA or undecided
                 suffix_name = base_name + f'_v{vi + 1}'
-                pua_code = pua.allocate(v['glyphHash'], f'Type B variant, name={base_name}, vi={vi}')
+                pua_code = pua.allocate(
+                    v['glyphHash'], f'Type B variant, name={base_name}, vi={vi}')
                 glyph['finalUnicode'] = pua_code
                 glyph['finalUnicodeHex'] = f'{pua_code:04X}'
                 glyph['finalName'] = suffix_name
@@ -229,6 +374,46 @@ def _build_glyph_entry(variant, record):
     }
 
 
+def merge_variants_into_glyph(variants, record):
+    """Merge multiple visually-identical variants into one glyph entry.
+
+    Uses the first variant's glyphHash as primary, merges all sources and aliases.
+    """
+    if not variants:
+        return None
+    primary = variants[0]
+    glyph = _build_glyph_entry(primary, record)
+
+    # Merge sources from all variants (deduplicate by assetId/cssUrl)
+    all_sources = []
+    seen_assets = set()
+    for v in variants:
+        for s in v.get('sources', []):
+            asset_id = s.get('assetId', s.get('cssUrl', ''))
+            if asset_id and asset_id not in seen_assets:
+                seen_assets.add(asset_id)
+                all_sources.append(s)
+    glyph['sources'] = all_sources
+
+    # Collect all names as aliases
+    all_names = set()
+    for v in variants:
+        name = v.get('canonicalName') or v.get('name', '')
+        if name:
+            all_names.add(name)
+    glyph['aliases'] = sorted(all_names)
+    glyph['mergedVariantCount'] = len(variants)
+
+    # Recompute affectedProjects
+    projects = set()
+    for s in all_sources:
+        for p in s.get('projects', []):
+            projects.add(p)
+    glyph['affectedProjects'] = sorted(projects)
+
+    return glyph
+
+
 def build_alias_map(resolved_glyphs):
     """Build name → glyphHash map for alias lookup."""
     alias_map = {}
@@ -247,8 +432,10 @@ def generate_resolution_json(resolved_glyphs, pua, type_a_stats, type_b_stats, t
             'generatedAt': datetime.now(timezone.utc).isoformat(),
             'decisionsSource': DECISIONS_PATH if decisions else 'none (auto-resolved)',
             'totalGlyphs': len(resolved_glyphs),
-            'resolvedConflicts': type_a_stats['kept'] + type_a_stats['pua_assigned'] + type_a_stats['auto_resolved'] +
-                                 type_b_stats['kept'] + type_b_stats['pua_assigned'] + type_b_stats['auto_resolved'],
+            'resolvedConflicts': type_a_stats['kept'] + type_a_stats['pua_assigned'] + type_a_stats['auto_resolved'] + type_a_stats.get('false_positive_merged', 0) + type_a_stats.get('group_merged', 0) +
+            type_b_stats['kept'] + type_b_stats['pua_assigned'] +
+            type_b_stats['auto_resolved'] + type_b_stats.get(
+                'false_positive_merged', 0) + type_b_stats.get('group_merged', 0),
             'puaCodesAssigned': pua.assigned_count,
             'puaRangeUsed': pua.range_used,
             'stats': {
@@ -282,14 +469,18 @@ def generate_report_md(resolution, output_path):
     # Stats by type
     stats = meta['stats']
     lines.append('## 按类型统计\n')
-    lines.append('| 类型 | 保留原始 | PUA 分配 | 自动解决 |')
-    lines.append('|------|----------|----------|----------|')
+    lines.append('| 类型 | 保留原始 | PUA 分配 | 组合并 | 假阳性合并 | 自动解决 |')
+    lines.append(
+        '|------|----------|----------|--------|------------|----------|')
     ta = stats['type_a']
     tb = stats['type_b']
     tc = stats['type_c']
-    lines.append(f'| Type A (Unicode) | {ta["kept"]} | {ta["pua_assigned"]} | {ta["auto_resolved"]} |')
-    lines.append(f'| Type B (Name)    | {tb["kept"]} | {tb["pua_assigned"]} | {tb["auto_resolved"]} |')
-    lines.append(f'| Type C (Alias)   | — | — | {tc["merged"]} |')
+    lines.append(
+        f'| Type A (Unicode) | {ta.get("kept", 0)} | {ta.get("pua_assigned", 0)} | {ta.get("group_merged", 0)} | {ta.get("false_positive_merged", 0)} | {ta.get("auto_resolved", 0)} |')
+    lines.append(
+        f'| Type B (Name)    | {tb.get("kept", 0)} | {tb.get("pua_assigned", 0)} | {tb.get("group_merged", 0)} | {tb.get("false_positive_merged", 0)} | {tb.get("auto_resolved", 0)} |')
+    lines.append(
+        f'| Type C (Alias)   | — | — | — | — | {tc.get("merged", 0)} |')
     lines.append('')
 
     # Resolution breakdown
@@ -310,9 +501,11 @@ def generate_report_md(resolution, output_path):
         lines.append('| glyphHash | PUA | 原因 |')
         lines.append('|-----------|-----|------|')
         for entry in resolution['puaAssignmentLog'][:50]:
-            lines.append(f'| {entry["glyphHash"][:12]}... | {entry["pua"]} | {entry["reason"][:60]} |')
+            lines.append(
+                f'| {entry["glyphHash"][:12]}... | {entry["pua"]} | {entry["reason"][:60]} |')
         if len(resolution['puaAssignmentLog']) > 50:
-            lines.append(f'\n... 共 {len(resolution["puaAssignmentLog"])} 条分配记录')
+            lines.append(
+                f'\n... 共 {len(resolution["puaAssignmentLog"])} 条分配记录')
         lines.append('')
 
     os.makedirs(os.path.dirname(output_path) or '.', exist_ok=True)
@@ -333,6 +526,10 @@ def main():
     conflicts_data = load_conflicts()
     records = conflicts_data.get('records', [])
     print(f'\n加载冲突数据: {len(records)} 条')
+
+    # Assign stable original_index to each record for ID consistency with UI
+    for i, r in enumerate(records):
+        r['original_index'] = i
 
     registry = load_registry()
     print(f'加载 glyph registry: {len(registry)} entries')
@@ -386,8 +583,10 @@ def main():
             all_resolved.append(g)
         else:
             # Merge: if both entries have the same glyphHash, combine sources
-            existing = next(x for x in all_resolved if x['glyphHash'] == g['glyphHash'])
-            existing_sources = {s.get('assetId') for s in existing.get('sources', [])}
+            existing = next(
+                x for x in all_resolved if x['glyphHash'] == g['glyphHash'])
+            existing_sources = {s.get('assetId')
+                                for s in existing.get('sources', [])}
             for s in g.get('sources', []):
                 if s.get('assetId') not in existing_sources:
                     existing['sources'].append(s)

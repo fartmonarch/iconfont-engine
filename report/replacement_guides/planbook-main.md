@@ -1,0 +1,164 @@
+# planbook-main 图标替换指南
+
+## 摘要
+- 可自动替换：4492 处
+- CSS 链接替换：97 处
+
+## CSS 链接替换
+
+| 文件 | 行号 | 旧链接 | 新链接 |
+|------|------|--------|--------|
+| planbookInput/src/pages/bonus/detail.html | 8 | ... | iconfont_merged.css |
+| planbookInput/src/pages/bonus/product.html | 8 | ... | iconfont_merged.css |
+| planbookInput/src/pages/client/info.html | 9 | ... | iconfont_merged.css |
+| planbookInput/src/pages/common/templatev1/templatev1.html | 8 | ... | iconfont_merged.css |
+| planbookInput/src/pages/company/list.html | 8 | ... | iconfont_merged.css |
+| planbookInput/src/pages/compare2/bonus/bonus.html | 9 | ... | iconfont_merged.css |
+| planbookInput/src/pages/compare2/bonus/bonus.html | 10 | ... | iconfont_merged.css |
+| planbookInput/src/pages/compare2/history/history.html | 8 | ... | iconfont_merged.css |
+| planbookInput/src/pages/compare2/index/index.html | 8 | ... | iconfont_merged.css |
+| planbookInput/src/pages/compare2/result/result.html | 9 | ... | iconfont_merged.css |
+| planbookInput/src/pages/compare2/result/result.html | 10 | ... | iconfont_merged.css |
+| planbookInput/src/pages/compare2/result/result.html | 11 | ... | iconfont_merged.css |
+| planbookInput/src/pages/compare3/demo.html | 9 | ... | iconfont_merged.css |
+| planbookInput/src/pages/compare3/demo.html | 10 | ... | iconfont_merged.css |
+| planbookInput/src/pages/compare3/demo.html | 11 | ... | iconfont_merged.css |
+| planbookInput/src/pages/compare3/index.html | 9 | ... | iconfont_merged.css |
+| planbookInput/src/pages/compare3/insurance-edit.html | 9 | ... | iconfont_merged.css |
+| planbookInput/src/pages/compare3/insurance-search-hk.html | 9 | ... | iconfont_merged.css |
+| planbookInput/src/pages/compare3/insurance-search.html | 9 | ... | iconfont_merged.css |
+| planbookInput/src/pages/compare3/insurance-search.html | 10 | ... | iconfont_merged.css |
+| planbookInput/src/pages/compare3/insurance-search.html | 11 | ... | iconfont_merged.css |
+| planbookInput/src/pages/compare3/product-dm-select.html | 9 | ... | iconfont_merged.css |
+| planbookInput/src/pages/compare3/product-dm.html | 9 | ... | iconfont_merged.css |
+| planbookInput/src/pages/compare3/reduce-dm.html | 9 | ... | iconfont_merged.css |
+| planbookInput/src/pages/compare3/reduce.html | 9 | ... | iconfont_merged.css |
+| planbookInput/src/pages/family/history/history.html | 8 | ... | iconfont_merged.css |
+| planbookInput/src/pages/family/indexv4/indexv4.html | 8 | ... | iconfont_merged.css |
+| planbookInput/src/pages/index.html | 8 | ... | iconfont_merged.css |
+| planbookInput/src/pages/input/history/history.html | 8 | ... | iconfont_merged.css |
+| planbookInput/src/pages/input/indexv2/indexv2.html | 8 | ... | iconfont_merged.css |
+| planbookInput/src/pages/input/indexv3/indexv3.html | 8 | ... | iconfont_merged.css |
+| planbookInput/src/pages/interest-selection/detail.html | 9 | ... | iconfont_merged.css |
+| planbookInput/src/pages/interest-selection/index.html | 9 | ... | iconfont_merged.css |
+| planbookInput/src/pages/planbook-hotlist/index.html | 9 | ... | iconfont_merged.css |
+| planbookInput/src/pages/policy/index/index.html | 9 | ... | iconfont_merged.css |
+| planbookInput/src/pages/policy/liability/liability.html | 9 | ... | iconfont_merged.css |
+| planbookInput/src/pages/policy/task.html | 9 | ... | iconfont_merged.css |
+| planbookInput/src/pages/test/nuoya.html | 8 | ... | iconfont_merged.css |
+| planbookInput/src/pages/universal/account.html | 8 | ... | iconfont_merged.css |
+| planbookInput/src/pages/universal/detail.html | 8 | ... | iconfont_merged.css |
+| planbookInput2024/DEMO/template/index.html | 10 | ... | iconfont_merged.css |
+| planbookInput2024/src/pages/bonus/detail/index.html | 8 | ... | iconfont_merged.css |
+| planbookInput2024/src/pages/bonus/product/index.html | 8 | ... | iconfont_merged.css |
+| planbookInput2024/src/pages/client/info/index.html | 9 | ... | iconfont_merged.css |
+| planbookInput2024/src/pages/common/templatev1/index.html | 8 | ... | iconfont_merged.css |
+| planbookInput2024/src/pages/company/list/index.html | 8 | ... | iconfont_merged.css |
+| planbookInput2024/src/pages/compare2/bonus/index.html | 9 | ... | iconfont_merged.css |
+| planbookInput2024/src/pages/compare2/bonus/index.html | 10 | ... | iconfont_merged.css |
+| planbookInput2024/src/pages/compare2/history/index.html | 8 | ... | iconfont_merged.css |
+| planbookInput2024/src/pages/compare2/index/index.html | 8 | ... | iconfont_merged.css |
+| planbookInput2024/src/pages/compare2/result/index.html | 9 | ... | iconfont_merged.css |
+| planbookInput2024/src/pages/compare2/result/index.html | 10 | ... | iconfont_merged.css |
+| planbookInput2024/src/pages/compare2/result/index.html | 11 | ... | iconfont_merged.css |
+| planbookInput2024/src/pages/compare3/demo/index.html | 9 | ... | iconfont_merged.css |
+| planbookInput2024/src/pages/compare3/demo/index.html | 10 | ... | iconfont_merged.css |
+| planbookInput2024/src/pages/compare3/demo/index.html | 11 | ... | iconfont_merged.css |
+| planbookInput2024/src/pages/compare3/index/index.html | 9 | ... | iconfont_merged.css |
+| planbookInput2024/src/pages/compare3/insurance-search/index.html | 9 | ... | iconfont_merged.css |
+| planbookInput2024/src/pages/compare3/insurance-search/index.html | 10 | ... | iconfont_merged.css |
+| planbookInput2024/src/pages/compare3/insurance-search/index.html | 11 | ... | iconfont_merged.css |
+| planbookInput2024/src/pages/compare3/insurance-search-hk/index.html | 8 | ... | iconfont_merged.css |
+| planbookInput2024/src/pages/compare3/product-dm/index.html | 9 | ... | iconfont_merged.css |
+| planbookInput2024/src/pages/compare3/product-dm-select/index.html | 9 | ... | iconfont_merged.css |
+| planbookInput2024/src/pages/compare3/reduce/index.html | 9 | ... | iconfont_merged.css |
+| planbookInput2024/src/pages/compare3/reduce-dm/index.html | 9 | ... | iconfont_merged.css |
+| planbookInput2024/src/pages/family/history/index.html | 8 | ... | iconfont_merged.css |
+| planbookInput2024/src/pages/family/indexv4/index.html | 8 | ... | iconfont_merged.css |
+| planbookInput2024/src/pages/index/index.html | 8 | ... | iconfont_merged.css |
+| planbookInput2024/src/pages/input/history/index.html | 8 | ... | iconfont_merged.css |
+| planbookInput2024/src/pages/input/indexv2/index.html | 8 | ... | iconfont_merged.css |
+| planbookInput2024/src/pages/input/indexv3/index.html | 8 | ... | iconfont_merged.css |
+| planbookInput2024/src/pages/interest-selection/detail/index.html | 9 | ... | iconfont_merged.css |
+| planbookInput2024/src/pages/interest-selection/index/index.html | 9 | ... | iconfont_merged.css |
+| planbookInput2024/src/pages/policy/index/index.html | 9 | ... | iconfont_merged.css |
+| planbookInput2024/src/pages/policy/liability/index.html | 9 | ... | iconfont_merged.css |
+| planbookInput2024/src/pages/test/nuoya/index.html | 8 | ... | iconfont_merged.css |
+| planbookInput2024/src/pages/universal/account/index.html | 8 | ... | iconfont_merged.css |
+| planbookInput2024/src/pages/universal/detail/index.html | 8 | ... | iconfont_merged.css |
+| planBookResult/DEMO/template/index.html | 10 | ... | iconfont_merged.css |
+| planBookResult/src/pages/planbkContrastCollection/index.html | 9 | ... | iconfont_merged.css |
+| planBookResult/src/pages/planbkFamilyExample/index.html | 12 | ... | iconfont_merged.css |
+| planBookResult/src/pages/planbkPurely/index.html | 10 | ... | iconfont_merged.css |
+| planBookResult/src/pages/planbkTemplate/index.html | 10 | ... | iconfont_merged.css |
+| planBookResult/src/pages/planbkTemplatev2/index.html | 10 | ... | iconfont_merged.css |
+| planBookResult/src/pages/planbkTemplatev2/index.html | 11 | ... | iconfont_merged.css |
+| projectGroup/src/pages/cleverUnderwrite/index.html | 9 | ... | iconfont_merged.css |
+| projectGroup/src/pages/compoundInterest/index.html | 9 | ... | iconfont_merged.css |
+| projectGroup/src/pages/deepseek/report.html | 9 | ... | iconfont_merged.css |
+| projectGroup/src/pages/feature/detail.html | 9 | ... | iconfont_merged.css |
+| projectGroup/src/pages/feature/index.html | 9 | ... | iconfont_merged.css |
+| projectGroup/src/pages/feedback/index.html | 9 | ... | iconfont_merged.css |
+| projectGroup/src/pages/me/index.html | 9 | ... | iconfont_merged.css |
+| projectGroup/src/pages/me/index.html | 10 | ... | iconfont_merged.css |
+| projectGroup/src/pages/productNews2/list.html | 9 | ... | iconfont_merged.css |
+| projectGroup/src/pages/video/index.html | 9 | ... | iconfont_merged.css |
+| projectGroup/src/pages/visitor/detail.html | 9 | ... | iconfont_merged.css |
+| projectGroup/src/pages/visitor/index.html | 9 | ... | iconfont_merged.css |
+
+## 图标名变更清单
+
+| 旧名称 | 新名称 | 文件 | 行号 |
+|--------|--------|------|------|
+| icon-arrows_down | icon-arrows_down_v1 | planbookInput/src/pages/compare2/result/components/insure-disease/disease-mixins.js | 34 |
+| icon-arrows_down | icon-arrows_down_v1 | planbookInput/src/pages/index/index.vue | 6 |
+| icon-arrows_down | icon-arrows_down_v1 | planbookInput/src/pages/policy/index/components/persons/members.vue | 34 |
+| icon-arrows_down | icon-arrows_down_v1 | planbookInput2024/src/pages/compare2/result/components/insure-disease/disease-mixins.js | 34 |
+| icon-arrows_down | icon-arrows_down_v1 | planbookInput2024/src/pages/compare3/components/dm-footer-bar/setting-popup.vue | 38 |
+| icon-arrows_down | icon-arrows_down_v1 | planbookInput2024/src/pages/index/index.vue | 6 |
+| icon-arrows_down | icon-arrows_down_v1 | planbookInput2024/src/pages/policy/index/components/persons/members.vue | 34 |
+| icon-arrows_down | icon-arrows_down_v1 | planBookResult/src/components/person/person.vue | 449 |
+| icon-arrows_down | icon-arrows_down_v1 | planBookResult/src/components/toggleDesc/toggleDesc.vue | 17 |
+| icon-arrows_down | icon-arrows_down_v1 | planBookResult/src/components/views/exhibitBox.vue | 60 |
+| icon-arrows_down | icon-arrows_down_v1 | planBookResult/src/pages/planbkContrastCollection/components/liabilitesLump.vue | 623 |
+| icon-arrows_down | icon-arrows_down_v1 | planBookResult/src/pages/planbkFamilyExample/index.vue | 966 |
+| icon-arrows_down | icon-arrows_down_v1 | planBookResult/src/pages/planbkFamilyExample/index.vue | 1136 |
+| icon-arrows_down | icon-arrows_down_v1 | planBookResult/src/pages/planbkTemplate/components/nameExplain.vue | 105 |
+| icon-arrows_down | icon-arrows_down_v1 | planBookResult/src/pages/planbkTemplatev2/components/nameExplain/index.vue | 102 |
+| icon-arrows_down | icon-arrows_down_v1 | planBookResult/src/pages/planbkTemplatev2/components/person/index.vue | 471 |
+| icon-arrows_down | icon-arrows_down_v1 | planbookInput/src/pages/compare2/result/components/insure-disease/disease-mixins.js | 34 |
+| icon-arrows_down | icon-arrows_down_v1 | planbookInput/src/pages/index/index.vue | 6 |
+| icon-arrows_down | icon-arrows_down_v1 | planbookInput/src/pages/policy/index/components/persons/members.vue | 34 |
+| icon-arrows_down | icon-arrows_down_v1 | planbookInput2024/src/pages/compare2/result/components/insure-disease/disease-mixins.js | 34 |
+| icon-arrows_down | icon-arrows_down_v1 | planbookInput2024/src/pages/compare3/components/dm-footer-bar/setting-popup.vue | 38 |
+| icon-arrows_down | icon-arrows_down_v1 | planbookInput2024/src/pages/index/index.vue | 6 |
+| icon-arrows_down | icon-arrows_down_v1 | planbookInput2024/src/pages/policy/index/components/persons/members.vue | 34 |
+| icon-arrows_down | icon-arrows_down_v1 | planBookResult/src/components/person/person.vue | 449 |
+| icon-arrows_down | icon-arrows_down_v1 | planBookResult/src/components/toggleDesc/toggleDesc.vue | 17 |
+| icon-arrows_down | icon-arrows_down_v1 | planBookResult/src/components/views/exhibitBox.vue | 60 |
+| icon-arrows_down | icon-arrows_down_v1 | planBookResult/src/pages/planbkContrastCollection/components/liabilitesLump.vue | 623 |
+| icon-arrows_down | icon-arrows_down_v1 | planBookResult/src/pages/planbkFamilyExample/index.vue | 966 |
+| icon-arrows_down | icon-arrows_down_v1 | planBookResult/src/pages/planbkFamilyExample/index.vue | 1136 |
+| icon-arrows_down | icon-arrows_down_v1 | planBookResult/src/pages/planbkTemplate/components/nameExplain.vue | 105 |
+| icon-arrows_down | icon-arrows_down_v1 | planBookResult/src/pages/planbkTemplatev2/components/nameExplain/index.vue | 102 |
+| icon-arrows_down | icon-arrows_down_v1 | planBookResult/src/pages/planbkTemplatev2/components/person/index.vue | 471 |
+| icon-arrows_down | icon-arrows_down_v1 | planbookInput/src/pages/compare2/result/components/insure-disease/disease-mixins.js | 34 |
+| icon-arrows_down | icon-arrows_down_v1 | planbookInput/src/pages/index/index.vue | 6 |
+| icon-arrows_down | icon-arrows_down_v1 | planbookInput/src/pages/policy/index/components/persons/members.vue | 34 |
+| icon-arrows_down | icon-arrows_down_v1 | planbookInput2024/src/pages/compare2/result/components/insure-disease/disease-mixins.js | 34 |
+| icon-arrows_down | icon-arrows_down_v1 | planbookInput2024/src/pages/compare3/components/dm-footer-bar/setting-popup.vue | 38 |
+| icon-arrows_down | icon-arrows_down_v1 | planbookInput2024/src/pages/index/index.vue | 6 |
+| icon-arrows_down | icon-arrows_down_v1 | planbookInput2024/src/pages/policy/index/components/persons/members.vue | 34 |
+| icon-arrows_down | icon-arrows_down_v1 | planBookResult/src/components/person/person.vue | 449 |
+| icon-arrows_down | icon-arrows_down_v1 | planBookResult/src/components/toggleDesc/toggleDesc.vue | 17 |
+| icon-arrows_down | icon-arrows_down_v1 | planBookResult/src/components/views/exhibitBox.vue | 60 |
+| icon-arrows_down | icon-arrows_down_v1 | planBookResult/src/pages/planbkContrastCollection/components/liabilitesLump.vue | 623 |
+| icon-arrows_down | icon-arrows_down_v1 | planBookResult/src/pages/planbkFamilyExample/index.vue | 966 |
+| icon-arrows_down | icon-arrows_down_v1 | planBookResult/src/pages/planbkFamilyExample/index.vue | 1136 |
+| icon-arrows_down | icon-arrows_down_v1 | planBookResult/src/pages/planbkTemplate/components/nameExplain.vue | 105 |
+| icon-arrows_down | icon-arrows_down_v1 | planBookResult/src/pages/planbkTemplatev2/components/nameExplain/index.vue | 102 |
+| icon-arrows_down | icon-arrows_down_v1 | planBookResult/src/pages/planbkTemplatev2/components/person/index.vue | 471 |
+| icon-arrows_down | icon-arrows_down_v1 | planbookInput/src/pages/compare2/result/components/insure-disease/disease-mixins.js | 34 |
+| icon-arrows_down | icon-arrows_down_v1 | planbookInput/src/pages/index/index.vue | 6 |
+
+... 共 4492 处

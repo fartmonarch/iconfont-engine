@@ -9,24 +9,28 @@
 
 ### 1.1 输入
 
-| 文件 | 大小 | 说明 |
-|------|------|------|
+| 文件                           | 大小  | 说明                          |
+| ------------------------------ | ----- | ----------------------------- |
 | `registry/glyph_registry.json` | ~9 MB | 1,346 条 Phase 5 注册表 entry |
 
 ### 1.2 输出
 
-| 文件 | 大小 | 说明 |
-|------|------|------|
-| `report/conflict_records.json` | ~2 MB | 结构化冲突数据（Phase 7 直接消费） |
-| `report/conflict_report.md` | ~200 KB | 人类可读分级报告 |
-| `report/phase6_conflict_preview.html` | ~146 KB | 可视化决策面板（辅助参考） |
+| 文件                                   | 大小    | 说明                                    |
+| -------------------------------------- | ------- | --------------------------------------- |
+| `report/conflict_records.json`         | ~2 MB   | 原始冲突数据（1,698 条）                |
+| `report/filtered_conflicts.json`       | ~2 MB   | Phase 6.5 过滤后（标记 false_positive） |
+| `report/visual_similarity_scores.json` | ~500 KB | Phase 6.5 视觉相似度分数                |
+| `report/conflict_report.md`            | ~200 KB | 人类可读分级报告                        |
+| `report/phase6_conflict_preview.html`  | ~146 KB | 可视化决策面板（辅助参考）              |
 
 ### 1.3 脚本
 
-| 文件 | 说明 |
-|------|------|
-| `pipeline/06_detect_conflicts.py` | 主脚本：8 个核心函数 |
-| `pipeline/test_06_conflicts.py` | 16 个单元测试 |
+| 文件                                      | 说明                                       |
+| ----------------------------------------- | ------------------------------------------ |
+| `pipeline/06_detect_conflicts.py`         | 主脚本：8 个核心函数                       |
+| `pipeline/test_06_conflicts.py`           | 16 个单元测试                              |
+| `pipeline/06_5_filter_false_positives.py` | Phase 6.5：假阳性过滤（视觉+几何相似度）   |
+| `pipeline/_visual_similarity.js`          | Phase 6.5：像素渲染比对（@napi-rs/canvas） |
 
 ---
 
@@ -90,50 +94,64 @@ records 数组按 `(severity_order, key)` 排序：
 
 ## 3. 三类冲突定义
 
-| 类型 | 检测条件 | resolution_hint | Phase 7 操作 |
-|------|---------|----------------|-------------|
-| **Type A: Unicode 冲突** | 同一 `canonicalUnicodeHex` → 多个不同 `glyphHash` | `assign_pua` | 分配新 PUA 码位 |
-| **Type B: Name 冲突** | 同一 `canonicalName` → 多个不同 `glyphHash` | `rename` | rename + alias 合并 |
-| **Type C: Duplicate Glyph** | 同一 entry 的 `len(sources) > 1` | `merge_alias` | merge sources（正常情况） |
+| 类型                        | 检测条件                                          | resolution_hint | Phase 7 操作              |
+| --------------------------- | ------------------------------------------------- | --------------- | ------------------------- |
+| **Type A: Unicode 冲突**    | 同一 `canonicalUnicodeHex` → 多个不同 `glyphHash` | `assign_pua`    | 分配新 PUA 码位           |
+| **Type B: Name 冲突**       | 同一 `canonicalName` → 多个不同 `glyphHash`       | `rename`        | rename + alias 合并       |
+| **Type C: Duplicate Glyph** | 同一 entry 的 `len(sources) > 1`                  | `merge_alias`   | merge sources（正常情况） |
 
 ---
 
 ## 4. 严重性分级
 
-| 级别 | 条件 | Phase 7 处理优先级 |
-|------|------|------------------|
-| **critical** | 变体数 >= 5 | 最高优先级 |
-| **warning** | 变体数 3-4 | 中等优先级 |
-| **info** | 变体数 = 2 | 低优先级 |
+| 级别         | 条件        | Phase 7 处理优先级 |
+| ------------ | ----------- | ------------------ |
+| **critical** | 变体数 >= 5 | 最高优先级         |
+| **warning**  | 变体数 3-4  | 中等优先级         |
+| **info**     | 变体数 = 2  | 低优先级           |
 
 ---
 
 ## 5. 统计事实
 
-| 指标 | 值 |
-|------|-----|
-| 总冲突数 | 1,698 |
-| Unicode 冲突 | 401（Critical 12 / Warning 195 / Info 194） |
-| Name 冲突 | 392（Critical 11 / Warning 155 / Info 226） |
+### Phase 6 原始输出
+
+| 指标            | 值                                           |
+| --------------- | -------------------------------------------- |
+| 总冲突数        | 1,698                                        |
+| Unicode 冲突    | 401（Critical 12 / Warning 195 / Info 194）  |
+| Name 冲突       | 392（Critical 11 / Warning 155 / Info 226）  |
 | Duplicate Glyph | 905（Critical 569 / Warning 159 / Info 177） |
+
+### Phase 6.5 过滤后（2026-05-14）
+
+| 指标                       | 值       | 说明                               |
+| -------------------------- | -------- | ---------------------------------- |
+| 审核 UI 卡片总数           | 793      | Type A + Type B                    |
+| 自动合并（false_positive） | **528**  | 视觉相似度 minScore >= 0.90        |
+| 仍需人工决策               | **265**  | 需在 conflict_resolver.html 中决策 |
+| 视觉相似度阈值             | 0.90     | @napi-rs/canvas 64x64 像素渲染     |
+| 判断逻辑                   | minScore | 所有 variant 两两相似才合并        |
+
+**典型修复案例**：U+E720（4 个客服耳机 + 1 个微信气泡）原 maxScore=0.9927 被错误合并，改 minScore=0.7478 后正确保留为待决策。
 
 ### Top Unicode 冲突（Type A Critical）
 
-| Unicode | 变体数 | 说明 |
-|---------|--------|------|
-| U+E6B5 | 6 | icon-arrows_right 有 6 种不同字形 |
-| U+E6B7 | 5 | 5 种不同字形 |
-| U+E6C6 | 5 | 5 种不同字形 |
-| U+E6CB | 5 | 5 种不同字形 |
-| U+E6EC | 5 | 5 种不同字形 |
+| Unicode | 变体数 | 说明                              |
+| ------- | ------ | --------------------------------- |
+| U+E6B5  | 6      | icon-arrows_right 有 6 种不同字形 |
+| U+E6B7  | 5      | 5 种不同字形                      |
+| U+E6C6  | 5      | 5 种不同字形                      |
+| U+E6CB  | 5      | 5 种不同字形                      |
+| U+E6EC  | 5      | 5 种不同字形                      |
 
 ### Top Name 冲突（Type B Critical）
 
-| Name | 变体数 | 说明 |
-|------|--------|------|
-| icon-arrows_right | 6 | 同名 6 种字形 |
-| icon-wechat_surface | 6 | 同名 6 种字形 |
-| icon-close_line | 5 | 同名 5 种字形 |
+| Name                | 变体数 | 说明          |
+| ------------------- | ------ | ------------- |
+| icon-arrows_right   | 6      | 同名 6 种字形 |
+| icon-wechat_surface | 6      | 同名 6 种字形 |
+| icon-close_line     | 5      | 同名 5 种字形 |
 
 ---
 
@@ -142,12 +160,18 @@ records 数组按 `(severity_order, key)` 排序：
 ### 6.1 Phase 7 读取什么
 
 ```python
-# Phase 7 需要读取的唯一文件
-with open('report/conflict_records.json') as f:
+# Phase 7 默认读取过滤后的冲突（含 false_positive 标记）
+with open('report/filtered_conflicts.json') as f:
     data = json.load(f)
 
-records = data['records']  # list of CONFLICT_RECORD
+records = data['records']  # list of CONFLICT_RECORD (with isFalsePositive flag)
 ```
+
+> **注意**：`filtered_conflicts.json` 中每条记录新增字段：
+> - `isFalsePositive`: bool — 是否已自动合并
+> - `similarityScore`: float — 最低相似度分数
+> - `similarityType`: "visual" | "geometric" — 判断依据
+> - `recommendation`: "merge_as_same_glyph" | "needs_review" — 建议操作
 
 ### 6.2 Phase 7 处理顺序
 
@@ -202,14 +226,14 @@ print(f'By severity: {d[\"metadata\"][\"by_severity\"]}')
 
 ## 8. 测试覆盖
 
-| 函数 | 测试数 | 覆盖 |
-|------|--------|------|
-| `detect_unicode_conflicts` | 4 | 基本冲突 / 无冲突 / 同 hash / null unicode |
-| `detect_name_conflicts` | 3 | 基本冲突 / null name / 同 hash |
-| `detect_duplicate_glyphs` | 3 | 基本检测 / 单来源 / 严重性分级 |
-| `classify_severity` | 1 | 全部分级阈值 |
-| `build_conflict_records` | 2 | 三类整合 / 必需字段 |
-| `generate_records_json` | 1 | 输出格式 + metadata |
-| `generate_report_md` | 1 | Markdown 结构 |
-| `test_deterministic_output` | 1 | 多次运行输出一致 |
-| **总计** | **16** | **100% 核心函数** |
+| 函数                        | 测试数 | 覆盖                                       |
+| --------------------------- | ------ | ------------------------------------------ |
+| `detect_unicode_conflicts`  | 4      | 基本冲突 / 无冲突 / 同 hash / null unicode |
+| `detect_name_conflicts`     | 3      | 基本冲突 / null name / 同 hash             |
+| `detect_duplicate_glyphs`   | 3      | 基本检测 / 单来源 / 严重性分级             |
+| `classify_severity`         | 1      | 全部分级阈值                               |
+| `build_conflict_records`    | 2      | 三类整合 / 必需字段                        |
+| `generate_records_json`     | 1      | 输出格式 + metadata                        |
+| `generate_report_md`        | 1      | Markdown 结构                              |
+| `test_deterministic_output` | 1      | 多次运行输出一致                           |
+| **总计**                    | **16** | **100% 核心函数**                          |

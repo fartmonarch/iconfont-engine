@@ -198,7 +198,8 @@ def normalize_glyph(glyph, upm_map):
     if source_upm != 1024:
         scale = 1024 / source_upm
         scaled_contours, scaled_aw, scaled_lsb = \
-            scale_contours(glyph['contours'], glyph['advanceWidth'], glyph['lsb'], scale)
+            scale_contours(glyph['contours'],
+                           glyph['advanceWidth'], glyph['lsb'], scale)
         result['contours'] = scaled_contours
         result['advanceWidth'] = scaled_aw
         result['lsb'] = scaled_lsb
@@ -207,12 +208,14 @@ def normalize_glyph(glyph, upm_map):
     else:
         result['upmChanged'] = False
 
-    # Step 2: round(6)
+    # Step 2: round(4) — 降低精度阈值以减少假阳性冲突
     result['contours'], result['advanceWidth'], result['lsb'] = \
-        round_contours(result['contours'], result['advanceWidth'], result['lsb'])
+        round_contours(result['contours'],
+                       result['advanceWidth'], result['lsb'], decimals=4)
 
     # Step 3: 每个 contour 起点统一
-    result['contours'] = [normalize_contour_start(c) for c in result['contours']]
+    result['contours'] = [normalize_contour_start(
+        c) for c in result['contours']]
 
     # Step 4: contour 排序
     result['contours'] = sort_contours(result['contours'])
@@ -282,7 +285,8 @@ def main():
                 stats['upm_unchanged'] += 1
         except Exception as e:
             stats['errors'] += 1
-            print(f'  ERROR [{glyph.get("assetId", "?")}][{glyph.get("glyphName", "?")}]: {e}')
+            print(
+                f'  ERROR [{glyph.get("assetId", "?")}][{glyph.get("glyphName", "?")}]: {e}')
 
     # 输出 normalized_glyphs.json
     output_path = 'sources/phase4_glyphs/normalized_glyphs.json'
@@ -306,7 +310,8 @@ def main():
     print(f'标准化摘要: {summary_path}')
 
     # 打印统计
-    unique_hashes = set(g['glyphHash'] for g in normalized if g['glyphHash'] != 'empty')
+    unique_hashes = set(g['glyphHash']
+                        for g in normalized if g['glyphHash'] != 'empty')
     print(f'\n--- Normalization 统计 ---')
     print(f'  总 glyph: {stats["total"]}')
     print(f'  UPM 缩放: {stats["upm_scaled"]}')
@@ -344,7 +349,8 @@ def main():
             s = stats['asset_stats'].get(aid, {})
             if s.get('scaled', 0) > 0:
                 projects = ', '.join(asset['sourceProjects'])
-                f.write(f'| {aid} | {projects} | {s["total"]} | {s["scaled"]} |\n')
+                f.write(
+                    f'| {aid} | {projects} | {s["total"]} | {s["scaled"]} |\n')
 
     print(f'报告: {report_path}')
 

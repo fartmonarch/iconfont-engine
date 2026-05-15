@@ -1,35 +1,25 @@
 #!/usr/bin/env python3
-"""Phase 7: Conflict Resolution — Interactive HTML Generator
+"""Phase 7: Conflict Resolution — Interactive HTML Generator v2
 
-Reads conflict_records.json + glyph_registry.json, generates a self-contained
-HTML page with SVG-rendered glyphs for visual conflict resolution.
+Reads filtered_conflicts.json + glyph_registry.json, generates a self-contained
+HTML page with SVG-rendered glyphs and GROUP-BASED conflict resolution.
 
-Usage:
-    python pipeline/07_generate_resolver_ui.py
-
-Output:
-    report/conflict_resolver.html
+New features:
+- Group-based decisions: Keep Group + multiple PUA Groups
+- Checkbox multi-select for variants
+- Manual merge button for pending cards
+- localStorage persistence
+- Correct SVG evenodd fill across contours
 """
 import json
-import html as htmlmod
 import os
 import sys
 
 DATA_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-CONFLICTS_PATH = os.path.join(DATA_DIR, 'report', 'conflict_records.json')
+CONFLICTS_PATH = os.path.join(DATA_DIR, 'report', 'filtered_conflicts.json')
 OUTPUT_PATH = os.path.join(DATA_DIR, 'report', 'conflict_resolver.html')
-DATA_JSON_PATH = os.path.join(DATA_DIR, 'report', 'conflict_resolver_data.json')
-
-TYPE_LABELS = {
-    'unicode_conflict': 'Type A: Unicode',
-    'name_conflict': 'Type B: Name',
-}
-
-SEVERITY_LABELS = {
-    'critical': 'Critical',
-    'warning': 'Warning',
-    'info': 'Info',
-}
+DATA_JSON_PATH = os.path.join(
+    DATA_DIR, 'report', 'conflict_resolver_data.json')
 
 
 def contour_to_path(contour):
@@ -43,8 +33,6 @@ def contour_to_path(contour):
             first_on = i
             break
     if first_on is None:
-        # 全 off-curve contour（TrueType 圆/孔洞）：
-        # 在最后一个和第一个 off-curve 点之间插入隐含 on-curve 点
         mid_x = (pts[-1]['x'] + pts[0]['x']) / 2
         mid_y = (pts[-1]['y'] + pts[0]['y']) / 2
         d = f'M {mid_x:.1f} {mid_y:.1f} '
@@ -106,15 +94,16 @@ def contours_to_svg(contours, upm=1024, size=80):
     vh = (max_y - min_y) + 2 * pad
     if vw < 1 or vh < 1:
         return None
-    paths = []
+    subpaths = []
     for contour in contours:
-        flipped = [{'x': p['x'], 'y': upm - p['y'], 'on_curve': p['on_curve']} for p in contour]
+        flipped = [{'x': p['x'], 'y': upm - p['y'],
+                    'on_curve': p['on_curve']} for p in contour]
         d = contour_to_path(flipped)
         if d:
-            paths.append(f'<path d="{d}" fill="#333"/>')
-    if not paths:
+            subpaths.append(d)
+    if not subpaths:
         return None
-    svg_content = ''.join(paths)
+    svg_content = f'<path d="{" ".join(subpaths)}" fill="#333"/>'
     return (
         f'<svg viewBox="{vx:.0f} {vy:.0f} {vw:.0f} {vh:.0f}" '
         f'width="{size}" height="{size}" fill-rule="evenodd" xmlns="http://www.w3.org/2000/svg">'
@@ -122,16 +111,15 @@ def contours_to_svg(contours, upm=1024, size=80):
     )
 
 
-def load_conflicts():
-    with open(CONFLICTS_PATH, 'r', encoding='utf-8') as f:
-        return json.load(f)
-
-
 def build_embedded_records(data):
-    """Build JSON for embedding. Only Type A+B, with inline SVG strings."""
-    records = data['records']
+    """Build JSON for embedding. Only Type A+B, with inline SVG strings.
+
+    CRITICAL: id MUST be the original index in filtered_conflicts.json
+    so that decisions can be matched by resolve script.
+    """
+    all_records = data['records']
     embedded = []
-    for idx, r in enumerate(records):
+    for original_idx, r in enumerate(all_records):
         if r['type'] not in ('unicode_conflict', 'name_conflict'):
             continue
         variants = []
@@ -149,12 +137,15 @@ def build_embedded_records(data):
                 'svg': svg,
             })
         embedded.append({
-            'id': idx,
+            'id': original_idx,
             'type': r['type'],
             'severity': r['severity'],
             'key': r['key'],
             'variantCount': r['variantCount'],
             'resolution_hint': r['resolution_hint'],
+            'isFalsePositive': r.get('isFalsePositive', False),
+            'similarityScore': r.get('similarityScore'),
+            'similarityType': r.get('similarityType', ''),
             'variants': variants,
         })
     return embedded
@@ -163,11 +154,13 @@ def build_embedded_records(data):
 def generate_html(embedded_records):
     """Generate the complete self-contained HTML page."""
     total = len(embedded_records)
-    type_a = sum(1 for r in embedded_records if r['type'] == 'unicode_conflict')
+    type_a = sum(
+        1 for r in embedded_records if r['type'] == 'unicode_conflict')
     type_b = sum(1 for r in embedded_records if r['type'] == 'name_conflict')
     crit = sum(1 for r in embedded_records if r['severity'] == 'critical')
     warn = sum(1 for r in embedded_records if r['severity'] == 'warning')
     info = sum(1 for r in embedded_records if r['severity'] == 'info')
+    fp_count = sum(1 for r in embedded_records if r.get('isFalsePositive'))
 
     html_parts = []
     html_parts.append(f'''<!DOCTYPE html>
@@ -175,12 +168,11 @@ def generate_html(embedded_records):
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Phase 7 Conflict Resolution</title>
+<title>Phase 7 Conflict Resolution v2</title>
 <style>
 * {{ margin: 0; padding: 0; box-sizing: border-box; }}
 body {{ font-family: -apple-system, "Microsoft YaHei", "Segoe UI", sans-serif; background: #f0f2f5; padding: 0; }}
 
-/* Header */
 #app-header {{
     position: sticky; top: 0; z-index: 100;
     background: #fff; border-bottom: 1px solid #e8e8e8;
@@ -189,32 +181,21 @@ body {{ font-family: -apple-system, "Microsoft YaHei", "Segoe UI", sans-serif; b
 }}
 #app-header h1 {{ font-size: 18px; margin-bottom: 8px; }}
 
-/* Progress */
 .progress-section {{ display: flex; align-items: center; gap: 12px; margin-bottom: 8px; }}
 #progress-text {{ font-size: 13px; color: #666; white-space: nowrap; }}
 .progress-bar {{ flex: 1; height: 8px; background: #f0f0f0; border-radius: 4px; overflow: hidden; }}
 .progress-fill {{ height: 100%; background: #52c41a; transition: width 0.3s; width: 0%; }}
 
-/* Filters */
-.filter-bar {{ display: flex; gap: 6px; flex-wrap: wrap; align-items: center; margin-bottom: 8px; }}
-.filter-btn {{
-    padding: 4px 12px; border: 1px solid #d9d9d9; border-radius: 4px;
-    background: #fff; cursor: pointer; font-size: 12px; transition: all 0.2s;
-}}
-.filter-btn:hover {{ border-color: #1890ff; color: #1890ff; }}
+.filter-bar {{ display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 8px; }}
+.filter-btn {{ padding: 4px 12px; border: 1px solid #d9d9d9; background: #fff; border-radius: 4px; cursor: pointer; font-size: 12px; }}
 .filter-btn.active {{ background: #1890ff; color: #fff; border-color: #1890ff; }}
+.filter-btn:hover {{ border-color: #1890ff; }}
 
-/* Export */
-.actions {{ display: flex; gap: 8px; }}
-#export-btn {{
-    padding: 6px 16px; background: #1890ff; color: #fff; border: none;
-    border-radius: 4px; cursor: pointer; font-size: 13px;
-}}
-#export-btn:hover {{ background: #40a9ff; }}
+.actions {{ text-align: right; }}
+#export-btn {{ padding: 6px 16px; background: #1890ff; color: #fff; border: none; border-radius: 4px; cursor: pointer; font-size: 13px; }}
 #export-btn:disabled {{ background: #d9d9d9; cursor: not-allowed; }}
-
-/* Cards container */
-#card-container {{ padding: 16px 20px; max-width: 1400px; margin: 0 auto; }}
+#export-btn:hover:not(:disabled) {{ background: #40a9ff; }}
+#clear-cache-btn {{ padding: 6px 16px; background: #fff; color: #666; border: 1px solid #d9d9d9; border-radius: 4px; cursor: pointer; font-size: 13px; margin-right: 8px; }}
 
 /* Conflict card */
 .conflict-card {{
@@ -226,6 +207,9 @@ body {{ font-family: -apple-system, "Microsoft YaHei", "Segoe UI", sans-serif; b
 .conflict-card[data-severity="critical"] {{ border-left: 4px solid #ff4d4f; }}
 .conflict-card[data-severity="warning"] {{ border-left: 4px solid #fa8c16; }}
 .conflict-card[data-severity="info"] {{ border-left: 4px solid #1890ff; }}
+.conflict-card.false-positive {{ border-left: 4px solid #52c41a; background: #f6ffed; }}
+.conflict-card.false-positive .card-header {{ background: #f6ffed; }}
+.conflict-card.false-positive .card-hint {{ background: #d9f7be; color: #237804; }}
 .conflict-card.hidden {{ display: none; }}
 
 /* Card header */
@@ -248,65 +232,84 @@ body {{ font-family: -apple-system, "Microsoft YaHei", "Segoe UI", sans-serif; b
 .variant-count {{ font-size: 12px; color: #666; margin-left: auto; }}
 .decision-status {{ font-size: 12px; color: #52c41a; font-weight: 600; display: none; }}
 .conflict-card.resolved .decision-status {{ display: inline; }}
+.fp-badge {{ background: #52c41a; color: #fff; padding: 2px 8px; border-radius: 10px; font-size: 11px; margin-left: 8px; }}
+
+/* Variant selection toolbar */
+.variant-toolbar {{
+    display: flex; align-items: center; gap: 8px;
+    padding: 8px 14px; background: #fafafa; border-bottom: 1px solid #f0f0f0;
+}}
+.variant-toolbar label {{ font-size: 12px; color: #666; cursor: pointer; display: flex; align-items: center; gap: 4px; }}
+.variant-toolbar input[type="checkbox"] {{ cursor: pointer; }}
+.btn-group-action {{
+    padding: 3px 10px; border: 1px solid #d9d9d9; background: #fff;
+    border-radius: 4px; cursor: pointer; font-size: 12px;
+}}
+.btn-group-action:hover {{ border-color: #1890ff; color: #1890ff; }}
+.btn-group-action.primary {{ background: #1890ff; color: #fff; border-color: #1890ff; }}
+.btn-group-action.primary:hover {{ background: #40a9ff; }}
+.btn-group-action.success {{ background: #52c41a; color: #fff; border-color: #52c41a; }}
+.btn-group-action.success:hover {{ background: #73d13d; }}
+.btn-group-action.warning {{ background: #fa8c16; color: #fff; border-color: #fa8c16; }}
+.btn-group-action.warning:hover {{ background: #ffa940; }}
 
 /* Card body */
 .card-body {{
     display: flex; gap: 12px; padding: 14px;
     overflow-x: auto; flex-wrap: nowrap;
 }}
-
-/* Variant panel */
 .variant-panel {{
-    flex: 0 0 auto; width: 160px;
-    border: 2px solid #e8e8e8; border-radius: 8px;
-    padding: 10px; text-align: center;
+    flex: 0 0 auto; width: 140px; max-width: 140px;
+    border: 1px solid #e8e8e8; border-radius: 6px; padding: 10px;
+    text-align: center; background: #fff;
     transition: border-color 0.2s, background 0.2s;
 }}
-.variant-panel:hover {{ border-color: #1890ff; background: #f0f5ff; }}
+.variant-panel:hover {{ border-color: #d9d9d9; }}
 .variant-panel.selected {{ border-color: #52c41a; background: #f6ffed; }}
-.variant-panel.selected:hover {{ border-color: #52c41a; }}
-
-/* SVG container */
-.svg-container {{
-    width: 80px; height: 80px; margin: 0 auto 8px;
-    display: flex; align-items: center; justify-content: center;
-    color: #303133;
-}}
-.svg-container svg {{ display: block; }}
-.svg-placeholder {{
-    width: 80px; height: 80px;
-    background: #fafafa; border: 1px dashed #d9d9d9;
-    border-radius: 4px;
-}}
-
-/* Variant meta */
-.variant-meta {{ font-size: 11px; color: #666; margin-bottom: 8px; line-height: 1.5; }}
-.variant-meta code {{ background: #f0f0f0; padding: 1px 4px; border-radius: 3px; font-size: 10px; }}
-.variant-meta .name {{ display: block; font-weight: 500; color: #333; margin: 2px 0; }}
-.variant-meta .sources {{ display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }}
-
-/* Buttons */
-.btn-group {{ display: flex; gap: 4px; justify-content: center; }}
-.btn {{
-    padding: 4px 10px; border: 1px solid #d9d9d9; border-radius: 4px;
-    cursor: pointer; font-size: 11px; font-weight: 600;
-    transition: all 0.2s; background: #fff;
-}}
-.btn-keep {{ color: #52c41a; border-color: #52c41a; }}
-.btn-keep:hover {{ background: #f6ffed; }}
-.btn-pua {{ color: #fa8c16; border-color: #fa8c16; }}
-.btn-pua:hover {{ background: #fff7e6; }}
-
-.variant-panel.selected {{ border-color: #52c41a; background: #f6ffed; }}
-.variant-panel.selected:hover {{ border-color: #52c41a; }}
 .variant-panel.pua-active {{ border-color: #fa8c16; background: #fff7e6; }}
-.variant-panel.pua-active:hover {{ border-color: #fa8c16; }}
+.variant-panel.in-group {{ border-color: #1890ff; background: #e6f7ff; opacity: 0.7; }}
+.variant-panel .svg-container {{ width: 80px; height: 80px; margin: 0 auto 8px; display: flex; align-items: center; justify-content: center; }}
+.variant-panel .svg-container svg {{ max-width: 100%; max-height: 100%; }}
+.variant-meta {{ font-size: 11px; color: #666; margin-bottom: 8px; word-break: break-all; }}
+.variant-meta .name {{ font-weight: 600; color: #333; font-size: 12px; display: block; margin-bottom: 2px; }}
+.variant-meta code {{ font-size: 10px; color: #999; }}
+.variant-checkbox {{ margin-bottom: 6px; }}
 
-.variant-panel.selected .btn-keep {{ background: #52c41a; color: #fff; border-color: #52c41a; }}
-.variant-panel.pua-active .btn-pua {{ background: #fa8c16; color: #fff; border-color: #fa8c16; }}
+/* Groups area */
+.groups-area {{
+    padding: 10px 14px; background: #fafafa; border-top: 1px solid #f0f0f0;
+    display: flex; flex-wrap: wrap; gap: 8px;
+}}
+.groups-area:empty {{ display: none; }}
+.group-tag {{
+    display: inline-flex; align-items: center; gap: 6px;
+    padding: 4px 10px; border-radius: 4px; font-size: 12px;
+}}
+.group-tag.keep {{ background: #f6ffed; border: 1px solid #b7eb8f; color: #389e0d; }}
+.group-tag.pua {{ background: #fff7e6; border: 1px solid #ffd591; color: #d46b08; }}
+.group-tag .group-label {{ font-weight: 600; }}
+.group-tag .group-variants {{ color: #666; font-size: 11px; }}
+.group-tag .btn-remove {{ background: none; border: none; cursor: pointer; color: #999; font-size: 14px; padding: 0 2px; }}
+.group-tag .btn-remove:hover {{ color: #ff4d4f; }}
 
-/* No icon placeholder */
-.no-icon {{ width: 80px; height: 80px; margin: 0 auto; background: #f0f0f0; border-radius: 6px; display: flex; align-items: center; justify-content: center; color: #ccc; font-size: 24px; }}
+/* Card footer */
+.card-footer {{
+    padding: 8px 14px; background: #fafafa; border-top: 1px solid #f0f0f0;
+    display: flex; justify-content: space-between; align-items: center;
+}}
+.btn-manual-merge {{
+    padding: 4px 12px; background: #52c41a; color: #fff; border: none;
+    border-radius: 4px; cursor: pointer; font-size: 12px;
+}}
+.btn-manual-merge:hover {{ background: #73d13d; }}
+.btn-unmerge {{
+    padding: 4px 12px; background: #fff; color: #666; border: 1px solid #d9d9d9;
+    border-radius: 4px; cursor: pointer; font-size: 12px;
+}}
+.btn-unmerge:hover {{ border-color: #ff4d4f; color: #ff4d4f; }}
+
+/* SVG placeholder */
+.svg-placeholder {{ width: 80px; height: 80px; margin: 0 auto; background: #f0f0f0; border-radius: 6px; display: flex; align-items: center; justify-content: center; color: #ccc; font-size: 24px; }}
 
 /* Responsive */
 @media (max-width: 768px) {{
@@ -319,7 +322,7 @@ body {{ font-family: -apple-system, "Microsoft YaHei", "Segoe UI", sans-serif; b
 <body>
 
 <header id="app-header">
-    <h1>Phase 7 Conflict Resolution</h1>
+    <h1>Phase 7 Conflict Resolution v2 — 分组审核</h1>
     <div class="progress-section">
         <span id="progress-text">Loading...</span>
         <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
@@ -328,6 +331,7 @@ body {{ font-family: -apple-system, "Microsoft YaHei", "Segoe UI", sans-serif; b
         <button class="filter-btn active" data-filter="all">All</button>
     </div>
     <div class="actions">
+        <button id="clear-cache-btn">Clear Cache</button>
         <button id="export-btn" disabled>Export Decisions (JSON)</button>
     </div>
 </header>
@@ -342,57 +346,99 @@ body {{ font-family: -apple-system, "Microsoft YaHei", "Segoe UI", sans-serif; b
         return String(str).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
     }}
 
+    const STORAGE_KEY = 'iconfont_conflict_decisions_v2';
+
     const state = {{
-        decisions: {{}},
+        decisions: {{}},      // recordId -> {{ groups: [{{ type, variants: [] }}] }}
+        selections: {{}},     // recordId -> Set(variantIndex)
         totalRecords: 0,
         totalVariants: 0,
+        pendingRecords: 0,
+        pendingVariants: 0,
+        autoMergedRecords: 0,
     }};
     let records = [];
 
     const container = document.getElementById('card-container');
 
-    // Load data from external JSON file (same approach as review.html)
+    // Load data
     fetch('conflict_resolver_data.json')
         .then(function(r) {{ return r.json(); }})
         .then(function(data) {{
             records = data.records || [];
             state.totalRecords = records.length;
-            state.totalVariants = records.reduce(function(sum, r) {{
-                return sum + (r.variants ? r.variants.length : 0);
-            }}, 0);
+            state.totalVariants = records.reduce(function(sum, r) {{ return sum + (r.variants ? r.variants.length : 0); }}, 0);
+            state.autoMergedRecords = records.filter(function(r) {{ return r.isFalsePositive; }}).length;
+            state.pendingRecords = state.totalRecords - state.autoMergedRecords;
+            state.pendingVariants = records.filter(function(r) {{ return !r.isFalsePositive; }}).reduce(function(sum, r) {{ return sum + (r.variants ? r.variants.length : 0); }}, 0);
+
+            // Load cached decisions
+            loadFromLocalStorage();
+
             buildFilterButtons();
             renderCards();
             updateProgress();
         }})
         .catch(function(e) {{
-            container.innerHTML = '<div class="loading">Failed to load data: ' + e.message + '<br/>Please serve this page via an HTTP server (e.g., python -m http.server)</div>';
+            container.innerHTML = '<div class="loading">Failed to load data: ' + e.message + '<br/>Please serve this page via HTTP server</div>';
         }});
 
+    // ===================== localStorage =====================
+    function saveToLocalStorage() {{
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(state.decisions));
+    }}
+
+    function loadFromLocalStorage() {{
+        try {{
+            var raw = localStorage.getItem(STORAGE_KEY);
+            if (raw) {{
+                state.decisions = JSON.parse(raw);
+            }}
+        }} catch(e) {{ console.warn('Failed to load cache:', e); }}
+    }}
+
+    function clearCache() {{
+        localStorage.removeItem(STORAGE_KEY);
+        state.decisions = {{}};
+        renderCards();
+        updateProgress();
+    }}
+
+    document.getElementById('clear-cache-btn').addEventListener('click', clearCache);
+
+    // ===================== Filter Buttons =====================
     function buildFilterButtons() {{
         var type_a = records.filter(function(r) {{ return r.type === 'unicode_conflict'; }}).length;
         var type_b = records.filter(function(r) {{ return r.type === 'name_conflict'; }}).length;
         var crit = records.filter(function(r) {{ return r.severity === 'critical'; }}).length;
         var warn = records.filter(function(r) {{ return r.severity === 'warning'; }}).length;
         var info = records.filter(function(r) {{ return r.severity === 'info'; }}).length;
+        var fp = records.filter(function(r) {{ return r.isFalsePositive; }}).length;
+        var pending = records.filter(function(r) {{ return !r.isFalsePositive; }}).length;
         var total = records.length;
         document.getElementById('filter-bar').innerHTML =
             '<button class="filter-btn active" data-filter="all">All (' + total + ')</button>' +
+            '<button class="filter-btn" data-filter="pending" style="color:#1890ff;font-weight:600;">Pending (' + pending + ')</button>' +
+            '<button class="filter-btn" data-filter="false_positive" style="color:#52c41a;">Auto-Merged (' + fp + ')</button>' +
             '<button class="filter-btn" data-filter="critical">Critical (' + crit + ')</button>' +
             '<button class="filter-btn" data-filter="warning">Warning (' + warn + ')</button>' +
             '<button class="filter-btn" data-filter="info">Info (' + info + ')</button>' +
             '<button class="filter-btn" data-filter="unicode_conflict">Type A (' + type_a + ')</button>' +
             '<button class="filter-btn" data-filter="name_conflict">Type B (' + type_b + ')</button>';
-        // Re-bind filter events
         document.querySelectorAll('.filter-btn').forEach(function(btn) {{
             btn.addEventListener('click', function() {{
                 document.querySelectorAll('.filter-btn').forEach(function(b) {{ b.classList.remove('active'); }});
                 btn.classList.add('active');
-                const filter = btn.dataset.filter;
+                var filter = btn.dataset.filter;
                 document.querySelectorAll('.conflict-card').forEach(function(card) {{
                     if (filter === 'all') {{
                         card.classList.remove('hidden');
+                    }} else if (filter === 'pending') {{
+                        card.classList.toggle('hidden', card.dataset.falsePositive === 'true');
+                    }} else if (filter === 'false_positive') {{
+                        card.classList.toggle('hidden', card.dataset.falsePositive !== 'true');
                     }} else {{
-                        const match = card.dataset.severity === filter || card.dataset.type === filter;
+                        var match = card.dataset.severity === filter || card.dataset.type === filter;
                         card.classList.toggle('hidden', !match);
                     }}
                 }});
@@ -400,142 +446,397 @@ body {{ font-family: -apple-system, "Microsoft YaHei", "Segoe UI", sans-serif; b
         }});
     }}
 
+    // ===================== Render Cards =====================
     function renderCards() {{
-        const fragment = document.createDocumentFragment();
+        container.innerHTML = '';
+        var fragment = document.createDocumentFragment();
 
-    records.forEach(function(record) {{
-        const card = document.createElement('div');
-        card.className = 'conflict-card';
+        // Sort: pending first, auto-merged last
+        var sorted = records.slice().sort(function(a, b) {{
+            return (a.isFalsePositive ? 1 : 0) - (b.isFalsePositive ? 1 : 0);
+        }});
+
+        sorted.forEach(function(record) {{
+            fragment.appendChild(buildCard(record));
+        }});
+        container.appendChild(fragment);
+    }}
+
+    function buildCard(record) {{
+        var card = document.createElement('div');
+        var isUnmerged = state.decisions[record.id] && state.decisions[record.id].unmerge;
+        var isFp = record.isFalsePositive && !isUnmerged;
+        var hasDecision = !!state.decisions[record.id] && !isUnmerged;
+        var isResolved = isFp || (hasDecision && isRecordResolved(record));
+        card.className = 'conflict-card' + (isFp ? ' false-positive' : '') + (isResolved ? ' resolved' : '');
         card.dataset.id = record.id;
         card.dataset.type = record.type;
         card.dataset.severity = record.severity;
+        card.dataset.falsePositive = isFp ? 'true' : 'false';
 
-        const typeLabel = record.type === 'unicode_conflict' ? 'Unicode: ' + record.key : 'Name: ' + record.key;
-        const sevLabel = record.severity.charAt(0).toUpperCase() + record.severity.slice(1);
-        const actionHint = record.type === 'unicode_conflict'
-            ? '保留一个变体在原 unicode，其余分配 PUA'
-            : '保留一个变体在原名称，其余分配 PUA + _vN 后缀';
+        var typeLabel = record.type === 'unicode_conflict' ? 'Unicode: ' + record.key : 'Name: ' + record.key;
+        var sevLabel = record.severity.charAt(0).toUpperCase() + record.severity.slice(1);
+        var simScore = record.similarityScore !== undefined ? record.similarityScore : null;
 
-        let variantsHtml = '';
+        // Header
+        var fpBadge = isFp ? '<span class="fp-badge">自动合并</span>' : '';
+        var headerHtml =
+            '<div class="card-header">'
+            + '<span class="key">' + escapeHtml(record.key) + '</span>'
+            + '<span class="sev-badge ' + record.severity + '">' + sevLabel + '</span>'
+            + '<span class="type-label">' + typeLabel + '</span>'
+            + fpBadge
+            + '<span class="variant-count">' + record.variantCount + ' variants</span>'
+            + '<span class="decision-status">&#10003; Resolved</span>'
+            + '</div>';
+
+        // Hint
+        var hintHtml;
+        if (isFp) {{
+            hintHtml = '<div class="card-hint">【已自动合并】' + (record.similarityType === 'visual' ? '视觉相似度' : '几何相似度')
+                + (simScore !== null ? ' ' + (simScore * 100).toFixed(1) + '%' : '')
+                + ' — 这些变体已自动合并</div>';
+        }} else {{
+            hintHtml = '<div class="card-hint">'
+                + '选中变体后点击"设为保留组"或"添加 PUA 组"进行分组。'
+                + (record.type === 'unicode_conflict' ? ' 保留组合并后共享原 unicode。' : ' 保留组合并后共享原名称。')
+                + '</div>';
+        }}
+
+        // Toolbar + Variants
+        var variantsHtml = '';
         record.variants.forEach(function(v, vi) {{
-            const svgHtml = v.svg
-                ? '<div class="svg-container">' + v.svg + '</div>'
-                : '<div class="svg-placeholder"></div>';
+            var svgHtml = v.svg ? '<div class="svg-container">' + v.svg + '</div>' : '<div class="svg-placeholder"></div>';
+            var groupInfo = findVariantGroup(record.id, vi);
+            var inGroupClass = groupInfo ? ' in-group' : '';
+            var checkbox = !isFp ? '<div class="variant-checkbox"><input type="checkbox" data-rid="' + record.id + '" data-vi="' + vi + '" class="var-checkbox"' + (isSelected(record.id, vi) ? ' checked' : '') + '></div>' : '';
+            var groupLabel = groupInfo ? '<div style="font-size:10px;color:#1890ff;margin-bottom:4px;">' + groupInfo.label + '</div>' : '';
 
-            variantsHtml += '<div class="variant-panel" data-variant="' + vi + '">'
+            variantsHtml += '<div class="variant-panel' + inGroupClass + '" data-variant="' + vi + '">'
+                + checkbox
+                + groupLabel
                 + svgHtml
                 + '<div class="variant-meta">'
                 + '<span class="name">' + escapeHtml(v.name) + '</span>'
                 + '<code>' + escapeHtml(v.glyphHash.substring(0, 12)) + '</code><br/>'
                 + '<span class="sources">' + escapeHtml(v.sources) + '</span>'
                 + '</div>'
-                + '<div class="btn-group">'
-                + '<button class="btn btn-keep" data-rid="' + record.id + '" data-vi="' + vi + '" data-act="keep">保留</button>'
-                + '<button class="btn btn-pua" data-rid="' + record.id + '" data-vi="' + vi + '" data-act="pua">PUA</button>'
-                + '</div>'
                 + '</div>';
         }});
 
-        card.innerHTML =
-            '<div class="card-header">'
-            + '<span class="key">' + escapeHtml(record.key) + '</span>'
-            + '<span class="sev-badge ' + record.severity + '">' + sevLabel + '</span>'
-            + '<span class="type-label">' + typeLabel + '</span>'
-            + '<span class="variant-count">' + record.variantCount + ' variants</span>'
-            + '<span class="decision-status">&#10003; Resolved</span>'
-            + '</div>'
-            + '<div class="card-hint">' + actionHint + '</div>'
-            + '<div class="card-body">' + variantsHtml + '</div>';
+        var toolbarHtml = '';
+        if (!isFp) {{
+            toolbarHtml = '<div class="variant-toolbar">'
+                + '<label><input type="checkbox" class="select-all" data-rid="' + record.id + '"> 全选</label>'
+                + '<button class="btn-group-action success" data-rid="' + record.id + '" data-action="keep">设为保留组</button>'
+                + '<button class="btn-group-action warning" data-rid="' + record.id + '" data-action="pua">添加 PUA 组</button>'
+                + '<button class="btn-group-action" data-rid="' + record.id + '" data-action="clear">取消选择</button>'
+                + '</div>';
+        }}
 
-        fragment.appendChild(card);
+        var bodyHtml = '<div class="card-body">' + variantsHtml + '</div>';
+
+        // Groups area
+        var groupsHtml = buildGroupsArea(record);
+
+        // Footer
+        var footerHtml = '';
+        if (!isFp) {{
+            footerHtml = '<div class="card-footer">'
+                + '<button class="btn-manual-merge" data-rid="' + record.id + '">人工合并（所有变体视为相同）</button>'
+                + '<span style="font-size:11px;color:#999;">或：选中部分变体后点击上方按钮分组</span>'
+                + '</div>';
+        }} else {{
+            footerHtml = '<div class="card-footer">'
+                + '<button class="btn-unmerge" data-rid="' + record.id + '">取消自动合并（转为人工审核）</button>'
+                + '</div>';
+        }}
+
+        card.innerHTML = headerHtml + hintHtml + toolbarHtml + bodyHtml + groupsHtml + footerHtml;
+        return card;
+    }}
+
+    function findVariantGroup(recordId, variantIndex) {{
+        var dec = state.decisions[recordId];
+        if (!dec || !dec.groups) return null;
+        for (var gi = 0; gi < dec.groups.length; gi++) {{
+            var g = dec.groups[gi];
+            if (g.variants.indexOf(variantIndex) >= 0) {{
+                return {{ label: g.type === 'keep' ? '保留组' : ('PUA-' + (gi + 1)), groupIndex: gi }};
+            }}
+        }}
+        return null;
+    }}
+
+    function isSelected(recordId, variantIndex) {{
+        return state.selections[recordId] && state.selections[recordId].has(variantIndex);
+    }}
+
+    function buildGroupsArea(record) {{
+        var dec = state.decisions[record.id];
+        if (!dec || !dec.groups || dec.groups.length === 0) return '';
+        var html = '<div class="groups-area">';
+        dec.groups.forEach(function(g, gi) {{
+            var cls = g.type === 'keep' ? 'keep' : 'pua';
+            var label = g.type === 'keep' ? '保留组' : ('PUA-' + (gi + 1));
+            var vnames = g.variants.map(function(vi) {{ return 'v' + (vi + 1); }}).join(', ');
+            html += '<div class="group-tag ' + cls + '">'
+                + '<span class="group-label">' + label + '</span>'
+                + '<span class="group-variants">(' + vnames + ')</span>'
+                + '<button class="btn-remove" data-rid="' + record.id + '" data-gi="' + gi + '">&times;</button>'
+                + '</div>';
+        }});
+        html += '</div>';
+        return html;
+    }}
+
+    function isRecordResolved(record) {{
+        var dec = state.decisions[record.id];
+        if (!dec || !dec.groups) return false;
+        var grouped = new Set();
+        dec.groups.forEach(function(g) {{
+            g.variants.forEach(function(v) {{ grouped.add(v); }});
+        }});
+        return grouped.size === record.variants.length;
+    }}
+
+    // ===================== Event Delegation =====================
+    container.addEventListener('click', function(e) {{
+        // Variant checkbox
+        var cb = e.target.closest('.var-checkbox');
+        if (cb) {{
+            var rid = parseInt(cb.dataset.rid);
+            var vi = parseInt(cb.dataset.vi);
+            toggleSelection(rid, vi);
+            var panel = cb.closest('.variant-panel');
+            if (panel) panel.classList.toggle('selected', cb.checked);
+            return;
+        }}
+
+        // Variant panel click (toggle selection)
+        var panel = e.target.closest('.variant-panel');
+        if (panel && !panel.classList.contains('in-group') && !e.target.closest('.var-checkbox')) {{
+            var cb2 = panel.querySelector('.var-checkbox');
+            if (cb2) {{
+                cb2.checked = !cb2.checked;
+                panel.classList.toggle('selected', cb2.checked);
+                var rid = parseInt(cb2.dataset.rid);
+                var vi = parseInt(cb2.dataset.vi);
+                toggleSelection(rid, vi);
+            }}
+            return;
+        }}
+
+        // Select all
+        var sa = e.target.closest('.select-all');
+        if (sa) {{
+            var rid = parseInt(sa.dataset.rid);
+            var record = records.find(function(r) {{ return r.id === rid; }});
+            if (record) {{
+                var allSelected = record.variants.every(function(_, vi) {{ return isSelected(rid, vi); }});
+                if (allSelected) {{
+                    state.selections[rid] = new Set();
+                }} else {{
+                    state.selections[rid] = new Set(record.variants.map(function(_, i) {{ return i; }}));
+                }}
+                updateCard(rid);
+            }}
+            return;
+        }}
+
+        // Group action buttons
+        var btn = e.target.closest('.btn-group-action');
+        if (btn) {{
+            var rid = parseInt(btn.dataset.rid);
+            var action = btn.dataset.action;
+            if (action === 'clear') {{
+                delete state.selections[rid];
+            }} else {{
+                createGroup(rid, action);
+            }}
+            updateCard(rid);
+            updateProgress();
+            saveToLocalStorage();
+            return;
+        }}
+
+        // Remove group
+        var rm = e.target.closest('.btn-remove');
+        if (rm) {{
+            var rid = parseInt(rm.dataset.rid);
+            var gi = parseInt(rm.dataset.gi);
+            removeGroup(rid, gi);
+            updateCard(rid);
+            updateProgress();
+            saveToLocalStorage();
+            return;
+        }}
+
+        // Manual merge
+        var mm = e.target.closest('.btn-manual-merge');
+        if (mm) {{
+            var rid = parseInt(mm.dataset.rid);
+            var record = records.find(function(r) {{ return r.id === rid; }});
+            if (record) {{
+                manualMerge(record);
+                updateCard(rid);
+                updateProgress();
+                saveToLocalStorage();
+                scrollNext();
+            }}
+            return;
+        }}
+
+        // Unmerge (cancel auto-merge)
+        var um = e.target.closest('.btn-unmerge');
+        if (um) {{
+            var rid = parseInt(um.dataset.rid);
+            unmerge(rid);
+            renderCards();  // unmerge may change card ordering
+            updateProgress();
+            saveToLocalStorage();
+            return;
+        }}
     }});
 
-        container.innerHTML = '';
-        container.appendChild(fragment);
-
-        // Event delegation for decision buttons
-        container.addEventListener('click', function(e) {{
-            var btn = e.target.closest('.btn');
-            if (!btn) return;
-            var rid = btn.dataset.rid;
-            var vi = btn.dataset.vi;
-            var act = btn.dataset.act;
-            if (rid === undefined) return;
-            _decide(parseInt(rid), parseInt(vi), act);
-        }});
-    }}
-
-    function _decide(recordId, variantIndex, action) {{
-        var card = container.querySelector('.conflict-card[data-id="' + recordId + '"]');
-        if (!card) return;
-
-        var record = records[recordId];
-        var panel = card.querySelector('.variant-panel[data-variant="' + variantIndex + '"]');
-        if (!panel) return;
-
-        // Ensure decisions entry exists for this record
-        if (!state.decisions[recordId]) {{
-            state.decisions[recordId] = {{
-                recordType: record.type,
-                key: record.key,
-                variants: {{}}
-            }};
-        }}
-
-        var variantKey = String(variantIndex);
-        var currentDecision = state.decisions[recordId].variants[variantKey];
-
-        if (currentDecision === action) {{
-            // Toggle off: deselect this action
-            delete state.decisions[recordId].variants[variantKey];
-            panel.classList.remove('selected', 'pua-active');
+    // ===================== Actions =====================
+    function toggleSelection(recordId, variantIndex) {{
+        if (!state.selections[recordId]) state.selections[recordId] = new Set();
+        if (state.selections[recordId].has(variantIndex)) {{
+            state.selections[recordId].delete(variantIndex);
         }} else {{
-            // Apply new action
-            panel.classList.remove('selected', 'pua-active');
-            if (action === 'keep') {{
-                panel.classList.add('selected');
-            }} else if (action === 'pua') {{
-                panel.classList.add('pua-active');
-            }}
-            state.decisions[recordId].variants[variantKey] = action;
+            state.selections[recordId].add(variantIndex);
         }}
-
-        // Update card resolved state
-        var decidedCount = Object.keys(state.decisions[recordId].variants).length;
-        var allDecided = decidedCount === record.variants.length;
-        card.classList.toggle('resolved', allDecided);
-
-        updateProgress();
     }}
 
-    function updateProgress() {{
-        var decidedCount = 0;
-        for (var rid in state.decisions) {{
-            decidedCount += Object.keys(state.decisions[rid].variants).length;
+    function createGroup(recordId, type) {{
+        var selected = state.selections[recordId];
+        if (!selected || selected.size === 0) {{
+            alert('请先勾选变体');
+            return;
         }}
-        var pct = (decidedCount / state.totalVariants * 100).toFixed(1);
-        document.getElementById('progress-text').textContent = decidedCount + ' / ' + state.totalVariants + ' variants resolved';
-        document.getElementById('progress-fill').style.width = pct + '%';
-        // Export enabled when there is at least one decision
-        document.getElementById('export-btn').disabled = (decidedCount === 0);
-    }};
 
-    // Export
-    document.getElementById('export-btn').addEventListener('click', function() {{
-        var decidedCount = 0;
-        for (var rid in state.decisions) {{
-            decidedCount += Object.keys(state.decisions[rid].variants).length;
+        // Exclude already grouped variants
+        var dec = state.decisions[recordId];
+        var grouped = new Set();
+        if (dec && dec.groups) {{
+            dec.groups.forEach(function(g) {{
+                g.variants.forEach(function(v) {{ grouped.add(v); }});
+            }});
         }}
-        const output = {{
+
+        var newVariants = [];
+        selected.forEach(function(vi) {{
+            if (!grouped.has(vi)) newVariants.push(vi);
+        }});
+
+        if (newVariants.length === 0) {{
+            alert('选中的变体已全部分组');
+            return;
+        }}
+
+        if (!state.decisions[recordId]) state.decisions[recordId] = {{ groups: [] }};
+        if (!state.decisions[recordId].groups) state.decisions[recordId].groups = [];
+
+        state.decisions[recordId].groups.push({{
+            type: type,
+            variants: newVariants.sort(function(a,b){{ return a-b; }})
+        }});
+
+        // Clear selection for this record
+        delete state.selections[recordId];
+    }}
+
+    function removeGroup(recordId, groupIndex) {{
+        var dec = state.decisions[recordId];
+        if (!dec || !dec.groups) return;
+        dec.groups.splice(groupIndex, 1);
+        if (dec.groups.length === 0) delete state.decisions[recordId];
+    }}
+
+    function manualMerge(record) {{
+        state.decisions[record.id] = {{
+            groups: [{{ type: 'keep', variants: record.variants.map(function(_, i) {{ return i; }}) }}]
+        }};
+        delete state.selections[record.id];
+    }}
+
+    function scrollNext() {{
+        var currentCenter = window.innerHeight * 0.5;
+        var nextCard = container.querySelector('.conflict-card:not(.resolved):not(.false-positive)');
+        if (!nextCard) return;
+        var nextTop = nextCard.getBoundingClientRect().top + window.pageYOffset;
+        var targetY = nextTop - currentCenter + (nextCard.offsetHeight / 2);
+        window.scrollTo({{ top: Math.max(0, targetY), behavior: 'smooth' }});
+    }}
+
+    function updateCard(recordId) {{
+        var record = records.find(function(r) {{ return r.id === recordId; }});
+        if (!record) return;
+        var oldCard = container.querySelector('.conflict-card[data-id="' + recordId + '"]');
+        if (!oldCard) return;
+        var newCard = buildCard(record);
+        oldCard.parentNode.replaceChild(newCard, oldCard);
+    }}
+
+    function unmerge(recordId) {{
+        // Mark this record as unmerged — override the auto-merge status
+        state.decisions[recordId] = {{ unmerge: true }};
+        delete state.selections[recordId];
+        // No alert needed — renderCards will immediately reflect the change
+    }}
+
+    // ===================== Progress =====================
+    function updateProgress() {{
+        var resolvedPending = 0;
+        records.forEach(function(r) {{
+            if (!r.isFalsePositive && isRecordResolved(r)) resolvedPending++;
+        }});
+        var pending = state.pendingRecords;
+        var pct = pending > 0 ? (resolvedPending / pending * 100).toFixed(1) : 100;
+        document.getElementById('progress-text').textContent =
+            'Auto-merged: ' + state.autoMergedRecords +
+            ' | Pending: ' + state.pendingRecords +
+            ' | Resolved: ' + resolvedPending + '/' + pending;
+        document.getElementById('progress-fill').style.width = pct + '%';
+
+        var hasDecisions = Object.keys(state.decisions).length > 0;
+        document.getElementById('export-btn').disabled = !hasDecisions;
+    }}
+
+    // ===================== Export =====================
+    document.getElementById('export-btn').addEventListener('click', function() {{
+        var resolvedPending = 0;
+        records.forEach(function(r) {{
+            if (!r.isFalsePositive && isRecordResolved(r)) resolvedPending++;
+        }});
+
+        // Build clean export
+        var exportDecisions = {{}};
+        for (var rid in state.decisions) {{
+            var dec = state.decisions[rid];
+            if (dec.groups) {{
+                exportDecisions[rid] = {{
+                    recordKey: records[rid] ? records[rid].key : '',
+                    recordType: records[rid] ? records[rid].type : '',
+                    groups: dec.groups.map(function(g) {{
+                        return {{ type: g.type, variants: g.variants }};
+                    }})
+                }};
+            }}
+        }}
+
+        var output = {{
             generatedAt: new Date().toISOString(),
             totalRecords: state.totalRecords,
-            totalVariants: state.totalVariants,
-            decidedCount: decidedCount,
-            decisions: state.decisions,
+            autoMergedRecords: state.autoMergedRecords,
+            pendingRecords: state.pendingRecords,
+            resolvedPending: resolvedPending,
+            decisions: exportDecisions,
         }};
-        const blob = new Blob([JSON.stringify(output, null, 2)], {{ type: 'application/json' }});
-        const url = URL.createObjectURL(blob);
-        const a = document.createElement('a');
+        var blob = new Blob([JSON.stringify(output, null, 2)], {{ type: 'application/json' }});
+        var url = URL.createObjectURL(blob);
+        var a = document.createElement('a');
         a.href = url;
         a.download = 'phase7_decisions.json';
         a.click();
@@ -551,15 +852,16 @@ body {{ font-family: -apple-system, "Microsoft YaHei", "Segoe UI", sans-serif; b
 
 def main():
     print('=' * 60)
-    print('Phase 7: Conflict Resolution — HTML Generator')
+    print('Phase 7: Conflict Resolution v2 — HTML Generator')
     print('=' * 60)
 
     if not os.path.exists(CONFLICTS_PATH):
         print(f'\n错误: 未找到冲突数据文件 {CONFLICTS_PATH}')
-        print('请先运行 Phase 6: python pipeline/06_detect_conflicts.py')
+        print('请先运行 Phase 6.5: python pipeline/06_5_filter_false_positives.py')
         return 1
 
-    data = load_conflicts()
+    with open(CONFLICTS_PATH, 'r', encoding='utf-8') as f:
+        data = json.load(f)
     total_records = len(data.get('records', []))
     print(f'\n加载冲突数据: {total_records} 条')
 
@@ -568,7 +870,6 @@ def main():
     type_b = sum(1 for r in embedded if r['type'] == 'name_conflict')
     print(f'过滤后: {len(embedded)} 条 (Type A: {type_a}, Type B: {type_b})')
 
-    # Count SVGs generated
     svg_count = sum(len(r['variants']) for r in embedded)
     print(f'生成 SVG 预览: {svg_count} 个')
 
@@ -576,7 +877,6 @@ def main():
 
     os.makedirs(os.path.dirname(OUTPUT_PATH), exist_ok=True)
 
-    # Write JSON data file (loaded via fetch, same as review.html)
     with open(DATA_JSON_PATH, 'w', encoding='utf-8') as f:
         json.dump({'records': embedded}, f, ensure_ascii=False)
     data_size_kb = os.path.getsize(DATA_JSON_PATH) / 1024
@@ -584,17 +884,13 @@ def main():
 
     with open(OUTPUT_PATH, 'w', encoding='utf-8') as f:
         f.write(html_content)
-
-    size_kb = len(html_content) / 1024
-    print(f'\n输出: {OUTPUT_PATH}')
-    print(f'大小: {size_kb:.1f} KB')
+    html_size_kb = os.path.getsize(OUTPUT_PATH) / 1024
+    print(f'输出: {OUTPUT_PATH} ({html_size_kb:.1f} KB)')
     print(f'卡片数: {len(embedded)}')
     print(f'SVG 数: {svg_count}')
-    print(f'\n注意: 此页面需要通过 HTTP 服务器访问（与 review.html 一样）')
-    print(f'  cd report && python -m http.server 8080')
-    print(f'  浏览器打开: http://localhost:8080/conflict_resolver.html')
-    return 0
+    print('\n请通过 HTTP 服务器访问: cd report && python -m http.server 8080')
+    print('浏览器打开: http://localhost:8080/conflict_resolver.html')
 
 
 if __name__ == '__main__':
-    sys.exit(main())
+    sys.exit(main() or 0)

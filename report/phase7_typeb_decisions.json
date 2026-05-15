@@ -1,0 +1,1340 @@
+{
+  "generatedAt": "2026-05-15T05:44:17.949Z",
+  "totalRecords": 84,
+  "autoMergedRecords": 0,
+  "pendingRecords": 84,
+  "resolvedPending": 84,
+  "decisions": {
+    "583": {
+      "recordKey": "",
+      "recordType": "",
+      "groups": [
+        {
+          "type": "keep",
+          "variants": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ]
+        }
+      ]
+    },
+    "584": {
+      "recordKey": "",
+      "recordType": "",
+      "groups": [
+        {
+          "type": "keep",
+          "variants": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ]
+        }
+      ]
+    },
+    "585": {
+      "recordKey": "",
+      "recordType": "",
+      "groups": [
+        {
+          "type": "keep",
+          "variants": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ]
+        }
+      ]
+    },
+    "586": {
+      "recordKey": "",
+      "recordType": "",
+      "groups": [
+        {
+          "type": "keep",
+          "variants": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ]
+        }
+      ]
+    },
+    "587": {
+      "recordKey": "",
+      "recordType": "",
+      "groups": [
+        {
+          "type": "keep",
+          "variants": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ]
+        }
+      ]
+    },
+    "946": {
+      "recordKey": "",
+      "recordType": "",
+      "groups": [
+        {
+          "type": "keep",
+          "variants": [
+            0,
+            1
+          ]
+        },
+        {
+          "type": "pua",
+          "variants": [
+            2
+          ]
+        }
+      ]
+    },
+    "947": {
+      "recordKey": "",
+      "recordType": "",
+      "groups": [
+        {
+          "type": "keep",
+          "variants": [
+            2,
+            3
+          ]
+        },
+        {
+          "type": "pua",
+          "variants": [
+            1
+          ]
+        },
+        {
+          "type": "pua",
+          "variants": [
+            0
+          ]
+        }
+      ]
+    },
+    "951": {
+      "recordKey": "",
+      "recordType": "",
+      "groups": [
+        {
+          "type": "keep",
+          "variants": [
+            0,
+            1,
+            2,
+            3
+          ]
+        }
+      ]
+    },
+    "958": {
+      "recordKey": "",
+      "recordType": "",
+      "groups": [
+        {
+          "type": "keep",
+          "variants": [
+            0,
+            1,
+            2
+          ]
+        }
+      ]
+    },
+    "963": {
+      "recordKey": "",
+      "recordType": "",
+      "groups": [
+        {
+          "type": "keep",
+          "variants": [
+            0,
+            1,
+            2
+          ]
+        }
+      ]
+    },
+    "978": {
+      "recordKey": "",
+      "recordType": "",
+      "groups": [
+        {
+          "type": "keep",
+          "variants": [
+            0,
+            1,
+            2,
+            3
+          ]
+        }
+      ]
+    },
+    "982": {
+      "recordKey": "",
+      "recordType": "",
+      "groups": [
+        {
+          "type": "keep",
+          "variants": [
+            0,
+            1,
+            2,
+            3
+          ]
+        }
+      ]
+    },
+    "983": {
+      "recordKey": "",
+      "recordType": "",
+      "groups": [
+        {
+          "type": "keep",
+          "variants": [
+            0,
+            2,
+            3
+          ]
+        },
+        {
+          "type": "pua",
+          "variants": [
+            1
+          ]
+        }
+      ]
+    },
+    "985": {
+      "recordKey": "",
+      "recordType": "",
+      "groups": [
+        {
+          "type": "keep",
+          "variants": [
+            0
+          ]
+        },
+        {
+          "type": "pua",
+          "variants": [
+            1,
+            2
+          ]
+        }
+      ]
+    },
+    "989": {
+      "recordKey": "",
+      "recordType": "",
+      "groups": [
+        {
+          "type": "keep",
+          "variants": [
+            0,
+            1,
+            2,
+            3
+          ]
+        }
+      ]
+    },
+    "990": {
+      "recordKey": "",
+      "recordType": "",
+      "groups": [
+        {
+          "type": "keep",
+          "variants": [
+            0,
+            1,
+            2,
+            3
+          ]
+        }
+      ]
+    },
+    "993": {
+      "recordKey": "",
+      "recordType": "",
+      "groups": [
+        {
+          "type": "keep",
+          "variants": [
+            1,
+            2
+          ]
+        },
+        {
+          "type": "pua",
+          "variants": [
+            0
+          ]
+        }
+      ]
+    },
+    "995": {
+      "recordKey": "",
+      "recordType": "",
+      "groups": [
+        {
+          "type": "keep",
+          "variants": [
+            0,
+            1,
+            2,
+            3
+          ]
+        }
+      ]
+    },
+    "996": {
+      "recordKey": "",
+      "recordType": "",
+      "groups": [
+        {
+          "type": "keep",
+          "variants": [
+            0,
+            1,
+            2,
+            3
+          ]
+        }
+      ]
+    },
+    "1000": {
+      "recordKey": "",
+      "recordType": "",
+      "groups": [
+        {
+          "type": "keep",
+          "variants": [
+            0,
+            1,
+            2
+          ]
+        }
+      ]
+    },
+    "1002": {
+      "recordKey": "",
+      "recordType": "",
+      "groups": [
+        {
+          "type": "keep",
+          "variants": [
+            0,
+            1
+          ]
+        },
+        {
+          "type": "pua",
+          "variants": [
+            2
+          ]
+        }
+      ]
+    },
+    "1004": {
+      "recordKey": "",
+      "recordType": "",
+      "groups": [
+        {
+          "type": "keep",
+          "variants": [
+            0,
+            1
+          ]
+        },
+        {
+          "type": "pua",
+          "variants": [
+            2
+          ]
+        }
+      ]
+    },
+    "1006": {
+      "recordKey": "",
+      "recordType": "",
+      "groups": [
+        {
+          "type": "keep",
+          "variants": [
+            0,
+            1
+          ]
+        },
+        {
+          "type": "pua",
+          "variants": [
+            2,
+            3
+          ]
+        }
+      ]
+    },
+    "1011": {
+      "recordKey": "",
+      "recordType": "",
+      "groups": [
+        {
+          "type": "keep",
+          "variants": [
+            0,
+            1,
+            3
+          ]
+        },
+        {
+          "type": "pua",
+          "variants": [
+            2
+          ]
+        }
+      ]
+    },
+    "1012": {
+      "recordKey": "",
+      "recordType": "",
+      "groups": [
+        {
+          "type": "keep",
+          "variants": [
+            0,
+            1,
+            2
+          ]
+        }
+      ]
+    },
+    "1014": {
+      "recordKey": "",
+      "recordType": "",
+      "groups": [
+        {
+          "type": "keep",
+          "variants": [
+            0,
+            1,
+            3
+          ]
+        },
+        {
+          "type": "pua",
+          "variants": [
+            2
+          ]
+        }
+      ]
+    },
+    "1016": {
+      "recordKey": "",
+      "recordType": "",
+      "groups": [
+        {
+          "type": "keep",
+          "variants": [
+            1,
+            2
+          ]
+        },
+        {
+          "type": "pua",
+          "variants": [
+            0
+          ]
+        }
+      ]
+    },
+    "1021": {
+      "recordKey": "",
+      "recordType": "",
+      "groups": [
+        {
+          "type": "keep",
+          "variants": [
+            0,
+            1,
+            2,
+            3
+          ]
+        }
+      ]
+    },
+    "1022": {
+      "recordKey": "",
+      "recordType": "",
+      "groups": [
+        {
+          "type": "keep",
+          "variants": [
+            0,
+            1
+          ]
+        },
+        {
+          "type": "pua",
+          "variants": [
+            2
+          ]
+        }
+      ]
+    },
+    "1027": {
+      "recordKey": "",
+      "recordType": "",
+      "groups": [
+        {
+          "type": "keep",
+          "variants": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "type": "pua",
+          "variants": [
+            3
+          ]
+        }
+      ]
+    },
+    "1028": {
+      "recordKey": "",
+      "recordType": "",
+      "groups": [
+        {
+          "type": "keep",
+          "variants": [
+            0,
+            2
+          ]
+        },
+        {
+          "type": "pua",
+          "variants": [
+            1
+          ]
+        }
+      ]
+    },
+    "1029": {
+      "recordKey": "",
+      "recordType": "",
+      "groups": [
+        {
+          "type": "keep",
+          "variants": [
+            0,
+            1
+          ]
+        },
+        {
+          "type": "pua",
+          "variants": [
+            2
+          ]
+        }
+      ]
+    },
+    "1030": {
+      "recordKey": "",
+      "recordType": "",
+      "groups": [
+        {
+          "type": "keep",
+          "variants": [
+            0,
+            2
+          ]
+        },
+        {
+          "type": "pua",
+          "variants": [
+            1
+          ]
+        }
+      ]
+    },
+    "1032": {
+      "recordKey": "",
+      "recordType": "",
+      "groups": [
+        {
+          "type": "keep",
+          "variants": [
+            0,
+            1,
+            2,
+            3
+          ]
+        }
+      ]
+    },
+    "1041": {
+      "recordKey": "",
+      "recordType": "",
+      "groups": [
+        {
+          "type": "keep",
+          "variants": [
+            0,
+            1,
+            2,
+            3
+          ]
+        }
+      ]
+    },
+    "1043": {
+      "recordKey": "",
+      "recordType": "",
+      "groups": [
+        {
+          "type": "keep",
+          "variants": [
+            0,
+            2,
+            3
+          ]
+        },
+        {
+          "type": "pua",
+          "variants": [
+            1
+          ]
+        }
+      ]
+    },
+    "1051": {
+      "recordKey": "",
+      "recordType": "",
+      "groups": [
+        {
+          "type": "keep",
+          "variants": [
+            0,
+            1
+          ]
+        },
+        {
+          "type": "pua",
+          "variants": [
+            2
+          ]
+        }
+      ]
+    },
+    "1052": {
+      "recordKey": "",
+      "recordType": "",
+      "groups": [
+        {
+          "type": "keep",
+          "variants": [
+            0,
+            1,
+            2,
+            3
+          ]
+        }
+      ]
+    },
+    "1057": {
+      "recordKey": "",
+      "recordType": "",
+      "groups": [
+        {
+          "type": "keep",
+          "variants": [
+            0,
+            1,
+            2,
+            3
+          ]
+        }
+      ]
+    },
+    "1063": {
+      "recordKey": "",
+      "recordType": "",
+      "groups": [
+        {
+          "type": "keep",
+          "variants": [
+            0,
+            1,
+            2,
+            3
+          ]
+        }
+      ]
+    },
+    "1068": {
+      "recordKey": "",
+      "recordType": "",
+      "groups": [
+        {
+          "type": "keep",
+          "variants": [
+            0,
+            1,
+            2,
+            3
+          ]
+        }
+      ]
+    },
+    "1071": {
+      "recordKey": "",
+      "recordType": "",
+      "groups": [
+        {
+          "type": "keep",
+          "variants": [
+            0,
+            1,
+            3
+          ]
+        },
+        {
+          "type": "pua",
+          "variants": [
+            2
+          ]
+        }
+      ]
+    },
+    "1073": {
+      "recordKey": "",
+      "recordType": "",
+      "groups": [
+        {
+          "type": "keep",
+          "variants": [
+            0,
+            1,
+            2
+          ]
+        }
+      ]
+    },
+    "1074": {
+      "recordKey": "",
+      "recordType": "",
+      "groups": [
+        {
+          "type": "keep",
+          "variants": [
+            0,
+            1,
+            2,
+            3
+          ]
+        }
+      ]
+    },
+    "1075": {
+      "recordKey": "",
+      "recordType": "",
+      "groups": [
+        {
+          "type": "keep",
+          "variants": [
+            0,
+            1,
+            2,
+            3
+          ]
+        }
+      ]
+    },
+    "1086": {
+      "recordKey": "",
+      "recordType": "",
+      "groups": [
+        {
+          "type": "keep",
+          "variants": [
+            0,
+            1,
+            2
+          ]
+        }
+      ]
+    },
+    "1088": {
+      "recordKey": "",
+      "recordType": "",
+      "groups": [
+        {
+          "type": "keep",
+          "variants": [
+            0,
+            1,
+            2
+          ]
+        }
+      ]
+    },
+    "1091": {
+      "recordKey": "",
+      "recordType": "",
+      "groups": [
+        {
+          "type": "keep",
+          "variants": [
+            0,
+            1,
+            2
+          ]
+        }
+      ]
+    },
+    "1092": {
+      "recordKey": "",
+      "recordType": "",
+      "groups": [
+        {
+          "type": "keep",
+          "variants": [
+            0,
+            1,
+            2,
+            3
+          ]
+        }
+      ]
+    },
+    "1096": {
+      "recordKey": "",
+      "recordType": "",
+      "groups": [
+        {
+          "type": "keep",
+          "variants": [
+            0,
+            1,
+            2
+          ]
+        }
+      ]
+    },
+    "1097": {
+      "recordKey": "",
+      "recordType": "",
+      "groups": [
+        {
+          "type": "keep",
+          "variants": [
+            0,
+            1,
+            2
+          ]
+        }
+      ]
+    },
+    "1099": {
+      "recordKey": "",
+      "recordType": "",
+      "groups": [
+        {
+          "type": "keep",
+          "variants": [
+            0,
+            1,
+            2,
+            3
+          ]
+        }
+      ]
+    },
+    "1100": {
+      "recordKey": "",
+      "recordType": "",
+      "groups": [
+        {
+          "type": "keep",
+          "variants": [
+            0,
+            1,
+            2
+          ]
+        }
+      ]
+    },
+    "1475": {
+      "recordKey": "",
+      "recordType": "",
+      "groups": [
+        {
+          "type": "keep",
+          "variants": [
+            0
+          ]
+        },
+        {
+          "type": "pua",
+          "variants": [
+            1
+          ]
+        }
+      ]
+    },
+    "1482": {
+      "recordKey": "",
+      "recordType": "",
+      "groups": [
+        {
+          "type": "keep",
+          "variants": [
+            0,
+            1
+          ]
+        }
+      ]
+    },
+    "1491": {
+      "recordKey": "",
+      "recordType": "",
+      "groups": [
+        {
+          "type": "keep",
+          "variants": [
+            0,
+            1
+          ]
+        }
+      ]
+    },
+    "1520": {
+      "recordKey": "",
+      "recordType": "",
+      "groups": [
+        {
+          "type": "keep",
+          "variants": [
+            0,
+            1
+          ]
+        }
+      ]
+    },
+    "1533": {
+      "recordKey": "",
+      "recordType": "",
+      "groups": [
+        {
+          "type": "keep",
+          "variants": [
+            0,
+            1
+          ]
+        }
+      ]
+    },
+    "1534": {
+      "recordKey": "",
+      "recordType": "",
+      "groups": [
+        {
+          "type": "keep",
+          "variants": [
+            0
+          ]
+        },
+        {
+          "type": "pua",
+          "variants": [
+            1
+          ]
+        }
+      ]
+    },
+    "1543": {
+      "recordKey": "",
+      "recordType": "",
+      "groups": [
+        {
+          "type": "keep",
+          "variants": [
+            0
+          ]
+        },
+        {
+          "type": "pua",
+          "variants": [
+            1
+          ]
+        }
+      ]
+    },
+    "1551": {
+      "recordKey": "",
+      "recordType": "",
+      "groups": [
+        {
+          "type": "keep",
+          "variants": [
+            0
+          ]
+        },
+        {
+          "type": "pua",
+          "variants": [
+            1
+          ]
+        }
+      ]
+    },
+    "1560": {
+      "recordKey": "",
+      "recordType": "",
+      "groups": [
+        {
+          "type": "keep",
+          "variants": [
+            0,
+            1
+          ]
+        }
+      ]
+    },
+    "1563": {
+      "recordKey": "",
+      "recordType": "",
+      "groups": [
+        {
+          "type": "keep",
+          "variants": [
+            0,
+            1
+          ]
+        }
+      ]
+    },
+    "1615": {
+      "recordKey": "",
+      "recordType": "",
+      "groups": [
+        {
+          "type": "keep",
+          "variants": [
+            0,
+            1
+          ]
+        }
+      ]
+    },
+    "1654": {
+      "recordKey": "",
+      "recordType": "",
+      "groups": [
+        {
+          "type": "keep",
+          "variants": [
+            0
+          ]
+        },
+        {
+          "type": "pua",
+          "variants": [
+            1
+          ]
+        }
+      ]
+    },
+    "1655": {
+      "recordKey": "",
+      "recordType": "",
+      "groups": [
+        {
+          "type": "keep",
+          "variants": [
+            0
+          ]
+        },
+        {
+          "type": "pua",
+          "variants": [
+            1
+          ]
+        }
+      ]
+    },
+    "1656": {
+      "recordKey": "",
+      "recordType": "",
+      "groups": [
+        {
+          "type": "keep",
+          "variants": [
+            0
+          ]
+        },
+        {
+          "type": "pua",
+          "variants": [
+            1
+          ]
+        }
+      ]
+    },
+    "1657": {
+      "recordKey": "",
+      "recordType": "",
+      "groups": [
+        {
+          "type": "keep",
+          "variants": [
+            0,
+            1
+          ]
+        }
+      ]
+    },
+    "1658": {
+      "recordKey": "",
+      "recordType": "",
+      "groups": [
+        {
+          "type": "keep",
+          "variants": [
+            0,
+            1
+          ]
+        }
+      ]
+    },
+    "1659": {
+      "recordKey": "",
+      "recordType": "",
+      "groups": [
+        {
+          "type": "keep",
+          "variants": [
+            0,
+            1
+          ]
+        }
+      ]
+    },
+    "1660": {
+      "recordKey": "",
+      "recordType": "",
+      "groups": [
+        {
+          "type": "keep",
+          "variants": [
+            0
+          ]
+        },
+        {
+          "type": "pua",
+          "variants": [
+            1
+          ]
+        }
+      ]
+    },
+    "1662": {
+      "recordKey": "",
+      "recordType": "",
+      "groups": [
+        {
+          "type": "keep",
+          "variants": [
+            0,
+            1
+          ]
+        }
+      ]
+    },
+    "1665": {
+      "recordKey": "",
+      "recordType": "",
+      "groups": [
+        {
+          "type": "keep",
+          "variants": [
+            1
+          ]
+        },
+        {
+          "type": "pua",
+          "variants": [
+            0
+          ]
+        }
+      ]
+    },
+    "1666": {
+      "recordKey": "",
+      "recordType": "",
+      "groups": [
+        {
+          "type": "keep",
+          "variants": [
+            1
+          ]
+        },
+        {
+          "type": "pua",
+          "variants": [
+            0
+          ]
+        }
+      ]
+    },
+    "1673": {
+      "recordKey": "",
+      "recordType": "",
+      "groups": [
+        {
+          "type": "keep",
+          "variants": [
+            0,
+            1
+          ]
+        }
+      ]
+    },
+    "1675": {
+      "recordKey": "",
+      "recordType": "",
+      "groups": [
+        {
+          "type": "keep",
+          "variants": [
+            0,
+            1
+          ]
+        }
+      ]
+    },
+    "1676": {
+      "recordKey": "",
+      "recordType": "",
+      "groups": [
+        {
+          "type": "keep",
+          "variants": [
+            0,
+            1
+          ]
+        }
+      ]
+    },
+    "1683": {
+      "recordKey": "",
+      "recordType": "",
+      "groups": [
+        {
+          "type": "keep",
+          "variants": [
+            0,
+            1
+          ]
+        }
+      ]
+    },
+    "1685": {
+      "recordKey": "",
+      "recordType": "",
+      "groups": [
+        {
+          "type": "keep",
+          "variants": [
+            0,
+            1
+          ]
+        }
+      ]
+    },
+    "1687": {
+      "recordKey": "",
+      "recordType": "",
+      "groups": [
+        {
+          "type": "keep",
+          "variants": [
+            0,
+            1
+          ]
+        }
+      ]
+    },
+    "1688": {
+      "recordKey": "",
+      "recordType": "",
+      "groups": [
+        {
+          "type": "keep",
+          "variants": [
+            0,
+            1
+          ]
+        }
+      ]
+    },
+    "1689": {
+      "recordKey": "",
+      "recordType": "",
+      "groups": [
+        {
+          "type": "keep",
+          "variants": [
+            0,
+            1
+          ]
+        }
+      ]
+    },
+    "1690": {
+      "recordKey": "",
+      "recordType": "",
+      "groups": [
+        {
+          "type": "keep",
+          "variants": [
+            0,
+            1
+          ]
+        }
+      ]
+    },
+    "1696": {
+      "recordKey": "",
+      "recordType": "",
+      "groups": [
+        {
+          "type": "keep",
+          "variants": [
+            0,
+            1
+          ]
+        }
+      ]
+    }
+  }
+}

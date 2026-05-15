@@ -37,12 +37,15 @@ from datetime import datetime, timezone
 
 
 def load_registry(registry_path=None):
-    """加载 glyph_registry.json"""
+    """加载 glyph_registry.json，优先使用 resolved 版本。"""
     if registry_path is None:
-        registry_path = os.path.join(
-            os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
-            'registry', 'glyph_registry.json',
-        )
+        base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+        resolved_path = os.path.join(
+            base_dir, 'registry', 'glyph_registry_resolved.json')
+        default_path = os.path.join(
+            base_dir, 'registry', 'glyph_registry.json')
+        registry_path = resolved_path if os.path.exists(
+            resolved_path) else default_path
     with open(registry_path, 'r', encoding='utf-8') as f:
         data = json.load(f)
     return data

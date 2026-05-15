@@ -16,10 +16,38 @@ import os
 import sys
 
 DATA_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-CONFLICTS_PATH = os.path.join(DATA_DIR, 'report', 'filtered_conflicts.json')
-OUTPUT_PATH = os.path.join(DATA_DIR, 'report', 'conflict_resolver.html')
-DATA_JSON_PATH = os.path.join(
+
+# Allow command-line override for input/output paths
+DEFAULT_CONFLICTS = os.path.join(DATA_DIR, 'report', 'filtered_conflicts.json')
+DEFAULT_OUTPUT = os.path.join(DATA_DIR, 'report', 'conflict_resolver.html')
+DEFAULT_DATA_JSON = os.path.join(
     DATA_DIR, 'report', 'conflict_resolver_data.json')
+
+CONFLICTS_PATH = DEFAULT_CONFLICTS
+OUTPUT_PATH = DEFAULT_OUTPUT
+DATA_JSON_PATH = DEFAULT_DATA_JSON
+TYPE_FILTER = None  # 'type_a' or 'type_b' or None for all
+
+
+def parse_args():
+    """Parse command line arguments."""
+    global CONFLICTS_PATH, OUTPUT_PATH, DATA_JSON_PATH, TYPE_FILTER
+    args = sys.argv[1:]
+    i = 0
+    while i < len(args):
+        if args[i] in ('--input', '-i') and i + 1 < len(args):
+            CONFLICTS_PATH = os.path.abspath(args[i + 1])
+            i += 2
+        elif args[i] in ('--output', '-o') and i + 1 < len(args):
+            OUTPUT_PATH = os.path.abspath(args[i + 1])
+            base = os.path.splitext(OUTPUT_PATH)[0]
+            DATA_JSON_PATH = base + '_data.json'
+            i += 2
+        elif args[i] in ('--type-filter', '-t') and i + 1 < len(args):
+            TYPE_FILTER = args[i + 1]
+            i += 2
+        else:
+            i += 1
 
 
 def contour_to_path(contour):
@@ -121,6 +149,14 @@ def build_embedded_records(data):
     embedded = []
     for original_idx, r in enumerate(all_records):
         if r['type'] not in ('unicode_conflict', 'name_conflict'):
+            continue
+        # Apply type filter if specified
+        if TYPE_FILTER == 'type_a' and r['type'] != 'unicode_conflict':
+            continue
+        if TYPE_FILTER == 'type_b' and r['type'] != 'name_conflict':
+            continue
+        # For Type B filter, skip false positives (already auto-merged)
+        if TYPE_FILTER == 'type_b' and r.get('isFalsePositive'):
             continue
         variants = []
         for vi, v in enumerate(r['variants']):
@@ -362,7 +398,7 @@ body {{ font-family: -apple-system, "Microsoft YaHei", "Segoe UI", sans-serif; b
     const container = document.getElementById('card-container');
 
     // Load data
-    fetch('conflict_resolver_data.json')
+    fetch('{os.path.basename(DATA_JSON_PATH)}')
         .then(function(r) {{ return r.json(); }})
         .then(function(data) {{
             records = data.records || [];
@@ -498,7 +534,7 @@ body {{ font-family: -apple-system, "Microsoft YaHei", "Segoe UI", sans-serif; b
                 + ' — 这些变体已自动合并</div>';
         }} else {{
             hintHtml = '<div class="card-hint">'
-                + '选中变体后点击"设为保留组"或"添加 PUA 组"进行分组。'
+                + ' 选中变体后点击"设为保留组"或"添加 PUA 组"进行分组，或点击下方"一键分组"快速处理。'
                 + (record.type === 'unicode_conflict' ? ' 保留组合并后共享原 unicode。' : ' 保留组合并后共享原名称。')
                 + '</div>';
         }}
@@ -530,6 +566,7 @@ body {{ font-family: -apple-system, "Microsoft YaHei", "Segoe UI", sans-serif; b
                 + '<label><input type="checkbox" class="select-all" data-rid="' + record.id + '"> 全选</label>'
                 + '<button class="btn-group-action success" data-rid="' + record.id + '" data-action="keep">设为保留组</button>'
                 + '<button class="btn-group-action warning" data-rid="' + record.id + '" data-action="pua">添加 PUA 组</button>'
+                + '<button class="btn-group-action primary" data-rid="' + record.id + '" data-action="auto-group" title="CSS来源最多的变体保留，其余全部添加 PUA 组">一键分组</button>'
                 + '<button class="btn-group-action" data-rid="' + record.id + '" data-action="clear">取消选择</button>'
                 + '</div>';
         }}
@@ -651,12 +688,17 @@ body {{ font-family: -apple-system, "Microsoft YaHei", "Segoe UI", sans-serif; b
             var action = btn.dataset.action;
             if (action === 'clear') {{
                 delete state.selections[rid];
+            }} else if (action === 'auto-group') {{
+                autoGroup(rid);
             }} else {{
                 createGroup(rid, action);
             }}
             updateCard(rid);
             updateProgress();
             saveToLocalStorage();
+            if (action === 'auto-group') {{
+                scrollNext();
+            }}
             return;
         }}
 
@@ -786,6 +828,44 @@ body {{ font-family: -apple-system, "Microsoft YaHei", "Segoe UI", sans-serif; b
         // No alert needed — renderCards will immediately reflect the change
     }}
 
+    function autoGroup(recordId) {{
+        var record = records.find(function(r) {{ return r.id === recordId; }});
+        if (!record || !record.variants || record.variants.length === 0) return;
+
+        // Overwrite existing decisions for this record
+        delete state.selections[recordId];
+        state.decisions[recordId] = {{ groups: [] }};
+
+        // Find variant with highest sourceCount; tie-break by lowest index
+        var keepIdx = 0;
+        var maxCount = record.variants[0].sourceCount || 0;
+        for (var i = 1; i < record.variants.length; i++) {{
+            var cnt = record.variants[i].sourceCount || 0;
+            if (cnt > maxCount) {{
+                maxCount = cnt;
+                keepIdx = i;
+            }}
+        }}
+
+        // Keep the variant with most CSS sources
+        state.decisions[recordId].groups.push({{
+            type: 'keep',
+            variants: [keepIdx]
+        }});
+
+        // Remaining variants -> pua group
+        if (record.variants.length > 1) {{
+            var rest = [];
+            for (var i = 0; i < record.variants.length; i++) {{
+                if (i !== keepIdx) rest.push(i);
+            }}
+            state.decisions[recordId].groups.push({{
+                type: 'pua',
+                variants: rest
+            }});
+        }}
+    }}
+
     // ===================== Progress =====================
     function updateProgress() {{
         var resolvedPending = 0;
@@ -851,9 +931,13 @@ body {{ font-family: -apple-system, "Microsoft YaHei", "Segoe UI", sans-serif; b
 
 
 def main():
+    parse_args()
+
     print('=' * 60)
     print('Phase 7: Conflict Resolution v2 — HTML Generator')
     print('=' * 60)
+    print(f'输入: {CONFLICTS_PATH}')
+    print(f'输出: {OUTPUT_PATH}')
 
     if not os.path.exists(CONFLICTS_PATH):
         print(f'\n错误: 未找到冲突数据文件 {CONFLICTS_PATH}')

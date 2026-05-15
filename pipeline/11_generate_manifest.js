@@ -96,9 +96,13 @@ function generateDemoHtml(outputJson) {
     .map((g) => `.${CSS_ICON_PREFIX}${g.name}:before { content: "\\${g.unicode}"; }`)
     .join('\n');
 
+  // E000-E5FF = newly allocated by pipeline (conflict PUA)
+  // E600-EAFF = original source icons (naturally in PUA range)
+  const isPuaConflict = (unicode) => { const u = parseInt(unicode, 16); return u >= 0xE000 && u < 0xE600; };
+
   const iconItems = icons
     .map((g) => {
-      const isPua = parseInt(g.unicode, 16) >= 0xE000;
+      const isPua = isPuaConflict(g.unicode);
       const badge = isPua ? '<span class="badge-pua">PUA</span>' : '';
       const liClass = isPua ? 'dib dib-pua' : 'dib';
       const decimal = parseInt(g.unicode, 16);
@@ -111,7 +115,7 @@ function generateDemoHtml(outputJson) {
     .join('\n');
 
   // Stats
-  const puaCount = icons.filter((g) => parseInt(g.unicode, 16) >= 0xE000).length;
+  const puaCount = icons.filter((g) => isPuaConflict(g.unicode)).length;
   const aliasCount = icons.reduce((sum, g) => sum + (g.aliases?.length || 0), 0);
   const projectSet = new Set(icons.flatMap((g) => g.affectedProjects || []));
 
@@ -194,7 +198,7 @@ ${iconItems}
   <div class="tab-unicode" id="tab-unicode" style="display:none">
     <ul class="icon-list dib-box">
 ${icons.map((g) => {
-    const isPua = parseInt(g.unicode, 16) >= 0xE000;
+    const isPua = isPuaConflict(g.unicode);
     const badge = isPua ? '<span class="badge-pua">PUA</span>' : '';
     const liClass = isPua ? 'dib dib-pua' : 'dib';
     const decimal = parseInt(g.unicode, 16);

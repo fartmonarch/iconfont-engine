@@ -1,0 +1,6715 @@
+[
+  {
+    "name": "icon-jiazai",
+    "unicode": "E600",
+    "aliases": [
+      "icon-jiazai"
+    ],
+    "projects": [],
+    "resolution": "single_source"
+  },
+  {
+    "name": "icon-xiansuoguanli",
+    "unicode": "E601",
+    "aliases": [
+      "icon-xiansuoguanli"
+    ],
+    "projects": [],
+    "resolution": "single_source"
+  },
+  {
+    "name": "icon-bangzhu",
+    "unicode": "E607",
+    "aliases": [
+      "icon-bangzhu"
+    ],
+    "projects": [],
+    "resolution": "single_source"
+  },
+  {
+    "name": "icon-eye",
+    "unicode": "E658",
+    "aliases": [
+      "icon-eye"
+    ],
+    "projects": [],
+    "resolution": "single_source"
+  },
+  {
+    "name": "icon-close-circle",
+    "unicode": "E65A",
+    "aliases": [
+      "icon-close-circle"
+    ],
+    "projects": [],
+    "resolution": "single_source"
+  },
+  {
+    "name": "icon-reload",
+    "unicode": "E65B",
+    "aliases": [
+      "icon-reload"
+    ],
+    "projects": [],
+    "resolution": "single_source"
+  },
+  {
+    "name": "icon-file-word",
+    "unicode": "E01E",
+    "aliases": [
+      "icon-file-CSS",
+      "icon-file-Excel",
+      "icon-file-ExperienceDesign",
+      "icon-file-HTML",
+      "icon-file-PDF",
+      "icon-file-Photoshop",
+      "icon-file-PowerPoint",
+      "icon-file-Text",
+      "icon-file-Video",
+      "icon-file-exe",
+      "icon-file-image",
+      "icon-file-keynote",
+      "icon-file-lllustrator",
+      "icon-file-music",
+      "icon-file-sketch",
+      "icon-file-word",
+      "icon-file-xmind",
+      "icon-file-zip"
+    ],
+    "projects": [],
+    "resolution": "single_source"
+  },
+  {
+    "name": "icon-xiafan",
+    "unicode": "E01F",
+    "aliases": [
+      "icon-xiafan"
+    ],
+    "projects": [],
+    "resolution": "single_source"
+  },
+  {
+    "name": "icon-file-copy",
+    "unicode": "E65C",
+    "aliases": [
+      "icon-file-copy"
+    ],
+    "projects": [],
+    "resolution": "single_source"
+  },
+  {
+    "name": "icon-gengduo",
+    "unicode": "E65D",
+    "aliases": [
+      "icon-gengduo"
+    ],
+    "projects": [],
+    "resolution": "single_source"
+  },
+  {
+    "name": "icon-liuyan",
+    "unicode": "E65E",
+    "aliases": [
+      "icon-liuyan"
+    ],
+    "projects": [],
+    "resolution": "single_source"
+  },
+  {
+    "name": "icon-zhuye",
+    "unicode": "E65F",
+    "aliases": [
+      "icon-zhuye"
+    ],
+    "projects": [],
+    "resolution": "single_source"
+  },
+  {
+    "name": "icon-tianjia",
+    "unicode": "E660",
+    "aliases": [
+      "icon-tianjia"
+    ],
+    "projects": [],
+    "resolution": "single_source"
+  },
+  {
+    "name": "icon-gongwenbao",
+    "unicode": "E661",
+    "aliases": [
+      "icon-gongwenbao"
+    ],
+    "projects": [],
+    "resolution": "single_source"
+  },
+  {
+    "name": "icon-xingming",
+    "unicode": "E662",
+    "aliases": [
+      "icon-xingming"
+    ],
+    "projects": [],
+    "resolution": "single_source"
+  },
+  {
+    "name": "icon-zuzhi",
+    "unicode": "E663",
+    "aliases": [
+      "icon-zuzhi"
+    ],
+    "projects": [],
+    "resolution": "single_source"
+  },
+  {
+    "name": "icon-erweima",
+    "unicode": "E664",
+    "aliases": [
+      "icon-erweima"
+    ],
+    "projects": [],
+    "resolution": "single_source"
+  },
+  {
+    "name": "icon-yonghuguanli1",
+    "unicode": "E665",
+    "aliases": [
+      "icon-yonghuguanli1"
+    ],
+    "projects": [],
+    "resolution": "single_source"
+  },
+  {
+    "name": "icon-dingdanguanli1",
+    "unicode": "E666",
+    "aliases": [
+      "icon-dingdanguanli1"
+    ],
+    "projects": [],
+    "resolution": "single_source"
+  },
+  {
+    "name": "icon-shezhi",
+    "unicode": "E667",
+    "aliases": [
+      "icon-shezhi"
+    ],
+    "projects": [],
+    "resolution": "single_source"
+  },
+  {
+    "name": "icon-wenjianjia",
+    "unicode": "E668",
+    "aliases": [
+      "icon-wenjianjia"
+    ],
+    "projects": [],
+    "resolution": "single_source"
+  },
+  {
+    "name": "icon-wendang",
+    "unicode": "E669",
+    "aliases": [
+      "icon-wendang"
+    ],
+    "projects": [],
+    "resolution": "single_source"
+  },
+  {
+    "name": "icon-tuwen",
+    "unicode": "E66A",
+    "aliases": [
+      "icon-tuwen"
+    ],
+    "projects": [],
+    "resolution": "single_source"
+  },
+  {
+    "name": "icon-wenda",
+    "unicode": "E66B",
+    "aliases": [
+      "icon-wenda"
+    ],
+    "projects": [],
+    "resolution": "single_source"
+  },
+  {
+    "name": "icon-chanpin",
+    "unicode": "E66C",
+    "aliases": [
+      "icon-chanpin"
+    ],
+    "projects": [],
+    "resolution": "single_source"
+  },
+  {
+    "name": "icon-file-gonggongwenjianjia",
+    "unicode": "E02C",
+    "aliases": [
+      "icon-file-gonggongwenjianjia",
+      "icon-file-wenjianjia"
+    ],
+    "projects": [],
+    "resolution": "single_source"
+  },
+  {
+    "name": "icon-a-zongbiaobao1x",
+    "unicode": "E66D",
+    "aliases": [
+      "icon-a-zongbiaobao1x"
+    ],
+    "projects": [],
+    "resolution": "single_source"
+  },
+  {
+    "name": "icon-a-changxianbaofei1x",
+    "unicode": "E66E",
+    "aliases": [
+      "icon-a-changxianbaofei1x"
+    ],
+    "projects": [],
+    "resolution": "single_source"
+  },
+  {
+    "name": "icon-a-yugujixiao1x",
+    "unicode": "E66F",
+    "aliases": [
+      "icon-a-yugujixiao1x"
+    ],
+    "projects": [],
+    "resolution": "single_source"
+  },
+  {
+    "name": "icon-yincang",
+    "unicode": "E670",
+    "aliases": [
+      "icon-yincang"
+    ],
+    "projects": [],
+    "resolution": "single_source"
+  },
+  {
+    "name": "icon-xianshi",
+    "unicode": "E671",
+    "aliases": [
+      "icon-xianshi"
+    ],
+    "projects": [],
+    "resolution": "single_source"
+  },
+  {
+    "name": "icon-arrow-left",
+    "unicode": "E08B",
+    "aliases": [
+      "icon-arrow-left"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-file-jiazaishibai",
+    "unicode": "E02D",
+    "aliases": [
+      "icon-file-jiazaishibai"
+    ],
+    "projects": [],
+    "resolution": "single_source"
+  },
+  {
+    "name": "icon-time",
+    "unicode": "E6DB",
+    "aliases": [
+      "icon-time"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-tv",
+    "unicode": "E02E",
+    "aliases": [
+      "icon-tv"
+    ],
+    "projects": [],
+    "resolution": "single_source"
+  },
+  {
+    "name": "icon-play_back",
+    "unicode": "E02F",
+    "aliases": [
+      "icon-play_back"
+    ],
+    "projects": [],
+    "resolution": "single_source"
+  },
+  {
+    "name": "icon-message",
+    "unicode": "E031",
+    "aliases": [
+      "icon-message"
+    ],
+    "projects": [],
+    "resolution": "single_source"
+  },
+  {
+    "name": "icon-writea_commentary",
+    "unicode": "E032",
+    "aliases": [
+      "icon-writea_commentary"
+    ],
+    "projects": [],
+    "resolution": "single_source"
+  },
+  {
+    "name": "icon-good",
+    "unicode": "E033",
+    "aliases": [
+      "icon-good"
+    ],
+    "projects": [],
+    "resolution": "single_source"
+  },
+  {
+    "name": "icon-personal_insurance",
+    "unicode": "E034",
+    "aliases": [
+      "icon-personal_insurance"
+    ],
+    "projects": [],
+    "resolution": "single_source"
+  },
+  {
+    "name": "icon-community",
+    "unicode": "E035",
+    "aliases": [
+      "icon-community"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-share1",
+    "unicode": "E038",
+    "aliases": [
+      "icon-share1"
+    ],
+    "projects": [],
+    "resolution": "single_source"
+  },
+  {
+    "name": "icon-zhuanqu-",
+    "unicode": "E08F",
+    "aliases": [
+      "icon-zhuanqu-"
+    ],
+    "projects": [],
+    "resolution": "single_source"
+  },
+  {
+    "name": "icon-Sheldon",
+    "unicode": "E76D",
+    "aliases": [
+      "icon-Sheldon"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-calculator_fill",
+    "unicode": "E7A5",
+    "aliases": [
+      "icon-calculator_fill"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-abacus_fill",
+    "unicode": "E7A7",
+    "aliases": [
+      "icon-abacus_fill"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-business_fill",
+    "unicode": "E7A8",
+    "aliases": [
+      "icon-business_fill"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-bills_fill",
+    "unicode": "E7A9",
+    "aliases": [
+      "icon-bills_fill"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-bag_fill",
+    "unicode": "E7AA",
+    "aliases": [
+      "icon-bag_fill"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-company_fill",
+    "unicode": "E7AC",
+    "aliases": [
+      "icon-company_fill"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-cards_fill",
+    "unicode": "E7AD",
+    "aliases": [
+      "icon-cards_fill"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-disability_fill",
+    "unicode": "E7AE",
+    "aliases": [
+      "icon-disability_fill"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-datagrow_fill",
+    "unicode": "E7AF",
+    "aliases": [
+      "icon-datagrow_fill"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-flower_fill",
+    "unicode": "E7B1",
+    "aliases": [
+      "icon-flower_fill"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-feature_fill",
+    "unicode": "E7B3",
+    "aliases": [
+      "icon-feature_fill"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-gift_fill",
+    "unicode": "E7B4",
+    "aliases": [
+      "icon-gift_fill"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-image_fill",
+    "unicode": "E7B6",
+    "aliases": [
+      "icon-image_fill"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-more_fill",
+    "unicode": "E7BB",
+    "aliases": [
+      "icon-more_fill"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-navigation_fill",
+    "unicode": "E7BC",
+    "aliases": [
+      "icon-navigation_fill"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-insurance_fill",
+    "unicode": "E7BD",
+    "aliases": [
+      "icon-insurance_fill"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-pei_fill",
+    "unicode": "E7BE",
+    "aliases": [
+      "icon-pei_fill"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-phone_fill",
+    "unicode": "E7BF",
+    "aliases": [
+      "icon-phone_fill"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-policy_fill1",
+    "unicode": "E7C1",
+    "aliases": [
+      "icon-policy_fill1"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-posts_fill",
+    "unicode": "E7C2",
+    "aliases": [
+      "icon-posts_fill"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-planbook_fill",
+    "unicode": "E7C3",
+    "aliases": [
+      "icon-planbook_fill"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-question_fill",
+    "unicode": "E7C4",
+    "aliases": [
+      "icon-question_fill"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-ringtone_fill",
+    "unicode": "E7C5",
+    "aliases": [
+      "icon-ringtone_fill"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-new_line",
+    "unicode": "E7C6",
+    "aliases": [
+      "icon-new_line"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-speak_fill",
+    "unicode": "E024",
+    "aliases": [
+      "icon-speak_fill"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-searchpolicy_fill",
+    "unicode": "E7C7",
+    "aliases": [
+      "icon-searchpolicy_fill"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-safety_fill",
+    "unicode": "E7C8",
+    "aliases": [
+      "icon-safety_fill"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-wallet_fill",
+    "unicode": "E7C9",
+    "aliases": [
+      "icon-wallet_fill"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-quan_fill",
+    "unicode": "E7CA",
+    "aliases": [
+      "icon-quan_fill"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-diamond_fill",
+    "unicode": "E7CD",
+    "aliases": [
+      "icon-diamond_fill"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-bill_compute",
+    "unicode": "E7D5",
+    "aliases": [
+      "icon-bill_compute"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-birthday_fill",
+    "unicode": "E7DE",
+    "aliases": [
+      "icon-birthday_fill"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-giving_fill",
+    "unicode": "E7DF",
+    "aliases": [
+      "icon-giving_fill"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-cloud_line",
+    "unicode": "E7E4",
+    "aliases": [
+      "icon-cloud_line"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-recommend1",
+    "unicode": "E7FC",
+    "aliases": [
+      "icon-recommend1"
+    ],
+    "projects": [],
+    "resolution": "single_source"
+  },
+  {
+    "name": "icon-edit2",
+    "unicode": "E812",
+    "aliases": [
+      "icon-edit2",
+      "icon-edit3"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-risksuggestion",
+    "unicode": "E81A",
+    "aliases": [
+      "icon-risksuggestion"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-zhuanqu_huabanfuben",
+    "unicode": "E840",
+    "aliases": [
+      "icon-zhuanqu_huabanfuben"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-sanjiaodown",
+    "unicode": "E85E",
+    "aliases": [
+      "icon-sanjiaodown"
+    ],
+    "projects": [],
+    "resolution": "single_source"
+  },
+  {
+    "name": "icon-number_line",
+    "unicode": "E85F",
+    "aliases": [
+      "icon-number_line"
+    ],
+    "projects": [],
+    "resolution": "single_source"
+  },
+  {
+    "name": "icon-calendar_line",
+    "unicode": "E860",
+    "aliases": [
+      "icon-calendar_line"
+    ],
+    "projects": [],
+    "resolution": "single_source"
+  },
+  {
+    "name": "icon-time_line",
+    "unicode": "E861",
+    "aliases": [
+      "icon-time_line"
+    ],
+    "projects": [],
+    "resolution": "single_source"
+  },
+  {
+    "name": "icon-right_line",
+    "unicode": "E862",
+    "aliases": [
+      "icon-right_line"
+    ],
+    "projects": [],
+    "resolution": "single_source"
+  },
+  {
+    "name": "icon-paly_line",
+    "unicode": "E863",
+    "aliases": [
+      "icon-paly_line"
+    ],
+    "projects": [],
+    "resolution": "single_source"
+  },
+  {
+    "name": "icon-recommend_line",
+    "unicode": "E864",
+    "aliases": [
+      "icon-recommend_line"
+    ],
+    "projects": [],
+    "resolution": "single_source"
+  },
+  {
+    "name": "icon-cocher_line",
+    "unicode": "E866",
+    "aliases": [
+      "icon-cocher_line"
+    ],
+    "projects": [],
+    "resolution": "single_source"
+  },
+  {
+    "name": "icon-commutation_line",
+    "unicode": "E867",
+    "aliases": [
+      "icon-commutation_line"
+    ],
+    "projects": [],
+    "resolution": "single_source"
+  },
+  {
+    "name": "icon-eyes_close_line",
+    "unicode": "E868",
+    "aliases": [
+      "icon-eyes_close_line"
+    ],
+    "projects": [],
+    "resolution": "single_source"
+  },
+  {
+    "name": "icon-basic_knowledge_line",
+    "unicode": "E869",
+    "aliases": [
+      "icon-basic_knowledge_line"
+    ],
+    "projects": [],
+    "resolution": "single_source"
+  },
+  {
+    "name": "icon-close_fill",
+    "unicode": "E86C",
+    "aliases": [
+      "icon-close_fill"
+    ],
+    "projects": [],
+    "resolution": "single_source"
+  },
+  {
+    "name": "icon-eyes_open_line",
+    "unicode": "E86D",
+    "aliases": [
+      "icon-eyes_open_line"
+    ],
+    "projects": [],
+    "resolution": "single_source"
+  },
+  {
+    "name": "icon-top",
+    "unicode": "E059",
+    "aliases": [
+      "icon-top"
+    ],
+    "projects": [],
+    "resolution": "single_source"
+  },
+  {
+    "name": "icon-choose_done_fill_b",
+    "unicode": "E870",
+    "aliases": [
+      "icon-choose_done_fill_b"
+    ],
+    "projects": [],
+    "resolution": "single_source"
+  },
+  {
+    "name": "icon-client_line_b",
+    "unicode": "E873",
+    "aliases": [
+      "icon-client_line_b"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-production_library",
+    "unicode": "E05A",
+    "aliases": [
+      "icon-production_library"
+    ],
+    "projects": [],
+    "resolution": "single_source"
+  },
+  {
+    "name": "icon-dd_add",
+    "unicode": "E890",
+    "aliases": [
+      "icon-dd_add"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-_huaban1",
+    "unicode": "E896",
+    "aliases": [
+      "icon-_huaban1"
+    ],
+    "projects": [],
+    "resolution": "single_source"
+  },
+  {
+    "name": "icon-answer_font",
+    "unicode": "E05B",
+    "aliases": [
+      "icon-answer_font"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-search1",
+    "unicode": "E89E",
+    "aliases": [
+      "icon-search",
+      "icon-search1"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-dd_photo",
+    "unicode": "E8A2",
+    "aliases": [
+      "icon-dd_photo"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-phone_fill1",
+    "unicode": "E05D",
+    "aliases": [
+      "icon-phone_fill1"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-family",
+    "unicode": "E05E",
+    "aliases": [
+      "icon-family"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-recommend2",
+    "unicode": "E05F",
+    "aliases": [
+      "icon-recommend2"
+    ],
+    "projects": [],
+    "resolution": "single_source"
+  },
+  {
+    "name": "icon-phone-card",
+    "unicode": "E060",
+    "aliases": [
+      "icon-phone-card"
+    ],
+    "projects": [],
+    "resolution": "single_source"
+  },
+  {
+    "name": "icon-calendar_fill",
+    "unicode": "E8AF",
+    "aliases": [
+      "icon-calendar_fill"
+    ],
+    "projects": [],
+    "resolution": "single_source"
+  },
+  {
+    "name": "icon-wechatpay_fill",
+    "unicode": "E8B2",
+    "aliases": [
+      "icon-wechatpay_fill"
+    ],
+    "projects": [],
+    "resolution": "single_source"
+  },
+  {
+    "name": "icon-downloadd",
+    "unicode": "E8B7",
+    "aliases": [
+      "icon-downloadd"
+    ],
+    "projects": [],
+    "resolution": "single_source"
+  },
+  {
+    "name": "icon-check",
+    "unicode": "E8B8",
+    "aliases": [
+      "icon-check"
+    ],
+    "projects": [],
+    "resolution": "single_source"
+  },
+  {
+    "name": "icon-answer2",
+    "unicode": "E8B9",
+    "aliases": [
+      "icon-answer2"
+    ],
+    "projects": [],
+    "resolution": "single_source"
+  },
+  {
+    "name": "icon-phone2",
+    "unicode": "E8BB",
+    "aliases": [
+      "icon-phone2"
+    ],
+    "projects": [],
+    "resolution": "single_source"
+  },
+  {
+    "name": "icon-email",
+    "unicode": "E8BC",
+    "aliases": [
+      "icon-email"
+    ],
+    "projects": [],
+    "resolution": "single_source"
+  },
+  {
+    "name": "icon-increase_line-01",
+    "unicode": "E8D4",
+    "aliases": [
+      "icon-increase_line-01"
+    ],
+    "projects": [],
+    "resolution": "single_source"
+  },
+  {
+    "name": "icon-increase_line",
+    "unicode": "E091",
+    "aliases": [
+      "icon-increase_line"
+    ],
+    "projects": [],
+    "resolution": "single_source"
+  },
+  {
+    "name": "icon-eyes_line_b",
+    "unicode": "E8DC",
+    "aliases": [
+      "icon-eyes_line_b"
+    ],
+    "projects": [],
+    "resolution": "single_source"
+  },
+  {
+    "name": "icon-close_eyes_line_b",
+    "unicode": "E8DF",
+    "aliases": [
+      "icon-close_eyes_line_b"
+    ],
+    "projects": [],
+    "resolution": "single_source"
+  },
+  {
+    "name": "icon-123-011",
+    "unicode": "E8ED",
+    "aliases": [
+      "icon-123-011"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-install_line",
+    "unicode": "E906",
+    "aliases": [
+      "icon-install_line"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-framework_line",
+    "unicode": "E907",
+    "aliases": [
+      "icon-framework_line"
+    ],
+    "projects": [],
+    "resolution": "single_source"
+  },
+  {
+    "name": "icon-home_fill",
+    "unicode": "E908",
+    "aliases": [
+      "icon-home_fill"
+    ],
+    "projects": [],
+    "resolution": "single_source"
+  },
+  {
+    "name": "icon-back_line",
+    "unicode": "E909",
+    "aliases": [
+      "icon-back_line"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-Copylink",
+    "unicode": "E90B",
+    "aliases": [
+      "icon-Copylink"
+    ],
+    "projects": [],
+    "resolution": "single_source"
+  },
+  {
+    "name": "icon-medal_line",
+    "unicode": "E90C",
+    "aliases": [
+      "icon-medal_line"
+    ],
+    "projects": [],
+    "resolution": "single_source"
+  },
+  {
+    "name": "icon-achievement_line",
+    "unicode": "E90D",
+    "aliases": [
+      "icon-achievement_line"
+    ],
+    "projects": [],
+    "resolution": "single_source"
+  },
+  {
+    "name": "icon-ratio_line",
+    "unicode": "E90E",
+    "aliases": [
+      "icon-ratio_line"
+    ],
+    "projects": [],
+    "resolution": "single_source"
+  },
+  {
+    "name": "icon-message_line",
+    "unicode": "E90F",
+    "aliases": [
+      "icon-message_line"
+    ],
+    "projects": [],
+    "resolution": "single_source"
+  },
+  {
+    "name": "icon-switch_line",
+    "unicode": "E910",
+    "aliases": [
+      "icon-switch_line"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-share_line_b",
+    "unicode": "E916",
+    "aliases": [
+      "icon-share_line_b"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-approve_line_b",
+    "unicode": "E917",
+    "aliases": [
+      "icon-approve_line_b"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-comment_line_b",
+    "unicode": "E918",
+    "aliases": [
+      "icon-comment_line_b"
+    ],
+    "projects": [],
+    "resolution": "single_source"
+  },
+  {
+    "name": "icon-add_fill",
+    "unicode": "E91A",
+    "aliases": [
+      "icon-add_fill"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-a-collect_line_b_huaban1",
+    "unicode": "E91B",
+    "aliases": [
+      "icon-a-collect_line_b_huaban1"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-a-collect_fill_huaban1",
+    "unicode": "E91C",
+    "aliases": [
+      "icon-a-collect_fill_huaban1"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-a-calendar_huaban1",
+    "unicode": "E91D",
+    "aliases": [
+      "icon-a-calendar_huaban1"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-audio_line",
+    "unicode": "E920",
+    "aliases": [
+      "icon-audio_line"
+    ],
+    "projects": [],
+    "resolution": "single_source"
+  },
+  {
+    "name": "icon-a-video_linexiawu51821",
+    "unicode": "E921",
+    "aliases": [
+      "icon-a-video_linexiawu51821"
+    ],
+    "projects": [],
+    "resolution": "single_source"
+  },
+  {
+    "name": "icon-points_line",
+    "unicode": "E923",
+    "aliases": [
+      "icon-points_line"
+    ],
+    "projects": [],
+    "resolution": "single_source"
+  },
+  {
+    "name": "icon-Image_line",
+    "unicode": "E924",
+    "aliases": [
+      "icon-Image_line",
+      "icon-image_line"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-id_fill",
+    "unicode": "E92C",
+    "aliases": [
+      "icon-id_fill"
+    ],
+    "projects": [],
+    "resolution": "single_source"
+  },
+  {
+    "name": "icon-beautify",
+    "unicode": "E92D",
+    "aliases": [
+      "icon-beautify"
+    ],
+    "projects": [],
+    "resolution": "single_source"
+  },
+  {
+    "name": "icon-a-nextstep_huaban1",
+    "unicode": "E92F",
+    "aliases": [
+      "icon-a-nextstep_huaban1"
+    ],
+    "projects": [],
+    "resolution": "single_source"
+  },
+  {
+    "name": "icon-a-start_huaban1",
+    "unicode": "E931",
+    "aliases": [
+      "icon-a-start_huaban1"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-a-lensflip",
+    "unicode": "E933",
+    "aliases": [
+      "icon-a-lensflip"
+    ],
+    "projects": [],
+    "resolution": "single_source"
+  },
+  {
+    "name": "icon-ratio",
+    "unicode": "E934",
+    "aliases": [
+      "icon-ratio"
+    ],
+    "projects": [],
+    "resolution": "single_source"
+  },
+  {
+    "name": "icon-frame_line",
+    "unicode": "E935",
+    "aliases": [
+      "icon-frame_line"
+    ],
+    "projects": [],
+    "resolution": "single_source"
+  },
+  {
+    "name": "icon-subtitle_line",
+    "unicode": "E936",
+    "aliases": [
+      "icon-subtitle_line"
+    ],
+    "projects": [],
+    "resolution": "single_source"
+  },
+  {
+    "name": "icon-record_b",
+    "unicode": "E937",
+    "aliases": [
+      "icon-record_b"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-record_interrupt",
+    "unicode": "E938",
+    "aliases": [
+      "icon-record_interrupt"
+    ],
+    "projects": [],
+    "resolution": "single_source"
+  },
+  {
+    "name": "icon-choose_b",
+    "unicode": "E939",
+    "aliases": [
+      "icon-choose_b"
+    ],
+    "projects": [],
+    "resolution": "single_source"
+  },
+  {
+    "name": "icon-a-plan_line_huaban1",
+    "unicode": "E93A",
+    "aliases": [
+      "icon-a-plan_line_huaban1"
+    ],
+    "projects": [],
+    "resolution": "single_source"
+  },
+  {
+    "name": "icon-zhifubaozhifu1",
+    "unicode": "E93B",
+    "aliases": [
+      "icon-zhifubaozhifu1"
+    ],
+    "projects": [],
+    "resolution": "single_source"
+  },
+  {
+    "name": "icon-slide",
+    "unicode": "E93C",
+    "aliases": [
+      "icon-slide"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-a-phone_b_huaban1",
+    "unicode": "E93D",
+    "aliases": [
+      "icon-a-phone_b_huaban1"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-a-key_b_huaban1",
+    "unicode": "E93E",
+    "aliases": [
+      "icon-a-key_b_huaban1"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-uncheck",
+    "unicode": "E93F",
+    "aliases": [
+      "icon-uncheck"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-checkbox",
+    "unicode": "E940",
+    "aliases": [
+      "icon-checkbox"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-shaixuan",
+    "unicode": "E941",
+    "aliases": [
+      "icon-shaixuan"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-table_line",
+    "unicode": "E943",
+    "aliases": [
+      "icon-table_line"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-view_line",
+    "unicode": "E944",
+    "aliases": [
+      "icon-view_line"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-reward_points",
+    "unicode": "E945",
+    "aliases": [
+      "icon-reward_points"
+    ],
+    "projects": [],
+    "resolution": "single_source"
+  },
+  {
+    "name": "icon-reduce_b",
+    "unicode": "E946",
+    "aliases": [
+      "icon-reduce_b"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-heart_l_line",
+    "unicode": "E949",
+    "aliases": [
+      "icon-heart_l_line"
+    ],
+    "projects": [],
+    "resolution": "single_source"
+  },
+  {
+    "name": "icon-a-weibiaoti-4_huaban1",
+    "unicode": "E94B",
+    "aliases": [
+      "icon-a-weibiaoti-4_huaban1"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-arrow_up",
+    "unicode": "E94D",
+    "aliases": [
+      "icon-arrow_up"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-steward_line",
+    "unicode": "E94E",
+    "aliases": [
+      "icon-steward_line"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-dd_search_b",
+    "unicode": "E957",
+    "aliases": [
+      "icon-dd_search_b"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-extract_line",
+    "unicode": "E959",
+    "aliases": [
+      "icon-extract_line"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-aivideo_line",
+    "unicode": "E95C",
+    "aliases": [
+      "icon-aivideo_line"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-skin-line",
+    "unicode": "E963",
+    "aliases": [
+      "icon-skin-line",
+      "icon-skin_line"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-a-huabanbeifen14",
+    "unicode": "E966",
+    "aliases": [
+      "icon-a-huabanbeifen14",
+      "icon-vs_b_line"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-positive_order_b",
+    "unicode": "E967",
+    "aliases": [
+      "icon-positive_order_b"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-reverse_order_b",
+    "unicode": "E968",
+    "aliases": [
+      "icon-reverse_order_b"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-word_line",
+    "unicode": "E96A",
+    "aliases": [
+      "icon-word_line"
+    ],
+    "projects": [],
+    "resolution": "single_source"
+  },
+  {
+    "name": "icon-style_line",
+    "unicode": "E96B",
+    "aliases": [
+      "icon-style_line"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-brochures_line",
+    "unicode": "E97A",
+    "aliases": [
+      "icon-brochures_line"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-code_line",
+    "unicode": "E980",
+    "aliases": [
+      "icon-code_line"
+    ],
+    "projects": [],
+    "resolution": "single_source"
+  },
+  {
+    "name": "icon-a-gangxian_huaban1_huaban1",
+    "unicode": "E982",
+    "aliases": [
+      "icon-a-gangxian_huaban1_huaban1"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-a-bianzu45beifen2",
+    "unicode": "E984",
+    "aliases": [
+      "icon-a-bianzu45beifen2"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-a-bianzu45",
+    "unicode": "E985",
+    "aliases": [
+      "icon-a-bianzu45"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-a-bianzu44",
+    "unicode": "E986",
+    "aliases": [
+      "icon-a-bianzu44"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-material_line",
+    "unicode": "E98A",
+    "aliases": [
+      "icon-material_line"
+    ],
+    "projects": [],
+    "resolution": "single_source"
+  },
+  {
+    "name": "s-answer",
+    "unicode": "EA01",
+    "aliases": [
+      "s-answer"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-0yuanduihuan",
+    "unicode": "E061",
+    "aliases": [
+      "s-0yuanduihuan"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-adpic",
+    "unicode": "EA02",
+    "aliases": [
+      "s-adpic"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-comments",
+    "unicode": "E062",
+    "aliases": [
+      "s-comments"
+    ],
+    "projects": [],
+    "resolution": "single_source"
+  },
+  {
+    "name": "s-copy-2",
+    "unicode": "E063",
+    "aliases": [
+      "s-copy-2"
+    ],
+    "projects": [],
+    "resolution": "single_source"
+  },
+  {
+    "name": "s-copy",
+    "unicode": "EA04",
+    "aliases": [
+      "s-copy"
+    ],
+    "projects": [],
+    "resolution": "single_source"
+  },
+  {
+    "name": "s-dele",
+    "unicode": "E064",
+    "aliases": [
+      "s-dele"
+    ],
+    "projects": [],
+    "resolution": "single_source"
+  },
+  {
+    "name": "s-claims",
+    "unicode": "EA05",
+    "aliases": [
+      "s-claims"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-download",
+    "unicode": "EA06",
+    "aliases": [
+      "s-download"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-goodfor2",
+    "unicode": "E065",
+    "aliases": [
+      "s-goodfor2"
+    ],
+    "projects": [],
+    "resolution": "single_source"
+  },
+  {
+    "name": "s-goodforcopy",
+    "unicode": "E066",
+    "aliases": [
+      "s-goodforcopy"
+    ],
+    "projects": [],
+    "resolution": "single_source"
+  },
+  {
+    "name": "s-helpkong",
+    "unicode": "EA09",
+    "aliases": [
+      "s-helpkong"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-more",
+    "unicode": "E067",
+    "aliases": [
+      "s-more"
+    ],
+    "projects": [],
+    "resolution": "single_source"
+  },
+  {
+    "name": "s-insurance",
+    "unicode": "EA0A",
+    "aliases": [
+      "s-insurance"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-jiagz-zy",
+    "unicode": "EA0B",
+    "aliases": [
+      "s-jiagz-zy"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-numcomments",
+    "unicode": "E068",
+    "aliases": [
+      "s-numcomments"
+    ],
+    "projects": [],
+    "resolution": "single_source"
+  },
+  {
+    "name": "s-numgood",
+    "unicode": "E069",
+    "aliases": [
+      "s-numgood"
+    ],
+    "projects": [],
+    "resolution": "single_source"
+  },
+  {
+    "name": "s-loading",
+    "unicode": "EA0C",
+    "aliases": [
+      "s-loading"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-mess-bs",
+    "unicode": "EA0D",
+    "aliases": [
+      "s-mess-bs"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-message",
+    "unicode": "EA0E",
+    "aliases": [
+      "s-message"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-mission-gexianchexian",
+    "unicode": "EA0F",
+    "aliases": [
+      "s-mission-gexianchexian"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-mission-duihuanhongbao",
+    "unicode": "EA10",
+    "aliases": [
+      "s-mission-duihuanhongbao"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-reply",
+    "unicode": "E06A",
+    "aliases": [
+      "s-reply"
+    ],
+    "projects": [],
+    "resolution": "single_source"
+  },
+  {
+    "name": "s-mission-fenxiangwenzhang",
+    "unicode": "EA11",
+    "aliases": [
+      "s-mission-fenxiangwenzhang"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-report",
+    "unicode": "E026",
+    "aliases": [
+      "s-report"
+    ],
+    "projects": [],
+    "resolution": "single_source"
+  },
+  {
+    "name": "s-bangzhu",
+    "unicode": "E027",
+    "aliases": [
+      "s-bangzhu"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-seemore",
+    "unicode": "E06B",
+    "aliases": [
+      "s-seemore"
+    ],
+    "projects": [],
+    "resolution": "single_source"
+  },
+  {
+    "name": "s-mission-huitie",
+    "unicode": "EA14",
+    "aliases": [
+      "s-mission-huitie"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-mission-wanshanxinxi",
+    "unicode": "E06C",
+    "aliases": [
+      "s-mission-wanshanxinxi"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-mission-shimingrenzheng",
+    "unicode": "EA16",
+    "aliases": [
+      "s-mission-shimingrenzheng"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-mission-lurukehu",
+    "unicode": "EA17",
+    "aliases": [
+      "s-mission-lurukehu"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-mission-choujiang",
+    "unicode": "E06D",
+    "aliases": [
+      "s-mission-choujiang"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-mission-qiandao",
+    "unicode": "EA19",
+    "aliases": [
+      "s-mission-qiandao"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-mission-jihuashu",
+    "unicode": "EA1A",
+    "aliases": [
+      "s-mission-jihuashu"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-mission-pinglunwenzhang",
+    "unicode": "E06F",
+    "aliases": [
+      "s-mission-pinglunwenzhang"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-mission-zhuanfajihuashu",
+    "unicode": "E070",
+    "aliases": [
+      "s-mission-zhuanfajihuashu"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-mission-yuyuekecheng",
+    "unicode": "E071",
+    "aliases": [
+      "s-mission-yuyuekecheng"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-notice",
+    "unicode": "EA1E",
+    "aliases": [
+      "s-notice"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-phone3",
+    "unicode": "EA1F",
+    "aliases": [
+      "s-phone3"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-pic-in",
+    "unicode": "EA20",
+    "aliases": [
+      "s-pic-in"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-ping",
+    "unicode": "EA22",
+    "aliases": [
+      "s-ping"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-poster",
+    "unicode": "EA23",
+    "aliases": [
+      "s-poster"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-rili1",
+    "unicode": "E072",
+    "aliases": [
+      "s-rili1"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-toast-gou",
+    "unicode": "EA27",
+    "aliases": [
+      "s-toast-gou"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-zhuyi",
+    "unicode": "EA28",
+    "aliases": [
+      "s-zhuyi"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-zan-before",
+    "unicode": "EA29",
+    "aliases": [
+      "s-zan-before"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-gexian-rili",
+    "unicode": "EA2B",
+    "aliases": [
+      "s-gexian-rili"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-zhu",
+    "unicode": "EA2C",
+    "aliases": [
+      "s-zhu"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-chengzuosijiache",
+    "unicode": "E074",
+    "aliases": [
+      "s-chengzuosijiache"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-zhuyuanjintie",
+    "unicode": "EA2F",
+    "aliases": [
+      "s-hongbao",
+      "s-zhuyuanjintie"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-baodandianzi",
+    "unicode": "EA30",
+    "aliases": [
+      "s-baodandianzi"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-baodanzhizhi",
+    "unicode": "EA31",
+    "aliases": [
+      "s-baodanzhizhi"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-xinyongqia",
+    "unicode": "EA32",
+    "aliases": [
+      "s-xinyongqia"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-mianfeihuomian",
+    "unicode": "EA33",
+    "aliases": [
+      "s-mianfeihuomian"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-gongjiaojiaotongyiwai",
+    "unicode": "EA34",
+    "aliases": [
+      "s-gongjiaoche",
+      "s-gongjiaojiaotongyiwai"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-guanbi",
+    "unicode": "E076",
+    "aliases": [
+      "s-guanbi"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-liuyan",
+    "unicode": "EA37",
+    "aliases": [
+      "s-liuyan"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-guanbi122222",
+    "unicode": "E028",
+    "aliases": [
+      "s-guanbi122222"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-jianhao",
+    "unicode": "EA3B",
+    "aliases": [
+      "s-jianhao"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-zhuangxiu",
+    "unicode": "EA3C",
+    "aliases": [
+      "s-zhuangxiu"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-chuzuche",
+    "unicode": "E078",
+    "aliases": [
+      "s-chuzuche"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-yuyin",
+    "unicode": "EA3E",
+    "aliases": [
+      "s-yuyin"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-shanchu",
+    "unicode": "EA40",
+    "aliases": [
+      "s-shanchu"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-shuaxin",
+    "unicode": "EA41",
+    "aliases": [
+      "s-shuaxin"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-lunchuan",
+    "unicode": "E07A",
+    "aliases": [
+      "s-lunchuan"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-xuanze",
+    "unicode": "E07B",
+    "aliases": [
+      "s-xuanze"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-yiliaofei",
+    "unicode": "EA43",
+    "aliases": [
+      "s-feiyong",
+      "s-yiliaofei"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-xuanze-dianji",
+    "unicode": "E07C",
+    "aliases": [
+      "s-xuanze-dianji"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-lishicheliang",
+    "unicode": "EA44",
+    "aliases": [
+      "s-lishicheliang"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-zhongbingjianhu",
+    "unicode": "EA45",
+    "aliases": [
+      "s-zhongbingjianhu",
+      "s-zhongbingjianhujintiejintie"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-shoushang",
+    "unicode": "E02A",
+    "aliases": [
+      "s-shoushang"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-tongyitiaokuan",
+    "unicode": "EA46",
+    "aliases": [
+      "s-tongyi",
+      "s-tongyitiaokuan"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-tongyitiaokuanweigouxuan",
+    "unicode": "E07D",
+    "aliases": [
+      "s-tongyitiaokuanweigouxuan"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-zuanshi",
+    "unicode": "EA47",
+    "aliases": [
+      "s-zuanshi"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-tonghangjiaoliu",
+    "unicode": "EA48",
+    "aliases": [
+      "s-tonghangjiaoliu"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-mingpian",
+    "unicode": "EA49",
+    "aliases": [
+      "s-mingpian"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-xiangyou",
+    "unicode": "EA4A",
+    "aliases": [
+      "s-xiangyou"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-zaixiankefu",
+    "unicode": "EA4C",
+    "aliases": [
+      "s-zaixiankefu"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-chengshi",
+    "unicode": "EA4E",
+    "aliases": [
+      "s-chengshi"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-shenhezhong",
+    "unicode": "EA50",
+    "aliases": [
+      "s-shenhezhong"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-kehu",
+    "unicode": "EA51",
+    "aliases": [
+      "s-kehu"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-kehudianji",
+    "unicode": "EA52",
+    "aliases": [
+      "s-kehudianji"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-jiayongdianqi",
+    "unicode": "EA53",
+    "aliases": [
+      "s-jiayongdianqi"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-yixuanze",
+    "unicode": "EA55",
+    "aliases": [
+      "s-yixuanze"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-yijianfankui",
+    "unicode": "EA58",
+    "aliases": [
+      "s-yijianfankui"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-chenggong",
+    "unicode": "EA59",
+    "aliases": [
+      "s-chenggong"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-wode",
+    "unicode": "EA5A",
+    "aliases": [
+      "s-wode"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-wodelipei",
+    "unicode": "EA5B",
+    "aliases": [
+      "s-wodelipei"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-wode-dianji",
+    "unicode": "EA5C",
+    "aliases": [
+      "s-wode-dianji"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-fangwu",
+    "unicode": "EA5D",
+    "aliases": [
+      "s-fangwu"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-shoushubuchang",
+    "unicode": "EA5E",
+    "aliases": [
+      "s-shoushu",
+      "s-shoushubuchang"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-shouji",
+    "unicode": "EA5F",
+    "aliases": [
+      "s-shouji"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-shouji2",
+    "unicode": "EA60",
+    "aliases": [
+      "s-shouji2"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-tuiguangfei",
+    "unicode": "EA62",
+    "aliases": [
+      "s-tuiguangfei"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-bofang1",
+    "unicode": "EA64",
+    "aliases": [
+      "s-bofang1"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-bofang2",
+    "unicode": "EA65",
+    "aliases": [
+      "s-bofang2"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-shoucang",
+    "unicode": "EA66",
+    "aliases": [
+      "s-shoucang"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-shoucang2",
+    "unicode": "EA67",
+    "aliases": [
+      "s-shoucang2"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-shoucang-dianji",
+    "unicode": "EA68",
+    "aliases": [
+      "s-shoucang-dianji"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-rilinew",
+    "unicode": "EA6B",
+    "aliases": [
+      "s-rilinew"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-qitashenguyiwai",
+    "unicode": "EA6D",
+    "aliases": [
+      "s-qitashenguyiwai",
+      "s-yiwai"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-zanting",
+    "unicode": "EA6E",
+    "aliases": [
+      "s-zanting"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-zuixinxiayiye",
+    "unicode": "E087",
+    "aliases": [
+      "s-zuixinxiayiye"
+    ],
+    "projects": [],
+    "resolution": "single_source"
+  },
+  {
+    "name": "s-weishangpai",
+    "unicode": "EA70",
+    "aliases": [
+      "s-weishangpai"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-jidongcheyiwai",
+    "unicode": "EA72",
+    "aliases": [
+      "s-jidongcheyiwai",
+      "s-sijiache"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-chakangengduo1",
+    "unicode": "EA75",
+    "aliases": [
+      "s-chakangengduo1"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-shumiao",
+    "unicode": "EA76",
+    "aliases": [
+      "s-shumiao"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-minyongranqi",
+    "unicode": "EA77",
+    "aliases": [
+      "s-minyongranqi",
+      "s-ranqi"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-minyongdian",
+    "unicode": "EA78",
+    "aliases": [
+      "s-dianchatou",
+      "s-minyongdian"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-shuiguanbaolie",
+    "unicode": "EA7A",
+    "aliases": [
+      "s-shuiguanbaolie"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-shuilujiaotongyiwai",
+    "unicode": "EA7B",
+    "aliases": [
+      "s-shuilujiaotongyiwai"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-zhuyi1",
+    "unicode": "EA7C",
+    "aliases": [
+      "s-zhuyi1"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-zhuyi2",
+    "unicode": "EA7D",
+    "aliases": [
+      "s-zhuyi2"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-manqifanhuan",
+    "unicode": "EA80",
+    "aliases": [
+      "s-manqifanhuan",
+      "s-xianjin"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-huozai",
+    "unicode": "EA81",
+    "aliases": [
+      "s-huozai"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-huoche",
+    "unicode": "EA82",
+    "aliases": [
+      "s-huoche"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-dianzan",
+    "unicode": "EA83",
+    "aliases": [
+      "s-dianzan"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-dianzan-dianji",
+    "unicode": "EA84",
+    "aliases": [
+      "s-dianzan-dianji"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-shaoshang",
+    "unicode": "EA85",
+    "aliases": [
+      "s-shaoshang"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-tangshang",
+    "unicode": "EA86",
+    "aliases": [
+      "s-tangshang"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-shenqinglipei",
+    "unicode": "EA87",
+    "aliases": [
+      "s-shenqinglipei"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-diantiyiwaixian",
+    "unicode": "EA88",
+    "aliases": [
+      "s-dianti",
+      "s-diantiyiwaixian"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-dianhua",
+    "unicode": "EA89",
+    "aliases": [
+      "s-dianhua"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-jibing",
+    "unicode": "EA8E",
+    "aliases": [
+      "s-jibing"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-huangguan",
+    "unicode": "E088",
+    "aliases": [
+      "s-huangguan"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-hongbaoliquan",
+    "unicode": "EA93",
+    "aliases": [
+      "s-hongbaoliquan"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-xubao",
+    "unicode": "EA94",
+    "aliases": [
+      "s-xubao"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-jiejiari",
+    "unicode": "EA97",
+    "aliases": [
+      "s-jiejiari"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-dingdan",
+    "unicode": "EA99",
+    "aliases": [
+      "s-dingdan"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-zengxian",
+    "unicode": "EA9D",
+    "aliases": [
+      "s-zengxian"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-shengubaozhang",
+    "unicode": "EA9F",
+    "aliases": [
+      "s-shengubaozhang"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-chepai",
+    "unicode": "EAA0",
+    "aliases": [
+      "s-chepai"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-zhuanpan",
+    "unicode": "EAA1",
+    "aliases": [
+      "s-zhuanpan"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-zhuanwanjiantou",
+    "unicode": "EAA3",
+    "aliases": [
+      "s-zhuanwanjiantou"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-naozhong",
+    "unicode": "EAA7",
+    "aliases": [
+      "s-naozhong"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-fu",
+    "unicode": "EAA8",
+    "aliases": [
+      "s-fu"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-approve",
+    "unicode": "E713",
+    "aliases": [
+      "icon-approve"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-arrows_right",
+    "unicode": "E6B5",
+    "aliases": [
+      "icon-arrows_right"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-close_line",
+    "unicode": "E6BF",
+    "aliases": [
+      "icon-close_line"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-delete_rubbish",
+    "unicode": "E703",
+    "aliases": [
+      "icon-delete_rubbish"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-help",
+    "unicode": "E6C6",
+    "aliases": [
+      "icon-help"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-inform",
+    "unicode": "E6EF",
+    "aliases": [
+      "icon-inform"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-invitation",
+    "unicode": "E6F5",
+    "aliases": [
+      "icon-invitation"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-me_line",
+    "unicode": "E6FD",
+    "aliases": [
+      "icon-me_line"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-more_circle",
+    "unicode": "E6CB",
+    "aliases": [
+      "icon-more_circle"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-multiple_choice",
+    "unicode": "E753",
+    "aliases": [
+      "icon-multiple_choice"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-wechat_surface",
+    "unicode": "E720",
+    "aliases": [
+      "icon-wechat_surface"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-123-01",
+    "unicode": "E8E9",
+    "aliases": [
+      "icon-123-01"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-123-01_v2",
+    "unicode": "E000",
+    "aliases": [
+      "icon-123-01"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-_huaban",
+    "unicode": "E843",
+    "aliases": [
+      "icon-_huaban"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-_huaban_v2",
+    "unicode": "E001",
+    "aliases": [
+      "icon-_huaban"
+    ],
+    "projects": [],
+    "resolution": "single_source"
+  },
+  {
+    "name": "icon-_huaban_v3",
+    "unicode": "E002",
+    "aliases": [
+      "icon-_huaban"
+    ],
+    "projects": [],
+    "resolution": "single_source"
+  },
+  {
+    "name": "icon-abacus",
+    "unicode": "E744",
+    "aliases": [
+      "icon-abacus"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-add",
+    "unicode": "E6B3",
+    "aliases": [
+      "icon-add"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-add_attention",
+    "unicode": "E08A",
+    "aliases": [
+      "icon-add_attention"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-add_circle",
+    "unicode": "E6B2",
+    "aliases": [
+      "icon-add_circle"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-add_image",
+    "unicode": "E70A",
+    "aliases": [
+      "icon-add_image"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-add_image_after",
+    "unicode": "E709",
+    "aliases": [
+      "icon-add_image_after"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-anonymous",
+    "unicode": "E716",
+    "aliases": [
+      "icon-anonymous"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-anonymous_after",
+    "unicode": "E70E",
+    "aliases": [
+      "icon-anonymous_after"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-answer",
+    "unicode": "E718",
+    "aliases": [
+      "icon-answer"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-approve_after",
+    "unicode": "E710",
+    "aliases": [
+      "icon-approve_after"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-arrow_down_fill",
+    "unicode": "E92B",
+    "aliases": [
+      "icon-arrow_down_fill"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-arrows_down",
+    "unicode": "E6B4",
+    "aliases": [
+      "icon-arrows_down"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-arrows_left",
+    "unicode": "E6B7",
+    "aliases": [
+      "icon-arrows_left"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-arrows_up",
+    "unicode": "E6B6",
+    "aliases": [
+      "icon-arrows_up"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-ask",
+    "unicode": "E717",
+    "aliases": [
+      "icon-ask"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-associator_packet",
+    "unicode": "E774",
+    "aliases": [
+      "icon-associator_packet"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-back_play",
+    "unicode": "E756",
+    "aliases": [
+      "icon-back_play"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-bag",
+    "unicode": "E752",
+    "aliases": [
+      "icon-bag"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-book",
+    "unicode": "E74B",
+    "aliases": [
+      "icon-book"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-building",
+    "unicode": "E725",
+    "aliases": [
+      "icon-building"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-bullet_screen",
+    "unicode": "E72E",
+    "aliases": [
+      "icon-bullet_screen"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-bullet_screen_close",
+    "unicode": "E72F",
+    "aliases": [
+      "icon-bullet_screen_close"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-business_permit",
+    "unicode": "E707",
+    "aliases": [
+      "icon-business_permit"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-calculator",
+    "unicode": "E735",
+    "aliases": [
+      "icon-calculator"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-calendar",
+    "unicode": "E6B8",
+    "aliases": [
+      "icon-calendar"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-camera",
+    "unicode": "E708",
+    "aliases": [
+      "icon-camera"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-camera_flip",
+    "unicode": "E757",
+    "aliases": [
+      "icon-camera_flip"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-car_insurance",
+    "unicode": "E6F3",
+    "aliases": [
+      "icon-car_insurance"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-certification",
+    "unicode": "E734",
+    "aliases": [
+      "icon-certification"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-choose_done",
+    "unicode": "E6BB",
+    "aliases": [
+      "icon-choose_done"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-choose_done_line",
+    "unicode": "E6B9",
+    "aliases": [
+      "icon-choose_done_line"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-choose_done_surface",
+    "unicode": "E6BA",
+    "aliases": [
+      "icon-choose_done_surface"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-choose_none_line",
+    "unicode": "E6BC",
+    "aliases": [
+      "icon-choose_none_line"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-classification",
+    "unicode": "E742",
+    "aliases": [
+      "icon-classification"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-client",
+    "unicode": "E6EA",
+    "aliases": [
+      "icon-client"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-close_circle_line",
+    "unicode": "E6BD",
+    "aliases": [
+      "icon-close_circle_line"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-close_circle_line_v2",
+    "unicode": "E003",
+    "aliases": [
+      "icon-close_circle_line"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-close_circle_surface",
+    "unicode": "E6BE",
+    "aliases": [
+      "icon-close_circle_surface"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-close_eye",
+    "unicode": "E6E8",
+    "aliases": [
+      "icon-close_eye"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-close_eye_v2",
+    "unicode": "E004",
+    "aliases": [
+      "icon-close_eye"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-collect_line",
+    "unicode": "E6C0",
+    "aliases": [
+      "icon-collect_line"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-collect_surface",
+    "unicode": "E6C1",
+    "aliases": [
+      "icon-collect_surface"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-comment",
+    "unicode": "E719",
+    "aliases": [
+      "icon-comment"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-common_problem",
+    "unicode": "E6FC",
+    "aliases": [
+      "icon-common_problem"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-community_me",
+    "unicode": "E6EE",
+    "aliases": [
+      "icon-community_me"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-compensate",
+    "unicode": "E747",
+    "aliases": [
+      "icon-compensate"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-concept",
+    "unicode": "E749",
+    "aliases": [
+      "icon-concept"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-copy",
+    "unicode": "E7CC",
+    "aliases": [
+      "icon-copy"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-copy_v2",
+    "unicode": "E005",
+    "aliases": [
+      "icon-copy"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-course",
+    "unicode": "E71F",
+    "aliases": [
+      "icon-course"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-customer",
+    "unicode": "E020",
+    "aliases": [
+      "icon-customer"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-customer_surface",
+    "unicode": "E021",
+    "aliases": [
+      "icon-customer_surface"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-delete_cell",
+    "unicode": "E6C2",
+    "aliases": [
+      "icon-delete_cell"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-develop",
+    "unicode": "E740",
+    "aliases": [
+      "icon-develop"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-disability",
+    "unicode": "E73F",
+    "aliases": [
+      "icon-disability"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-discussion",
+    "unicode": "E74F",
+    "aliases": [
+      "icon-discussion"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-documents",
+    "unicode": "E7F5",
+    "aliases": [
+      "icon-documents"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-down",
+    "unicode": "E8E3",
+    "aliases": [
+      "icon-down"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-down_v2",
+    "unicode": "E006",
+    "aliases": [
+      "icon-down"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-download",
+    "unicode": "E6C3",
+    "aliases": [
+      "icon-download"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-download_fill",
+    "unicode": "E7D3",
+    "aliases": [
+      "icon-download_fill"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-download_fill_v2",
+    "unicode": "E007",
+    "aliases": [
+      "icon-download_fill"
+    ],
+    "projects": [],
+    "resolution": "single_source"
+  },
+  {
+    "name": "icon-earned_premium",
+    "unicode": "E6FB",
+    "aliases": [
+      "icon-earned_premium"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-edit",
+    "unicode": "E6C4",
+    "aliases": [
+      "icon-edit"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-edit_v2",
+    "unicode": "E008",
+    "aliases": [
+      "icon-edit"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-flag",
+    "unicode": "E74A",
+    "aliases": [
+      "icon-flag"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-full_screen",
+    "unicode": "E6D0",
+    "aliases": [
+      "icon-full_screen"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-gift",
+    "unicode": "E6EB",
+    "aliases": [
+      "icon-gift"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-giving",
+    "unicode": "E738",
+    "aliases": [
+      "icon-giving"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-good_line",
+    "unicode": "E030",
+    "aliases": [
+      "icon-good_line"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-good_line_v2",
+    "unicode": "E009",
+    "aliases": [
+      "icon-good_line"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-good_surface",
+    "unicode": "E72C",
+    "aliases": [
+      "icon-good_surface"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-greeting_card",
+    "unicode": "E737",
+    "aliases": [
+      "icon-greeting_card"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-handbook",
+    "unicode": "E03B",
+    "aliases": [
+      "icon-handbook"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-handbook_v2",
+    "unicode": "E00A",
+    "aliases": [
+      "icon-handbook"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-history",
+    "unicode": "E74E",
+    "aliases": [
+      "icon-history"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-history_fill",
+    "unicode": "E80C",
+    "aliases": [
+      "icon-history_fill"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-history_fill_v2",
+    "unicode": "E00B",
+    "aliases": [
+      "icon-history_fill"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-home_line",
+    "unicode": "E6F8",
+    "aliases": [
+      "icon-home_line"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-home_surface",
+    "unicode": "E036",
+    "aliases": [
+      "icon-home_surface"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-id",
+    "unicode": "E706",
+    "aliases": [
+      "icon-id"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-invitation_letter",
+    "unicode": "E736",
+    "aliases": [
+      "icon-invitation_letter"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-invite_friends",
+    "unicode": "E6F0",
+    "aliases": [
+      "icon-invite_friends"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-law_line",
+    "unicode": "E040",
+    "aliases": [
+      "icon-law_line"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-law_line_v2",
+    "unicode": "E00C",
+    "aliases": [
+      "icon-law_line"
+    ],
+    "projects": [],
+    "resolution": "single_source"
+  },
+  {
+    "name": "icon-learn_line",
+    "unicode": "E6FA",
+    "aliases": [
+      "icon-learn_line"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-learn_surface",
+    "unicode": "E6FE",
+    "aliases": [
+      "icon-learn_surface"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-live",
+    "unicode": "E6E9",
+    "aliases": [
+      "icon-live"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-live_me",
+    "unicode": "E6E4",
+    "aliases": [
+      "icon-live_me"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-location",
+    "unicode": "E71D",
+    "aliases": [
+      "icon-location"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-location_v2",
+    "unicode": "E00D",
+    "aliases": [
+      "icon-location"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-logo_bao",
+    "unicode": "E6C7",
+    "aliases": [
+      "icon-logo_bao"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-logo_bao_v2",
+    "unicode": "E00E",
+    "aliases": [
+      "icon-logo_bao"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-logo_shi",
+    "unicode": "E6C9",
+    "aliases": [
+      "icon-logo_shi"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-logo_shi_v2",
+    "unicode": "E00F",
+    "aliases": [
+      "icon-logo_shi"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-logo_xian",
+    "unicode": "E6C8",
+    "aliases": [
+      "icon-logo_xian"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-logo_xian_v2",
+    "unicode": "E010",
+    "aliases": [
+      "icon-logo_xian"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-main",
+    "unicode": "E73A",
+    "aliases": [
+      "icon-main"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-make_money_line",
+    "unicode": "E6F6",
+    "aliases": [
+      "icon-make_money_line"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-make_money_surface",
+    "unicode": "E701",
+    "aliases": [
+      "icon-make_money_surface"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-me_surface",
+    "unicode": "E700",
+    "aliases": [
+      "icon-me_surface"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-means",
+    "unicode": "E727",
+    "aliases": [
+      "icon-means"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-menu_learn",
+    "unicode": "E71C",
+    "aliases": [
+      "icon-menu_learn"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-message_learn",
+    "unicode": "E71A",
+    "aliases": [
+      "icon-message_learn"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-money",
+    "unicode": "E741",
+    "aliases": [
+      "icon-money"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-more_point",
+    "unicode": "E6CC",
+    "aliases": [
+      "icon-more_point"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-my_meetings",
+    "unicode": "E6E5",
+    "aliases": [
+      "icon-my_meetings"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-news",
+    "unicode": "E6E6",
+    "aliases": [
+      "icon-news"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-notify",
+    "unicode": "E705",
+    "aliases": [
+      "icon-notify"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-open_eye",
+    "unicode": "E6E7",
+    "aliases": [
+      "icon-open_eye"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-open_eye_v2",
+    "unicode": "E011",
+    "aliases": [
+      "icon-open_eye"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-phone",
+    "unicode": "E74D",
+    "aliases": [
+      "icon-phone"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-phone_done",
+    "unicode": "E74C",
+    "aliases": [
+      "icon-phone_done"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-phone_line",
+    "unicode": "E6CD",
+    "aliases": [
+      "icon-phone_line"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-phone_surface",
+    "unicode": "E71E",
+    "aliases": [
+      "icon-phone_surface"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-play_circle",
+    "unicode": "E726",
+    "aliases": [
+      "icon-play_circle"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-play_line",
+    "unicode": "E6CE",
+    "aliases": [
+      "icon-play_line"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-play_surface",
+    "unicode": "E6CF",
+    "aliases": [
+      "icon-play_surface"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-position",
+    "unicode": "E04E",
+    "aliases": [
+      "icon-position"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-position_v2",
+    "unicode": "E012",
+    "aliases": [
+      "icon-position"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-present",
+    "unicode": "E6F4",
+    "aliases": [
+      "icon-present"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-present_surface",
+    "unicode": "E72A",
+    "aliases": [
+      "icon-present_surface"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-protect",
+    "unicode": "E748",
+    "aliases": [
+      "icon-protect"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-qq",
+    "unicode": "E754",
+    "aliases": [
+      "icon-qq"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-qr_code",
+    "unicode": "E739",
+    "aliases": [
+      "icon-qr_code"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-receipt",
+    "unicode": "E6EC",
+    "aliases": [
+      "icon-receipt"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-recommend",
+    "unicode": "E729",
+    "aliases": [
+      "icon-recommend"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-record",
+    "unicode": "E70B",
+    "aliases": [
+      "icon-record"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-record_after",
+    "unicode": "E039",
+    "aliases": [
+      "icon-record_after"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-red_packet",
+    "unicode": "E72D",
+    "aliases": [
+      "icon-red_packet"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-reduce_circle",
+    "unicode": "E6D2",
+    "aliases": [
+      "icon-reduce_circle"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-refresh",
+    "unicode": "E6D5",
+    "aliases": [
+      "icon-refresh"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-rotary_table",
+    "unicode": "E723",
+    "aliases": [
+      "icon-rotary_table"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-safe",
+    "unicode": "E728",
+    "aliases": [
+      "icon-safe"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-scan",
+    "unicode": "E037",
+    "aliases": [
+      "icon-scan"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-screen",
+    "unicode": "E786",
+    "aliases": [
+      "icon-screen"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-search",
+    "unicode": "E6D6",
+    "aliases": [
+      "icon-search"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-service",
+    "unicode": "E746",
+    "aliases": [
+      "icon-service"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-settlement",
+    "unicode": "E745",
+    "aliases": [
+      "icon-settlement"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-setup",
+    "unicode": "E6DA",
+    "aliases": [
+      "icon-setup"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-setup_v2",
+    "unicode": "E013",
+    "aliases": [
+      "icon-setup"
+    ],
+    "projects": [],
+    "resolution": "single_source"
+  },
+  {
+    "name": "icon-share",
+    "unicode": "E6D8",
+    "aliases": [
+      "icon-share"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-share_bold",
+    "unicode": "E88C",
+    "aliases": [
+      "icon-share_bold"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-shrink_screen",
+    "unicode": "E6D1",
+    "aliases": [
+      "icon-shrink_screen"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-signin",
+    "unicode": "E6F2",
+    "aliases": [
+      "icon-signin"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-smile_line",
+    "unicode": "E73E",
+    "aliases": [
+      "icon-smile_line"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-smile_surface",
+    "unicode": "E73D",
+    "aliases": [
+      "icon-smile_surface"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-special_effects",
+    "unicode": "E730",
+    "aliases": [
+      "icon-special_effects"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-special_effects_clos",
+    "unicode": "E731",
+    "aliases": [
+      "icon-special_effects_clos"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-square_line",
+    "unicode": "E73C",
+    "aliases": [
+      "icon-square_line"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-square_surface",
+    "unicode": "E73B",
+    "aliases": [
+      "icon-square_surface"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-study_line",
+    "unicode": "E732",
+    "aliases": [
+      "icon-study_line"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-suspend",
+    "unicode": "E6D9",
+    "aliases": [
+      "icon-suspend"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-term",
+    "unicode": "E03A",
+    "aliases": [
+      "icon-term"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-ticket",
+    "unicode": "E724",
+    "aliases": [
+      "icon-ticket"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-ticket_line_b",
+    "unicode": "E8E2",
+    "aliases": [
+      "icon-ticket_line_b"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-tie",
+    "unicode": "E751",
+    "aliases": [
+      "icon-tie"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-toker",
+    "unicode": "E77D",
+    "aliases": [
+      "icon-toker"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-umbrella_line",
+    "unicode": "E6ED",
+    "aliases": [
+      "icon-umbrella_line"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-umbrella_surface",
+    "unicode": "E72B",
+    "aliases": [
+      "icon-umbrella_surface"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-vs",
+    "unicode": "E805",
+    "aliases": [
+      "icon-vs"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-wallet",
+    "unicode": "E6E3",
+    "aliases": [
+      "icon-wallet"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-weichat",
+    "unicode": "E03C",
+    "aliases": [
+      "icon-weichat"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-zhibo_huaban",
+    "unicode": "E880",
+    "aliases": [
+      "icon-zhibo_huaban"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-arrow-bs",
+    "unicode": "EA03",
+    "aliases": [
+      "s-arrow-bs"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-fenxiang1",
+    "unicode": "EA07",
+    "aliases": [
+      "s-fenxiang1"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-fenxiang2",
+    "unicode": "EA08",
+    "aliases": [
+      "s-fenxiang2"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-qiandai",
+    "unicode": "E083",
+    "aliases": [
+      "s-qiandai"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-rili",
+    "unicode": "EA21",
+    "aliases": [
+      "s-rili"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-shuishangjiaotong",
+    "unicode": "EA26",
+    "aliases": [
+      "s-shuishangjiaotong"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-4",
+    "unicode": "E8C1",
+    "aliases": [
+      "icon-4"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-5",
+    "unicode": "E8C2",
+    "aliases": [
+      "icon-5"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-6",
+    "unicode": "E8C3",
+    "aliases": [
+      "icon-6"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-Group",
+    "unicode": "E659",
+    "aliases": [
+      "icon-Group"
+    ],
+    "projects": [],
+    "resolution": "single_source"
+  },
+  {
+    "name": "icon-Group_v2",
+    "unicode": "E014",
+    "aliases": [
+      "icon-Group"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-Insurance_policy",
+    "unicode": "E759",
+    "aliases": [
+      "icon-Insurance_policy"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-Medal",
+    "unicode": "E79A",
+    "aliases": [
+      "icon-Medal"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-Pause",
+    "unicode": "E04C",
+    "aliases": [
+      "icon-Pause"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-Pause1",
+    "unicode": "E81F",
+    "aliases": [
+      "icon-Pause1"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-Resources",
+    "unicode": "E79C",
+    "aliases": [
+      "icon-Resources"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-accident",
+    "unicode": "E78D",
+    "aliases": [
+      "icon-accident"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-add_line",
+    "unicode": "E7F4",
+    "aliases": [
+      "icon-add_line"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-add_surface",
+    "unicode": "E782",
+    "aliases": [
+      "icon-add_surface"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-advancemoney",
+    "unicode": "E03F",
+    "aliases": [
+      "icon-advancemoney"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-arrow",
+    "unicode": "E912",
+    "aliases": [
+      "icon-arrow"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-arrow_down",
+    "unicode": "E779",
+    "aliases": [
+      "icon-arrow_down"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-arrow_line",
+    "unicode": "E8C8",
+    "aliases": [
+      "icon-arrow_line"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-arrow_page",
+    "unicode": "E77C",
+    "aliases": [
+      "icon-arrow_page"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-arrow_right_fill",
+    "unicode": "E81E",
+    "aliases": [
+      "icon-arrow_right_fill"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-arrow_top",
+    "unicode": "E80B",
+    "aliases": [
+      "icon-arrow_top"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-arrow_up_fill",
+    "unicode": "E92A",
+    "aliases": [
+      "icon-arrow_up_fill"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-ask_font",
+    "unicode": "E75D",
+    "aliases": [
+      "icon-ask_font"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-associator_cash",
+    "unicode": "E773",
+    "aliases": [
+      "icon-associator_cash"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-audio",
+    "unicode": "E76E",
+    "aliases": [
+      "icon-audio"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-back",
+    "unicode": "E876",
+    "aliases": [
+      "icon-back"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-backspace",
+    "unicode": "E778",
+    "aliases": [
+      "icon-backspace"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-bad_line",
+    "unicode": "E839",
+    "aliases": [
+      "icon-bad_line"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-bad_surface",
+    "unicode": "E835",
+    "aliases": [
+      "icon-bad_surface"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-bill",
+    "unicode": "E775",
+    "aliases": [
+      "icon-bill"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-bill_group_line",
+    "unicode": "E044",
+    "aliases": [
+      "icon-bill_group_line"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-bill_history",
+    "unicode": "E048",
+    "aliases": [
+      "icon-bill_history"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-bill_line",
+    "unicode": "E7AB",
+    "aliases": [
+      "icon-bill_line"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-bingdu",
+    "unicode": "E612",
+    "aliases": [
+      "icon-bingdu"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-bingdu_huaban1",
+    "unicode": "E87E",
+    "aliases": [
+      "icon-bingdu_huaban1"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-birthday",
+    "unicode": "E771",
+    "aliases": [
+      "icon-birthday"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-bofangliebiao-01",
+    "unicode": "E8A3",
+    "aliases": [
+      "icon-bofangliebiao-01"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-bullet_screen_fill",
+    "unicode": "E886",
+    "aliases": [
+      "icon-bullet_screen_fill"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-bullet_screen_fill_close",
+    "unicode": "E888",
+    "aliases": [
+      "icon-bullet_screen_fill_close"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-bus",
+    "unicode": "E793",
+    "aliases": [
+      "icon-bus"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-business_card",
+    "unicode": "E785",
+    "aliases": [
+      "icon-business_card"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-camera_flip_fill",
+    "unicode": "E892",
+    "aliases": [
+      "icon-camera_flip_fill"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-camera_line-",
+    "unicode": "E7FA",
+    "aliases": [
+      "icon-camera_line-"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-card_fill",
+    "unicode": "E022",
+    "aliases": [
+      "icon-card_fill"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-care_line",
+    "unicode": "E815",
+    "aliases": [
+      "icon-care_line"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-checkbox_default_sys",
+    "unicode": "E89D",
+    "aliases": [
+      "icon-checkbox_default_sys"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-checkbox_sys",
+    "unicode": "E89C",
+    "aliases": [
+      "icon-checkbox_sys"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-choose_bold",
+    "unicode": "E82D",
+    "aliases": [
+      "icon-choose_bold"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-circle_fill",
+    "unicode": "E057",
+    "aliases": [
+      "icon-circle_fill"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-close_line_b",
+    "unicode": "E871",
+    "aliases": [
+      "icon-close_line_b"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-comment_b",
+    "unicode": "E08E",
+    "aliases": [
+      "icon-comment_b"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-common",
+    "unicode": "E055",
+    "aliases": [
+      "icon-common"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-common_active",
+    "unicode": "E054",
+    "aliases": [
+      "icon-common_active"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-compose_actionsheet",
+    "unicode": "E898",
+    "aliases": [
+      "icon-compose_actionsheet"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-conversion",
+    "unicode": "E80F",
+    "aliases": [
+      "icon-conversion"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-coupon_line",
+    "unicode": "E881",
+    "aliases": [
+      "icon-coupon_line"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-credit_line",
+    "unicode": "E041",
+    "aliases": [
+      "icon-credit_line"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-creditcard_fill",
+    "unicode": "E7B5",
+    "aliases": [
+      "icon-creditcard_fill"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-crm",
+    "unicode": "E856",
+    "aliases": [
+      "icon-crm"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-cut",
+    "unicode": "E789",
+    "aliases": [
+      "icon-cut"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-data",
+    "unicode": "E8EE",
+    "aliases": [
+      "icon-data"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-dd_bill",
+    "unicode": "E8A0",
+    "aliases": [
+      "icon-dd_bill"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-dd_calendar",
+    "unicode": "E88E",
+    "aliases": [
+      "icon-dd_calendar"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-dd_history",
+    "unicode": "E89F",
+    "aliases": [
+      "icon-dd_history"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-delete",
+    "unicode": "E04F",
+    "aliases": [
+      "icon-delete"
+    ],
+    "projects": [],
+    "resolution": "single_source"
+  },
+  {
+    "name": "icon-delete_v2",
+    "unicode": "E015",
+    "aliases": [
+      "icon-delete"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-dialog_fill",
+    "unicode": "E049",
+    "aliases": [
+      "icon-dialog_fill"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-diamond",
+    "unicode": "E76C",
+    "aliases": [
+      "icon-diamond"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-direction_left",
+    "unicode": "E761",
+    "aliases": [
+      "icon-direction_left"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-direction_right",
+    "unicode": "E762",
+    "aliases": [
+      "icon-direction_right"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-disaster",
+    "unicode": "E78A",
+    "aliases": [
+      "icon-disaster"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-document",
+    "unicode": "E879",
+    "aliases": [
+      "icon-document"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-download1",
+    "unicode": "E79E",
+    "aliases": [
+      "icon-download1"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-download_surface",
+    "unicode": "E836",
+    "aliases": [
+      "icon-download_surface"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-edit1",
+    "unicode": "E08C",
+    "aliases": [
+      "icon-edit1"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-edit1_v2",
+    "unicode": "E016",
+    "aliases": [
+      "icon-edit1"
+    ],
+    "projects": [],
+    "resolution": "single_source"
+  },
+  {
+    "name": "icon-electronic",
+    "unicode": "E78C",
+    "aliases": [
+      "icon-electronic"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-elevator",
+    "unicode": "E78F",
+    "aliases": [
+      "icon-elevator"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-express",
+    "unicode": "E7A3",
+    "aliases": [
+      "icon-express"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-eyes_closed",
+    "unicode": "E874",
+    "aliases": [
+      "icon-eyes_closed"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-eyes_opened",
+    "unicode": "E878",
+    "aliases": [
+      "icon-eyes_opened"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-fall",
+    "unicode": "E797",
+    "aliases": [
+      "icon-fall"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-feedback",
+    "unicode": "E053",
+    "aliases": [
+      "icon-feedback"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-feedback_line",
+    "unicode": "E846",
+    "aliases": [
+      "icon-feedback_line"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-feedback_line_v2",
+    "unicode": "E017",
+    "aliases": [
+      "icon-feedback_line"
+    ],
+    "projects": [],
+    "resolution": "single_source"
+  },
+  {
+    "name": "icon-female",
+    "unicode": "E7A0",
+    "aliases": [
+      "icon-female"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-fire",
+    "unicode": "E78E",
+    "aliases": [
+      "icon-fire"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-five_fill",
+    "unicode": "E052",
+    "aliases": [
+      "icon-five_fill"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-flag_fill",
+    "unicode": "E046",
+    "aliases": [
+      "icon-flag_fill"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-flower",
+    "unicode": "E75E",
+    "aliases": [
+      "icon-flower"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-forward",
+    "unicode": "E88F",
+    "aliases": [
+      "icon-forward"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-four_fill",
+    "unicode": "E051",
+    "aliases": [
+      "icon-four_fill"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-free",
+    "unicode": "E780",
+    "aliases": [
+      "icon-free"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-friend",
+    "unicode": "E7FB",
+    "aliases": [
+      "icon-friend"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-fullscreen",
+    "unicode": "E822",
+    "aliases": [
+      "icon-fullscreen"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-gas",
+    "unicode": "E795",
+    "aliases": [
+      "icon-gas"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-gemstone_line_b",
+    "unicode": "E8DE",
+    "aliases": [
+      "icon-gemstone_line_b"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-grab_class",
+    "unicode": "E03D",
+    "aliases": [
+      "icon-grab_class"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-greetingcard_fill",
+    "unicode": "E7B0",
+    "aliases": [
+      "icon-greetingcard_fill"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-health",
+    "unicode": "E77E",
+    "aliases": [
+      "icon-health"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-home",
+    "unicode": "E875",
+    "aliases": [
+      "icon-home"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-hot_surface",
+    "unicode": "E045",
+    "aliases": [
+      "icon-hot_surface"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-id_line_b",
+    "unicode": "E872",
+    "aliases": [
+      "icon-id_line_b"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-ideas_fill",
+    "unicode": "E04A",
+    "aliases": [
+      "icon-ideas_fill"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-in_lock",
+    "unicode": "E833",
+    "aliases": [
+      "icon-in_lock"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-invitation_fill",
+    "unicode": "E047",
+    "aliases": [
+      "icon-invitation_fill"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-key",
+    "unicode": "E767",
+    "aliases": [
+      "icon-key"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-keyboard_down",
+    "unicode": "E837",
+    "aliases": [
+      "icon-keyboard_down"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-keyboard_up",
+    "unicode": "E838",
+    "aliases": [
+      "icon-keyboard_up"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-law_fill",
+    "unicode": "E04D",
+    "aliases": [
+      "icon-law_fill"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-levitation",
+    "unicode": "E796",
+    "aliases": [
+      "icon-levitation"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-lifetime_line",
+    "unicode": "E814",
+    "aliases": [
+      "icon-lifetime_line"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-link",
+    "unicode": "E86A",
+    "aliases": [
+      "icon-link"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-list_line_bb",
+    "unicode": "E8D8",
+    "aliases": [
+      "icon-list_line_bb"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-loan_fill",
+    "unicode": "E7CE",
+    "aliases": [
+      "icon-loan_fill"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-loan_line",
+    "unicode": "E7BA",
+    "aliases": [
+      "icon-loan_line"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-lock",
+    "unicode": "E772",
+    "aliases": [
+      "icon-lock"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-lock_circle",
+    "unicode": "E058",
+    "aliases": [
+      "icon-lock_circle"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-lock_line_bb",
+    "unicode": "E89A",
+    "aliases": [
+      "icon-lock_line_bb"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-male",
+    "unicode": "E7A1",
+    "aliases": [
+      "icon-male"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-medal_fill",
+    "unicode": "E04B",
+    "aliases": [
+      "icon-medal_fill"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-medical",
+    "unicode": "E77F",
+    "aliases": [
+      "icon-medical"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-meg_line_b",
+    "unicode": "E8D6",
+    "aliases": [
+      "icon-meg_line_b"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-message_fill",
+    "unicode": "E7F8",
+    "aliases": [
+      "icon-message_fill"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-mirror",
+    "unicode": "E79D",
+    "aliases": [
+      "icon-mirror"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-more_circle_left1",
+    "unicode": "E83A",
+    "aliases": [
+      "icon-more_circle_left1"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-one_fill",
+    "unicode": "E056",
+    "aliases": [
+      "icon-one_fill"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-opinion",
+    "unicode": "E802",
+    "aliases": [
+      "icon-opinion"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-oppse_line",
+    "unicode": "E090",
+    "aliases": [
+      "icon-oppse_line"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-oppse_surface",
+    "unicode": "E798",
+    "aliases": [
+      "icon-oppse_surface"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-order",
+    "unicode": "E8C6",
+    "aliases": [
+      "icon-order"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-order1",
+    "unicode": "E8C7",
+    "aliases": [
+      "icon-order1"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-peer_line",
+    "unicode": "E765",
+    "aliases": [
+      "icon-peer_line"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-peer_surface",
+    "unicode": "E764",
+    "aliases": [
+      "icon-peer_surface"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-personal_center",
+    "unicode": "E88A",
+    "aliases": [
+      "icon-personal_center"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-pic_fill",
+    "unicode": "E900",
+    "aliases": [
+      "icon-pic_fill"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-plane",
+    "unicode": "E791",
+    "aliases": [
+      "icon-plane"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-play_fill",
+    "unicode": "E813",
+    "aliases": [
+      "icon-play_fill"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-policy_fill",
+    "unicode": "E7B2",
+    "aliases": [
+      "icon-policy_fill"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-policy_group_line",
+    "unicode": "E043",
+    "aliases": [
+      "icon-policy_group_line"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-policy_line",
+    "unicode": "E042",
+    "aliases": [
+      "icon-policy_line"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-policyarchive",
+    "unicode": "E81D",
+    "aliases": [
+      "icon-policyarchive"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-radio_line",
+    "unicode": "E7A6",
+    "aliases": [
+      "icon-radio_line"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-record_line",
+    "unicode": "E89B",
+    "aliases": [
+      "icon-record_line"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-reduce",
+    "unicode": "E6D4",
+    "aliases": [
+      "icon-reduce"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-remind_line_b",
+    "unicode": "E8C9",
+    "aliases": [
+      "icon-remind_line_b"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-ringbell_fill",
+    "unicode": "E809",
+    "aliases": [
+      "icon-ringbell_fill"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-routine",
+    "unicode": "E7B8",
+    "aliases": [
+      "icon-routine"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-service_line_bb",
+    "unicode": "E8DB",
+    "aliases": [
+      "icon-service_line_bb"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-setting",
+    "unicode": "E877",
+    "aliases": [
+      "icon-setting"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-share_actionsheet",
+    "unicode": "E899",
+    "aliases": [
+      "icon-share_actionsheet"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-ship",
+    "unicode": "E790",
+    "aliases": [
+      "icon-ship"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-shrink_screen_line",
+    "unicode": "E08D",
+    "aliases": [
+      "icon-shrink_screen_line"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-sick",
+    "unicode": "E78B",
+    "aliases": [
+      "icon-sick"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-smile",
+    "unicode": "E777",
+    "aliases": [
+      "icon-smile"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-speech",
+    "unicode": "E776",
+    "aliases": [
+      "icon-speech"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-sticker",
+    "unicode": "E788",
+    "aliases": [
+      "icon-sticker"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-system",
+    "unicode": "E806",
+    "aliases": [
+      "icon-system"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-taxi",
+    "unicode": "E792",
+    "aliases": [
+      "icon-taxi"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-thousandtalentsprogram",
+    "unicode": "E855",
+    "aliases": [
+      "icon-thousandtalentsprogram"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-three_fill",
+    "unicode": "E050",
+    "aliases": [
+      "icon-three_fill"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-thumb_down",
+    "unicode": "E7CB",
+    "aliases": [
+      "icon-thumb_down"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-thumbup_fill",
+    "unicode": "E885",
+    "aliases": [
+      "icon-thumbup_fill"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-ticket_surface",
+    "unicode": "E7A4",
+    "aliases": [
+      "icon-ticket_surface"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-tipoff",
+    "unicode": "E79F",
+    "aliases": [
+      "icon-tipoff"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-train",
+    "unicode": "E794",
+    "aliases": [
+      "icon-train"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-two_fill",
+    "unicode": "E025",
+    "aliases": [
+      "icon-two_fill"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-vedio",
+    "unicode": "E816",
+    "aliases": [
+      "icon-vedio"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-voiceclose",
+    "unicode": "E857",
+    "aliases": [
+      "icon-voiceclose"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-voiceopen",
+    "unicode": "E858",
+    "aliases": [
+      "icon-voiceopen"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-wechat_line",
+    "unicode": "E787",
+    "aliases": [
+      "icon-wechat_line"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-weekly",
+    "unicode": "E03E",
+    "aliases": [
+      "icon-weekly"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-weekly_fill",
+    "unicode": "E7B9",
+    "aliases": [
+      "icon-weekly_fill"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-weibiaoti",
+    "unicode": "E023",
+    "aliases": [
+      "icon-weibiaoti"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-weibiaoti-14-01",
+    "unicode": "E8B3",
+    "aliases": [
+      "icon-weibiaoti-14-01"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-weibiaoti-16-01",
+    "unicode": "E8B6",
+    "aliases": [
+      "icon-weibiaoti-16-01"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-weibiaoti-5-01",
+    "unicode": "E8A6",
+    "aliases": [
+      "icon-weibiaoti-5-01"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-weibiaoti-6-01",
+    "unicode": "E8A7",
+    "aliases": [
+      "icon-weibiaoti-6-01"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-weibiaoti-7-01",
+    "unicode": "E8A8",
+    "aliases": [
+      "icon-weibiaoti-7-01"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-weibiaoti-8-01",
+    "unicode": "E8A9",
+    "aliases": [
+      "icon-weibiaoti-8-01"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-weibiaoti-9-01",
+    "unicode": "E8AC",
+    "aliases": [
+      "icon-weibiaoti-9-01"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-weibiaoti-_huaban",
+    "unicode": "E849",
+    "aliases": [
+      "icon-weibiaoti-_huaban"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-weichat_line",
+    "unicode": "E766",
+    "aliases": [
+      "icon-weichat_line"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "icon-write_line",
+    "unicode": "E05C",
+    "aliases": [
+      "icon-write_line"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-bianji",
+    "unicode": "E086",
+    "aliases": [
+      "s-bianji"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-chakangengduo",
+    "unicode": "EA74",
+    "aliases": [
+      "s-chakangengduo"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-dengdai",
+    "unicode": "EA92",
+    "aliases": [
+      "s-dengdai"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-dianhua1",
+    "unicode": "E07E",
+    "aliases": [
+      "s-dianhua1"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-dianhua1_v2",
+    "unicode": "E018",
+    "aliases": [
+      "s-dianhua1"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-dianhua2",
+    "unicode": "E07F",
+    "aliases": [
+      "s-dianhua2"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-dianhua2_v2",
+    "unicode": "E019",
+    "aliases": [
+      "s-dianhua2"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-dianhua3",
+    "unicode": "E080",
+    "aliases": [
+      "s-dianhua3"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-dianhua3_v2",
+    "unicode": "E01A",
+    "aliases": [
+      "s-dianhua3"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-dianhuakefu",
+    "unicode": "EA8D",
+    "aliases": [
+      "s-dianhuakefu"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-ditie",
+    "unicode": "EA0C",
+    "aliases": [
+      "s-ditie"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-fanhui",
+    "unicode": "E082",
+    "aliases": [
+      "s-fanhui"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-feiji",
+    "unicode": "E084",
+    "aliases": [
+      "s-feiji"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-feiji_v2",
+    "unicode": "E01B",
+    "aliases": [
+      "s-feiji"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-fenxiang",
+    "unicode": "E079",
+    "aliases": [
+      "s-fenxiang"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-gaokongzhuiwu",
+    "unicode": "E085",
+    "aliases": [
+      "s-gaokongzhuiwu"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-gengduo",
+    "unicode": "E029",
+    "aliases": [
+      "s-gengduo"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-guanbi1",
+    "unicode": "EA04",
+    "aliases": [
+      "s-guanbi1"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-guanbi2",
+    "unicode": "E077",
+    "aliases": [
+      "s-guanbi2"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-guanbi2_v2",
+    "unicode": "E01C",
+    "aliases": [
+      "s-guanbi2"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-guanbi3",
+    "unicode": "E073",
+    "aliases": [
+      "s-guanbi3"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-guanbi3_v2",
+    "unicode": "E01D",
+    "aliases": [
+      "s-guanbi3"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-help",
+    "unicode": "EA04",
+    "aliases": [
+      "s-help"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-help-bs",
+    "unicode": "EA07",
+    "aliases": [
+      "s-help-bs"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-ku",
+    "unicode": "EA4B",
+    "aliases": [
+      "s-ku"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-liwu",
+    "unicode": "EA39",
+    "aliases": [
+      "s-liwu"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-mission-canyupeixun",
+    "unicode": "EA12",
+    "aliases": [
+      "s-mission-canyupeixun"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-mission-fatie",
+    "unicode": "E092",
+    "aliases": [
+      "s-mission-fatie"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-pic",
+    "unicode": "EA0B",
+    "aliases": [
+      "s-pic"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-qingduzhongji",
+    "unicode": "EAA2",
+    "aliases": [
+      "s-qingduzhongji"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-quan",
+    "unicode": "EA09",
+    "aliases": [
+      "s-quan"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-shezhi",
+    "unicode": "E081",
+    "aliases": [
+      "s-shezhi"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-shibai",
+    "unicode": "EA4F",
+    "aliases": [
+      "s-shibai"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-shouqi",
+    "unicode": "E075",
+    "aliases": [
+      "s-shouqi"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-sijiacheyiwaixian",
+    "unicode": "EA91",
+    "aliases": [
+      "s-sijiacheyiwaixian"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-sousuo",
+    "unicode": "EA1A",
+    "aliases": [
+      "s-sousuo"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-state1",
+    "unicode": "EA25",
+    "aliases": [
+      "s-state1"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-state3",
+    "unicode": "EA26",
+    "aliases": [
+      "s-state3"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-tianjia",
+    "unicode": "EA29",
+    "aliases": [
+      "s-tianjia"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-tianjiaxin",
+    "unicode": "EA7F",
+    "aliases": [
+      "s-tianjiaxin"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-tiaokuan",
+    "unicode": "EA24",
+    "aliases": [
+      "s-tiaokuan"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-weixuanze",
+    "unicode": "E02B",
+    "aliases": [
+      "s-weixuanze"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-xiangji",
+    "unicode": "EA8F",
+    "aliases": [
+      "s-xiangji"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-xianshi",
+    "unicode": "EA6C",
+    "aliases": [
+      "s-xianshi"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-xiayiye",
+    "unicode": "EA01",
+    "aliases": [
+      "s-xiayiye"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-yiwaiyiliao",
+    "unicode": "EA57",
+    "aliases": [
+      "s-yiwaiyiliao"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-zan-after",
+    "unicode": "EA0F",
+    "aliases": [
+      "s-zan-after"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-zengxianlianxiren",
+    "unicode": "EA9E",
+    "aliases": [
+      "s-zengxianlianxiren"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-zhankai",
+    "unicode": "EA10",
+    "aliases": [
+      "s-zhankai"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-zhiyin",
+    "unicode": "EA19",
+    "aliases": [
+      "s-zhiyin"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-zhuyuanbaozhang",
+    "unicode": "E06E",
+    "aliases": [
+      "s-zhuyuanbaozhang"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-ziliao",
+    "unicode": "EA40",
+    "aliases": [
+      "s-ziliao"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  },
+  {
+    "name": "s-ziranzaihai",
+    "unicode": "EA96",
+    "aliases": [
+      "s-ziranzaihai"
+    ],
+    "projects": [],
+    "resolution": "alias_merged"
+  }
+]

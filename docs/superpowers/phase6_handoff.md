@@ -1,239 +1,179 @@
-# Phase 6 核心技术文档 — 冲突检测
+# Phase 6–11 冲突解决与字体合并 Handoff
 
-> 本文档记录 Phase 6 的核心算法细节、数据结构约定、Phase 7 对接点。
-> 目的：确保后续 Phase 7 开发时无需回看代码就能理解 Phase 6 的输出格式和保证条件。
-
----
-
-## 1. 输入 / 输出
-
-### 1.1 输入
-
-| 文件                           | 大小  | 说明                          |
-| ------------------------------ | ----- | ----------------------------- |
-| `registry/glyph_registry.json` | ~9 MB | 1,346 条 Phase 5 注册表 entry |
-
-### 1.2 输出
-
-| 文件                                   | 大小    | 说明                                    |
-| -------------------------------------- | ------- | --------------------------------------- |
-| `report/conflict_records.json`         | ~2 MB   | 原始冲突数据（1,698 条）                |
-| `report/filtered_conflicts.json`       | ~2 MB   | Phase 6.5 过滤后（标记 false_positive） |
-| `report/visual_similarity_scores.json` | ~500 KB | Phase 6.5 视觉相似度分数                |
-| `report/conflict_report.md`            | ~200 KB | 人类可读分级报告                        |
-| `report/phase6_conflict_preview.html`  | ~146 KB | 可视化决策面板（辅助参考）              |
-
-### 1.3 脚本
-
-| 文件                                      | 说明                                       |
-| ----------------------------------------- | ------------------------------------------ |
-| `pipeline/06_detect_conflicts.py`         | 主脚本：8 个核心函数                       |
-| `pipeline/test_06_conflicts.py`           | 16 个单元测试                              |
-| `pipeline/06_5_filter_false_positives.py` | Phase 6.5：假阳性过滤（视觉+几何相似度）   |
-| `pipeline/_visual_similarity.js`          | Phase 6.5：像素渲染比对（@napi-rs/canvas） |
+> 本文档记录截至 **2026-05-15** 的全链路完成状态。
+> **所有冲突已清零，746-glyph 统一字体已生成。**
+> 这是给下一个对话的交接文档，请务必先读完再操作。
 
 ---
 
-## 2. conflict_records.json 数据结构
+## 1. 最终状态总览
 
-### 顶层格式
-
-```json
-{
-  "metadata": {
-    "generatedAt": "2026-05-13T10:01:55.675491+00:00",
-    "total_conflicts": 1698,
-    "by_type": {
-      "glyph_duplicate": 905,
-      "unicode_conflict": 401,
-      "name_conflict": 392
-    },
-    "by_severity": {
-      "critical": 592,
-      "warning": 509,
-      "info": 597
-    }
-  },
-  "records": [CONFLICT_RECORD, ...]
-}
-```
-
-### CONFLICT_RECORD 格式
-
-```json
-{
-  "type": "unicode_conflict" | "name_conflict" | "glyph_duplicate",
-  "severity": "critical" | "warning" | "info",
-  "key": "U+E6B5" | "icon-home" | "sha256_xxx",
-  "variantCount": 6,
-  "variants": [
-    {
-      "glyphHash": "sha256_xxx",
-      "canonicalUnicodeHex": "E6B5",
-      "canonicalName": "icon-arrows_right",
-      "sources": [
-        {"assetId": "xxx", "projects": ["project-a"], "cssUrl": "..."}
-      ],
-      "contours": [...],
-      "advanceWidth": 1024
-    }
-  ],
-  "affectedAssets": ["assetId1", "assetId2"],
-  "affectedProjects": ["project-a", "project-b"],
-  "resolution_hint": "assign_pua" | "rename" | "merge_alias"
-}
-```
-
-### records 排序规则
-
-records 数组按 `(severity_order, key)` 排序：
-- severity_order: critical=0, warning=1, info=2
-- 同 severity 内按 key 字母序
+| 指标             | 值                                |
+| ---------------- | --------------------------------- |
+| Registry entries | **747**（Type B 解决后，原 1346） |
+| Type A 冲突      | **0**（原 401，全部解决）         |
+| Type B 冲突      | **0**（原 392，全部解决）         |
+| Type C Duplicate | **627**（正常多来源，已合并）     |
+| False Positive   | **9**（已自动合并）               |
+| 合并字体 glyphs  | **746**（1 条 no unicode 跳过）   |
+| PUA 新分配范围   | E000–E0FF（~147 个）              |
+| CSS aliases      | 66 个                             |
 
 ---
 
-## 3. 三类冲突定义
+## 2. 输出文件
 
-| 类型                        | 检测条件                                          | resolution_hint | Phase 7 操作              |
-| --------------------------- | ------------------------------------------------- | --------------- | ------------------------- |
-| **Type A: Unicode 冲突**    | 同一 `canonicalUnicodeHex` → 多个不同 `glyphHash` | `assign_pua`    | 分配新 PUA 码位           |
-| **Type B: Name 冲突**       | 同一 `canonicalName` → 多个不同 `glyphHash`       | `rename`        | rename + alias 合并       |
-| **Type C: Duplicate Glyph** | 同一 entry 的 `len(sources) > 1`                  | `merge_alias`   | merge sources（正常情况） |
+### 2.1 主要产出
 
----
+| 文件                           | 说明                                               |
+| ------------------------------ | -------------------------------------------------- |
+| `output/iconfont_merged.ttf`   | 合并字体 TTF                                       |
+| `output/iconfont_merged.woff2` | 合并字体 WOFF2                                     |
+| `output/iconfont_merged.css`   | 完整 CSS（@font-face + 全量 icon class + aliases） |
+| `output/iconfont_merged.json`  | 图标元数据（name/unicode/aliases/sources）         |
+| `output/demo_index.html`       | 字体预览页（746 图标，PUA 标签仅 E000-E5FF）       |
+| `output/merge_manifest.json`   | 构建元数据                                         |
+| `output/package/`              | 标准分发包（iconfont.* 命名）                      |
 
-## 4. 严重性分级
+### 2.2 Registry 文件
 
-| 级别         | 条件        | Phase 7 处理优先级 |
-| ------------ | ----------- | ------------------ |
-| **critical** | 变体数 >= 5 | 最高优先级         |
-| **warning**  | 变体数 3-4  | 中等优先级         |
-| **info**     | 变体数 = 2  | 低优先级           |
+| 文件                                                          | 说明                                          |
+| ------------------------------------------------------------- | --------------------------------------------- |
+| `registry/glyph_registry.json`                                | 当前 registry（747 entries，Type A+B 全解决） |
+| `registry/glyph_registry_resolved.json`                       | 最新 resolved 版本（同上）                    |
+| `registry/glyph_registry_backup_before_typeb_resolution.json` | Type B 解决前备份（1346 entries）             |
+| `registry/lineage.json`                                       | 全溯源链（含 assign_pua 记录）                |
 
----
+### 2.3 决策文件
 
-## 5. 统计事实
-
-### Phase 6 原始输出
-
-| 指标            | 值                                           |
-| --------------- | -------------------------------------------- |
-| 总冲突数        | 1,698                                        |
-| Unicode 冲突    | 401（Critical 12 / Warning 195 / Info 194）  |
-| Name 冲突       | 392（Critical 11 / Warning 155 / Info 226）  |
-| Duplicate Glyph | 905（Critical 569 / Warning 159 / Info 177） |
-
-### Phase 6.5 过滤后（2026-05-14）
-
-| 指标                       | 值       | 说明                               |
-| -------------------------- | -------- | ---------------------------------- |
-| 审核 UI 卡片总数           | 793      | Type A + Type B                    |
-| 自动合并（false_positive） | **528**  | 视觉相似度 minScore >= 0.90        |
-| 仍需人工决策               | **265**  | 需在 conflict_resolver.html 中决策 |
-| 视觉相似度阈值             | 0.90     | @napi-rs/canvas 64x64 像素渲染     |
-| 判断逻辑                   | minScore | 所有 variant 两两相似才合并        |
-
-**典型修复案例**：U+E720（4 个客服耳机 + 1 个微信气泡）原 maxScore=0.9927 被错误合并，改 minScore=0.7478 后正确保留为待决策。
-
-### Top Unicode 冲突（Type A Critical）
-
-| Unicode | 变体数 | 说明                              |
-| ------- | ------ | --------------------------------- |
-| U+E6B5  | 6      | icon-arrows_right 有 6 种不同字形 |
-| U+E6B7  | 5      | 5 种不同字形                      |
-| U+E6C6  | 5      | 5 种不同字形                      |
-| U+E6CB  | 5      | 5 种不同字形                      |
-| U+E6EC  | 5      | 5 种不同字形                      |
-
-### Top Name 冲突（Type B Critical）
-
-| Name                | 变体数 | 说明          |
-| ------------------- | ------ | ------------- |
-| icon-arrows_right   | 6      | 同名 6 种字形 |
-| icon-wechat_surface | 6      | 同名 6 种字形 |
-| icon-close_line     | 5      | 同名 5 种字形 |
+| 文件                                 | 说明                                              |
+| ------------------------------------ | ------------------------------------------------- |
+| `report/phase7_typeb_decisions.json` | Type B 人工审核决策（84 条）                      |
+| `report/phase7_typea_decisions.json` | Type A 人工审核决策（101 条匹配）                 |
+| `report/phase7_resolution.json`      | Phase 7 最终分辨结果（747 entries，Phase 8 输入） |
 
 ---
 
-## 6. Phase 7 对接点
-
-### 6.1 Phase 7 读取什么
-
-```python
-# Phase 7 默认读取过滤后的冲突（含 false_positive 标记）
-with open('report/filtered_conflicts.json') as f:
-    data = json.load(f)
-
-records = data['records']  # list of CONFLICT_RECORD (with isFalsePositive flag)
-```
-
-> **注意**：`filtered_conflicts.json` 中每条记录新增字段：
-> - `isFalsePositive`: bool — 是否已自动合并
-> - `similarityScore`: float — 最低相似度分数
-> - `similarityType`: "visual" | "geometric" — 判断依据
-> - `recommendation`: "merge_as_same_glyph" | "needs_review" — 建议操作
-
-### 6.2 Phase 7 处理顺序
-
-1. 按 severity 遍历 records（critical → warning → info）
-2. Type A (`unicode_conflict`): 为每个 variant 分配新的 PUA 码位（从 E000 起递增）
-3. Type B (`name_conflict`): 为每个 variant 生成新 name + alias
-4. Type C (`glyph_duplicate`): 标记 merge，无需额外操作
-
-### 6.3 Phase 7 需要额外读取的数据
-
-```python
-# Phase 7 还需要这些文件来执行 rename/alias 替换
-with open('registry/glyph_registry.json') as f:
-    registry = json.load(f)  # 完整的 glyph 数据
-
-with open('sources/meta/assets_manifest.json') as f:
-    assets = json.load(f)  # assetId → sourceProjects, cssUrl, ttfPath
-
-with open('sources/meta/css_mappings.json') as f:
-    css_mappings = json.load(f)  # 用于项目文件中的 icon 类名替换
-```
-
-### 6.4 Phase 7 预期产出
-
-- `report/lineage.json` 更新（记录 PUA 分配和 rename 历史）
-- `registry/glyph_registry.json` 更新（添加 finalUnicode/finalName）
-- 前端项目文件替换（iconfont CSS 链接更新、icon class 替换）
-
----
-
-## 7. 运行方式
+## 3. 全链路脚本执行顺序（重跑指南）
 
 ```bash
-# 重跑 Phase 6
+# 1. 从 Type B 前备份恢复
+Copy-Item registry/glyph_registry_backup_before_typeb_resolution.json registry/glyph_registry.json
+
+# 2. Phase 6 冲突检测（在原始 1346 registry 上）
 python pipeline/06_detect_conflicts.py
+python pipeline/06_5_filter_false_positives.py
 
-# 运行测试
-python pipeline/test_06_conflicts.py
+# 3. Phase 6.8 应用 Type B 决策 → 747 entries
+python pipeline/06_8_apply_name_resolution.py --decisions report/phase7_typeb_decisions.json
+Copy-Item registry/glyph_registry_resolved.json registry/glyph_registry.json
 
-# 验证输出
-python -c "
-import json
-with open('report/conflict_records.json') as f:
-    d = json.load(f)
-print(f'Total conflicts: {d[\"metadata\"][\"total_conflicts\"]}')
-print(f'By type: {d[\"metadata\"][\"by_type\"]}')
-print(f'By severity: {d[\"metadata\"][\"by_severity\"]}')
-"
+# 4. Phase 6 重跑（在 747 registry 上）
+python pipeline/06_detect_conflicts.py       # Type A=110, Type B=0
+python pipeline/06_5_filter_false_positives.py
+
+# 5. Phase 7 应用 Type A 决策 → Type A=0
+python pipeline/07_apply_typea_resolution.py
+Copy-Item registry/glyph_registry_resolved.json registry/glyph_registry.json
+
+# 6. Phase 6 验证（Type A=0, Type B=0）
+python pipeline/06_detect_conflicts.py
+python pipeline/06_5_filter_false_positives.py
+
+# 7. Phase 7 生成 phase7_resolution.json（747 entries）
+python pipeline/07_resolve_conflicts.py
+
+# 8. Phase 8-9 合并字体
+python pipeline/08_merge_glyf.py
+
+# 9. Phase 11 输出
+node pipeline/11_generate_manifest.js
+node pipeline/12_package_output.js
 ```
 
 ---
 
-## 8. 测试覆盖
+## 4. 冲突解决机制详解
 
-| 函数                        | 测试数 | 覆盖                                       |
-| --------------------------- | ------ | ------------------------------------------ |
-| `detect_unicode_conflicts`  | 4      | 基本冲突 / 无冲突 / 同 hash / null unicode |
-| `detect_name_conflicts`     | 3      | 基本冲突 / null name / 同 hash             |
-| `detect_duplicate_glyphs`   | 3      | 基本检测 / 单来源 / 严重性分级             |
-| `classify_severity`         | 1      | 全部分级阈值                               |
-| `build_conflict_records`    | 2      | 三类整合 / 必需字段                        |
-| `generate_records_json`     | 1      | 输出格式 + metadata                        |
-| `generate_report_md`        | 1      | Markdown 结构                              |
-| `test_deterministic_output` | 1      | 多次运行输出一致                           |
-| **总计**                    | **16** | **100% 核心函数**                          |
+### 4.1 Type B 解决（Phase 6.8）
+
+脚本：`pipeline/06_8_apply_name_resolution.py`
+
+- **False Positive 自动合并**：308 条（视觉相似度 minScore >= 0.90）
+- **按人工决策合并**：84 条（`report/phase7_typeb_decisions.json`）
+- **保留组**：合并到第一个变体编码，其他变体编码释放
+- **PUA 组**：所有 variant 合并成 **1 条 entry**，分配 **1 个新 PUA 编码（E000+）**，命名规则 `原name_v2`
+
+> **关键修复**（2026-05-15）：旧逻辑对 PUA 组每个 variant 各生成独立 entry，导致同字形多个 PUA 码。
+> 修复后调用 `merge_variants_to_entry(group_variants, pua_name, pua=new_pua)` 合并为 1 条。
+
+### 4.2 Type A 解决（Phase 7）
+
+脚本：`pipeline/07_apply_typea_resolution.py`
+
+三段处理逻辑：
+1. **用户决策段**：从 `phase7_typea_decisions.json` + `conflict_resolver_typea_data.json` 建立 `id_to_record` 映射，应用 107 条手动决策
+2. **typea_data 自动补全段**：处理 typea_data 中未完整分组的 variants，带 `keep_uc` 防重复判断
+3. **fallback 段**：读取当前 `conflict_records.json` 处理 Type B 合并后产生的新冲突（按 sourceCount 保留最高的）
+
+关键 ID 映射说明：`phase7_typea_decisions.json` 的 key 是 `conflict_resolver_typea_data.json` 的 id（546-722 范围），**不是** `conflict_records.json` 的数组下标。
+
+### 4.3 phase7_resolution.json 生成（07_resolve_conflicts.py）
+
+**修复**（2026-05-15）：`resolve_type_c_auto` 原来跳过 `len(sources) <= 1` 的单来源 entry，导致 ~87 个 glyph 丢失。
+修复后包含全部 747 registry 条目（单来源标记 `resolution: 'single_source'`，多来源标记 `alias_merged`）。
+
+---
+
+## 5. PUA 编码规范
+
+| 范围      | 含义                                 | Demo 标签     |
+| --------- | ------------------------------------ | ------------- |
+| E000–E5FF | Pipeline 新分配（Type A/B 冲突解决） | 橙色 PUA 标签 |
+| E600–EAxx | 原始来源图标编码（iconfont.cn 分配） | 无标签        |
+
+Demo HTML 判断：`parseInt(unicode, 16) >= 0xE000 && parseInt(unicode, 16) < 0xE600`
+
+---
+
+## 6. 关键数据变化链
+
+```
+原始 registry:   1346 entries
+  ↓ Phase 6.8 Type B 解决（308 FP + 84 手动）
+registry:         747 entries（-599）
+  ↓ Phase 7 Type A 解决（107 手动 + fallback）
+registry:         747 entries（只改 canonicalUnicode，不改条数）
+  ↓ Phase 7 resolve_conflicts
+phase7_resolution: 747 entries
+  ↓ Phase 8-9 merge（跳过1条 no unicode）
+merged font:      746 glyphs
+```
+
+---
+
+## 7. 已知问题与待办
+
+### 后续工作（字体已完成，进入替换阶段）
+
+- [ ] **Phase 12/14：项目替换** — 用 `output/package/` 替换各前端项目的 iconfont 链接
+  - 需要 `14_generate_replacer.js` 生成各项目的替换指南
+  - `report/replacement_guides/` 已有部分项目的替换指南
+- [ ] **Phase 13：溯源增强** — `13_enhance_lineage.py` 增强 lineage 数据
+- [ ] **Phase 15：Resolver 数据重建** — `15_rebuild_resolver_data.py`
+
+### 已解决的历史问题
+
+| 问题                               | 根因                                                           | 修复                            |
+| ---------------------------------- | -------------------------------------------------------------- | ------------------------------- |
+| Type A 只处理 33 条                | decisions key 是 typea_data.id，不是 conflict_records 数组下标 | 改用 id_to_record 映射          |
+| 重复 PUA 分配（15 个）             | 第二段自动处理遍历了已被第一段处理的 record                    | 加 keep_uc 防重复判断           |
+| Type B PUA 各自独立编码            | merge_variants_to_entry 未传 pua 参数                          | 传入 pua=new_pua 合并为单 entry |
+| demo 全部显示 PUA 标签             | isPua 判断 >= E000，原始图标也在 E600+                         | 改为 E000-E5FF 才打标签         |
+| phase7_resolution 丢失 87 个 glyph | resolve_type_c_auto 跳过单来源 entry                           | 去掉 `len(sources) <= 1` 过滤   |
+
+---
+
+> **Handoff 时间**: 2026-05-15
+> **完成状态**: Phase 1–11 全部完成
+> **下一个 Phase**: 项目替换（Phase 12/14）

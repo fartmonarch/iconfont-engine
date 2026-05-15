@@ -3,12 +3,12 @@
   "woff2_path": "D:\\work\\iconfont-engine\\output\\iconfont_merged.woff2",
   "css_path": "D:\\work\\iconfont-engine\\output\\iconfont_merged.css",
   "manifest_path": "D:\\work\\iconfont-engine\\output\\iconfont_merged.json",
-  "glyphs_merged": 1062,
+  "glyphs_merged": 746,
   "errors": 0,
-  "total_resolved": 1063,
-  "total_valid": 1062,
+  "total_resolved": 747,
+  "total_valid": 746,
   "skipped_no_contours": 0,
   "skipped_no_unicode": 1,
   "skipped_composite": 0,
-  "generatedAt": "2026-05-14T09:30:47.573754+00:00"
+  "generatedAt": "2026-05-15T09:19:49.358882+00:00"
 }

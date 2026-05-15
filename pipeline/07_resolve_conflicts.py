@@ -313,38 +313,39 @@ def resolve_type_b(records, decisions, pua):
 
 
 def resolve_type_c_auto(registry_entries):
-    """Auto-resolve Type C: same glyphHash, multiple sources. Just merge aliases."""
+    """Auto-resolve Type C: same glyphHash, multiple sources. Also include single-source
+    entries so ALL registry glyphs appear in the output font."""
     resolved = []
     merged_count = 0
 
     for entry in registry_entries:
         sources = entry.get('sources', [])
-        if len(sources) <= 1:
-            continue
+        multi = len(sources) > 1
 
         glyph = {
             'glyphHash': entry['glyphHash'],
             'finalUnicode': entry.get('canonicalUnicode'),
-            'finalUnicodeHex': entry.get('canonicalUnicodeHex'),
+            'finalUnicodeHex': entry.get('canonicalUnicodeHex') or
+            (f'{entry["canonicalUnicode"]:04X}' if isinstance(
+                entry.get('canonicalUnicode'), int) else ''),
             'finalName': entry.get('canonicalName') or '',
             'aliases': entry.get('aliases', []),
             'advanceWidth': entry.get('advanceWidth'),
             'glyphType': entry.get('glyphType', 'unknown'),
-            'resolution': 'alias_merged',
+            'resolution': 'alias_merged' if multi else 'single_source',
             'sources': sources,
         }
-        # Merge alias names from all sources
+        # Merge alias names
         all_names = set()
-        for src in sources:
-            css_name = src.get('cssUrl', '').split('/')[-1].replace('.css', '')
-            # We already have canonicalName from the registry
         if entry.get('aliases'):
             all_names.update(entry['aliases'])
         glyph['aliases'] = sorted(all_names)
-        glyph['mergedSourceCount'] = len(sources)
+        if multi:
+            glyph['mergedSourceCount'] = len(sources)
 
         resolved.append(glyph)
-        merged_count += 1
+        if multi:
+            merged_count += 1
 
     return resolved, {'merged': merged_count}
 

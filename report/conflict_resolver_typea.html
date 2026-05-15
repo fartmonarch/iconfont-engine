@@ -1,0 +1,1097 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phase 7 Conflict Resolution v2</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, "Microsoft YaHei", "Segoe UI", sans-serif;
+            background: #f0f2f5;
+            padding: 0;
+        }
+
+        #app-header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: #fff;
+            border-bottom: 1px solid #e8e8e8;
+            padding: 12px 20px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+        }
+
+        #app-header h1 {
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+
+        .progress-section {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 8px;
+        }
+
+        #progress-text {
+            font-size: 13px;
+            color: #666;
+            white-space: nowrap;
+        }
+
+        .progress-bar {
+            flex: 1;
+            height: 8px;
+            background: #f0f0f0;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: #52c41a;
+            transition: width 0.3s;
+            width: 0%;
+        }
+
+        .filter-bar {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-bottom: 8px;
+        }
+
+        .filter-btn {
+            padding: 4px 12px;
+            border: 1px solid #d9d9d9;
+            background: #fff;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 12px;
+        }
+
+        .filter-btn.active {
+            background: #1890ff;
+            color: #fff;
+            border-color: #1890ff;
+        }
+
+        .filter-btn:hover {
+            border-color: #1890ff;
+        }
+
+        .actions {
+            text-align: right;
+        }
+
+        #export-btn {
+            padding: 6px 16px;
+            background: #1890ff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 13px;
+        }
+
+        #export-btn:disabled {
+            background: #d9d9d9;
+            cursor: not-allowed;
+        }
+
+        #export-btn:hover:not(:disabled) {
+            background: #40a9ff;
+        }
+
+        #clear-cache-btn {
+            padding: 6px 16px;
+            background: #fff;
+            color: #666;
+            border: 1px solid #d9d9d9;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 13px;
+            margin-right: 8px;
+        }
+
+        /* Conflict card */
+        .conflict-card {
+            background: #fff;
+            border-radius: 8px;
+            margin-bottom: 12px;
+            border: 1px solid #e8e8e8;
+            overflow: hidden;
+            transition: opacity 0.3s;
+        }
+
+        .conflict-card.resolved {
+            opacity: 0.6;
+        }
+
+        .conflict-card[data-severity="critical"] {
+            border-left: 4px solid #ff4d4f;
+        }
+
+        .conflict-card[data-severity="warning"] {
+            border-left: 4px solid #fa8c16;
+        }
+
+        .conflict-card[data-severity="info"] {
+            border-left: 4px solid #1890ff;
+        }
+
+        .conflict-card.false-positive {
+            border-left: 4px solid #52c41a;
+            background: #f6ffed;
+        }
+
+        .conflict-card.false-positive .card-header {
+            background: #f6ffed;
+        }
+
+        .conflict-card.false-positive .card-hint {
+            background: #d9f7be;
+            color: #237804;
+        }
+
+        .conflict-card.hidden {
+            display: none;
+        }
+
+        /* Card header */
+        .card-header {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 14px;
+            background: #fafafa;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .card-header .key {
+            font-weight: 700;
+            font-size: 14px;
+            font-family: monospace;
+        }
+
+        .card-hint {
+            padding: 4px 14px;
+            background: #fffbe6;
+            border-bottom: 1px solid #ffe58f;
+            font-size: 12px;
+            color: #d46b08;
+        }
+
+        .sev-badge {
+            padding: 2px 8px;
+            border-radius: 10px;
+            font-size: 11px;
+            font-weight: 600;
+        }
+
+        .sev-badge.critical {
+            background: #fff1f0;
+            color: #cf1322;
+        }
+
+        .sev-badge.warning {
+            background: #fff7e6;
+            color: #d46b08;
+        }
+
+        .sev-badge.info {
+            background: #e6f7ff;
+            color: #096dd9;
+        }
+
+        .type-label {
+            font-size: 11px;
+            color: #999;
+        }
+
+        .variant-count {
+            font-size: 12px;
+            color: #666;
+            margin-left: auto;
+        }
+
+        .decision-status {
+            font-size: 12px;
+            color: #52c41a;
+            font-weight: 600;
+            display: none;
+        }
+
+        .conflict-card.resolved .decision-status {
+            display: inline;
+        }
+
+        .fp-badge {
+            background: #52c41a;
+            color: #fff;
+            padding: 2px 8px;
+            border-radius: 10px;
+            font-size: 11px;
+            margin-left: 8px;
+        }
+
+        /* Variant selection toolbar */
+        .variant-toolbar {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 14px;
+            background: #fafafa;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .variant-toolbar label {
+            font-size: 12px;
+            color: #666;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .variant-toolbar input[type="checkbox"] {
+            cursor: pointer;
+        }
+
+        .btn-group-action {
+            padding: 3px 10px;
+            border: 1px solid #d9d9d9;
+            background: #fff;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 12px;
+        }
+
+        .btn-group-action:hover {
+            border-color: #1890ff;
+            color: #1890ff;
+        }
+
+        .btn-group-action.primary {
+            background: #1890ff;
+            color: #fff;
+            border-color: #1890ff;
+        }
+
+        .btn-group-action.primary:hover {
+            background: #40a9ff;
+        }
+
+        .btn-group-action.success {
+            background: #52c41a;
+            color: #fff;
+            border-color: #52c41a;
+        }
+
+        .btn-group-action.success:hover {
+            background: #73d13d;
+        }
+
+        .btn-group-action.warning {
+            background: #fa8c16;
+            color: #fff;
+            border-color: #fa8c16;
+        }
+
+        .btn-group-action.warning:hover {
+            background: #ffa940;
+        }
+
+        /* Card body */
+        .card-body {
+            display: flex;
+            gap: 12px;
+            padding: 14px;
+            overflow-x: auto;
+            flex-wrap: nowrap;
+        }
+
+        .variant-panel {
+            flex: 0 0 auto;
+            width: 140px;
+            max-width: 140px;
+            border: 1px solid #e8e8e8;
+            border-radius: 6px;
+            padding: 10px;
+            text-align: center;
+            background: #fff;
+            transition: border-color 0.2s, background 0.2s;
+        }
+
+        .variant-panel:hover {
+            border-color: #d9d9d9;
+        }
+
+        .variant-panel.selected {
+            border-color: #52c41a;
+            background: #f6ffed;
+        }
+
+        .variant-panel.pua-active {
+            border-color: #fa8c16;
+            background: #fff7e6;
+        }
+
+        .variant-panel.in-group {
+            border-color: #1890ff;
+            background: #e6f7ff;
+            opacity: 0.7;
+        }
+
+        .variant-panel .svg-container {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .variant-panel .svg-container svg {
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+        .variant-meta {
+            font-size: 11px;
+            color: #666;
+            margin-bottom: 8px;
+            word-break: break-all;
+        }
+
+        .variant-meta .name {
+            font-weight: 600;
+            color: #333;
+            font-size: 12px;
+            display: block;
+            margin-bottom: 2px;
+        }
+
+        .variant-meta code {
+            font-size: 10px;
+            color: #999;
+        }
+
+        .variant-checkbox {
+            margin-bottom: 6px;
+        }
+
+        /* Groups area */
+        .groups-area {
+            padding: 10px 14px;
+            background: #fafafa;
+            border-top: 1px solid #f0f0f0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .groups-area:empty {
+            display: none;
+        }
+
+        .group-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 12px;
+        }
+
+        .group-tag.keep {
+            background: #f6ffed;
+            border: 1px solid #b7eb8f;
+            color: #389e0d;
+        }
+
+        .group-tag.pua {
+            background: #fff7e6;
+            border: 1px solid #ffd591;
+            color: #d46b08;
+        }
+
+        .group-tag .group-label {
+            font-weight: 600;
+        }
+
+        .group-tag .group-variants {
+            color: #666;
+            font-size: 11px;
+        }
+
+        .group-tag .btn-remove {
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: #999;
+            font-size: 14px;
+            padding: 0 2px;
+        }
+
+        .group-tag .btn-remove:hover {
+            color: #ff4d4f;
+        }
+
+        /* Card footer */
+        .card-footer {
+            padding: 8px 14px;
+            background: #fafafa;
+            border-top: 1px solid #f0f0f0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .btn-manual-merge {
+            padding: 4px 12px;
+            background: #52c41a;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 12px;
+        }
+
+        .btn-manual-merge:hover {
+            background: #73d13d;
+        }
+
+        .btn-unmerge {
+            padding: 4px 12px;
+            background: #fff;
+            color: #666;
+            border: 1px solid #d9d9d9;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 12px;
+        }
+
+        .btn-unmerge:hover {
+            border-color: #ff4d4f;
+            color: #ff4d4f;
+        }
+
+        /* SVG placeholder */
+        .svg-placeholder {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto;
+            background: #f0f0f0;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ccc;
+            font-size: 24px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .card-body {
+                flex-wrap: wrap;
+            }
+
+            .variant-panel {
+                width: 100%;
+                max-width: 200px;
+            }
+        }
+
+        .loading {
+            text-align: center;
+            padding: 60px;
+            color: #909399;
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header id="app-header">
+        <h1>Phase 7 Conflict Resolution v2 — 分组审核</h1>
+        <div class="progress-section">
+            <span id="progress-text">Loading...</span>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progress-fill"></div>
+            </div>
+        </div>
+        <div class="filter-bar" id="filter-bar">
+            <button class="filter-btn active" data-filter="all">All</button>
+        </div>
+        <div class="actions">
+            <button id="clear-cache-btn">Clear Cache</button>
+            <button id="export-btn" disabled>Export Decisions (JSON)</button>
+        </div>
+    </header>
+
+    <main id="card-container">
+        <div class="loading">Loading data...</div>
+    </main>
+
+    <script>
+        (function () {
+            'use strict';
+
+            function escapeHtml(str) {
+                return String(str).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+            }
+
+            const STORAGE_KEY = 'iconfont_conflict_decisions_v2';
+
+            const state = {
+                decisions: {},      // recordId -> { groups: [{ type, variants: [] }] }
+                selections: {},     // recordId -> Set(variantIndex)
+                totalRecords: 0,
+                totalVariants: 0,
+                pendingRecords: 0,
+                pendingVariants: 0,
+                autoMergedRecords: 0,
+            };
+            let records = [];
+
+            const container = document.getElementById('card-container');
+
+            // Load data
+            fetch('conflict_resolver_typea_data.json')
+                .then(function (r) { return r.json(); })
+                .then(function (data) {
+                    records = data.records || [];
+                    state.totalRecords = records.length;
+                    state.totalVariants = records.reduce(function (sum, r) { return sum + (r.variants ? r.variants.length : 0); }, 0);
+                    state.autoMergedRecords = records.filter(function (r) { return r.isFalsePositive; }).length;
+                    state.pendingRecords = state.totalRecords - state.autoMergedRecords;
+                    state.pendingVariants = records.filter(function (r) { return !r.isFalsePositive; }).reduce(function (sum, r) { return sum + (r.variants ? r.variants.length : 0); }, 0);
+
+                    // Load cached decisions
+                    loadFromLocalStorage();
+
+                    buildFilterButtons();
+                    renderCards();
+                    updateProgress();
+                })
+                .catch(function (e) {
+                    container.innerHTML = '<div class="loading">Failed to load data: ' + e.message + '<br/>Please serve this page via HTTP server</div>';
+                });
+
+            // ===================== localStorage =====================
+            function saveToLocalStorage() {
+                localStorage.setItem(STORAGE_KEY, JSON.stringify(state.decisions));
+            }
+
+            function loadFromLocalStorage() {
+                try {
+                    var raw = localStorage.getItem(STORAGE_KEY);
+                    if (raw) {
+                        state.decisions = JSON.parse(raw);
+                    }
+                } catch (e) { console.warn('Failed to load cache:', e); }
+            }
+
+            function clearCache() {
+                localStorage.removeItem(STORAGE_KEY);
+                state.decisions = {};
+                renderCards();
+                updateProgress();
+            }
+
+            document.getElementById('clear-cache-btn').addEventListener('click', clearCache);
+
+            // ===================== Filter Buttons =====================
+            function buildFilterButtons() {
+                var type_a = records.filter(function (r) { return r.type === 'unicode_conflict'; }).length;
+                var type_b = records.filter(function (r) { return r.type === 'name_conflict'; }).length;
+                var crit = records.filter(function (r) { return r.severity === 'critical'; }).length;
+                var warn = records.filter(function (r) { return r.severity === 'warning'; }).length;
+                var info = records.filter(function (r) { return r.severity === 'info'; }).length;
+                var fp = records.filter(function (r) { return r.isFalsePositive; }).length;
+                var pending = records.filter(function (r) { return !r.isFalsePositive; }).length;
+                var total = records.length;
+                document.getElementById('filter-bar').innerHTML =
+                    '<button class="filter-btn active" data-filter="all">All (' + total + ')</button>' +
+                    '<button class="filter-btn" data-filter="pending" style="color:#1890ff;font-weight:600;">Pending (' + pending + ')</button>' +
+                    '<button class="filter-btn" data-filter="false_positive" style="color:#52c41a;">Auto-Merged (' + fp + ')</button>' +
+                    '<button class="filter-btn" data-filter="critical">Critical (' + crit + ')</button>' +
+                    '<button class="filter-btn" data-filter="warning">Warning (' + warn + ')</button>' +
+                    '<button class="filter-btn" data-filter="info">Info (' + info + ')</button>' +
+                    '<button class="filter-btn" data-filter="unicode_conflict">Type A (' + type_a + ')</button>' +
+                    '<button class="filter-btn" data-filter="name_conflict">Type B (' + type_b + ')</button>';
+                document.querySelectorAll('.filter-btn').forEach(function (btn) {
+                    btn.addEventListener('click', function () {
+                        document.querySelectorAll('.filter-btn').forEach(function (b) { b.classList.remove('active'); });
+                        btn.classList.add('active');
+                        var filter = btn.dataset.filter;
+                        document.querySelectorAll('.conflict-card').forEach(function (card) {
+                            if (filter === 'all') {
+                                card.classList.remove('hidden');
+                            } else if (filter === 'pending') {
+                                card.classList.toggle('hidden', card.dataset.falsePositive === 'true');
+                            } else if (filter === 'false_positive') {
+                                card.classList.toggle('hidden', card.dataset.falsePositive !== 'true');
+                            } else {
+                                var match = card.dataset.severity === filter || card.dataset.type === filter;
+                                card.classList.toggle('hidden', !match);
+                            }
+                        });
+                    });
+                });
+            }
+
+            // ===================== Render Cards =====================
+            function renderCards() {
+                container.innerHTML = '';
+                var fragment = document.createDocumentFragment();
+
+                // Sort: pending first, auto-merged last
+                var sorted = records.slice().sort(function (a, b) {
+                    return (a.isFalsePositive ? 1 : 0) - (b.isFalsePositive ? 1 : 0);
+                });
+
+                sorted.forEach(function (record) {
+                    fragment.appendChild(buildCard(record));
+                });
+                container.appendChild(fragment);
+            }
+
+            function buildCard(record) {
+                var card = document.createElement('div');
+                var isUnmerged = state.decisions[record.id] && state.decisions[record.id].unmerge;
+                var isFp = record.isFalsePositive && !isUnmerged;
+                var hasDecision = !!state.decisions[record.id] && !isUnmerged;
+                var isResolved = isFp || (hasDecision && isRecordResolved(record));
+                card.className = 'conflict-card' + (isFp ? ' false-positive' : '') + (isResolved ? ' resolved' : '');
+                card.dataset.id = record.id;
+                card.dataset.type = record.type;
+                card.dataset.severity = record.severity;
+                card.dataset.falsePositive = isFp ? 'true' : 'false';
+
+                var typeLabel = record.type === 'unicode_conflict' ? 'Unicode: ' + record.key : 'Name: ' + record.key;
+                var sevLabel = record.severity.charAt(0).toUpperCase() + record.severity.slice(1);
+                var simScore = record.similarityScore !== undefined ? record.similarityScore : null;
+
+                // Header
+                var fpBadge = isFp ? '<span class="fp-badge">自动合并</span>' : '';
+                var headerHtml =
+                    '<div class="card-header">'
+                    + '<span class="key">' + escapeHtml(record.key) + '</span>'
+                    + '<span class="sev-badge ' + record.severity + '">' + sevLabel + '</span>'
+                    + '<span class="type-label">' + typeLabel + '</span>'
+                    + fpBadge
+                    + '<span class="variant-count">' + record.variantCount + ' variants</span>'
+                    + '<span class="decision-status">&#10003; Resolved</span>'
+                    + '</div>';
+
+                // Hint
+                var hintHtml;
+                if (isFp) {
+                    hintHtml = '<div class="card-hint">【已自动合并】' + (record.similarityType === 'visual' ? '视觉相似度' : '几何相似度')
+                        + (simScore !== null ? ' ' + (simScore * 100).toFixed(1) + '%' : '')
+                        + ' — 这些变体已自动合并</div>';
+                } else {
+                    hintHtml = '<div class="card-hint">'
+                        + ' 选中变体后点击"设为保留组"或"添加 PUA 组"进行分组，或点击下方"一键分组"快速处理。'
+                        + (record.type === 'unicode_conflict' ? ' 保留组合并后共享原 unicode。' : ' 保留组合并后共享原名称。')
+                        + '</div>';
+                }
+
+                // Toolbar + Variants
+                var variantsHtml = '';
+                record.variants.forEach(function (v, vi) {
+                    var svgHtml = v.svg ? '<div class="svg-container">' + v.svg + '</div>' : '<div class="svg-placeholder"></div>';
+                    var groupInfo = findVariantGroup(record.id, vi);
+                    var inGroupClass = groupInfo ? ' in-group' : '';
+                    var checkbox = !isFp ? '<div class="variant-checkbox"><input type="checkbox" data-rid="' + record.id + '" data-vi="' + vi + '" class="var-checkbox"' + (isSelected(record.id, vi) ? ' checked' : '') + '></div>' : '';
+                    var groupLabel = groupInfo ? '<div style="font-size:10px;color:#1890ff;margin-bottom:4px;">' + groupInfo.label + '</div>' : '';
+
+                    variantsHtml += '<div class="variant-panel' + inGroupClass + '" data-variant="' + vi + '">'
+                        + checkbox
+                        + groupLabel
+                        + svgHtml
+                        + '<div class="variant-meta">'
+                        + '<span class="name">' + escapeHtml(v.name) + '</span>'
+                        + '<code>' + escapeHtml(v.glyphHash.substring(0, 12)) + '</code><br/>'
+                        + '<span class="sources">' + escapeHtml(v.sources) + '</span>'
+                        + '</div>'
+                        + '</div>';
+                });
+
+                var toolbarHtml = '';
+                if (!isFp) {
+                    toolbarHtml = '<div class="variant-toolbar">'
+                        + '<label><input type="checkbox" class="select-all" data-rid="' + record.id + '"> 全选</label>'
+                        + '<button class="btn-group-action success" data-rid="' + record.id + '" data-action="keep">设为保留组</button>'
+                        + '<button class="btn-group-action warning" data-rid="' + record.id + '" data-action="pua">添加 PUA 组</button>'
+                        + '<button class="btn-group-action primary" data-rid="' + record.id + '" data-action="auto-group" title="CSS来源最多的变体保留，其余全部添加 PUA 组">一键分组</button>'
+                        + '<button class="btn-group-action" data-rid="' + record.id + '" data-action="clear">取消选择</button>'
+                        + '</div>';
+                }
+
+                var bodyHtml = '<div class="card-body">' + variantsHtml + '</div>';
+
+                // Groups area
+                var groupsHtml = buildGroupsArea(record);
+
+                // Footer
+                var footerHtml = '';
+                if (!isFp) {
+                    footerHtml = '<div class="card-footer">'
+                        + '<button class="btn-manual-merge" data-rid="' + record.id + '">人工合并（所有变体视为相同）</button>'
+                        + '<span style="font-size:11px;color:#999;">或：选中部分变体后点击上方按钮分组</span>'
+                        + '</div>';
+                } else {
+                    footerHtml = '<div class="card-footer">'
+                        + '<button class="btn-unmerge" data-rid="' + record.id + '">取消自动合并（转为人工审核）</button>'
+                        + '</div>';
+                }
+
+                card.innerHTML = headerHtml + hintHtml + toolbarHtml + bodyHtml + groupsHtml + footerHtml;
+                return card;
+            }
+
+            function findVariantGroup(recordId, variantIndex) {
+                var dec = state.decisions[recordId];
+                if (!dec || !dec.groups) return null;
+                for (var gi = 0; gi < dec.groups.length; gi++) {
+                    var g = dec.groups[gi];
+                    if (g.variants.indexOf(variantIndex) >= 0) {
+                        return { label: g.type === 'keep' ? '保留组' : ('PUA-' + (gi + 1)), groupIndex: gi };
+                    }
+                }
+                return null;
+            }
+
+            function isSelected(recordId, variantIndex) {
+                return state.selections[recordId] && state.selections[recordId].has(variantIndex);
+            }
+
+            function buildGroupsArea(record) {
+                var dec = state.decisions[record.id];
+                if (!dec || !dec.groups || dec.groups.length === 0) return '';
+                var html = '<div class="groups-area">';
+                dec.groups.forEach(function (g, gi) {
+                    var cls = g.type === 'keep' ? 'keep' : 'pua';
+                    var label = g.type === 'keep' ? '保留组' : ('PUA-' + (gi + 1));
+                    var vnames = g.variants.map(function (vi) { return 'v' + (vi + 1); }).join(', ');
+                    html += '<div class="group-tag ' + cls + '">'
+                        + '<span class="group-label">' + label + '</span>'
+                        + '<span class="group-variants">(' + vnames + ')</span>'
+                        + '<button class="btn-remove" data-rid="' + record.id + '" data-gi="' + gi + '">&times;</button>'
+                        + '</div>';
+                });
+                html += '</div>';
+                return html;
+            }
+
+            function isRecordResolved(record) {
+                var dec = state.decisions[record.id];
+                if (!dec || !dec.groups) return false;
+                var grouped = new Set();
+                dec.groups.forEach(function (g) {
+                    g.variants.forEach(function (v) { grouped.add(v); });
+                });
+                return grouped.size === record.variants.length;
+            }
+
+            // ===================== Event Delegation =====================
+            container.addEventListener('click', function (e) {
+                // Variant checkbox
+                var cb = e.target.closest('.var-checkbox');
+                if (cb) {
+                    var rid = parseInt(cb.dataset.rid);
+                    var vi = parseInt(cb.dataset.vi);
+                    toggleSelection(rid, vi);
+                    var panel = cb.closest('.variant-panel');
+                    if (panel) panel.classList.toggle('selected', cb.checked);
+                    return;
+                }
+
+                // Variant panel click (toggle selection)
+                var panel = e.target.closest('.variant-panel');
+                if (panel && !panel.classList.contains('in-group') && !e.target.closest('.var-checkbox')) {
+                    var cb2 = panel.querySelector('.var-checkbox');
+                    if (cb2) {
+                        cb2.checked = !cb2.checked;
+                        panel.classList.toggle('selected', cb2.checked);
+                        var rid = parseInt(cb2.dataset.rid);
+                        var vi = parseInt(cb2.dataset.vi);
+                        toggleSelection(rid, vi);
+                    }
+                    return;
+                }
+
+                // Select all
+                var sa = e.target.closest('.select-all');
+                if (sa) {
+                    var rid = parseInt(sa.dataset.rid);
+                    var record = records.find(function (r) { return r.id === rid; });
+                    if (record) {
+                        var allSelected = record.variants.every(function (_, vi) { return isSelected(rid, vi); });
+                        if (allSelected) {
+                            state.selections[rid] = new Set();
+                        } else {
+                            state.selections[rid] = new Set(record.variants.map(function (_, i) { return i; }));
+                        }
+                        updateCard(rid);
+                    }
+                    return;
+                }
+
+                // Group action buttons
+                var btn = e.target.closest('.btn-group-action');
+                if (btn) {
+                    var rid = parseInt(btn.dataset.rid);
+                    var action = btn.dataset.action;
+                    if (action === 'clear') {
+                        delete state.selections[rid];
+                    } else if (action === 'auto-group') {
+                        autoGroup(rid);
+                    } else {
+                        createGroup(rid, action);
+                    }
+                    updateCard(rid);
+                    updateProgress();
+                    saveToLocalStorage();
+                    if (action === 'auto-group') {
+                        scrollNext();
+                    }
+                    return;
+                }
+
+                // Remove group
+                var rm = e.target.closest('.btn-remove');
+                if (rm) {
+                    var rid = parseInt(rm.dataset.rid);
+                    var gi = parseInt(rm.dataset.gi);
+                    removeGroup(rid, gi);
+                    updateCard(rid);
+                    updateProgress();
+                    saveToLocalStorage();
+                    return;
+                }
+
+                // Manual merge
+                var mm = e.target.closest('.btn-manual-merge');
+                if (mm) {
+                    var rid = parseInt(mm.dataset.rid);
+                    var record = records.find(function (r) { return r.id === rid; });
+                    if (record) {
+                        manualMerge(record);
+                        updateCard(rid);
+                        updateProgress();
+                        saveToLocalStorage();
+                        scrollNext();
+                    }
+                    return;
+                }
+
+                // Unmerge (cancel auto-merge)
+                var um = e.target.closest('.btn-unmerge');
+                if (um) {
+                    var rid = parseInt(um.dataset.rid);
+                    unmerge(rid);
+                    renderCards();  // unmerge may change card ordering
+                    updateProgress();
+                    saveToLocalStorage();
+                    return;
+                }
+            });
+
+            // ===================== Actions =====================
+            function toggleSelection(recordId, variantIndex) {
+                if (!state.selections[recordId]) state.selections[recordId] = new Set();
+                if (state.selections[recordId].has(variantIndex)) {
+                    state.selections[recordId].delete(variantIndex);
+                } else {
+                    state.selections[recordId].add(variantIndex);
+                }
+            }
+
+            function createGroup(recordId, type) {
+                var selected = state.selections[recordId];
+                if (!selected || selected.size === 0) {
+                    alert('请先勾选变体');
+                    return;
+                }
+
+                // Exclude already grouped variants
+                var dec = state.decisions[recordId];
+                var grouped = new Set();
+                if (dec && dec.groups) {
+                    dec.groups.forEach(function (g) {
+                        g.variants.forEach(function (v) { grouped.add(v); });
+                    });
+                }
+
+                var newVariants = [];
+                selected.forEach(function (vi) {
+                    if (!grouped.has(vi)) newVariants.push(vi);
+                });
+
+                if (newVariants.length === 0) {
+                    alert('选中的变体已全部分组');
+                    return;
+                }
+
+                if (!state.decisions[recordId]) state.decisions[recordId] = { groups: [] };
+                if (!state.decisions[recordId].groups) state.decisions[recordId].groups = [];
+
+                state.decisions[recordId].groups.push({
+                    type: type,
+                    variants: newVariants.sort(function (a, b) { return a - b; })
+                });
+
+                // Clear selection for this record
+                delete state.selections[recordId];
+            }
+
+            function removeGroup(recordId, groupIndex) {
+                var dec = state.decisions[recordId];
+                if (!dec || !dec.groups) return;
+                dec.groups.splice(groupIndex, 1);
+                if (dec.groups.length === 0) delete state.decisions[recordId];
+            }
+
+            function manualMerge(record) {
+                state.decisions[record.id] = {
+                    groups: [{ type: 'keep', variants: record.variants.map(function (_, i) { return i; }) }]
+                };
+                delete state.selections[record.id];
+            }
+
+            function scrollNext() {
+                var currentCenter = window.innerHeight * 0.5;
+                var nextCard = container.querySelector('.conflict-card:not(.resolved):not(.false-positive)');
+                if (!nextCard) return;
+                var nextTop = nextCard.getBoundingClientRect().top + window.pageYOffset;
+                var targetY = nextTop - currentCenter + (nextCard.offsetHeight / 2);
+                window.scrollTo({ top: Math.max(0, targetY), behavior: 'smooth' });
+            }
+
+            function updateCard(recordId) {
+                var record = records.find(function (r) { return r.id === recordId; });
+                if (!record) return;
+                var oldCard = container.querySelector('.conflict-card[data-id="' + recordId + '"]');
+                if (!oldCard) return;
+                var newCard = buildCard(record);
+                oldCard.parentNode.replaceChild(newCard, oldCard);
+            }
+
+            function unmerge(recordId) {
+                // Mark this record as unmerged — override the auto-merge status
+                state.decisions[recordId] = { unmerge: true };
+                delete state.selections[recordId];
+                // No alert needed — renderCards will immediately reflect the change
+            }
+
+            function autoGroup(recordId) {
+                var record = records.find(function (r) { return r.id === recordId; });
+                if (!record || !record.variants || record.variants.length === 0) return;
+
+                // Overwrite existing decisions for this record
+                delete state.selections[recordId];
+                state.decisions[recordId] = { groups: [] };
+
+                // Find variant with highest sourceCount; tie-break by lowest index
+                var keepIdx = 0;
+                var maxCount = record.variants[0].sourceCount || 0;
+                for (var i = 1; i < record.variants.length; i++) {
+                    var cnt = record.variants[i].sourceCount || 0;
+                    if (cnt > maxCount) {
+                        maxCount = cnt;
+                        keepIdx = i;
+                    }
+                }
+
+                // Keep the variant with most CSS sources
+                state.decisions[recordId].groups.push({
+                    type: 'keep',
+                    variants: [keepIdx]
+                });
+
+                // Remaining variants -> pua group
+                if (record.variants.length > 1) {
+                    var rest = [];
+                    for (var i = 0; i < record.variants.length; i++) {
+                        if (i !== keepIdx) rest.push(i);
+                    }
+                    state.decisions[recordId].groups.push({
+                        type: 'pua',
+                        variants: rest
+                    });
+                }
+            }
+
+            // ===================== Progress =====================
+            function updateProgress() {
+                var resolvedPending = 0;
+                records.forEach(function (r) {
+                    if (!r.isFalsePositive && isRecordResolved(r)) resolvedPending++;
+                });
+                var pending = state.pendingRecords;
+                var pct = pending > 0 ? (resolvedPending / pending * 100).toFixed(1) : 100;
+                document.getElementById('progress-text').textContent =
+                    'Auto-merged: ' + state.autoMergedRecords +
+                    ' | Pending: ' + state.pendingRecords +
+                    ' | Resolved: ' + resolvedPending + '/' + pending;
+                document.getElementById('progress-fill').style.width = pct + '%';
+
+                var hasDecisions = Object.keys(state.decisions).length > 0;
+                document.getElementById('export-btn').disabled = !hasDecisions;
+            }
+
+            // ===================== Export =====================
+            document.getElementById('export-btn').addEventListener('click', function () {
+                var resolvedPending = 0;
+                records.forEach(function (r) {
+                    if (!r.isFalsePositive && isRecordResolved(r)) resolvedPending++;
+                });
+
+                // Build clean export
+                var exportDecisions = {};
+                for (var rid in state.decisions) {
+                    var dec = state.decisions[rid];
+                    if (dec.groups) {
+                        exportDecisions[rid] = {
+                            recordKey: records[rid] ? records[rid].key : '',
+                            recordType: records[rid] ? records[rid].type : '',
+                            groups: dec.groups.map(function (g) {
+                                return { type: g.type, variants: g.variants };
+                            })
+                        };
+                    }
+                }
+
+                var output = {
+                    generatedAt: new Date().toISOString(),
+                    totalRecords: state.totalRecords,
+                    autoMergedRecords: state.autoMergedRecords,
+                    pendingRecords: state.pendingRecords,
+                    resolvedPending: resolvedPending,
+                    decisions: exportDecisions,
+                };
+                var blob = new Blob([JSON.stringify(output, null, 2)], { type: 'application/json' });
+                var url = URL.createObjectURL(blob);
+                var a = document.createElement('a');
+                a.href = url;
+                a.download = 'phase7_decisions.json';
+                a.click();
+                URL.revokeObjectURL(url);
+            });
+        })();
+    </script>
+</body>
+
+</html>

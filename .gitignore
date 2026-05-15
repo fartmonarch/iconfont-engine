@@ -2,3 +2,7 @@ node_modules
 
 .claude
 .claude/settings.local.json
+
+# Large data files (exceed GitHub 100MB limit)
+registry/lineage_resolved.json
+report/icon_usage_index.json

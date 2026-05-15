@@ -45,6 +45,13 @@
 | 16  | ~~`pipeline/09_build_font.py`~~                          | ~~待编写~~                    | Python  | Phase 9    | 🟢 已合并到 Phase 8                                                     | 合并到 08_merge_glyf.py                                                                      |
 | 17  | `pipeline/10_validate_render.js`                         | **新编写**                    | Node.js | Phase 10   | 🟢 已完成                                                               | Chrome/Firefox 渲染对比、pixel diff、输出 diff report（Playwright + pixelmatch）             |
 | 18  | `pipeline/11_generate_manifest.js`                       | **新编写**                    | Node.js | Phase 11   | 🟢 已完成                                                               | merge_manifest.json + demo_index.html + phase11_output.md                                    |
+| 19  | `pipeline/07_apply_typea_resolution.py`                  | **新编写**                    | Python  | Phase 7    | 🟢 已完成                                                               | Type A 决策三段处理：用户决策107条 + typea_data补全 + fallback自动PUA分配 → Type A清零       |
+| 20  | `pipeline/07_resolve_conflicts.py`                       | **新编写**                    | Python  | Phase 7    | 🟢 已完成                                                               | 生成 phase7_resolution.json（747 entries，全含registry，单来源标记 single_source）           |
+| 21  | `pipeline/12_package_output.js`                          | **新编写**                    | Node.js | Phase 11   | 🟢 已完成                                                               | 生成 output/package/（iconfont.ttf/woff2/css/json + demo_index.html，标准分发包）            |
+| 22  | `pipeline/13_enhance_lineage.py`                         | **新编写**                    | Python  | Phase 13   | 🟢 已完成                                                               | 增强 lineage.json：注入 replacement 字段（nameChanged/unicodeChanged/新旧值）                |
+| 23  | `pipeline/14_generate_replacer.js`                       | **新编写**                    | Node.js | Phase 14   | 🟢 已完成                                                               | 按项目生成替换脚本 output/replacers/<proj>_replace.js + 替换指南 report/replacement_guides/  |
+| 24  | `pipeline/15_rebuild_resolver_data.py`                   | **新编写**                    | Python  | Phase 15   | 🟢 已完成                                                               | 重建 conflict_resolver_data.json 含 lineage resolved 完整数据                                |
+| 25  | `pipeline/16_apply_replacements.js`                      | **待编写**                    | Node.js | Phase 16   | 🔵 待执行                                                               | 替换执行器：接收 --project/--repo-dir/--css-cdn-url，应用 replacer 规则到实际仓库            |
 
 ---
 
@@ -88,14 +95,11 @@
 | `_cmp2.js`                    | 14       | 单文件替换验证                   |
 | `GPT_ttf合并流程规范.md`      | —        | 参考文档（TTF 合并流程规范）     |
 
-### E. 待编写（3 个）
+### E. 待编写（1 个）
 
-| 编号 | 文件                    | 语言    | 说明           |
-| ---- | ----------------------- | ------- | -------------- |
-| 08   | `05_build_registry.py`  | Python  | 哈希注册表构建 |
-| 15   | `08_merge_glyf.py`      | Python  | 核心合并引擎   |
-| 16   | `09_build_font.py`      | Python  | 字体生成       |
-| 17   | `10_validate_render.js` | Node.js | 渲染验证       |
+| 编号 | 文件                                | 语言    | 说明                                                                         |
+| ---- | ----------------------------------- | ------- | ---------------------------------------------------------------------------- |
+| 25   | `pipeline/16_apply_replacements.js` | Node.js | 替换执行器：--project/--repo-dir/--css-cdn-url，应用 replacer 脚本到实际仓库 |
 
 ---
 
@@ -143,12 +147,8 @@ Phase 1 全程脚本覆盖扫描的是**"文本里存在的完整链接"**，而
 ## 状态图
 
 ```
-Phase 1 扫描    Phase 2 解析         Phase 3-5 提取    Phase 6 检测     Phase 7 解决     Phase 8-9 合并    Phase 10 验证   Phase 11 输出
-    │               │                    │                │                │                │               │              │
-  [01] 🟢         [04] 🟢              [06] 🟢          [10] 🔧          [12] 🔧          [16] ⬜           [18] ⬜          [19] 🔧
-  [02] 🟢         [05] 🟢              [07] ⬜          [11] 🔧          [13] 🔧          [17] ⬜
-  [03] 🟢         [06] 🟢              [08] ⬜          [14] 🔧
-                                                        [15] 🔧
+Phase 1-2 扫描/解析  Phase 3-5 提取/注册  Phase 6-7 冲突治理     Phase 8-11 合并/输出  Phase 12-15 溯源/分发   Phase 16 替换
+  [01-06] 🟢 ×6       [06-08] 🟢 ×4        [09-09g] 🟢 ×8          [15-21] 🟢 ×7          [22-24] 🟢 ×3            [25] 🔵 待编写
 ```
 
-- 🟢 = 已完成  🔧 = 已收集待迁移  ⬜ = 待编写
+- 🟢 = 已完成  🔵 = 已规划待执行  🔧 = 已收集待迁移  ⬜ = 待编写
